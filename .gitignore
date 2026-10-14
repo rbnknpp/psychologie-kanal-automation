@@ -1,0 +1,12 @@
+.env
+client_secret.json
+token.json
+token.json.*
+.oauth_granted_at*
+output/
+logs/
+assets/stock_cache/
+assets/voices/
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,95 @@
+name: Taeglicher Lauf (Psychologie und Alltags Fakten)
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # 05:30 UTC = 07:30 MESZ / 06:30 MEZ; Veroeffentlichung laeuft ueber config.PUBLISH_TIMES
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Testlauf: 1 Short, kein langes Video, Upload nur privat"
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-run
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    env:
+      TTS_ENGINE: piper
+      PYTHONUNBUFFERED: "1"
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: ffmpeg und Schriften installieren
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg fonts-liberation
+
+      - name: Python-Pakete installieren
+        run: pip install -r requirements.txt
+
+      - name: Piper-Stimme (aus Cache oder Download)
+        id: voice-cache
+        uses: actions/cache@v4
+        with:
+          path: assets/voices
+          key: piper-voice-de_DE-thorsten-medium
+      - name: Piper-Stimme herunterladen
+        if: steps.voice-cache.outputs.cache-hit != 'true'
+        run: python -m piper.download_voices --download-dir assets/voices de_DE-thorsten-medium
+
+      - name: YouTube-Zugangsdaten bereitstellen
+        env:
+          YT_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YT_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
+          printf '%s' "$YT_TOKEN" > token.json
+
+      - name: Videos erzeugen
+        run: |
+          if [ "${{ inputs.test }}" = "true" ]; then python pipeline.py --test; else python pipeline.py; fi
+
+      - name: Hochladen (bis zu 3 Versuche, bereits Hochgeladenes wird uebersprungen)
+        run: |
+          ARGS=""
+          if [ "${{ inputs.test }}" = "true" ]; then ARGS="--privacy private"; fi
+          for i in 1 2 3; do
+            if python upload_cli.py $ARGS; then exit 0; fi
+            echo "Upload-Versuch $i fehlgeschlagen, warte 90 s..."
+            sleep 90
+          done
+          exit 1
+
+      - name: Zustand zurueck ins Repository schreiben
+        if: ${{ always() && inputs.test != true }}
+        run: |
+          git config user.name "daily-bot"
+          git config user.email "daily-bot@users.noreply.github.com"
+          git add state.json playlists_cache.json hypnosis_themes.json performance_insights.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Tageszustand aktualisiert [skip ci]"
+            git pull --rebase -q || true
+            git push || true
+          fi
+
+      - name: Alarm-Mail bei Fehler
+        if: failure()
+        run: python notify.py "Psychologie-Kanal (Cloud)" "GitHub-Actions-Lauf"
