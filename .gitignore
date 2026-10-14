@@ -10,3 +10,6 @@ assets/voices/
 __pycache__/
 *.pyc
 .venv/
+report/token_*.json
+report/client_secret.json
+report/reports/
