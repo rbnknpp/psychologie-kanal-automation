@@ -213,7 +213,7 @@ def run(shorts_n: int = None, skip_longform: bool = False):
     state.record_facts(shorts_facts)
 
     if skip_longform:
-        print(f"Testlauf: kein langes Video. Fertig, {shorts_n} Short(s) in {run_dir}")
+        print(f"Ohne langes Video. Fertig, {shorts_n} Short(s) in {run_dir}")
         return run_dir
 
     # --- Langes Video: am Hypnose-Tag die Einschlaf-Hypnose, sonst Fakten-Kompilation
@@ -306,5 +306,7 @@ if __name__ == "__main__":
 
     if "--test" in sys.argv:  # Cloud-Testlauf: 1 Short, kein langes Video
         run(shorts_n=1, skip_longform=True)
+    elif "--no-longform" in sys.argv:  # nur die Shorts (z.B. Neuerzeugung nach einem Fehler)
+        run(skip_longform=True)
     else:
         run()

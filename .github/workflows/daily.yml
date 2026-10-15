@@ -1,6 +1,6 @@
 name: Taeglicher Lauf (Psychologie und Alltags Fakten)
 
-run-name: ${{ inputs.test && 'TEST' || 'Tageslauf' }}
+run-name: ${{ inputs.test && 'TEST' || (inputs.only_shorts && 'Nur Shorts' || 'Tageslauf') }}
 
 on:
   schedule:
@@ -13,6 +13,10 @@ on:
     inputs:
       test:
         description: "Testlauf: 1 Short, kein langes Video, Upload nur privat"
+        type: boolean
+        default: false
+      only_shorts:
+        description: "Nur die Shorts neu erzeugen (kein langes Video), Doppellauf-Schutz umgehen"
         type: boolean
         default: false
 
@@ -41,7 +45,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then echo "skip=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "skip=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           today=$(date -u +%F)
           n=$(gh api "repos/${{ github.repository }}/actions/workflows/daily.yml/runs?created=%3E%3D${today}&per_page=50"             --jq "[.workflow_runs[] | select(.id != ${{ github.run_id }}) | select(.display_title != \"TEST\") | select(.status != \"completed\" or .conclusion == \"success\")] | length")
           echo "Andere Tageslaeufe heute (laufend oder erfolgreich): $n"
@@ -89,13 +93,16 @@ jobs:
       - name: Videos erzeugen
         if: steps.guard.outputs.skip != 'true'
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then python pipeline.py --test; else python pipeline.py; fi
+          if [ "${{ inputs.test }}" = "true" ]; then python pipeline.py --test
+          elif [ "${{ inputs.only_shorts }}" = "true" ]; then python pipeline.py --no-longform
+          else python pipeline.py; fi
 
       - name: Hochladen (bis zu 3 Versuche, bereits Hochgeladenes wird uebersprungen)
         if: steps.guard.outputs.skip != 'true'
         run: |
           ARGS=""
           if [ "${{ inputs.test }}" = "true" ]; then ARGS="--privacy private"; fi
+          if [ "${{ inputs.only_shorts }}" = "true" ]; then ARGS="$ARGS --only shorts"; fi
           for i in 1 2 3; do
             if python upload_cli.py $ARGS; then exit 0; fi
             echo "Upload-Versuch $i fehlgeschlagen, warte 90 s..."

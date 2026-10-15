@@ -1,56 +1,87 @@
 {
-  "generated_at": "2026-10-14T12:01:29.329426",
+  "generated_at": "2026-10-15T09:52:28.948146",
   "lookback_days": 14,
   "top": [
     {
-      "video_id": "Ds52d0Gkww0",
-      "title": "Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst",
-      "views": 9,
-      "retention": 32.2
+      "video_id": "pOFSQxZC5uU",
+      "title": "Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden",
+      "views": 969,
+      "retention": 39.4
     },
     {
-      "video_id": "pHJUhj3BVlM",
-      "title": "3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst",
-      "views": 8,
-      "retention": 103.3
+      "video_id": "7b7jpt7S4mc",
+      "title": "Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät",
+      "views": 936,
+      "retention": 35.4
     },
     {
-      "video_id": "kHoNBNXeaTU",
-      "title": "3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist",
-      "views": 4,
-      "retention": 10.2
+      "video_id": "mrjhUPVy3_s",
+      "title": "Warum du beim Lügen öfter die Hände versteckst",
+      "views": 923,
+      "retention": 38.2
     },
     {
-      "video_id": "E9dJbyekUF8",
-      "title": "Die Zahl, die zeigt wie viel dich dein Handy wirklich kostet",
-      "views": 4,
-      "retention": 33
+      "video_id": "rWs-m5Gv0QU",
+      "title": "3 Sekunden – so lange hält dein Gehirn eine Pause für normal",
+      "views": 682,
+      "retention": 28.1
     },
     {
-      "video_id": "eKO0qCoAReY",
-      "title": "3 Zahlen, die zeigen ob dein Abo-Dschungel dich wirklich arm macht",
-      "views": 3,
-      "retention": 27.8
+      "video_id": "wNs6r52y1xc",
+      "title": "Warum dir Musik in Moll trotzdem gefallen kann",
+      "views": 660,
+      "retention": 38.0
     },
     {
-      "video_id": "UpS0-z4jCd0",
-      "title": "Warum ein Budget auf Papier besser wirkt als eine App",
-      "views": 3,
-      "retention": 61.0
+      "video_id": "0UkaXyC7UoA",
+      "title": "Warum ein Handschlag mehr über dich verrät, als du denkst",
+      "views": 552,
+      "retention": 39.7
     },
     {
-      "video_id": "VLzKoUt743A",
-      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
-      "views": 2,
-      "retention": 100.0
+      "video_id": "XhQkiY_Mymk",
+      "title": "Dein Gehirn erkennt Freude in einer Stimme schneller als in einem Gesicht",
+      "views": 379,
+      "retention": 27.3
     },
     {
-      "video_id": "rnAKXkkhKjE",
-      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
-      "views": 2,
-      "retention": 55.9
+      "video_id": "rN28u7sVPhM",
+      "title": "Warum dir ein Lob von einem Fremden mehr bedeutet, als es sollte",
+      "views": 320,
+      "retention": 30.5
     }
   ],
-  "flop": [],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst\" (9 Views, 32.2% Bindung)\n- \"3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst\" (8 Views, 103.3% Bindung)\n- \"3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist\" (4 Views, 10.2% Bindung)\n- \"Die Zahl, die zeigt wie viel dich dein Handy wirklich kostet\" (4 Views, 33% Bindung)\n- \"3 Zahlen, die zeigen ob dein Abo-Dschungel dich wirklich arm macht\" (3 Views, 27.8% Bindung)\n- \"Warum ein Budget auf Papier besser wirkt als eine App\" (3 Views, 61.0% Bindung)\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (2 Views, 100.0% Bindung)\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (2 Views, 55.9% Bindung)"
+  "flop": [
+    {
+      "video_id": "UsxbfzAeldA",
+      "title": "Warum ein Raum mit Fenstern dich produktiver macht als einer ohne",
+      "views": 38,
+      "retention": 17.4
+    },
+    {
+      "video_id": "dmaeS6C6ZHo",
+      "title": "Ein einziges 'Danke' verändert, wie jemand über dich denkt",
+      "views": 43,
+      "retention": 32.6
+    },
+    {
+      "video_id": "Hsx1G12wf38",
+      "title": "Warum deine Stimmung ansteckend ist, bevor du ein Wort sagst",
+      "views": 43,
+      "retention": 27.0
+    },
+    {
+      "video_id": "REDCCfrDX-8",
+      "title": "Warum dir dein eigenes Gesicht auf Video fremd vorkommt",
+      "views": 44,
+      "retention": 84.4
+    },
+    {
+      "video_id": "8P12nVJnNo0",
+      "title": "Dein Gehirn traut einer tiefen Stimme automatisch mehr",
+      "views": 52,
+      "retention": 45.5
+    }
+  ],
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden\" (969 Views, 39.4% Bindung)\n- \"Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät\" (936 Views, 35.4% Bindung)\n- \"Warum du beim Lügen öfter die Hände versteckst\" (923 Views, 38.2% Bindung)\n- \"3 Sekunden – so lange hält dein Gehirn eine Pause für normal\" (682 Views, 28.1% Bindung)\n- \"Warum dir Musik in Moll trotzdem gefallen kann\" (660 Views, 38.0% Bindung)\n- \"Warum ein Handschlag mehr über dich verrät, als du denkst\" (552 Views, 39.7% Bindung)\n- \"Dein Gehirn erkennt Freude in einer Stimme schneller als in einem Gesicht\" (379 Views, 27.3% Bindung)\n- \"Warum dir ein Lob von einem Fremden mehr bedeutet, als es sollte\" (320 Views, 30.5% Bindung)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum ein Raum mit Fenstern dich produktiver macht als einer ohne\" (38 Views, 17.4% Bindung)\n- \"Ein einziges 'Danke' verändert, wie jemand über dich denkt\" (43 Views, 32.6% Bindung)\n- \"Warum deine Stimmung ansteckend ist, bevor du ein Wort sagst\" (43 Views, 27.0% Bindung)\n- \"Warum dir dein eigenes Gesicht auf Video fremd vorkommt\" (44 Views, 84.4% Bindung)\n- \"Dein Gehirn traut einer tiefen Stimme automatisch mehr\" (52 Views, 45.5% Bindung)"
 }

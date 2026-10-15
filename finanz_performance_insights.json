@@ -1,7 +1,37 @@
 {
-  "generated_at": "2026-10-14T12:01:31.259672",
+  "generated_at": "2026-10-15T09:52:31.263172",
   "lookback_days": 14,
   "top": [
+    {
+      "video_id": "7e3O8682JL4",
+      "title": "Die Summe, die zeigt was taegliche Bequemlichkeit dich im Jahr kostet",
+      "views": 58,
+      "retention": 42.2
+    },
+    {
+      "video_id": "S1sx0ucsngA",
+      "title": "3 Zahlen, die zeigen ob dein Haushaltsbuch dich wirklich ehrlich macht",
+      "views": 35,
+      "retention": 35.3
+    },
+    {
+      "video_id": "ALOI3JnX3cg",
+      "title": "Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist",
+      "views": 34,
+      "retention": 53.4
+    },
+    {
+      "video_id": "BAtIWlEwS5U",
+      "title": "Warum dein Gehirn bei 'nur heute' sofort die Kontrolle verliert",
+      "views": 31,
+      "retention": 37.7
+    },
+    {
+      "video_id": "v3BM_vJx9h4",
+      "title": "3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist",
+      "views": 28,
+      "retention": 20.0
+    },
     {
       "video_id": "Ds52d0Gkww0",
       "title": "Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst",
@@ -11,7 +41,7 @@
     {
       "video_id": "pHJUhj3BVlM",
       "title": "3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst",
-      "views": 8,
+      "views": 6,
       "retention": 103.3
     },
     {
@@ -19,38 +49,8 @@
       "title": "3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist",
       "views": 4,
       "retention": 10.2
-    },
-    {
-      "video_id": "E9dJbyekUF8",
-      "title": "Die Zahl, die zeigt wie viel dich dein Handy wirklich kostet",
-      "views": 4,
-      "retention": 33
-    },
-    {
-      "video_id": "eKO0qCoAReY",
-      "title": "3 Zahlen, die zeigen ob dein Abo-Dschungel dich wirklich arm macht",
-      "views": 3,
-      "retention": 27.8
-    },
-    {
-      "video_id": "UpS0-z4jCd0",
-      "title": "Warum ein Budget auf Papier besser wirkt als eine App",
-      "views": 3,
-      "retention": 61.0
-    },
-    {
-      "video_id": "VLzKoUt743A",
-      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
-      "views": 2,
-      "retention": 100.0
-    },
-    {
-      "video_id": "rnAKXkkhKjE",
-      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
-      "views": 2,
-      "retention": 55.9
     }
   ],
   "flop": [],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst\" (9 Views, 32.2% Bindung)\n- \"3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst\" (8 Views, 103.3% Bindung)\n- \"3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist\" (4 Views, 10.2% Bindung)\n- \"Die Zahl, die zeigt wie viel dich dein Handy wirklich kostet\" (4 Views, 33% Bindung)\n- \"3 Zahlen, die zeigen ob dein Abo-Dschungel dich wirklich arm macht\" (3 Views, 27.8% Bindung)\n- \"Warum ein Budget auf Papier besser wirkt als eine App\" (3 Views, 61.0% Bindung)\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (2 Views, 100.0% Bindung)\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (2 Views, 55.9% Bindung)"
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Die Summe, die zeigt was taegliche Bequemlichkeit dich im Jahr kostet\" (58 Views, 42.2% Bindung)\n- \"3 Zahlen, die zeigen ob dein Haushaltsbuch dich wirklich ehrlich macht\" (35 Views, 35.3% Bindung)\n- \"Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist\" (34 Views, 53.4% Bindung)\n- \"Warum dein Gehirn bei 'nur heute' sofort die Kontrolle verliert\" (31 Views, 37.7% Bindung)\n- \"3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist\" (28 Views, 20.0% Bindung)\n- \"Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst\" (9 Views, 32.2% Bindung)\n- \"3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst\" (6 Views, 103.3% Bindung)\n- \"3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist\" (4 Views, 10.2% Bindung)"
 }
