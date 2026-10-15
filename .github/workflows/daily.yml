@@ -1,8 +1,14 @@
 name: Taeglicher Lauf (Psychologie und Alltags Fakten)
 
+run-name: ${{ inputs.test && 'TEST' || 'Tageslauf' }}
+
 on:
   schedule:
-    - cron: "30 5 * * *"   # 05:30 UTC = 07:30 MESZ / 06:30 MEZ; Veroeffentlichung laeuft ueber config.PUBLISH_TIMES
+    # GitHub laesst geplante Laeufe gelegentlich verspaetet oder gar nicht starten. Darum mehrere
+    # Startzeiten; der Pruef-Schritt unten sorgt dafuer, dass pro Tag nur EIN Lauf durchgeht.
+    - cron: "17 5 * * *"   # 07:17 MESZ / 06:17 MEZ (Veroeffentlichung laeuft ueber config.PUBLISH_TIMES)
+    - cron: "47 6 * * *"   # Reserve
+    - cron: "47 8 * * *"   # zweite Reserve
   workflow_dispatch:
     inputs:
       test:
@@ -30,32 +36,49 @@ jobs:
       EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
     steps:
+      - name: Pruefen, ob heute schon ein Tageslauf laeuft oder erfolgreich war
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ inputs.test }}" = "true" ]; then echo "skip=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          today=$(date -u +%F)
+          n=$(gh api "repos/${{ github.repository }}/actions/workflows/daily.yml/runs?created=%3E%3D${today}&per_page=50"             --jq "[.workflow_runs[] | select(.id != ${{ github.run_id }}) | select(.display_title != \"TEST\") | select(.status != \"completed\" or .conclusion == \"success\")] | length")
+          echo "Andere Tageslaeufe heute (laufend oder erfolgreich): $n"
+          if [ "$n" -gt 0 ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; else echo "skip=false" >> "$GITHUB_OUTPUT"; fi
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: ffmpeg und Schriften installieren
+        if: steps.guard.outputs.skip != 'true'
         run: |
           sudo apt-get update -q
           sudo apt-get install -y -q ffmpeg fonts-liberation
 
       - name: Python-Pakete installieren
+        if: steps.guard.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Piper-Stimme (aus Cache oder Download)
         id: voice-cache
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/cache@v4
         with:
           path: assets/voices
           key: piper-voice-de_DE-thorsten-medium
       - name: Piper-Stimme herunterladen
-        if: steps.voice-cache.outputs.cache-hit != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.voice-cache.outputs.cache-hit != 'true'
         run: python -m piper.download_voices --download-dir assets/voices de_DE-thorsten-medium
 
       - name: YouTube-Zugangsdaten bereitstellen
+        if: steps.guard.outputs.skip != 'true'
         env:
           YT_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YT_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
@@ -64,10 +87,12 @@ jobs:
           printf '%s' "$YT_TOKEN" > token.json
 
       - name: Videos erzeugen
+        if: steps.guard.outputs.skip != 'true'
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python pipeline.py --test; else python pipeline.py; fi
 
       - name: Hochladen (bis zu 3 Versuche, bereits Hochgeladenes wird uebersprungen)
+        if: steps.guard.outputs.skip != 'true'
         run: |
           ARGS=""
           if [ "${{ inputs.test }}" = "true" ]; then ARGS="--privacy private"; fi
@@ -79,7 +104,7 @@ jobs:
           exit 1
 
       - name: Zustand zurueck ins Repository schreiben
-        if: ${{ always() && inputs.test != true }}
+        if: ${{ always() && inputs.test != true && steps.guard.outputs.skip != 'true' }}
         run: |
           git config user.name "daily-bot"
           git config user.email "daily-bot@users.noreply.github.com"
@@ -91,5 +116,5 @@ jobs:
           fi
 
       - name: Alarm-Mail bei Fehler
-        if: failure()
+        if: failure() && steps.guard.outputs.skip != 'true'
         run: python notify.py "Psychologie-Kanal (Cloud)" "GitHub-Actions-Lauf"
