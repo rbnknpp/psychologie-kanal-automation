@@ -1977,18 +1977,16 @@
  },
  "Dein Gehirn zählt Treppenstufen, ohne dass du es merkst": {
   "title": "Dein Gehirn zählt Treppenstufen, ohne dass du es merkst",
-  "hook": "Dein Gehirn zählt Treppenstufen automatisch mit, ganz ohne dein Zutun.",
+  "hook": "Du zählst Treppenstufen, auch wenn du nie bewusst anfängst.",
   "tags": [
    "psychologie",
-   "gehirn fakten",
-   "motorik",
+   "gehirn",
    "treppensteigen",
    "automatische bewegung",
-   "verhalten",
-   "alltag",
+   "kleinhirn",
+   "alltagspsychologie",
    "gewohnheiten",
-   "neurowissenschaft",
-   "kognition"
+   "motorik"
   ]
  },
  "Warum geliehene Dinge schneller kaputtgehen – gefühlt": {
@@ -5503,6 +5501,340 @@
    "Urlaub",
    "Alltag",
    "Zeitgefühl"
+  ]
+ },
+ "Warum du beim Zugfahren rückwärts schneller müde wirst (und andere Sitzplätze dich wach halten)": {
+  "title": "Warum du beim Zugfahren rückwärts schneller müde wirst (und andere Sitzplätze dich wach halten)",
+  "hook": "Manche Plätze machen dich müder, ohne dass du Sport treibst.",
+  "tags": [
+   "Psychologie",
+   "Gehirn",
+   "Reisekrankheit",
+   "Müdigkeit",
+   "Alltagsfakten",
+   "Zugfahren",
+   "Autofahren",
+   "Wissen",
+   "Gleichgewichtssinn",
+   "Fakten"
+  ]
+ },
+ "Dein Gehirn merkt, wenn du vorgibst zuzuhören": {
+  "title": "Dein Gehirn merkt, wenn du vorgibst zuzuhören",
+  "hook": "Du nickst, aber dein Gehirn ist längst woanders, und man sieht es.",
+  "tags": [
+   "Psychologie",
+   "Körpersprache",
+   "Kommunikation",
+   "Zuhören",
+   "Gehirn",
+   "Gespräch",
+   "Nonverbal",
+   "Beziehungen",
+   "Fakten",
+   "Wissen"
+  ]
+ },
+ "3 Töne reichen, damit du eine Stimme wiedererkennst": {
+  "title": "3 Töne reichen, damit du eine Stimme wiedererkennst",
+  "hook": "Drei kurze Töne reichen deinem Gehirn, um eine Person zu erkennen.",
+  "tags": [
+   "Psychologie",
+   "Stimme",
+   "Gehirn",
+   "Wiedererkennung",
+   "Neurowissenschaft",
+   "Fakten",
+   "Wissen",
+   "Hören",
+   "Akustik",
+   "Baby"
+  ]
+ },
+ "Warum du bei schlechten Nachrichten zuerst erstarrst": {
+  "title": "Warum du bei schlechten Nachrichten zuerst erstarrst",
+  "hook": "Schlechte Nachrichten lassen dich erst mal einfrieren, bevor du reagierst.",
+  "tags": [
+   "Psychologie",
+   "Freeze-Reaktion",
+   "Stress",
+   "Gehirn",
+   "Verhalten",
+   "Schockmoment",
+   "Wissen",
+   "Fakten",
+   "Emotionen",
+   "Reaktion"
+  ]
+ },
+ "Dein Gehirn bevorzugt Stimmen, die du oft hörst, egal was sie sagen": {
+  "title": "Dein Gehirn bevorzugt Stimmen, die du oft hörst, egal was sie sagen",
+  "hook": "Du glaubst eher, was eine vertraute Stimme sagt, nicht was gesagt wird.",
+  "tags": [
+   "Psychologie",
+   "Vertrauen",
+   "Stimme",
+   "Mere-Exposure-Effekt",
+   "Gehirn",
+   "Medien",
+   "Fakten",
+   "Wissen",
+   "Wahrnehmung",
+   "Kommunikation"
+  ]
+ },
+ "Warum ein kurzer Blick auf die Uhr dich nervöser macht": {
+  "title": "Warum ein kurzer Blick auf die Uhr dich nervöser macht",
+  "hook": "Ein einziger Blick auf die Uhr kann deinen Puls beschleunigen.",
+  "tags": [
+   "Psychologie",
+   "Zeitwahrnehmung",
+   "Stress",
+   "Gehirn",
+   "Uhr",
+   "Zeitdruck",
+   "Fakten",
+   "Wissen",
+   "Alltag",
+   "Verhalten"
+  ]
+ },
+ "Die Zahl der Worte, die du brauchst, um jemanden sympathisch zu finden": {
+  "title": "Die Zahl der Worte, die du brauchst, um jemanden sympathisch zu finden",
+  "hook": "Manchmal reichen ein paar Worte, um jemanden sofort zu mögen.",
+  "tags": [
+   "Psychologie",
+   "Sympathie",
+   "Kommunikation",
+   "Sprache",
+   "Gehirn",
+   "Beziehungen",
+   "Fakten",
+   "Wissen",
+   "Gespräch",
+   "Verhalten"
+  ]
+ },
+ "Warum du bei Gruppenentscheidungen leiser wirst": {
+  "title": "Warum du bei Gruppenentscheidungen leiser wirst",
+  "hook": "Je größer die Gruppe, desto leiser wirst du, auch ohne es zu merken.",
+  "tags": [
+   "Psychologie",
+   "Gruppendynamik",
+   "Verhalten",
+   "Gehirn",
+   "Soziale Hemmung",
+   "Meeting",
+   "Fakten",
+   "Wissen",
+   "Kommunikation",
+   "Team"
+  ]
+ },
+ "Dein Gehirn braucht Berührung, um Nähe wirklich zu glauben": {
+  "title": "Dein Gehirn braucht Berührung, um Nähe wirklich zu glauben",
+  "hook": "Worte allein reichen deinem Gehirn oft nicht, um Nähe zu glauben.",
+  "tags": [
+   "Psychologie",
+   "Berührung",
+   "Oxytocin",
+   "Vertrauen",
+   "Gehirn",
+   "Beziehungen",
+   "Fakten",
+   "Wissen",
+   "Emotionen",
+   "Nähe"
+  ]
+ },
+ "Warum du dich nach einem Kompliment manchmal unwohl fühlst": {
+  "title": "Warum du dich nach einem Kompliment manchmal unwohl fühlst",
+  "hook": "Ein Kompliment kann sich manchmal komisch anfühlen, statt einfach gut.",
+  "tags": [
+   "Psychologie",
+   "Selbstwert",
+   "Kompliment",
+   "Kognitive Dissonanz",
+   "Gehirn",
+   "Emotionen",
+   "Fakten",
+   "Wissen",
+   "Verhalten",
+   "Selbstbild"
+  ]
+ },
+ "Warum du beim Lügen öfter lächelst, aber falsch": {
+  "title": "Warum du beim Lügen öfter lächelst, aber falsch",
+  "hook": "Ein Lächeln beim Lügen sieht fast immer anders aus.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lächeln",
+   "lügen erkennen",
+   "mimik",
+   "gehirn fakten",
+   "duchenne lächeln",
+   "soziale signale"
+  ]
+ },
+ "Warum dir ein geliehener Kugelschreiber fremd vorkommt": {
+  "title": "Warum dir ein geliehener Kugelschreiber fremd vorkommt",
+  "hook": "Ein geliehener Stift fühlt sich fast immer unangenehm an.",
+  "tags": [
+   "psychologie",
+   "gehirn",
+   "gewohnheit",
+   "motorisches gedächtnis",
+   "alltagspsychologie",
+   "fakten",
+   "wissenschaft",
+   "gewohnheiten"
+  ]
+ },
+ "3 Sekunden – so lange brauchst du, um eine Lüge zu planen": {
+  "title": "3 Sekunden – so lange brauchst du, um eine Lüge zu planen",
+  "hook": "Eine spontane Lüge entsteht oft in weniger als drei Sekunden.",
+  "tags": [
+   "psychologie",
+   "lügen erkennen",
+   "gehirn",
+   "körpersprache",
+   "kommunikation",
+   "fakten",
+   "wissenschaft",
+   "soziale psychologie"
+  ]
+ },
+ "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum": {
+  "title": "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum",
+  "hook": "Ein einziger Akkord reicht, um deine Stimmung zu beeinflussen.",
+  "tags": [
+   "psychologie",
+   "musik",
+   "dur moll",
+   "gehirn",
+   "emotionen",
+   "musikpsychologie",
+   "fakten",
+   "wissenschaft"
+  ]
+ },
+ "Die Zahl, die zeigt wie oft dein Blick pro Minute abschweift": {
+  "title": "Die Zahl, die zeigt wie oft dein Blick pro Minute abschweift",
+  "hook": "Dein Blick wandert öfter ab, als du jemals zugeben würdest.",
+  "tags": [
+   "psychologie",
+   "blickkontakt",
+   "körpersprache",
+   "kommunikation",
+   "gehirn",
+   "aufmerksamkeit",
+   "fakten",
+   "soziale psychologie"
+  ]
+ },
+ "Warum du bei einer Umfrage ehrlicher antwortest, wenn niemand zuschaut": {
+  "title": "Warum du bei einer Umfrage ehrlicher antwortest, wenn niemand zuschaut",
+  "hook": "Allein im Raum antwortest du erstaunlich anders als in Gesellschaft.",
+  "tags": [
+   "psychologie",
+   "sozialpsychologie",
+   "verhalten",
+   "ehrlichkeit",
+   "umfrage",
+   "gehirn",
+   "fakten",
+   "wissenschaft"
+  ]
+ },
+ "Dein Gehirn merkt sich Gerüche länger als Gesichter": {
+  "title": "Dein Gehirn merkt sich Gerüche länger als Gesichter",
+  "hook": "Ein einziger Geruch kann eine Erinnerung von vor Jahren zurückholen.",
+  "tags": [
+   "psychologie",
+   "gehirn",
+   "erinnerung",
+   "geruchssinn",
+   "limbisches system",
+   "fakten",
+   "wissenschaft",
+   "gedächtnis"
+  ]
+ },
+ "Warum du beim Zuhören am Telefon automatisch nickst, obwohl niemand es sieht": {
+  "title": "Warum du beim Zuhören am Telefon automatisch nickst, obwohl niemand es sieht",
+  "hook": "Am Telefon nickst du, obwohl dich niemand sehen kann.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "telefonieren",
+   "kommunikation",
+   "gehirn",
+   "alltagspsychologie",
+   "fakten",
+   "verhalten"
+  ]
+ },
+ "3 Töne pro Sekunde – mehr braucht dein Gehirn nicht, um Musik zu erkennen": {
+  "title": "3 Töne pro Sekunde – mehr braucht dein Gehirn nicht, um Musik zu erkennen",
+  "hook": "Dein Gehirn erkennt ein bekanntes Lied fast augenblicklich.",
+  "tags": [
+   "psychologie",
+   "musik",
+   "gehirn",
+   "mustererkennung",
+   "musikpsychologie",
+   "fakten",
+   "wissenschaft",
+   "hören"
+  ]
+ },
+ "Warum du beim Flirten unbewusst deine Füße verrätst": {
+  "title": "Warum du beim Flirten unbewusst deine Füße verrätst",
+  "hook": "Willst du wissen, ob dich jemand wirklich mag? Schau auf die Füße.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "flirten",
+   "nonverbale kommunikation",
+   "verhalten",
+   "gehirn fakten",
+   "body language",
+   "soziale signale",
+   "menschliches verhalten",
+   "fakten"
+  ]
+ },
+ "Dein Gehirn belohnt dich fürs Erzählen über dich selbst": {
+  "title": "Dein Gehirn belohnt dich fürs Erzählen über dich selbst",
+  "hook": "Über dich selbst zu reden fühlt sich gut an, fast wie Essen oder Geld.",
+  "tags": [
+   "gehirn",
+   "psychologie",
+   "belohnungssystem",
+   "kommunikation",
+   "gespräche",
+   "selbstoffenbarung",
+   "soziale medien",
+   "fakten",
+   "verhalten",
+   "beziehungen"
+  ]
+ },
+ "3 Minuten Schweigen reichen, um ein Gespräch unangenehm zu machen": {
+  "title": "3 Minuten Schweigen reichen, um ein Gespräch unangenehm zu machen",
+  "hook": "Kennst du das, wenn eine Gesprächspause plötzlich ewig lang wirkt?",
+  "tags": [
+   "psychologie",
+   "stille",
+   "gesprächspause",
+   "kommunikation",
+   "soziales verhalten",
+   "gehirn fakten",
+   "beziehungen",
+   "nähe",
+   "verhalten",
+   "fakten"
   ]
  }
 }
