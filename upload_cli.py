@@ -138,8 +138,34 @@ def _post_pending_comments(youtube, days_back: int = 4) -> None:
             _write_manifest(run_dir, manifest)
 
 
+def _foreign_videos_today(youtube, own_ids: set) -> list:
+    """Videos auf dem Kanal, die heute (Europe/Berlin) veroeffentlicht oder fuer heute
+    geplant sind und NICHT aus diesem Lauf stammen. Schutz gegen eine zweite, parallel
+    laufende Pipeline (z.B. die alte lokale Windows-Aufgabe), die sonst jeden Slot doppelt belegt."""
+    tz = ZoneInfo(config.PUBLISH_TIMEZONE)
+    today = datetime.now(tz).date()
+    ch = youtube.channels().list(part="contentDetails", mine=True).execute()
+    uploads = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    items = youtube.playlistItems().list(part="contentDetails", playlistId=uploads, maxResults=50).execute().get("items", [])
+    ids = [i["contentDetails"]["videoId"] for i in items]
+    found = []
+    for k in range(0, len(ids), 50):
+        vids = youtube.videos().list(part="status,snippet", id=",".join(ids[k:k + 50])).execute().get("items", [])
+        for v in vids:
+            if v["id"] in own_ids:
+                continue
+            when = v["status"].get("publishAt") or v["snippet"].get("publishedAt")
+            if not when:
+                continue
+            d = datetime.strptime(when[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc).astimezone(tz).date()
+            if d == today:
+                found.append(v["snippet"]["title"])
+    return found
+
+
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--force", action="store_true", help="Doppel-Upload-Schutz ueberspringen")
     parser.add_argument("--dir", type=str, default=None, help="Pfad zum Lauf-Ordner (Default: neuester)")
     parser.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None)
     parser.add_argument("--only", choices=["all", "shorts", "longform"], default="all")
@@ -159,6 +185,28 @@ def main():
 
     print("Pruefe auf nachzuholende Kommentare aelterer Uploads...")
     _post_pending_comments(youtube)
+
+    # Doppel-Upload-Schutz: Hat heute schon ein anderes System den Kanal befuellt, nichts hochladen.
+    if use_spread and not args.force and any(not i.get("uploaded") for i in manifest):
+        own_ids = {i.get("youtube_id") for i in manifest if i.get("youtube_id")}
+        try:
+            foreign = _foreign_videos_today(youtube, own_ids)
+        except Exception as e:
+            foreign = []
+            print(f"WARNUNG: Doppel-Upload-Pruefung fehlgeschlagen ({e}) - lade trotzdem hoch.")
+        limit = getattr(config, "FOREIGN_UPLOADS_LIMIT", 3)
+        if len(foreign) >= limit:
+            msg = (f"{len(foreign)} Videos fuer heute stammen nicht aus dieser Cloud-Pipeline "
+                   f"(z.B. '{foreign[0]}'). Vermutlich laeuft noch die alte lokale Windows-Aufgabe "
+                   f"(run_daily.bat) auf einem anderen PC. Dieser Lauf laedt deshalb NICHTS hoch, "
+                   f"damit kein Slot doppelt belegt wird. Bitte die lokale Aufgabe deaktivieren.")
+            print("DOPPEL-UPLOAD-SCHUTZ: " + msg)
+            try:
+                from notify import send_alert
+                send_alert("Psychologie-Kanal: zweite Upload-Pipeline aktiv", msg)
+            except Exception as e:
+                print(f"  (Alarm-Mail nicht gesendet: {e})")
+            return
 
     changed = False
     for i, item in enumerate(manifest):
