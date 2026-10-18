@@ -1,56 +1,87 @@
 {
-  "generated_at": "2026-10-15T09:52:31.263172",
+  "generated_at": "2026-10-18T20:24:12.588946",
   "lookback_days": 14,
   "top": [
     {
       "video_id": "7e3O8682JL4",
       "title": "Die Summe, die zeigt was taegliche Bequemlichkeit dich im Jahr kostet",
-      "views": 58,
-      "retention": 42.2
+      "views": 74,
+      "retention": 37.1
     },
     {
       "video_id": "S1sx0ucsngA",
       "title": "3 Zahlen, die zeigen ob dein Haushaltsbuch dich wirklich ehrlich macht",
-      "views": 35,
+      "views": 45,
       "retention": 35.3
-    },
-    {
-      "video_id": "ALOI3JnX3cg",
-      "title": "Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist",
-      "views": 34,
-      "retention": 53.4
     },
     {
       "video_id": "BAtIWlEwS5U",
       "title": "Warum dein Gehirn bei 'nur heute' sofort die Kontrolle verliert",
-      "views": 31,
-      "retention": 37.7
+      "views": 38,
+      "retention": 44.7
+    },
+    {
+      "video_id": "1cIAheVF2GE",
+      "title": "Warum ein hoher Dispo-Zins dich kaum noch schockt",
+      "views": 38,
+      "retention": 33.8
+    },
+    {
+      "video_id": "ALOI3JnX3cg",
+      "title": "Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist",
+      "views": 36,
+      "retention": 53.4
     },
     {
       "video_id": "v3BM_vJx9h4",
       "title": "3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist",
-      "views": 28,
-      "retention": 20.0
+      "views": 32,
+      "retention": 16.4
     },
     {
-      "video_id": "Ds52d0Gkww0",
-      "title": "Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst",
-      "views": 9,
-      "retention": 32.2
+      "video_id": "1mUB3hQRGLE",
+      "title": "Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet",
+      "views": 30,
+      "retention": 36.5
     },
     {
-      "video_id": "pHJUhj3BVlM",
-      "title": "3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst",
-      "views": 6,
-      "retention": 103.3
-    },
-    {
-      "video_id": "kHoNBNXeaTU",
-      "title": "3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist",
-      "views": 4,
-      "retention": 10.2
+      "video_id": "cM95Ylo3GMw",
+      "title": "3 Anzeichen, dass du dir dein Geld selbst wegorganisierst",
+      "views": 27,
+      "retention": 29.1
     }
   ],
-  "flop": [],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Die Summe, die zeigt was taegliche Bequemlichkeit dich im Jahr kostet\" (58 Views, 42.2% Bindung)\n- \"3 Zahlen, die zeigen ob dein Haushaltsbuch dich wirklich ehrlich macht\" (35 Views, 35.3% Bindung)\n- \"Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist\" (34 Views, 53.4% Bindung)\n- \"Warum dein Gehirn bei 'nur heute' sofort die Kontrolle verliert\" (31 Views, 37.7% Bindung)\n- \"3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist\" (28 Views, 20.0% Bindung)\n- \"Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst\" (9 Views, 32.2% Bindung)\n- \"3 Sekunden, die entscheiden ob du ein Schnäppchen für gut hältst\" (6 Views, 103.3% Bindung)\n- \"3 Zahlen, die verraten ob ein Kredit wirklich guenstig ist\" (4 Views, 10.2% Bindung)"
+  "flop": [
+    {
+      "video_id": "vdnEX8yRpKQ",
+      "title": "Warum du bei 'nur noch 2 verfuegbar' sofort nervoes wirst",
+      "views": 16,
+      "retention": 18.8
+    },
+    {
+      "video_id": "HhZ7puwzZoU",
+      "title": "Die Zahl, die zeigt wie teuer Unentschlossenheit beim Sparen ist",
+      "views": 24,
+      "retention": 51.5
+    },
+    {
+      "video_id": "cM95Ylo3GMw",
+      "title": "3 Anzeichen, dass du dir dein Geld selbst wegorganisierst",
+      "views": 27,
+      "retention": 29.1
+    },
+    {
+      "video_id": "1mUB3hQRGLE",
+      "title": "Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet",
+      "views": 30,
+      "retention": 36.5
+    },
+    {
+      "video_id": "v3BM_vJx9h4",
+      "title": "3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist",
+      "views": 32,
+      "retention": 16.4
+    }
+  ],
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Die Summe, die zeigt was taegliche Bequemlichkeit dich im Jahr kostet\" (74 Views, 37.1% Bindung)\n- \"3 Zahlen, die zeigen ob dein Haushaltsbuch dich wirklich ehrlich macht\" (45 Views, 35.3% Bindung)\n- \"Warum dein Gehirn bei 'nur heute' sofort die Kontrolle verliert\" (38 Views, 44.7% Bindung)\n- \"Warum ein hoher Dispo-Zins dich kaum noch schockt\" (38 Views, 33.8% Bindung)\n- \"Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist\" (36 Views, 53.4% Bindung)\n- \"3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist\" (32 Views, 16.4% Bindung)\n- \"Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet\" (30 Views, 36.5% Bindung)\n- \"3 Anzeichen, dass du dir dein Geld selbst wegorganisierst\" (27 Views, 29.1% Bindung)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du bei 'nur noch 2 verfuegbar' sofort nervoes wirst\" (16 Views, 18.8% Bindung)\n- \"Die Zahl, die zeigt wie teuer Unentschlossenheit beim Sparen ist\" (24 Views, 51.5% Bindung)\n- \"3 Anzeichen, dass du dir dein Geld selbst wegorganisierst\" (27 Views, 29.1% Bindung)\n- \"Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet\" (30 Views, 36.5% Bindung)\n- \"3 Zahlen, die verraten ob dein Abo-Dschungel schon ausser Kontrolle ist\" (32 Views, 16.4% Bindung)"
 }
