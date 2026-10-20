@@ -35,13 +35,17 @@ _SYSTEM_PROMPT = """Du bist Autor fuer einen YouTube-Kanal mit folgender Ausrich
 Rufe das Tool "submit_facts" GENAU EINMAL auf, mit allen angeforderten Fakten darin.
 
 Pro Fakt:
-- "title": YouTube-Titel, max. 90 Zeichen, neugierig machend, kein Clickbait der nicht eingeloest wird
+- "title": YouTube-Titel, HOECHSTENS 60 Zeichen, beschreibt eine konkrete Alltagssituation des
+  Zuschauers in der Du-Form (z.B. "Warum du beim Luegen die Haende versteckst",
+  "Dein Gehirn erkennt falsches Laecheln sofort"). Keine abstrakten Fakten ohne Alltagsbezug,
+  kein Clickbait der nicht eingeloest wird
 - "thumbnail_text": SEHR kurze knackige Kernaussage fuers Titelbild, 2-5 Woerter,
   komplett anders formuliert als der Titel (keine Wiederholung), wirkt wie ein Schlagwort
   (z.B. "DEIN GEHIRN LUEGT", "DER 5-EURO-FEHLER")
 - "hook": der allererste gesprochene Satz (max 12 Woerter), muss in 2 Sekunden fesseln
-- "script": der komplette gesprochene Text (inkl. hook am Anfang), 130-170 Woerter,
-  natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz
+- "script": der komplette gesprochene Text (inkl. hook am Anfang), 155-185 Woerter (Ziel: 55-62 Sekunden),
+  natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz,
+  der inhaltlich wieder zum Hook passt, sodass das Video beim Wiederholen nahtlos weiterlaeuft
   (kein "abonniere" o.ae. - das wird separat hinzugefuegt). Ein einziger Absatz, keine
   Zeilenumbrueche.
 - "description": YouTube-Beschreibung, 2-3 Saetze + 4-6 relevante Hashtags
@@ -54,8 +58,12 @@ Pro Fakt:
   (z.B. "human brain", "person thinking", "city night walk", "hands typing phone")
 
 Abwechslung ist Pflicht - die Videos duerfen NICHT wie aus einer Schablone wirken:
-- Variiere die Titel-Formulierung: nicht jeder Titel darf mit "Warum du..." oder
-  "Der Grund, warum..." beginnen. Nutze auch Fragen, Zahlen ("3 Sekunden, die..."),
+- Themen-Schwerpunkt (Robin 20.10.2026, aus den Kanal-Zahlen): mindestens 4 von 6 Fakten aus
+  Koerpersprache, Luegen erkennen, Beruehrung, Mimik/Laecheln, Stimme und soziale Situationen
+  (erste Eindruecke, Fremde, Gruppen, Naehe). Diese Themen laufen auf dem Kanal mit Abstand am
+  besten. Der Rest gemischt aus Alltagspsychologie.
+- Variiere die Titel-Formulierung: hoechstens die Haelfte der Titel darf mit "Warum du..."
+  beginnen. Nutze auch Fragen, Zahlen ("3 Sekunden, die..."),
   Behauptungen ("Dein Gehirn glaubt...") oder kurze Aussagen.
 - Variiere den Aufbau der Skripte innerhalb eines Batches: z.B. Mythos vs. Fakt,
   Alltagsszene -> Erklaerung, Kennst-du-das?-Einstieg, ueberraschende Zahl zuerst,

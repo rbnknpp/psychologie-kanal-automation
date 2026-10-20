@@ -59,8 +59,9 @@ THUMBNAIL_COLORS = ("0a0a2a", "2d1b4e")
 THUMBNAIL_ACCENT_COLOR = "#b98cff"
 THUMBNAIL_EMOJI = "🧠"
 
-# Anzahl Shorts pro Tag (mehr = mehr "Lottery Tickets" fuer den Algorithmus)
-SHORTS_PER_RUN = 10
+# Anzahl Shorts pro Tag. Robin 20.10.2026: von 10 auf 6 gesenkt - nach den Doppel-Uploads vom
+# 15./16.10. lieber weniger, dafuer staerkere Shorts, bis die Aufrufe wieder stabil sind.
+SHORTS_PER_RUN = 6
 
 # Longform-Kompilation: bekommt EIGENE, andere Fakten als die Shorts (kein
 # Wiederverwerten). Start-Anzahl an Fakten, danach werden bei Bedarf weitere
@@ -82,8 +83,8 @@ YOUTUBE_TOKEN_FILE = ROOT / "token.json"
 # Liegt eine Zeit in der Vergangenheit (z.B. Taskplaner lief spaeter als
 # gedacht), wird das jeweilige Video stattdessen sofort veroeffentlicht.
 PUBLISH_TIMEZONE = "Europe/Berlin"
-# Der Lauf startet um 08:00 und braucht mit 10 Shorts gut 1,5 Stunden, daher erst ab 10:00.
-PUBLISH_TIMES = ["10:00", "11:15", "12:30", "13:45", "15:00", "16:15", "17:30", "18:45", "20:00", "21:15", "21:45"]
+# Der Lauf startet frueh und braucht gut eine Stunde, daher erst ab 10:00.
+PUBLISH_TIMES = ["10:00", "12:00", "14:00", "16:00", "18:00", "19:30", "21:00"]
 
 # Untertitel-Upload kostet 400 Kontingent-Einheiten pro Video. Bei Shorts sind die
 # Untertitel ohnehin eingebrannt, daher dort weglassen - sonst reicht das Tageskontingent
