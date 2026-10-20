@@ -59,6 +59,10 @@ THUMBNAIL_COLORS = ("0a0a2a", "2d1b4e")
 THUMBNAIL_ACCENT_COLOR = "#b98cff"
 THUMBNAIL_EMOJI = "🧠"
 
+# Buch zum Kanal (Robin 20.10.2026). Steht in jeder Beschreibung; sobald die Amazon-Partner-ID
+# da ist, hier ?tag=<partner-id> anhaengen und "(Werbung)" ergaenzen.
+BOOK_LINE = "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: https://www.amazon.de/dp/B0HNFH6PC4"
+
 # Anzahl Shorts pro Tag. Robin 20.10.2026: von 10 auf 6 gesenkt - nach den Doppel-Uploads vom
 # 15./16.10. lieber weniger, dafuer staerkere Shorts, bis die Aufrufe wieder stabil sind.
 SHORTS_PER_RUN = 6

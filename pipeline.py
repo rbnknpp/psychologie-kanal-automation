@@ -42,7 +42,7 @@ def _fmt_timestamp(seconds: float) -> str:
 
 
 def _cross_link_line() -> str:
-    return f"Mehr zu {config.OTHER_CHANNEL_NAME}: {config.OTHER_CHANNEL_URL}"
+    return f"{config.BOOK_LINE}\n\nMehr zu {config.OTHER_CHANNEL_NAME}: {config.OTHER_CHANNEL_URL}"
 
 
 def _render_short(fact, item_dir):
