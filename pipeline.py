@@ -13,7 +13,7 @@ import re
 
 import config
 import state
-from content.script_generator import generate_facts
+from content.script_generator import generate_facts, generate_longform_theme
 from tts.edge_tts_engine import synthesize
 from video.captions import build_ass
 from video.stock_footage import fetch_clips
@@ -109,11 +109,13 @@ def run_longform(run_dir, extra_avoid: list[str] = None, out_name: str = "compil
     cursor = intro_duration
     batch_size = config.LONGFORM_FACTS_START
     all_used_titles = list(extra_avoid or [])
+    theme = generate_longform_theme(state.load().get("used_longform_themes", [])[-60:])
+    print(f"Oberthema: {theme['theme']} | Titel: {theme['title']}")
 
     while total_duration < config.LONGFORM_MIN_DURATION_SECONDS and len(longform_facts) < config.LONGFORM_MAX_FACTS:
         remaining_budget = config.LONGFORM_MAX_FACTS - len(longform_facts)
         n = min(batch_size, remaining_budget)
-        new_facts = generate_facts(n, extra_avoid=all_used_titles)
+        new_facts = generate_facts(n, extra_avoid=all_used_titles, theme=theme["theme"])
         all_used_titles += [f["title"] for f in new_facts]
 
         for fact in new_facts:
@@ -143,7 +145,7 @@ def run_longform(run_dir, extra_avoid: list[str] = None, out_name: str = "compil
     titles = ", ".join(f["title"] for f in longform_facts)
     hashtag = config.NICHE_LABEL.lower().replace(" ", "")
     thumb_path = run_dir / f"{out_name}_thumbnail.jpg"
-    build_thumbnail(f"{len(longform_facts)} {config.NICHE_LABEL}-Fakten", str(thumb_path))
+    build_thumbnail(theme["thumbnail_text"], str(thumb_path))
 
     srt_path = run_dir / f"{out_name}.srt"
     build_srt(all_words, str(srt_path))
@@ -151,8 +153,9 @@ def run_longform(run_dir, extra_avoid: list[str] = None, out_name: str = "compil
     chapters_block = "\n".join(f"{_fmt_timestamp(t)} {label}" for t, label in chapters)
 
     compilation_meta = {
-        "title": f"{len(longform_facts)} faszinierende {config.NICHE_LABEL}-Fakten, die du kennen solltest",
+        "title": theme["title"][:100],
         "description": (
+            f"{theme['description']}\n\n"
             f"In diesem Video: {titles}.\n\n"
             f"Kapitel:\n{chapters_block}\n\n"
             f"{_cross_link_line()}\n\n"
@@ -163,13 +166,16 @@ def run_longform(run_dir, extra_avoid: list[str] = None, out_name: str = "compil
         "video_path": str(compilation_out),
         "thumbnail_path": str(thumb_path),
         "srt_path": str(srt_path),
-        "comment_prompt": f"Welcher der {len(longform_facts)} Fakten hat dich am meisten überrascht? Schreib's in die Kommentare! 👇",
+        "comment_prompt": theme["comment_prompt"],
     }
     (run_dir / f"{out_name}_metadata.json").write_text(
         json.dumps(compilation_meta, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     state.record_facts(longform_facts)
+    st = state.load()
+    st["used_longform_themes"] = (st.get("used_longform_themes", []) + [theme["theme"]])[-100:]
+    state.save(st)
 
     print(f"Fertig. Longform-Video ({len(longform_facts)} Fakten, {total_duration/60:.1f} Min) in {compilation_out}")
     return compilation_meta, longform_facts

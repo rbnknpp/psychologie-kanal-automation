@@ -35,7 +35,7 @@ _SYSTEM_PROMPT = """Du bist Autor fuer einen YouTube-Kanal mit folgender Ausrich
 Rufe das Tool "submit_facts" GENAU EINMAL auf, mit allen angeforderten Fakten darin.
 
 Pro Fakt:
-- "title": YouTube-Titel, HOECHSTENS 60 Zeichen, beschreibt eine konkrete Alltagssituation des
+- "title": YouTube-Titel, max. 90 Zeichen, beschreibt eine konkrete Alltagssituation des
   Zuschauers in der Du-Form (z.B. "Warum du beim Luegen die Haende versteckst",
   "Dein Gehirn erkennt falsches Laecheln sofort"). Keine abstrakten Fakten ohne Alltagsbezug,
   kein Clickbait der nicht eingeloest wird
@@ -43,7 +43,7 @@ Pro Fakt:
   komplett anders formuliert als der Titel (keine Wiederholung), wirkt wie ein Schlagwort
   (z.B. "DEIN GEHIRN LUEGT", "DER 5-EURO-FEHLER")
 - "hook": der allererste gesprochene Satz (max 12 Woerter), muss in 2 Sekunden fesseln
-- "script": der komplette gesprochene Text (inkl. hook am Anfang), 155-185 Woerter (Ziel: 55-62 Sekunden),
+- "script": der komplette gesprochene Text (inkl. hook am Anfang), 170-205 Woerter (Ziel: 60-75 Sekunden - kuerzere Shorts laufen auf dem Kanal deutlich schlechter),
   natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz,
   der inhaltlich wieder zum Hook passt, sodass das Video beim Wiederholen nahtlos weiterlaeuft
   (kein "abonniere" o.ae. - das wird separat hinzugefuegt). Ein einziger Absatz, keine
@@ -58,7 +58,7 @@ Pro Fakt:
   (z.B. "human brain", "person thinking", "city night walk", "hands typing phone")
 
 Abwechslung ist Pflicht - die Videos duerfen NICHT wie aus einer Schablone wirken:
-- Themen-Schwerpunkt (Robin 20.10.2026, aus den Kanal-Zahlen): mindestens 4 von 6 Fakten aus
+- Themen-Schwerpunkt (Robin 20.10.2026, aus den Kanal-Zahlen): mindestens 60 % der Fakten aus
   Koerpersprache, Luegen erkennen, Beruehrung, Mimik/Laecheln, Stimme und soziale Situationen
   (erste Eindruecke, Fremde, Gruppen, Naehe). Diese Themen laufen auf dem Kanal mit Abstand am
   besten. Der Rest gemischt aus Alltagspsychologie.
@@ -113,7 +113,7 @@ _REQUIRED_FIELDS = {
 }
 
 
-def _request_facts(client, n, avoid_block):
+def _request_facts(client, n, avoid_block, theme=None):
     # Grosszuegiges Token-Budget pro Fakt (Skript + Meta-Felder + JSON-Overhead),
     # damit die Tool-Antwort bei groesseren Batches (Longform) nicht abgeschnitten wird.
     max_tokens = min(64000, 1500 + n * 1200)
@@ -128,7 +128,7 @@ def _request_facts(client, n, avoid_block):
         ),
         tools=[_TOOL],
         tool_choice={"type": "tool", "name": "submit_facts"},
-        messages=[{"role": "user", "content": f"Erzeuge {n} neue, unterschiedliche Fakten.\n\n{avoid_block}"}],
+        messages=[{"role": "user", "content": f"Erzeuge {n} neue, unterschiedliche Fakten.\n\n{_theme_block(theme)}{avoid_block}"}],
     )
 
     if resp.stop_reason == "max_tokens":
@@ -150,7 +150,20 @@ def _request_facts(client, n, avoid_block):
     return facts
 
 
-def generate_facts(n: int, max_attempts: int = 3, extra_avoid: list[str] = None) -> list[dict]:
+def _theme_block(theme):
+    """Langes Video: alle Fakten zu EINEM Oberthema (Robin 20.10.2026 - keine Sammelvideos mehr,
+    die wie aus der Schablone wirken; siehe YouTube-Richtlinie zu "inauthentic content")."""
+    if not theme:
+        return ""
+    return (
+        f"Alle Fakten gehoeren zu EINEM langen Video mit dem Oberthema: {theme}\n"
+        "Jeder Fakt beleuchtet einen ANDEREN Aspekt dieses Themas (keine Ueberschneidungen), sie bauen "
+        "logisch aufeinander auf (vom Bekannten zum Ueberraschenden). Der Hook ist hier ein Kapiteleinstieg, "
+        "kein Clickbait. Die Themen-Schwerpunkt-Regel fuer Shorts gilt hier nicht.\n\n"
+    )
+
+
+def generate_facts(n: int, max_attempts: int = 3, extra_avoid: list[str] = None, theme: str = None) -> list[dict]:
     """Fragt Claude nach n neuen, bisher ungenutzten Fakten-Skripten (mit Retry).
 
     `extra_avoid` sind zusaetzliche Titel (z.B. die in diesem Lauf bereits fuer
@@ -173,12 +186,63 @@ def generate_facts(n: int, max_attempts: int = 3, extra_avoid: list[str] = None)
     last_error = None
     for attempt in range(1, max_attempts + 1):
         try:
-            return _request_facts(client, n, avoid_block)
+            return _request_facts(client, n, avoid_block, theme)
         except ValueError as e:
             last_error = e
             print(f"  Versuch {attempt}/{max_attempts} fehlgeschlagen: {e}")
 
     raise RuntimeError(f"Skriptgenerierung nach {max_attempts} Versuchen fehlgeschlagen: {last_error}")
+
+
+_THEME_TOOL = {
+    "name": "submit_theme",
+    "description": "Reicht das Oberthema fuer das heutige lange Video ein.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "theme": {"type": "string"},
+            "title": {"type": "string"},
+            "thumbnail_text": {"type": "string"},
+            "description": {"type": "string"},
+            "comment_prompt": {"type": "string"},
+        },
+        "required": ["theme", "title", "thumbnail_text", "description", "comment_prompt"],
+    },
+}
+
+
+def generate_longform_theme(avoid: list[str] = None) -> dict:
+    """Waehlt EIN Oberthema fuer das lange Video (10-13 Min) mit eigenem Titel und Thumbnail-Text.
+    Robin 20.10.2026: jedes lange Video ist ein eigenstaendiges Thema statt "13 faszinierende Fakten"."""
+    client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY)
+    avoid_txt = "\n".join(f"- {t}" for t in (avoid or [])) or "- (noch keine)"
+    system = f"""Du planst das heutige lange Video (10-13 Minuten) fuer diesen YouTube-Kanal:
+{config.NICHE_DESCRIPTION}
+{_performance_block()}
+Rufe das Tool "submit_theme" GENAU EINMAL auf mit:
+- "theme": das Oberthema in einem Satz, konkret und alltagsnah (z. B. "Luegen erkennen: welche Signale
+  wirklich etwas verraten und welche Mythen sind", "Warum wir Fremden vertrauen oder misstrauen",
+  "Die Psychologie des Geldausgebens"). Bevorzugt Koerpersprache/Mimik/Beruehrung, soziale Situationen
+  und Geld-Psychologie - diese Themen laufen auf dem Kanal am besten bzw. haben die hoechsten Werbepreise.
+- "title": YouTube-Titel, max. 80 Zeichen, eigenstaendig und suchbar, KEINE Zahl der Fakten, keine
+  Schablonen wie "faszinierende Fakten".
+- "thumbnail_text": 2-5 Woerter, anders formuliert als der Titel.
+- "description": 2-3 Saetze, worum es geht und was man danach kann, + 4-6 Hashtags.
+- "comment_prompt": eine konkrete Frage zum Thema fuers erste Kommentar (max. 15 Woerter).
+Nichts erfinden, keine medizinischen Ratschlaege. Sprache: {config.CHANNEL_LANGUAGE}.
+Diese Oberthemen gab es schon (nicht wiederholen, auch nicht umformuliert):
+{avoid_txt}"""
+    for attempt in range(1, 4):
+        resp = client.messages.create(
+            model=config.ANTHROPIC_MODEL, max_tokens=1500, system=system,
+            tools=[_THEME_TOOL], tool_choice={"type": "tool", "name": "submit_theme"},
+            messages=[{"role": "user", "content": "Plane das heutige lange Video."}],
+        )
+        call = next((b for b in resp.content if b.type == "tool_use"), None)
+        if call and all(call.input.get(k) for k in _THEME_TOOL["input_schema"]["required"]):
+            return dict(call.input)
+        print(f"  Oberthema Versuch {attempt}/3 unvollstaendig")
+    raise RuntimeError("Kein Oberthema fuer das lange Video erhalten")
 
 
 _TRAILER_TOOL = {
