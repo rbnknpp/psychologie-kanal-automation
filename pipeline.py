@@ -23,6 +23,7 @@ from video.intro import get_or_build_intro
 from video.srt import build_srt
 from content.hypnosis_script import generate_hypnosis_script
 from video.hypnosis import build_voice_track, build_still, render_hypnosis
+from video.ambient_music import build_music_loop
 
 
 SHORT_CLIP_SECONDS = 10      # ein Hintergrund-Clip pro ~10s Short
@@ -222,23 +223,29 @@ def run(shorts_n: int = None, skip_longform: bool = False):
         print(f"Ohne langes Video. Fertig, {shorts_n} Short(s) in {run_dir}")
         return run_dir
 
-    # --- Langes Video: am Hypnose-Tag die Einschlaf-Hypnose, sonst Fakten-Kompilation
-    if datetime.date.today().weekday() == config.HYPNOSIS_WEEKDAY:
-        print("[3/3] Hypnose-Video (ersetzt heute das Longform-Video)...")
-        long_meta = run_hypnosis(run_dir)
-        longform_facts = []
-    else:
-        print("[3/3] Longform-Video...")
-        long_meta, longform_facts = run_longform(
-            run_dir, extra_avoid=[f["title"] for f in shorts_facts]
-        )
+    # --- Langes Video (Themen-Deep-Dive) jeden Tag
+    print("[3/3] Longform-Video...")
+    long_meta, longform_facts = run_longform(
+        run_dir, extra_avoid=[f["title"] for f in shorts_facts]
+    )
     manifest.append(long_meta)
-
     (run_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    print(f"Fertig. {shorts_n} Shorts + 1 langes Video in {run_dir}")
+    # --- Entspannungsvideo zusaetzlich an den Hypnose-Tagen. Schlaegt es fehl, bleiben
+    # Shorts und langes Video trotzdem hochladbar.
+    if datetime.date.today().weekday() in config.HYPNOSIS_WEEKDAYS:
+        print("[+] Entspannungsvideo (1-2 Std)...")
+        try:
+            manifest.append(run_hypnosis(run_dir))
+            (run_dir / "manifest.json").write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+        except Exception as e:
+            print(f"  Entspannungsvideo fehlgeschlagen, wird heute ausgelassen: {e}")
+
+    print(f"Fertig. {shorts_n} Shorts + {len(manifest) - shorts_n} lange(s) Video(s) in {run_dir}")
     return run_dir
 
 
@@ -262,19 +269,21 @@ def run_hypnosis(run_dir, total_seconds: int = None, script: dict = None) -> dic
     if voice_end > total_seconds - 180:
         total_seconds = int(voice_end + 600)  # Stimme nie abschneiden, danach mind. 10 Min Klang
     still = build_still(script["thumbnail_text"], work / "still.jpg")
+    music = build_music_loop(work / "music.wav", seed=script["theme"])
     out = run_dir / "hypnosis.mp4"
     print(f"  Rendere {total_seconds // 60} Min (Stimme bis {voice_end / 60:.1f} Min)...")
-    render_hypnosis(voice, still, out, total_seconds, lead_in=lead_in)
+    render_hypnosis(voice, still, out, total_seconds, lead_in=lead_in, music=music)
 
     # Das ruhige Standbild ist auch das Thumbnail (passt besser als der laute Fakten-Stil)
     thumb = still
     chapter_lines = ["00:00 Ankommen"] + [
         f"{_fmt_timestamp(t + lead_in)} {label}" for t, label in chapters if t > 0
-    ] + [f"{_fmt_timestamp(voice_end + 5)} Nur Klänge zum Weiterschlafen"]
+    ] + [f"{_fmt_timestamp(voice_end + 5)} Nur noch Musik zum Weiterschlafen"]
     minutes = total_seconds // 60
+    hours = f"{minutes // 60} Std" if minutes % 60 == 0 else f"{minutes} Min"
     title = script["title"].strip()
-    if "hypnose" not in title.lower():
-        title = f"{title} | {minutes} Min Hypnose zum Einschlafen"
+    if "hypnose" not in title.lower() and "entspann" not in title.lower():
+        title = f"{title} | {hours} Entspannung & Einschlafen"
     meta = {
         "title": title[:100],
         "description": (
@@ -282,7 +291,7 @@ def run_hypnosis(run_dir, total_seconds: int = None, script: dict = None) -> dic
             f"Kapitel:\n" + "\n".join(chapter_lines) + "\n\n"
             "Hinweis: Nicht beim Autofahren oder Bedienen von Maschinen anhören. "
             "Diese Entspannung ersetzt keine ärztliche oder therapeutische Behandlung. "
-            "Stimme und Klänge sind KI-generiert.\n\n"
+            "Stimme und Musik sind KI-generiert.\n\n"
             f"{_cross_link_line()}\n\n#einschlafen #hypnose #entspannung #schlafen"
         ),
         "tags": sorted(set(script.get("tags", []) + ["einschlafen", "hypnose", "entspannung", "schlaf", "meditation"]))[:30],
@@ -290,6 +299,7 @@ def run_hypnosis(run_dir, total_seconds: int = None, script: dict = None) -> dic
         "video_path": str(out),
         "thumbnail_path": str(thumb),
         "playlist": config.HYPNOSIS_PLAYLIST_NAME,
+        "publish_time": config.HYPNOSIS_PUBLISH_TIME,
         "comment_prompt": "Bei welcher Stelle bist du eingeschlafen? 🌙",
     }
     (run_dir / "hypnosis_metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -94,10 +94,12 @@ PUBLISH_TIMES = ["10:00", "11:15", "12:30", "13:45", "15:00", "16:15", "17:30", 
 # (10.000, geteilt mit dem Finanz-Kanal im selben Google-Projekt) nicht fuer 10 Shorts.
 UPLOAD_CAPTIONS_FOR_SHORTS = False
 
-# Einschlaf-Hypnose: ersetzt an einem Wochentag das 10-Minuten-Video (Robin, 06.10.2026)
-HYPNOSIS_WEEKDAY = 6               # 0 = Montag ... 6 = Sonntag
-HYPNOSIS_TOTAL_SECONDS = 60 * 60   # Videolaenge inkl. Klangteil nach der Stimme
-HYPNOSIS_SCRIPT_WORDS = 2600       # ca. 25 Min gesprochener Text bei langsamer Stimme
+# Entspannungs-/Einschlafvideo: kommt an diesen Tagen ZUSAETZLICH zum taeglichen langen Video
+# (Robin 20.10.2026: mind. 1-2 Std, beruhigende Musik mit Melodie + sanfte Stimme)
+HYPNOSIS_WEEKDAYS = [2, 6]         # 0 = Montag ... 6 = Sonntag -> Mittwoch + Sonntag
+HYPNOSIS_TOTAL_SECONDS = 2 * 60 * 60   # Videolaenge; nach der Stimme laeuft die Musik weiter
+HYPNOSIS_SCRIPT_WORDS = 3600       # ca. 35-45 Min gesprochener Text inkl. Pausen
+HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
 HYPNOSIS_VOICE = os.getenv("HYPNOSIS_VOICE", "de-DE-KatjaNeural")
 HYPNOSIS_RATE = "-25%"
 HYPNOSIS_PITCH = "-6Hz"

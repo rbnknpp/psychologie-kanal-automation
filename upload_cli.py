@@ -71,15 +71,17 @@ def _write_manifest(run_dir: Path, manifest: list) -> None:
     )
 
 
-def _compute_publish_at(index: int) -> str | None:
-    """Naechster passender Zeitpunkt aus config.PUBLISH_TIMES (RFC3339 UTC) oder
+def _compute_publish_at(index: int, hhmm: str = None) -> str | None:
+    """Naechster passender Zeitpunkt aus config.PUBLISH_TIMES (oder hhmm) als RFC3339 UTC,
     None, wenn kein Slot mehr uebrig oder der Slot heute schon vorbei ist."""
-    if index >= len(config.PUBLISH_TIMES):
-        return None
+    if hhmm is None:
+        if index >= len(config.PUBLISH_TIMES):
+            return None
+        hhmm = config.PUBLISH_TIMES[index]
 
     tz = ZoneInfo(config.PUBLISH_TIMEZONE)
     now_local = datetime.now(tz)
-    hh, mm = map(int, config.PUBLISH_TIMES[index].split(":"))
+    hh, mm = map(int, hhmm.split(":"))
     target_local = now_local.replace(hour=hh, minute=mm, second=0, microsecond=0)
 
     if target_local <= now_local:
@@ -220,6 +222,8 @@ def main():
 
         # Das taegliche Longform-Video (>= 10 Min) geht sofort live; nur die Shorts werden gestaffelt.
         publish_at = _compute_publish_at(i) if (use_spread and item["is_short"]) else None
+        if use_spread and item.get("publish_time"):  # z. B. Entspannungsvideo abends
+            publish_at = _compute_publish_at(i, item["publish_time"])
 
         print(f"Lade hoch: {item['title']}" + (f" (geplant: {publish_at})" if publish_at else ""))
         video_id = upload(

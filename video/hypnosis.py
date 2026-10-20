@@ -104,13 +104,37 @@ def build_still(text: str, out: Path, size=(1920, 1080)) -> Path:
     return out
 
 
-def render_hypnosis(voice: Path, still: Path, out: Path, total_seconds: int, lead_in: float = 15.0) -> Path:
-    """Mischt Sprachspur ueber den Klangteppich und rendert das Video mit Standbild.
-    Klangteppich: braunes Rauschen (tiefpassgefiltert) + zwei sehr leise, langsam
-    schwebende Sinustoene. Einblenden 10 s, Ausblenden in den letzten 120 s."""
+def render_hypnosis(voice: Path, still: Path, out: Path, total_seconds: int, lead_in: float = 15.0,
+                    music: Path = None) -> Path:
+    """Mischt Sprachspur ueber Musik + leises Rauschen und rendert das Video mit Standbild.
+    music: nahtlose Schleife aus video.ambient_music (wird bis zur Ziellaenge wiederholt).
+    Ohne music: Rauschen + zwei schwebende Sinustoene. Einblenden 10 s, Ausblenden 120 s."""
     T = int(total_seconds)
     delay_ms = int(lead_in * 1000)
     fade_out_start = max(0, T - 120)
+    if music:
+        filter_complex = (
+            f"anoisesrc=color=brown:amplitude=0.5:sample_rate={SAMPLE_RATE}:duration={T},"
+            f"lowpass=f=380,volume=0.10,aformat=channel_layouts=stereo[noise];"
+            f"[2:a]aresample={SAMPLE_RATE},aformat=channel_layouts=stereo,volume=0.55[music];"
+            f"[1:a]adelay={delay_ms}|{delay_ms},volume=1.6,apad[voice];"
+            f"[noise][music][voice]amix=inputs=3:duration=first:normalize=0,"
+            f"afade=t=in:d=10,afade=t=out:st={fade_out_start}:d=120,alimiter=limit=0.9[a]"
+        )
+        _run([
+            "ffmpeg", "-y",
+            "-loop", "1", "-framerate", "2", "-i", str(still),
+            "-i", str(voice),
+            "-stream_loop", "-1", "-i", str(music),
+            "-filter_complex", filter_complex,
+            "-map", "0:v", "-map", "[a]",
+            "-t", str(T),
+            "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-crf", "26", "-pix_fmt", "yuv420p", "-r", "2",
+            "-c:a", "aac", "-b:a", "160k",
+            "-movflags", "+faststart",
+            str(out),
+        ])
+        return out
     filter_complex = (
         f"anoisesrc=color=brown:amplitude=0.5:sample_rate={SAMPLE_RATE}:duration={T},"
         f"lowpass=f=420,volume=0.30,aformat=channel_layouts=stereo[noise];"
