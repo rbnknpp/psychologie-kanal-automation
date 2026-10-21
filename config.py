@@ -59,9 +59,14 @@ THUMBNAIL_COLORS = ("0a0a2a", "2d1b4e")
 THUMBNAIL_ACCENT_COLOR = "#b98cff"
 THUMBNAIL_EMOJI = "🧠"
 
-# Buch zum Kanal (Robin 20.10.2026). Steht in jeder Beschreibung; sobald die Amazon-Partner-ID
-# da ist, hier ?tag=<partner-id> anhaengen und "(Werbung)" ergaenzen.
-BOOK_LINE = "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: https://www.amazon.de/dp/B0HNFH6PC4"
+# Buch zum Kanal (Robin 20.10.2026), steht in jeder Beschreibung. Seit 21.10.2026 als Amazon-Partnerlink
+# (PartnerNet-ID robinknapp-21) mit dem vorgeschriebenen Partner-Hinweis.
+AMAZON_TAG = "robinknapp-21"
+BOOK_LINE = (
+    "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: "
+    f"https://www.amazon.de/dp/B0HNFH6PC4?tag={AMAZON_TAG}\n"
+    "(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)"
+)
 
 # Anzahl Shorts pro Tag (Robin 20.10.2026: Menge bleibt hoch, um Aufrufe/Wiedergabezeit schnell zu sammeln)
 SHORTS_PER_RUN = 10
