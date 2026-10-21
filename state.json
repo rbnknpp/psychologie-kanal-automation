@@ -1,25 +1,5 @@
 {
   "used_titles": [
-    "3 Sekunden – so lange dauert dein erster Eindruck von einer Stimme",
-    "Dein Gehirn belohnt dich fürs Aufschieben, kurzfristig",
-    "Warum du beim Zuhören automatisch nickst, auch wenn du nicht zustimmst",
-    "Dein Gehirn hält dich für ehrlicher, wenn du laut denkst",
-    "Ein Fenster im Büro verändert, wie produktiv du dich fühlst",
-    "Warum du beim Warten auf eine SMS öfter aufs Handy schaust, als nötig",
-    "3 Sekunden entscheiden, ob ein Witz bei dir ankommt",
-    "Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden",
-    "Warum dir eine fremde Sprache im Hintergrund die Konzentration raubt",
-    "Ein Grund, warum du beim Lesen innerlich mitsprichst",
-    "Dein Gehirn traut einer tiefen Stimme automatisch mehr Autorität zu",
-    "Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät",
-    "Warum du beim Zuhören am Telefon trotzdem nickst",
-    "Dein Gehirn hasst unvollendete Sätze",
-    "3 Sekunden Blickkontakt verändern, wie nah du dich jemandem fühlst",
-    "Warum dir ein Geruch sofort eine ganze Erinnerung zurückbringt",
-    "Dein Gehirn macht aus Zufall ein Muster",
-    "Warum geliehenes Geld sich weniger real anfühlt",
-    "Ein Spiegel im Raum verändert, wie ehrlich du bist",
-    "Dein Gehirn mag Gesichter lieber leicht asymmetrisch",
     "Warum ein Kompliment vor Zeugen mehr wiegt",
     "Dein Gehirn verwechselt Wärme mit Vertrauen",
     "Warum du beim Zweifeln automatisch den Kopf schräg legst",
@@ -199,7 +179,30 @@
     "Warum du bei schlechten Nachrichten zuerst erstarrst",
     "Warum du beim Zuhören öfter den Kopf schief legst",
     "Dein Gehirn erkennt eine falsche Freundlichkeit an der Stimme",
-    "Warum du Fremden in einer Schlange fast nie ins Gesicht siehst"
+    "Warum du Fremden in einer Schlange fast nie ins Gesicht siehst",
+    "Warum du beim Flirten öfter die Augenbrauen hebst",
+    "Dein Gehirn hört Unsicherheit in deiner Stimme, bevor du sie fühlst",
+    "Warum dir ein Fremder beim Lächeln öfter vertraut vorkommt",
+    "3 Zentimeter Mundwinkel entscheiden, ob ein Lächeln echt wirkt",
+    "Warum du bei einem Streit lauter wirst, obwohl es nichts bringt",
+    "Warum dir enger Körperkontakt in der U-Bahn so unangenehm ist",
+    "Dein Gehirn merkt sich Gesichter besser, wenn sie etwas Besonderes haben",
+    "Warum du beim Zuhören öfter 'mhm' sagst, ohne es zu merken",
+    "Dein Gehirn braucht nur einen Blick, um Rangordnung einzuschätzen",
+    "3 Fragen reichen, damit sich ein Fremder dir näher fühlt",
+    "Warum du beim Bezahlen mit Karte lockerer wirst als mit Bargeld",
+    "Dein Blick verrät, wie viel Trinkgeld du geben willst, bevor du es weißt",
+    "Warum du beim Verhandeln automatisch leiser wirst, wenn du unsicher bist",
+    "Dein Gehirn hält runde Preise für ehrlicher als krumme",
+    "Warum du beim Geld zählen automatisch langsamer sprichst",
+    "Dein Gehirn traut einer festen Unterschrift mehr als einer zittrigen",
+    "Warum du beim Shoppen mit Freunden mehr Geld ausgibst",
+    "Dein Gehirn schätzt Preise anders ein, wenn du lächelst",
+    "Warum du beim Geldgeben die Handfläche unbewusst anders hältst",
+    "Dein Gehirn erinnert sich an teure Fehler emotionaler als an günstige"
   ],
-  "used_topics": []
+  "used_topics": [],
+  "used_longform_themes": [
+    "Wie Körpersprache und unbewusste Signale bei Geldentscheidungen (z.B. beim Verhandeln, Bezahlen, Trinkgeld geben) verraten, was wir wirklich denken"
+  ]
 }
