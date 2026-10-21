@@ -47,6 +47,57 @@ _TOOL = {
 }
 
 
+_MORE_TOOL = {
+    "name": "submit_more",
+    "description": "Gibt zusätzliche Abschnitte zurück, die vor dem Ausklang eingefügt werden.",
+    "input_schema": {
+        "type": "object",
+        "properties": {"sections": _TOOL["input_schema"]["properties"]["sections"]},
+        "required": ["sections"],
+    },
+}
+
+
+def _word_count(script: dict) -> int:
+    return sum(len(s.get("text", "").split()) for s in script.get("sections", []))
+
+
+def _extend(client, script: dict, words: int, rounds: int = 4) -> dict:
+    """Claude schreibt in einem Rutsch meist nur ~1.000 Woerter (21.10.2026: Stimme nur 10,5 Min).
+    Darum so lange weitere Vertiefungs-Abschnitte vor dem Ausklang einfuegen, bis ~85 % der Ziellaenge stehen."""
+    for r in range(rounds):
+        have = _word_count(script)
+        if have >= words * 0.85:
+            break
+        secs = script["sections"]
+        keep_end = min(3, max(1, len(secs) // 6))       # Ausklang bleibt am Ende
+        body, ending = secs[:-keep_end], secs[-keep_end:]
+        context = "\n\n".join(s["text"] for s in body[-3:])
+        need = min(1400, words - have)
+        try:
+            resp = client.messages.create(
+                model=config.ANTHROPIC_MODEL, max_tokens=8000,
+                system=_SYSTEM_PROMPT.format(channel=config.INTRO_CHANNEL_NAME, words=need, sections=max(6, need // 120),
+                                             sections_max=max(6, need // 120) + 6, avoid="keine"),
+                tools=[_MORE_TOOL], tool_choice={"type": "tool", "name": "submit_more"},
+                messages=[{"role": "user", "content": (
+                    f"Thema: {script.get('theme')}. Die Hypnose ist zu kurz. Schreibe etwa {need} weitere Wörter als neue "
+                    "Abschnitte, die nahtlos an diese Stelle anschließen und noch tiefer führen (Phase „Sicherer Ort“ und "
+                    "„Vertiefung“: mehr Sinneseindrücke, Atmung, Schwere, Wärme, langsames Zählen). Kein Ausklang, kein "
+                    f"Aufwecken – der Ausklang folgt danach.\n\nLetzte Abschnitte bisher:\n{context}")}],
+            )
+            call = next((b for b in resp.content if b.type == "tool_use"), None)
+            more = (call.input.get("sections") if call else None) or []
+        except Exception as e:
+            print(f"  Hypnose-Verlaengerung {r + 1} fehlgeschlagen: {e}")
+            break
+        if not more:
+            break
+        script["sections"] = body + more + ending
+        print(f"  Hypnose verlaengert: {have} -> {_word_count(script)} Woerter")
+    return script
+
+
 def generate_hypnosis_script(avoid_themes: list[str] | None = None, words: int = None, max_attempts: int = 3) -> dict:
     words = words or config.HYPNOSIS_SCRIPT_WORDS
     sections = max(8, words // 120)
@@ -73,7 +124,7 @@ def generate_hypnosis_script(avoid_themes: list[str] | None = None, words: int =
             script = call.input
             if len(script.get("sections", [])) < 5:
                 raise ValueError(f"Zu wenige Abschnitte: {len(script.get('sections', []))}")
-            return script
+            return _extend(client, script, words)
         except Exception as e:
             last_error = e
             print(f"  Hypnose-Skript Versuch {attempt}/{max_attempts} fehlgeschlagen: {e}")
