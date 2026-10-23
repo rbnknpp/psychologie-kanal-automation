@@ -257,7 +257,7 @@ def run_hypnosis(run_dir, total_seconds: int = None, script: dict = None) -> dic
     bis zur Ziellaenge -> Standbild-Video. Schreibt hypnosis.mp4 + Metadaten in run_dir."""
     total_seconds = total_seconds or config.HYPNOSIS_TOTAL_SECONDS
     used = json.loads(_HYPNOSIS_THEMES_FILE.read_text(encoding="utf-8")) if _HYPNOSIS_THEMES_FILE.exists() else []
-    script = script or generate_hypnosis_script(avoid_themes=used[-12:])
+    script = script or generate_hypnosis_script(avoid_themes=used[-45:])
     work = run_dir / "hypnosis"
     work.mkdir(parents=True, exist_ok=True)
     (work / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=2), encoding="utf-8")

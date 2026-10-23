@@ -101,7 +101,7 @@ UPLOAD_CAPTIONS_FOR_SHORTS = False
 
 # Entspannungs-/Einschlafvideo: kommt an diesen Tagen ZUSAETZLICH zum taeglichen langen Video
 # (Robin 20.10.2026: mind. 1-2 Std, beruhigende Musik mit Melodie + sanfte Stimme)
-HYPNOSIS_WEEKDAYS = [2, 6]         # 0 = Montag ... 6 = Sonntag -> Mittwoch + Sonntag
+HYPNOSIS_WEEKDAYS = [0, 1, 2, 3, 4, 5, 6]  # taeglich (Robin 23.10.2026: Einschlafvideos laufen am besten)
 HYPNOSIS_TOTAL_SECONDS = 2 * 60 * 60   # Videolaenge; nach der Stimme laeuft die Musik weiter
 HYPNOSIS_SCRIPT_WORDS = 3600       # ca. 35-45 Min gesprochener Text inkl. Pausen
 HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
