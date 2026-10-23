@@ -90,6 +90,17 @@ jobs:
           printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
           printf '%s' "$YT_TOKEN" > token.json
 
+      - name: Erfolgsmuster aus YouTube Analytics aktualisieren (letzte 10 Tage)
+        if: steps.guard.outputs.skip != 'true' && inputs.test != true
+        continue-on-error: true
+        env:
+          TOKEN_PSYCH: ${{ secrets.ANALYTICS_TOKEN_PSYCHOLOGIE }}
+          CI: "true"
+        run: |
+          cp client_secret.json report/client_secret.json
+          printf '%s' "$TOKEN_PSYCH" > report/token_psychologie.json
+          cd report && python performance_insights.py psychologie 10
+
       - name: Videos erzeugen
         if: steps.guard.outputs.skip != 'true'
         run: |
@@ -120,7 +131,7 @@ jobs:
         run: |
           git config user.name "daily-bot"
           git config user.email "daily-bot@users.noreply.github.com"
-          git add state.json fact_history.json playlists_cache.json hypnosis_themes.json affiliate_done.json 2>/dev/null || true
+          git add state.json fact_history.json playlists_cache.json hypnosis_themes.json affiliate_done.json performance_insights.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Tageszustand aktualisiert [skip ci]"
             git pull --rebase -q || true

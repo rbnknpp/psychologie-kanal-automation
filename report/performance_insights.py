@@ -5,6 +5,8 @@ beim naechsten Lauf als Zusatz-Anweisung liest.
 
 Laeuft als Teil von weekly_report.py mit, kann aber auch einzeln aufgerufen
 werden: python performance_insights.py
+Seit 23.10.2026 zusaetzlich taeglich vor der Skript-Generierung (daily.yml), nur Psychologie-Kanal,
+10 Tage Rueckblick - damit die Themen-Auswahl auf frische Zahlen reagiert statt einmal pro Woche.
 """
 import datetime
 import json
@@ -102,15 +104,19 @@ def build_insights(creds, pipeline_dir: Path, days: int = LOOKBACK_DAYS) -> dict
     }
 
 
-def run() -> None:
+def run(only: str = None, days: int = LOOKBACK_DAYS) -> None:
     for ch in config.CHANNELS:
+        if only and only.lower() not in ch["label"].lower():
+            continue
         print(f"Erfolgsmuster fuer: {ch['label']}...")
         creds = get_credentials(ch["token_file"])
-        insights = build_insights(creds, ch["pipeline_dir"])
+        insights = build_insights(creds, ch["pipeline_dir"], days)
         out_path = ch["insights_file"]
         out_path.write_text(json.dumps(insights, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"  {len(insights['top'])} Top-, {len(insights['flop'])} Flop-Videos -> {out_path}")
 
 
 if __name__ == "__main__":
-    run()
+    # Taeglicher Lauf (daily.yml): python performance_insights.py psychologie 10
+    import sys
+    run(sys.argv[1] if len(sys.argv) > 1 else None, int(sys.argv[2]) if len(sys.argv) > 2 else LOOKBACK_DAYS)

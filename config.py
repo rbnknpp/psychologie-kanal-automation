@@ -111,6 +111,10 @@ HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
 # ("themen" schaltet zurueck auf run_longform).
 LONGFORM_MODE = "regen"
 RAIN_TOTAL_SECONDS = 3 * 60 * 60
+# Einmal pro Woche eine 8-Std-Version (Robin 23.10.2026): laeuft die ganze Nacht durch und bringt
+# die meisten Wiedergabestunden fuer die Monetarisierung (4.000 Std.)
+RAIN_LONG_WEEKDAYS = [5]  # Samstag
+RAIN_LONG_SECONDS = 8 * 60 * 60
 RAIN_PUBLISH_TIME = "21:30"
 RAIN_PLAYLIST_NAME = "Regen & Schlafmusik"
 HYPNOSIS_VOICE = os.getenv("HYPNOSIS_VOICE", "de-DE-KatjaNeural")
@@ -118,9 +122,10 @@ HYPNOSIS_RATE = "-25%"
 HYPNOSIS_PITCH = "-6Hz"
 HYPNOSIS_PLAYLIST_NAME = "Hypnose & Einschlafen"
 
-# Cross-Linking zum Schwesterkanal (kostenlose gegenseitige Zielgruppen-Befruchtung)
-OTHER_CHANNEL_NAME = "Finanzwissen Alltag"
-OTHER_CHANNEL_URL = "https://youtube.com/channel/UCDIAMMOKwhb-LMf80YwkLtg"
+# Hinweis in jeder Beschreibung. Bis 23.10.2026 stand hier der Finanz-Kanal (pausiert, kaum Aufrufe);
+# jetzt verweisen wir auf die eigenen Einschlafvideos, die die meiste Wiedergabezeit bringen.
+SLEEP_LINK_TEXT = "Zum Einschlafen: Regengeräusche & Einschlaf-Hypnosen"
+SLEEP_LINK_URL = "https://www.youtube.com/@psychologieundalltagsfakten/videos"
 
 # Playlist-Namen, in die neue Videos automatisch einsortiert werden
 SHORTS_PLAYLIST_NAME = "Shorts"

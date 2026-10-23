@@ -44,7 +44,7 @@ def _fmt_timestamp(seconds: float) -> str:
 
 
 def _cross_link_line() -> str:
-    return f"{config.BOOK_LINE}\n\nMehr zu {config.OTHER_CHANNEL_NAME}: {config.OTHER_CHANNEL_URL}"
+    return f"{config.BOOK_LINE}\n\n{config.SLEEP_LINK_TEXT}: {config.SLEEP_LINK_URL}"
 
 
 def _render_short(fact, item_dir):
@@ -226,7 +226,7 @@ def run(shorts_n: int = None, skip_longform: bool = False):
 
     # --- Langes Video: seit 23.10.2026 Regen-Video (3 Std), sonst Themen-Deep-Dive
     if getattr(config, "LONGFORM_MODE", "themen") == "regen":
-        print("[3/3] Regen-Video (3 Std)...")
+        print("[3/3] Regen-Video...")
         try:
             manifest.append(run_rain(run_dir))
         except Exception as e:
@@ -258,9 +258,11 @@ def run(shorts_n: int = None, skip_longform: bool = False):
 
 
 def run_rain(run_dir, total_seconds: int = None) -> dict:
-    """Regen-Video: Szene des Tages (Foto + Klangfarbe), Musikschleife, 3 Std Standbild-Video."""
-    total_seconds = total_seconds or config.RAIN_TOTAL_SECONDS
+    """Regen-Video: Szene des Tages (Foto + Klangfarbe), Musikschleife, Standbild-Video
+    (3 Std, an config.RAIN_LONG_WEEKDAYS 8 Std)."""
     today = datetime.date.today()
+    if not total_seconds:
+        total_seconds = config.RAIN_LONG_SECONDS if today.weekday() in config.RAIN_LONG_WEEKDAYS else config.RAIN_TOTAL_SECONDS
     scene = rain_video.scene_for(today)
     work = run_dir / "rain"
     work.mkdir(parents=True, exist_ok=True)

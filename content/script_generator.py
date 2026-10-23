@@ -1,5 +1,6 @@
 """Generiert Fakten-Skripte fuer Shorts via Claude API (Tool-Use fuer garantiert valides JSON)."""
 import json
+import re
 
 import anthropic
 
@@ -25,7 +26,12 @@ def _performance_block() -> str:
     digest = _load_performance_digest()
     if not digest:
         return ""
-    return f"\nZusaetzliche Erkenntnisse aus den echten Zuschauerzahlen der letzten Wochen:\n{digest}\n"
+    return (
+        f"\nZusaetzliche Erkenntnisse aus den echten Zuschauerzahlen der letzten Tage:\n{digest}\n"
+        "So nutzt du das: Uebernimm das THEMENFELD und den Aufbau erfolgreicher Videos, aber waehle "
+        "jeweils eine NEUE konkrete Alltagssituation mit einer ANDEREN Kernaussage. Eine Variante eines "
+        "Erfolgsvideos mit anderen Worten ist verboten - YouTube wertet gleichfoermige Videos ab.\n"
+    )
 
 
 _SYSTEM_PROMPT = """Du bist Autor fuer einen YouTube-Kanal mit folgender Ausrichtung:
@@ -175,23 +181,76 @@ def generate_facts(n: int, max_attempts: int = 3, extra_avoid: list[str] = None,
 
     client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY)
 
-    avoid = state.recent_titles(50) + list(extra_avoid or [])
-    avoid_block = (
-        "Vermeide diese bereits verwendeten Themen/Titel (keine Wiederholung, auch nicht umformuliert):\n"
-        + "\n".join(f"- {t}" for t in avoid)
-        if avoid
-        else "Es gibt noch keine bisherigen Themen."
-    )
+    history = state.recent_titles(200) + list(extra_avoid or [])
+    avoid = state.recent_titles(120) + list(extra_avoid or [])
+
+    def avoid_block(extra: list[str]) -> str:
+        titles = avoid + extra
+        if not titles:
+            return "Es gibt noch keine bisherigen Themen."
+        return ("Vermeide diese bereits verwendeten Themen/Titel (keine Wiederholung, auch nicht umformuliert):\n"
+                + "\n".join(f"- {t}" for t in titles))
 
     last_error = None
     for attempt in range(1, max_attempts + 1):
         try:
-            return _request_facts(client, n, avoid_block, theme)
+            facts = _request_facts(client, n, avoid_block([]), theme)
+            break
         except ValueError as e:
             last_error = e
             print(f"  Versuch {attempt}/{max_attempts} fehlgeschlagen: {e}")
+    else:
+        raise RuntimeError(f"Skriptgenerierung nach {max_attempts} Versuchen fehlgeschlagen: {last_error}")
 
-    raise RuntimeError(f"Skriptgenerierung nach {max_attempts} Versuchen fehlgeschlagen: {last_error}")
+    if theme:  # Kapitel eines langen Videos duerfen sich thematisch aehneln
+        return facts
+    # Fast gleiche Titel (z. B. dreimal "Fremder wirkt vertraut", 19.-21.10.) durch neue ersetzen
+    for _ in range(2):
+        dupes = _near_duplicates(facts, history)
+        if not dupes:
+            break
+        print(f"  {len(dupes)} zu aehnliche(r) Titel, wird ersetzt: {[facts[i]['title'] for i in dupes]}")
+        try:
+            fresh = _request_facts(client, len(dupes), avoid_block([f["title"] for f in facts]), theme)
+        except ValueError as e:
+            print(f"  Ersatz fehlgeschlagen, behalte die Titel: {e}")
+            break
+        for i, f in zip(dupes, fresh):
+            facts[i] = f
+    return facts
+
+
+_STOPWORDS = {"warum", "dein", "deine", "deinem", "deinen", "deiner", "dich", "dir", "du", "der", "die", "das",
+              "den", "dem", "des", "ein", "eine", "einem", "einen", "einer", "und", "oder", "aber", "als", "wenn",
+              "beim", "bei", "mit", "von", "vor", "nach", "fuer", "für", "ist", "sind", "wird", "kann", "mehr",
+              "oefter", "öfter", "sofort", "schneller", "gehirn", "denkst", "verraet", "verrät", "was", "wie",
+              "so", "nur", "auch", "nicht", "sich", "sie", "es", "auf", "aus", "zu", "im", "in", "an", "am"}
+
+
+def _title_words(title: str) -> set[str]:
+    words = re.findall(r"[a-zäöüß]+", title.lower())
+    return {w[:6] for w in words if len(w) > 3 and w not in _STOPWORDS}
+
+
+def _too_similar(a: set[str], b: set[str]) -> bool:
+    if not a or not b:
+        return False
+    common = len(a & b)
+    return common >= 2 and common / min(len(a), len(b)) >= 0.6
+
+
+def _near_duplicates(facts: list[dict], history: list[str]) -> list[int]:
+    """Indizes der Fakten, deren Titel einem frueheren oder einem anderen Titel im Batch zu sehr aehnelt
+    (gleiche Kernwoerter, z. B. "fremd" + "vertraut" + "laecheln")."""
+    past = [_title_words(t) for t in history]
+    dupes, seen = [], []
+    for i, f in enumerate(facts):
+        words = _title_words(f["title"])
+        if any(_too_similar(words, p) for p in past + seen):
+            dupes.append(i)
+        else:
+            seen.append(words)
+    return dupes
 
 
 _THEME_TOOL = {
