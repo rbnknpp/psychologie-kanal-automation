@@ -42,7 +42,7 @@ Pro Fakt:
 - "thumbnail_text": SEHR kurze knackige Kernaussage fuers Titelbild, 2-5 Woerter,
   komplett anders formuliert als der Titel (keine Wiederholung), wirkt wie ein Schlagwort
   (z.B. "DEIN GEHIRN LUEGT", "DER 5-EURO-FEHLER")
-- "hook": der allererste gesprochene Satz (max 12 Woerter), muss in 2 Sekunden fesseln
+- "hook": der allererste gesprochene Satz (max 9 Woerter), muss in der ersten Sekunde fesseln: direkt mit der ueberraschenden Aussage oder einer Du-Situation starten, keine Einleitung wie "Wusstest du" oder "Heute"
 - "script": der komplette gesprochene Text (inkl. hook am Anfang), 170-205 Woerter (Ziel: 60-75 Sekunden - kuerzere Shorts laufen auf dem Kanal deutlich schlechter),
   natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz,
   der inhaltlich wieder zum Hook passt, sodass das Video beim Wiederholen nahtlos weiterlaeuft

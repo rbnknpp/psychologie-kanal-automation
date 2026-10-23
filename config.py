@@ -68,8 +68,9 @@ BOOK_LINE = (
     "(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)"
 )
 
-# Anzahl Shorts pro Tag (Robin 20.10.2026: Menge bleibt hoch, um Aufrufe/Wiedergabezeit schnell zu sammeln)
-SHORTS_PER_RUN = 10
+# Anzahl Shorts pro Tag. Robin 23.10.2026: zurueck auf 5 - der Test mit 10/Tag (14.-22.10.) brachte
+# nicht mehr Aufrufe; lieber weniger, dafuer staerkere Shorts.
+SHORTS_PER_RUN = 5
 
 # Longform-Kompilation: bekommt EIGENE, andere Fakten als die Shorts (kein
 # Wiederverwerten). Start-Anzahl an Fakten, danach werden bei Bedarf weitere
@@ -91,8 +92,8 @@ YOUTUBE_TOKEN_FILE = ROOT / "token.json"
 # Liegt eine Zeit in der Vergangenheit (z.B. Taskplaner lief spaeter als
 # gedacht), wird das jeweilige Video stattdessen sofort veroeffentlicht.
 PUBLISH_TIMEZONE = "Europe/Berlin"
-# Der Lauf startet um ~07:15 und braucht mit 10 Shorts gut 1,5 Stunden, daher erst ab 10:00.
-PUBLISH_TIMES = ["10:00", "11:15", "12:30", "13:45", "15:00", "16:15", "17:30", "18:45", "20:00", "21:15", "21:45"]
+# Der Lauf startet um ~07:15 (oft verspaetet), daher erst ab 11:00.
+PUBLISH_TIMES = ["11:00", "13:00", "15:00", "17:00", "19:00", "20:00"]
 
 # Untertitel-Upload kostet 400 Kontingent-Einheiten pro Video. Bei Shorts sind die
 # Untertitel ohnehin eingebrannt, daher dort weglassen - sonst reicht das Tageskontingent
