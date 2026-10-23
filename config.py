@@ -105,6 +105,13 @@ HYPNOSIS_WEEKDAYS = [0, 1, 2, 3, 4, 5, 6]  # taeglich (Robin 23.10.2026: Einschl
 HYPNOSIS_TOTAL_SECONDS = 2 * 60 * 60   # Videolaenge; nach der Stimme laeuft die Musik weiter
 HYPNOSIS_SCRIPT_WORDS = 3600       # ca. 35-45 Min gesprochener Text inkl. Pausen
 HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
+
+# Langes Video (Robin 23.10.2026): "regen" = 3 Std Regengeraeusche + Musik statt Themen-Langvideo
+# ("themen" schaltet zurueck auf run_longform).
+LONGFORM_MODE = "regen"
+RAIN_TOTAL_SECONDS = 3 * 60 * 60
+RAIN_PUBLISH_TIME = "21:30"
+RAIN_PLAYLIST_NAME = "Regen & Schlafmusik"
 HYPNOSIS_VOICE = os.getenv("HYPNOSIS_VOICE", "de-DE-KatjaNeural")
 HYPNOSIS_RATE = "-25%"
 HYPNOSIS_PITCH = "-6Hz"

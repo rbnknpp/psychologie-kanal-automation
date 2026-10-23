@@ -24,6 +24,7 @@ from video.srt import build_srt
 from content.hypnosis_script import generate_hypnosis_script
 from video.hypnosis import build_voice_track, build_still, render_hypnosis
 from video.ambient_music import build_music_loop
+from video import rain as rain_video
 
 
 SHORT_CLIP_SECONDS = 10      # ein Hintergrund-Clip pro ~10s Short
@@ -223,12 +224,19 @@ def run(shorts_n: int = None, skip_longform: bool = False):
         print(f"Ohne langes Video. Fertig, {shorts_n} Short(s) in {run_dir}")
         return run_dir
 
-    # --- Langes Video (Themen-Deep-Dive) jeden Tag
-    print("[3/3] Longform-Video...")
-    long_meta, longform_facts = run_longform(
-        run_dir, extra_avoid=[f["title"] for f in shorts_facts]
-    )
-    manifest.append(long_meta)
+    # --- Langes Video: seit 23.10.2026 Regen-Video (3 Std), sonst Themen-Deep-Dive
+    if getattr(config, "LONGFORM_MODE", "themen") == "regen":
+        print("[3/3] Regen-Video (3 Std)...")
+        try:
+            manifest.append(run_rain(run_dir))
+        except Exception as e:
+            print(f"  Regen-Video fehlgeschlagen, wird heute ausgelassen: {e}")
+    else:
+        print("[3/3] Longform-Video...")
+        long_meta, longform_facts = run_longform(
+            run_dir, extra_avoid=[f["title"] for f in shorts_facts]
+        )
+        manifest.append(long_meta)
     (run_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -247,6 +255,45 @@ def run(shorts_n: int = None, skip_longform: bool = False):
 
     print(f"Fertig. {shorts_n} Shorts + {len(manifest) - shorts_n} lange(s) Video(s) in {run_dir}")
     return run_dir
+
+
+def run_rain(run_dir, total_seconds: int = None) -> dict:
+    """Regen-Video: Szene des Tages (Foto + Klangfarbe), Musikschleife, 3 Std Standbild-Video."""
+    total_seconds = total_seconds or config.RAIN_TOTAL_SECONDS
+    today = datetime.date.today()
+    scene = rain_video.scene_for(today)
+    work = run_dir / "rain"
+    work.mkdir(parents=True, exist_ok=True)
+    hours = round(total_seconds / 3600)
+    still, thumb = rain_video.build_still(scene, hours, work)
+    music = build_music_loop(work / "music.wav", seed=f"regen-{today.isoformat()}") if scene["music"] else None
+    out = run_dir / "rain.mp4"
+    print(f"  Szene: {scene['name']} ({'mit Musik' if music else 'ohne Musik'}{', mit Donner' if scene['thunder'] else ''})")
+    rain_video.render_rain(still, out, total_seconds, scene, music)
+    extra = " & sanfte Musik" if music else ""
+    meta = {
+        "title": f"{scene['name']} – {hours} Stunden Regengeräusche{extra} zum Einschlafen"[:100],
+        "description": (
+            f"{scene['name']}: {hours} Stunden ruhige Regengeräusche{extra} zum Einschlafen, Entspannen, "
+            "Lernen oder Lesen. Ohne plötzliche laute Geräusche; "
+            "am Ende wird der Ton langsam leiser.\n\n"
+            "Tipp: Lautstärke niedrig stellen und den Bildschirm ausschalten.\n\n"
+            "Klänge und Musik sind künstlich erzeugt, das Foto stammt von Pexels.\n\n"
+            f"{_cross_link_line()}\n\n#regen #regengeräusche #einschlafen #schlafmusik #entspannung"
+        ),
+        "tags": ["regen", "regengeräusche", "einschlafen", "schlafen", "entspannung", "rain sounds",
+                 "regen zum einschlafen", "schlafmusik", "naturgeräusche", "meditation"]
+                + (["gewitter", "donner"] if scene["thunder"] else []),
+        "is_short": False,
+        "video_path": str(out),
+        "thumbnail_path": str(thumb),
+        "playlist": config.RAIN_PLAYLIST_NAME,
+        "publish_time": config.RAIN_PUBLISH_TIME,
+        "comment_prompt": "Wobei hörst du Regen am liebsten – Einschlafen, Lernen oder Lesen? 🌧️",
+    }
+    (run_dir / "rain_metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Fertig. Regen-Video ({hours} Std) in {out}")
+    return meta
 
 
 _HYPNOSIS_THEMES_FILE = config.ROOT / "hypnosis_themes.json"
