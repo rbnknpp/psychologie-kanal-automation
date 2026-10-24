@@ -1,74 +1,4 @@
 {
- "Warum dir fremde Städte kleiner vorkommen, wenn du sie kennst": {
-  "title": "Warum dir fremde Städte kleiner vorkommen, wenn du sie kennst",
-  "hook": "Der Heimweg fühlt sich immer kürzer an als der Hinweg.",
-  "tags": [
-   "psychologie",
-   "zeitwahrnehmung",
-   "return trip effect",
-   "gehirn fakten",
-   "alltagspsychologie",
-   "wahrnehmung",
-   "reisen",
-   "wissenschaft"
-  ]
- },
- "Dein Gehirn verwandelt Langeweile in Erfindungsreichtum": {
-  "title": "Dein Gehirn verwandelt Langeweile in Erfindungsreichtum",
-  "hook": "Die besten Ideen kommen dir nie, wenn du beschäftigt bist.",
-  "tags": [
-   "psychologie",
-   "kreativität",
-   "langeweile",
-   "gehirn fakten",
-   "default mode network",
-   "ideen",
-   "wissenschaft",
-   "denken"
-  ]
- },
- "Warum du beim Treppen hochgehen oft die letzte Stufe verfehlst": {
-  "title": "Warum du beim Treppen hochgehen oft die letzte Stufe verfehlst",
-  "hook": "Dein Fuß hebt sich für eine Stufe, die längst nicht mehr da ist.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "bewegung",
-   "motorik",
-   "treppensteigen",
-   "alltagspsychologie",
-   "automatisierung",
-   "wissenschaft"
-  ]
- },
- "Dein Gehirn kann sich nicht an deinen eigenen Schlaf erinnern": {
-  "title": "Dein Gehirn kann sich nicht an deinen eigenen Schlaf erinnern",
-  "hook": "Du schläfst jede Nacht – und erinnerst dich trotzdem kaum daran.",
-  "tags": [
-   "psychologie",
-   "schlaf",
-   "gehirn fakten",
-   "gedächtnis",
-   "hippocampus",
-   "schlafforschung",
-   "wissenschaft",
-   "nacht"
-  ]
- },
- "Der Grund, warum du bei Gruppenfotos zuerst dein eigenes Gesicht suchst": {
-  "title": "Der Grund, warum du bei Gruppenfotos zuerst dein eigenes Gesicht suchst",
-  "hook": "Bei jedem Gruppenfoto schaust du als Erstes nur eine Person an – dich.",
-  "tags": [
-   "psychologie",
-   "selbstwahrnehmung",
-   "gehirn fakten",
-   "gruppenfoto",
-   "alltagspsychologie",
-   "soziales verhalten",
-   "wissenschaft",
-   "identität"
-  ]
- },
  "Warum dein Gehirn Gesprächspausen als unangenehm empfindet": {
   "title": "Warum dein Gehirn Gesprächspausen als unangenehm empfindet",
   "hook": "Vier Sekunden Stille im Gespräch – und du fängst an zu schwitzen.",
@@ -6021,6 +5951,78 @@
    "sprachmelodie",
    "gehirn fakten",
    "sarkasmus"
+  ]
+ },
+ "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst": {
+  "title": "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
+  "hook": "Verschränkte Arme bedeuten nicht automatisch Ablehnung.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "gestik",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "gehirn fakten",
+   "soziale signale",
+   "mimik und gestik"
+  ]
+ },
+ "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz": {
+  "title": "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz",
+  "hook": "Ein geflüstertes Wort wirkt ehrlicher als ein lautes.",
+  "tags": [
+   "stimme",
+   "psychologie",
+   "vertrauen",
+   "kommunikation",
+   "flüstern",
+   "gehirn fakten",
+   "soziale psychologie",
+   "nonverbale signale"
+  ]
+ },
+ "Warum du beim Vorstellen deinen eigenen Namen leiser sagst": {
+  "title": "Warum du beim Vorstellen deinen eigenen Namen leiser sagst",
+  "hook": "Achte mal auf deine Stimme beim eigenen Namen.",
+  "tags": [
+   "psychologie",
+   "stimme",
+   "körpersprache",
+   "erster eindruck",
+   "vorstellen",
+   "kommunikation",
+   "selbstbewusstsein",
+   "soziale situationen",
+   "namen",
+   "gespräch"
+  ]
+ },
+ "Warum du bei einer Entschuldigung zuerst auf die Hände schaust": {
+  "title": "Warum du bei einer Entschuldigung zuerst auf die Hände schaust",
+  "hook": "Dein Blick wandert bei Entschuldigungen zuerst zu den Händen.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "vertrauen",
+   "gestik",
+   "entschuldigung",
+   "gehirn fakten",
+   "soziale signale",
+   "mimik"
+  ]
+ },
+ "Kennst du das? Du erkennst schlechte Laune an der Türklinke": {
+  "title": "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
+  "hook": "Wie jemand eine Tür schließt, verrät seine Stimmung.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "stimmung",
+   "alltagspsychologie",
+   "gehirn fakten",
+   "nonverbale kommunikation",
+   "wahrnehmung",
+   "soziales verhalten"
   ]
  }
 }
