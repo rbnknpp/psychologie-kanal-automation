@@ -1,78 +1,4 @@
 {
- "Warum dein Gehirn Gesprächspausen als unangenehm empfindet": {
-  "title": "Warum dein Gehirn Gesprächspausen als unangenehm empfindet",
-  "hook": "Vier Sekunden Stille im Gespräch – und du fängst an zu schwitzen.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "gesprächspause",
-   "gehirn fakten",
-   "sozialverhalten",
-   "stille",
-   "wissenschaft",
-   "verhalten"
-  ]
- },
- "5 Minuten reichen, damit du dich in einen Fremden hineinversetzt": {
-  "title": "5 Minuten reichen, damit du dich in einen Fremden hineinversetzt",
-  "hook": "Nach nur fünf Minuten Gespräch fühlst du dich mit einem Fremden verbunden.",
-  "tags": [
-   "psychologie",
-   "empathie",
-   "beziehungen",
-   "gehirn fakten",
-   "soziale nähe",
-   "kommunikation",
-   "wissenschaft",
-   "verhalten"
-  ]
- },
- "Dein Gehirn speichert Gerüche anders als alles andere": {
-  "title": "Dein Gehirn speichert Gerüche anders als alles andere",
-  "hook": "Ein einziger Geruch kann dich zehn Jahre zurückversetzen – sofort.",
-  "tags": [
-   "psychologie",
-   "geruchssinn",
-   "erinnerung",
-   "gehirn fakten",
-   "proust effekt",
-   "limbisches system",
-   "wissenschaft",
-   "gedächtnis"
-  ]
- },
- "Warum dein Gehirn Ohrwürmer liebt, aber Stille hasst": {
-  "title": "Warum dein Gehirn Ohrwürmer liebt, aber Stille hasst",
-  "hook": "Warum fühlt sich völlige Stille manchmal unangenehmer an als Lärm?",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "stille",
-   "achtsamkeit",
-   "kognition",
-   "gedanken",
-   "mentale gesundheit",
-   "alltagspsychologie",
-   "verhalten",
-   "neuropsychologie"
-  ]
- },
- "Der 90-Sekunden-Trick, mit dem dein Körper eine Emotion beendet": {
-  "title": "Der 90-Sekunden-Trick, mit dem dein Körper eine Emotion beendet",
-  "hook": "Jede starke Emotion braucht nur 90 Sekunden, um durch deinen Körper zu laufen.",
-  "tags": [
-   "psychologie",
-   "emotionen",
-   "gehirn fakten",
-   "gefühle regulieren",
-   "neurowissenschaft",
-   "wut",
-   "achtsamkeit",
-   "mentale gesundheit",
-   "verhalten",
-   "alltagspsychologie"
-  ]
- },
  "Warum du beim Telefonieren automatisch im Zimmer auf und ab gehst": {
   "title": "Warum du beim Telefonieren automatisch im Zimmer auf und ab gehst",
   "hook": "Kennst du das? Beim Telefonieren läufst du ständig im Kreis.",
@@ -6023,6 +5949,75 @@
    "nonverbale kommunikation",
    "wahrnehmung",
    "soziales verhalten"
+  ]
+ },
+ "Warum du im Gespräch automatisch denselben Rhythmus sprichst wie dein Gegenüber": {
+  "title": "Warum du im Gespräch automatisch denselben Rhythmus sprichst wie dein Gegenüber",
+  "hook": "Zwei Fremde beginnen im Gespräch fast gleich zu sprechen.",
+  "tags": [
+   "psychologie",
+   "kommunikation",
+   "körpersprache",
+   "stimme",
+   "gespräch",
+   "sozialpsychologie",
+   "beziehung",
+   "alltagspsychologie"
+  ]
+ },
+ "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst": {
+  "title": "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst",
+  "hook": "In einer Gruppe verraten deine Füße, wen du am liebsten magst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "füße körpersprache",
+   "sympathie",
+   "gruppendynamik",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "soziale situationen",
+   "body language",
+   "fakten"
+  ]
+ },
+ "3 Sekunden Verspätung beim Lachen verraten, ob ein Witz wirklich ankam": {
+  "title": "3 Sekunden Verspätung beim Lachen verraten, ob ein Witz wirklich ankam",
+  "hook": "Ein Lachen mit Verzögerung bedeutet meistens: es war nicht lustig.",
+  "tags": [
+   "psychologie",
+   "humor",
+   "lachen",
+   "mimik",
+   "körpersprache",
+   "soziale signale",
+   "kommunikation"
+  ]
+ },
+ "Warum du bei einem Vortrag automatisch die Person anschaust, die am meisten nickt": {
+  "title": "Warum du bei einem Vortrag automatisch die Person anschaust, die am meisten nickt",
+  "hook": "Vor einer Gruppe suchst du dir unbewusst ein freundliches Gesicht aus.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "vortrag",
+   "blickkontakt",
+   "nervosität",
+   "kommunikation",
+   "soziale situationen"
+  ]
+ },
+ "Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst": {
+  "title": "Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst",
+  "hook": "Manche Berührungen fühlen sich falsch an, bevor sie überhaupt enden.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "berührung",
+   "umarmung",
+   "nähe",
+   "soziale signale",
+   "gehirn fakten"
   ]
  }
 }

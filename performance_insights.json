@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T09:30:34.836221",
+  "generated_at": "2026-10-25T09:47:17.598058",
   "lookback_days": 10,
   "top": [
     {
@@ -9,54 +9,60 @@
       "retention": 19.6
     },
     {
+      "video_id": "cDjyMs-iPKI",
+      "title": "3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst",
+      "views": 119,
+      "retention": 42.4
+    },
+    {
       "video_id": "4Bb1_Ac_ViU",
       "title": "Dein Gehirn merkt sich Gesichter besser, wenn du lächelst",
       "views": 108,
       "retention": 79.1
     },
     {
-      "video_id": "7b7jpt7S4mc",
-      "title": "Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät",
-      "views": 96,
-      "retention": 33.9
+      "video_id": "meOOz6ykjeM",
+      "title": "3 Zentimeter Mundwinkel entscheiden, ob ein Lächeln echt wirkt",
+      "views": 97,
+      "retention": 22.0
+    },
+    {
+      "video_id": "3XIzZm51Vqc",
+      "title": "Warum dir enger Körperkontakt in der U-Bahn so unangenehm ist",
+      "views": 71,
+      "retention": 34.2
     },
     {
       "video_id": "j1YqNcZNg5o",
       "title": "13 faszinierende Psychologie-Fakten, die du kennen solltest",
-      "views": 63,
-      "retention": 29.1
-    },
-    {
-      "video_id": "BUdik-p8KzI",
-      "title": "Dein Gehirn vertraut Menschen mehr, die deinen Namen richtig aussprechen",
-      "views": 62,
-      "retention": 33.2
-    },
-    {
-      "video_id": "vLIVGfVZwHI",
-      "title": "Warum dir eine falsche Berührung sofort auffällt",
       "views": 60,
-      "retention": 43.2
-    },
-    {
-      "video_id": "uBCQfuvae-0",
-      "title": "3 Sekunden Stille reichen, damit ein Gespräch unangenehm wird",
-      "views": 57,
-      "retention": 23.1
+      "retention": 22.4
     },
     {
       "video_id": "HUMN5bHX3lc",
       "title": "Ein Gähnen reicht, um zu verraten, wie nah ihr euch steht",
       "views": 53,
       "retention": 21.0
+    },
+    {
+      "video_id": "SYNchmc0_5M",
+      "title": "3 Minuten Smalltalk reichen, um dein Gehirn zu entspannen",
+      "views": 43,
+      "retention": 25.7
     }
   ],
   "flop": [
     {
-      "video_id": "cDjyMs-iPKI",
-      "title": "3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst",
-      "views": 15,
-      "retention": 62.1
+      "video_id": "Nu9NKF-rplw",
+      "title": "Dein Gehirn braucht nur einen Blick, um Rangordnung einzuschätzen",
+      "views": 17,
+      "retention": 37.5
+    },
+    {
+      "video_id": "1TzY_nsqbcs",
+      "title": "Warum du bei einem Streit lauter wirst, obwohl es nichts bringt",
+      "views": 17,
+      "retention": 14.3
     },
     {
       "video_id": "dxRCa4R4bcg",
@@ -65,23 +71,17 @@
       "retention": 13.7
     },
     {
-      "video_id": "C6bqj7nWK-k",
-      "title": "Dein Gehirn mag es, wenn Dinge symmetrisch enden",
+      "video_id": "hJjNgEF-160",
+      "title": "Warum geliehenes Geld anders wiegt als verdientes",
       "views": 18,
-      "retention": 51.1
+      "retention": 8.0
     },
     {
       "video_id": "VgDflytJ7UA",
       "title": "Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen",
       "views": 18,
       "retention": 46.7
-    },
-    {
-      "video_id": "hJjNgEF-160",
-      "title": "Warum geliehenes Geld anders wiegt als verdientes",
-      "views": 18,
-      "retention": 8.0
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum dir eine fremde Hand auf der Schulter Angst macht, eine bekannte nicht\" (990 Views, 19.6% Bindung)\n- \"Dein Gehirn merkt sich Gesichter besser, wenn du lächelst\" (108 Views, 79.1% Bindung)\n- \"Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät\" (96 Views, 33.9% Bindung) | Hook: \"Die Sitzrichtung im Zug beeinflusst, wie gestresst du dich fühlst.\" | Themen: psychologie, reisen, zugfahren, gleichgewichtssinn\n- \"13 faszinierende Psychologie-Fakten, die du kennen solltest\" (63 Views, 29.1% Bindung)\n- \"Dein Gehirn vertraut Menschen mehr, die deinen Namen richtig aussprechen\" (62 Views, 33.2% Bindung) | Hook: \"Falsch ausgesprochene Namen kosten sofort ein Stück Vertrauen.\" | Themen: psychologie, namen, vertrauen, kommunikation\n- \"Warum dir eine falsche Berührung sofort auffällt\" (60 Views, 43.2% Bindung) | Hook: \"Dein Körper erkennt eine unpassende Berührung schneller als dein Verstand.\" | Themen: psychologie, körpersprache, berührung, gehirn fakten\n- \"3 Sekunden Stille reichen, damit ein Gespräch unangenehm wird\" (57 Views, 23.1% Bindung) | Hook: \"Schon drei Sekunden Stille im Gespräch fühlen sich unerträglich an.\" | Themen: psychologie, kommunikation, stille, gespräch\n- \"Ein Gähnen reicht, um zu verraten, wie nah ihr euch steht\" (53 Views, 21.0% Bindung)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst\" (15 Views, 62.1% Bindung) | Hook: \"Schon wenige Zentimeter Abstand entscheiden, ob dir jemand zu nahekommt.\" | Themen: persönlicher raum, proxemik, psychologie, körpersprache\n- \"Warum du bei schlechtem Wetter pessimistischer entscheidest\" (17 Views, 13.7% Bindung)\n- \"Dein Gehirn mag es, wenn Dinge symmetrisch enden\" (18 Views, 51.1% Bindung) | Hook: \"Ein ungerader Abschluss stört dein Gehirn mehr, als du denkst.\" | Themen: psychologie, gehirn fakten, closure, wahrnehmung\n- \"Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen\" (18 Views, 46.7% Bindung) | Hook: \"Ein Gesicht, das deinem eigenen leicht ähnelt, findest du automatisch attraktiver.\" | Themen: psychologie, attraktivität, beziehungen, gehirn fakten\n- \"Warum geliehenes Geld anders wiegt als verdientes\" (18 Views, 8.0% Bindung)"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum dir eine fremde Hand auf der Schulter Angst macht, eine bekannte nicht\" (990 Views, 19.6% Bindung)\n- \"3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst\" (119 Views, 42.4% Bindung) | Hook: \"Schon wenige Zentimeter Abstand entscheiden, ob dir jemand zu nahekommt.\" | Themen: persönlicher raum, proxemik, psychologie, körpersprache\n- \"Dein Gehirn merkt sich Gesichter besser, wenn du lächelst\" (108 Views, 79.1% Bindung)\n- \"3 Zentimeter Mundwinkel entscheiden, ob ein Lächeln echt wirkt\" (97 Views, 22.0% Bindung) | Hook: \"Ein paar Millimeter am Mundwinkel entscheiden, ob dein Lächeln glaubwürdig wirkt.\" | Themen: psychologie, lächeln, mimik, körpersprache\n- \"Warum dir enger Körperkontakt in der U-Bahn so unangenehm ist\" (71 Views, 34.2% Bindung) | Hook: \"In der U-Bahn verletzt jeder fremde Körper eine Grenze, die du nicht siehst, aber spürst.\" | Themen: psychologie, körpersprache, nähe, persönlicher raum\n- \"13 faszinierende Psychologie-Fakten, die du kennen solltest\" (60 Views, 22.4% Bindung)\n- \"Ein Gähnen reicht, um zu verraten, wie nah ihr euch steht\" (53 Views, 21.0% Bindung)\n- \"3 Minuten Smalltalk reichen, um dein Gehirn zu entspannen\" (43 Views, 25.7% Bindung)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn braucht nur einen Blick, um Rangordnung einzuschätzen\" (17 Views, 37.5% Bindung) | Hook: \"Dein Gehirn ordnet Fremde innerhalb von Sekunden in eine unsichtbare Rangfolge ein.\" | Themen: psychologie, körpersprache, status, haltung\n- \"Warum du bei einem Streit lauter wirst, obwohl es nichts bringt\" (17 Views, 14.3% Bindung) | Hook: \"Je lauter du im Streit wirst, desto weniger hört dich dein Gegenüber wirklich.\" | Themen: psychologie, streit, kommunikation, beziehung\n- \"Warum du bei schlechtem Wetter pessimistischer entscheidest\" (17 Views, 13.7% Bindung)\n- \"Warum geliehenes Geld anders wiegt als verdientes\" (18 Views, 8.0% Bindung)\n- \"Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen\" (18 Views, 46.7% Bindung) | Hook: \"Ein Gesicht, das deinem eigenen leicht ähnelt, findest du automatisch attraktiver.\" | Themen: psychologie, attraktivität, beziehungen, gehirn fakten"
 }
