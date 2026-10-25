@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-10-25T09:47:17.598058",
-  "lookback_days": 10,
+  "generated_at": "2026-10-25T20:39:26.913728",
+  "lookback_days": 14,
   "top": [
+    {
+      "video_id": "7b7jpt7S4mc",
+      "title": "Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät",
+      "views": 1042,
+      "retention": 35.7
+    },
     {
       "video_id": "QFMcsCkYhGg",
       "title": "Warum dir eine fremde Hand auf der Schulter Angst macht, eine bekannte nicht",
@@ -9,79 +15,73 @@
       "retention": 19.6
     },
     {
-      "video_id": "cDjyMs-iPKI",
-      "title": "3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst",
-      "views": 119,
-      "retention": 42.4
+      "video_id": "pOFSQxZC5uU",
+      "title": "Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden",
+      "views": 973,
+      "retention": 39.4
     },
     {
-      "video_id": "4Bb1_Ac_ViU",
-      "title": "Dein Gehirn merkt sich Gesichter besser, wenn du lächelst",
-      "views": 108,
-      "retention": 79.1
+      "video_id": "ETSaKAIxQAE",
+      "title": "3 Sekunden reichen, damit dich eine Berührung beruhigt",
+      "views": 542,
+      "retention": 29.5
     },
     {
-      "video_id": "meOOz6ykjeM",
-      "title": "3 Zentimeter Mundwinkel entscheiden, ob ein Lächeln echt wirkt",
-      "views": 97,
+      "video_id": "AxvMqVes9AY",
+      "title": "Warum du beim Lügen am Telefon anders klingst",
+      "views": 273,
+      "retention": 30.5
+    },
+    {
+      "video_id": "5HwMapWFaLU",
+      "title": "Dein Gehirn merkt den Unterschied zwischen Lob und Schmeichelei",
+      "views": 217,
+      "retention": 28.4
+    },
+    {
+      "video_id": "Jr3Fl_Tbgx8",
+      "title": "Warum geteiltes Lachen Menschen sofort verbindet",
+      "views": 209,
       "retention": 22.0
     },
     {
-      "video_id": "3XIzZm51Vqc",
-      "title": "Warum dir enger Körperkontakt in der U-Bahn so unangenehm ist",
-      "views": 71,
-      "retention": 34.2
-    },
-    {
-      "video_id": "j1YqNcZNg5o",
-      "title": "13 faszinierende Psychologie-Fakten, die du kennen solltest",
-      "views": 60,
-      "retention": 22.4
-    },
-    {
-      "video_id": "HUMN5bHX3lc",
-      "title": "Ein Gähnen reicht, um zu verraten, wie nah ihr euch steht",
-      "views": 53,
-      "retention": 21.0
-    },
-    {
-      "video_id": "SYNchmc0_5M",
-      "title": "3 Minuten Smalltalk reichen, um dein Gehirn zu entspannen",
-      "views": 43,
-      "retention": 25.7
+      "video_id": "YI2RJZRi2aw",
+      "title": "Warum du beim Flüstern automatisch näher rückst",
+      "views": 134,
+      "retention": 42.7
     }
   ],
   "flop": [
     {
-      "video_id": "Nu9NKF-rplw",
-      "title": "Dein Gehirn braucht nur einen Blick, um Rangordnung einzuschätzen",
-      "views": 17,
-      "retention": 37.5
+      "video_id": "16IeCeC9RYU",
+      "title": "Ein Satz im Präsens wirkt überzeugender als derselbe im Konjunktiv",
+      "views": 36,
+      "retention": 16.2
     },
     {
-      "video_id": "1TzY_nsqbcs",
-      "title": "Warum du bei einem Streit lauter wirst, obwohl es nichts bringt",
-      "views": 17,
-      "retention": 14.3
+      "video_id": "d5SAcdwwK5w",
+      "title": "Dein Gehirn braucht Pausen, um wirklich zu lernen",
+      "views": 36,
+      "retention": 26.6
     },
     {
-      "video_id": "dxRCa4R4bcg",
-      "title": "Warum du bei schlechtem Wetter pessimistischer entscheidest",
-      "views": 17,
-      "retention": 13.7
+      "video_id": "7V2_izPoyLc",
+      "title": "Warum du beim Gähnen eines Fremden selbst gähnen musst",
+      "views": 37,
+      "retention": 310.8
     },
     {
-      "video_id": "hJjNgEF-160",
-      "title": "Warum geliehenes Geld anders wiegt als verdientes",
-      "views": 18,
-      "retention": 8.0
+      "video_id": "vMKlYcZhgc0",
+      "title": "3 Wörter reichen, damit du jemandem sofort mehr zutraust",
+      "views": 38,
+      "retention": 42.9
     },
     {
-      "video_id": "VgDflytJ7UA",
-      "title": "Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen",
-      "views": 18,
-      "retention": 46.7
+      "video_id": "-xExG1Pd3ww",
+      "title": "Warum du beim Flirten öfter die Augenbrauen hebst",
+      "views": 38,
+      "retention": 34.0
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum dir eine fremde Hand auf der Schulter Angst macht, eine bekannte nicht\" (990 Views, 19.6% Bindung)\n- \"3 Zentimeter Abstand entscheiden, ob du dich wohlfühlst\" (119 Views, 42.4% Bindung) | Hook: \"Schon wenige Zentimeter Abstand entscheiden, ob dir jemand zu nahekommt.\" | Themen: persönlicher raum, proxemik, psychologie, körpersprache\n- \"Dein Gehirn merkt sich Gesichter besser, wenn du lächelst\" (108 Views, 79.1% Bindung)\n- \"3 Zentimeter Mundwinkel entscheiden, ob ein Lächeln echt wirkt\" (97 Views, 22.0% Bindung) | Hook: \"Ein paar Millimeter am Mundwinkel entscheiden, ob dein Lächeln glaubwürdig wirkt.\" | Themen: psychologie, lächeln, mimik, körpersprache\n- \"Warum dir enger Körperkontakt in der U-Bahn so unangenehm ist\" (71 Views, 34.2% Bindung) | Hook: \"In der U-Bahn verletzt jeder fremde Körper eine Grenze, die du nicht siehst, aber spürst.\" | Themen: psychologie, körpersprache, nähe, persönlicher raum\n- \"13 faszinierende Psychologie-Fakten, die du kennen solltest\" (60 Views, 22.4% Bindung)\n- \"Ein Gähnen reicht, um zu verraten, wie nah ihr euch steht\" (53 Views, 21.0% Bindung)\n- \"3 Minuten Smalltalk reichen, um dein Gehirn zu entspannen\" (43 Views, 25.7% Bindung)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn braucht nur einen Blick, um Rangordnung einzuschätzen\" (17 Views, 37.5% Bindung) | Hook: \"Dein Gehirn ordnet Fremde innerhalb von Sekunden in eine unsichtbare Rangfolge ein.\" | Themen: psychologie, körpersprache, status, haltung\n- \"Warum du bei einem Streit lauter wirst, obwohl es nichts bringt\" (17 Views, 14.3% Bindung) | Hook: \"Je lauter du im Streit wirst, desto weniger hört dich dein Gegenüber wirklich.\" | Themen: psychologie, streit, kommunikation, beziehung\n- \"Warum du bei schlechtem Wetter pessimistischer entscheidest\" (17 Views, 13.7% Bindung)\n- \"Warum geliehenes Geld anders wiegt als verdientes\" (18 Views, 8.0% Bindung)\n- \"Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen\" (18 Views, 46.7% Bindung) | Hook: \"Ein Gesicht, das deinem eigenen leicht ähnelt, findest du automatisch attraktiver.\" | Themen: psychologie, attraktivität, beziehungen, gehirn fakten"
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zugfahren lieber rückwärts als vorwärts sitzt, und was das verrät\" (1042 Views, 35.7% Bindung) | Hook: \"Die Sitzrichtung im Zug beeinflusst, wie gestresst du dich fühlst.\" | Themen: psychologie, reisen, zugfahren, gleichgewichtssinn\n- \"Warum dir eine fremde Hand auf der Schulter Angst macht, eine bekannte nicht\" (990 Views, 19.6% Bindung)\n- \"Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden\" (973 Views, 39.4% Bindung) | Hook: \"Dein Gehirn erkennt ein falsches Lächeln fast sofort.\" | Themen: psychologie, körpersprache, lächeln, emotionen\n- \"3 Sekunden reichen, damit dich eine Berührung beruhigt\" (542 Views, 29.5% Bindung) | Hook: \"Eine kurze Berührung am Arm kann deinen Puls messbar senken.\" | Themen: psychologie, berührung, stressabbau, vertrauen\n- \"Warum du beim Lügen am Telefon anders klingst\" (273 Views, 30.5% Bindung) | Hook: \"Am Telefon lügst du anders, deine Stimme verrät dich, auch ohne Gesicht.\" | Themen: psychologie, lügen erkennen, stimme, telefon\n- \"Dein Gehirn merkt den Unterschied zwischen Lob und Schmeichelei\" (217 Views, 28.4% Bindung) | Hook: \"Dein Gehirn erkennt Schmeichelei schneller, als du denkst, selbst unbewusst.\" | Themen: psychologie, komplimente, schmeichelei, vertrauen\n- \"Warum geteiltes Lachen Menschen sofort verbindet\" (209 Views, 22.0% Bindung) | Hook: \"Zwei Fremde lachen zusammen, und schon sinkt die Distanz zwischen ihnen.\" | Themen: psychologie, lachen, sozialpsychologie, beziehungen\n- \"Warum du beim Flüstern automatisch näher rückst\" (134 Views, 42.7% Bindung) | Hook: \"Sobald jemand flüstert, rückst du automatisch näher.\" | Themen: psychologie, flüstern, körpersprache, stimme\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Ein Satz im Präsens wirkt überzeugender als derselbe im Konjunktiv\" (36 Views, 16.2% Bindung)\n- \"Dein Gehirn braucht Pausen, um wirklich zu lernen\" (36 Views, 26.6% Bindung) | Hook: \"Dein Gehirn lernt nicht während du übst, sondern danach.\" | Themen: psychologie, lernen, gehirn fakten, gedächtnis\n- \"Warum du beim Gähnen eines Fremden selbst gähnen musst\" (37 Views, 310.8% Bindung) | Hook: \"Jemand gähnt und du gähnst sofort mit, warum eigentlich?\" | Themen: psychologie, gähnen, gehirn fakten, körpersprache\n- \"3 Wörter reichen, damit du jemandem sofort mehr zutraust\" (38 Views, 42.9% Bindung)\n- \"Warum du beim Flirten öfter die Augenbrauen hebst\" (38 Views, 34.0% Bindung) | Hook: \"Ein kurzes Augenbrauen-Heben verrät sofort, ob du jemanden interessant findest.\" | Themen: psychologie, körpersprache, flirten, mimik"
 }
