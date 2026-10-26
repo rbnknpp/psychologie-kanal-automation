@@ -33,6 +33,11 @@ jobs:
     timeout-minutes: 340
     env:
       TTS_ENGINE: piper
+      # Stimmen-Test ab 26.10.2026: hochwertigere Stimme, etwas langsamer und lebendiger (Vorher: thorsten-medium, 1.0/0.667/0.8)
+      PIPER_MODEL: de_DE-thorsten-high
+      PIPER_LENGTH_SCALE: "1.1"
+      PIPER_NOISE_SCALE: "0.8"
+      PIPER_NOISE_W: "0.9"
       PYTHONUNBUFFERED: "1"
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -76,10 +81,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: assets/voices
-          key: piper-voice-de_DE-thorsten-medium
+          key: piper-voice-${{ env.PIPER_MODEL }}
       - name: Piper-Stimme herunterladen
         if: steps.guard.outputs.skip != 'true' && steps.voice-cache.outputs.cache-hit != 'true'
-        run: python -m piper.download_voices --download-dir assets/voices de_DE-thorsten-medium
+        run: python -m piper.download_voices --download-dir assets/voices "$PIPER_MODEL"
 
       - name: YouTube-Zugangsdaten bereitstellen
         if: steps.guard.outputs.skip != 'true'

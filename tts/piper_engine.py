@@ -13,6 +13,10 @@ import wave
 from pathlib import Path
 
 PIPER_MODEL = os.getenv("PIPER_MODEL", "de_DE-thorsten-medium")
+# Feinabstimmung der Sprechweise (Standard von Piper: 1.0 / 0.667 / 0.8)
+LENGTH_SCALE = float(os.getenv("PIPER_LENGTH_SCALE", "1.0"))   # >1 = langsamer
+NOISE_SCALE = float(os.getenv("PIPER_NOISE_SCALE", "0.667"))   # mehr = lebendigere Betonung
+NOISE_W = float(os.getenv("PIPER_NOISE_W", "0.8"))             # mehr = variablere Satzmelodie/Pausen
 PIPER_MODEL_DIR = Path(os.getenv("PIPER_MODEL_DIR", str(Path(__file__).resolve().parent.parent / "assets" / "voices")))
 SENTENCE_PAUSE = 0.28  # Sekunden Stille nach einem Satz
 
@@ -34,7 +38,10 @@ def _load():
 def _write_wav(text: str, wav_path: str, length_scale: float) -> None:
     from piper import SynthesisConfig
     with wave.open(wav_path, "wb") as wf:
-        _load().synthesize_wav(text, wf, syn_config=SynthesisConfig(length_scale=length_scale))
+        _load().synthesize_wav(
+            text, wf,
+            syn_config=SynthesisConfig(length_scale=length_scale * LENGTH_SCALE, noise_scale=NOISE_SCALE, noise_w_scale=NOISE_W),
+        )
 
 
 def speak_to_wav(text: str, wav_path: str, length_scale: float = 1.0) -> None:
