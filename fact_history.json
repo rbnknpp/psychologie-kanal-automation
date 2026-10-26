@@ -1,76 +1,4 @@
 {
- "Warum du beim Telefonieren automatisch im Zimmer auf und ab gehst": {
-  "title": "Warum du beim Telefonieren automatisch im Zimmer auf und ab gehst",
-  "hook": "Kennst du das? Beim Telefonieren läufst du ständig im Kreis.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "telefonieren",
-   "verhalten",
-   "konzentration",
-   "bewegung",
-   "alltagspsychologie",
-   "körpersprache",
-   "gewohnheiten",
-   "kognition"
-  ]
- },
- "Warum dir fremde Hände beim Händeschütteln etwas über sie verraten": {
-  "title": "Warum dir fremde Hände beim Händeschütteln etwas über sie verraten",
-  "hook": "Ein Händedruck dauert zwei Sekunden – und dein Gehirn urteilt sofort.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "erster eindruck",
-   "gehirn fakten",
-   "sozialverhalten",
-   "nonverbale kommunikation",
-   "verhalten",
-   "wissen"
-  ]
- },
- "Dein Gehirn erfindet Gründe für Entscheidungen, die du gar nicht getroffen hast": {
-  "title": "Dein Gehirn erfindet Gründe für Entscheidungen, die du gar nicht getroffen hast",
-  "hook": "Stell dir vor, du erklärst eine Entscheidung – die du nie getroffen hast.",
-  "tags": [
-   "psychologie",
-   "choice blindness",
-   "entscheidungen",
-   "gehirn fakten",
-   "selbstwahrnehmung",
-   "experiment",
-   "kognition",
-   "verhalten"
-  ]
- },
- "Warum geteiltes Essen besser schmeckt als dasselbe Essen allein": {
-  "title": "Warum geteiltes Essen besser schmeckt als dasselbe Essen allein",
-  "hook": "Dasselbe Gericht, derselbe Tisch – und trotzdem schmeckt es anders.",
-  "tags": [
-   "psychologie",
-   "soziales essen",
-   "geschmack",
-   "oxytocin",
-   "verhalten",
-   "ernährung psychologie",
-   "gehirn fakten",
-   "beziehungen"
-  ]
- },
- "3 Sekunden – so lange starrst du auf dein Handy, bevor du merkst, dass nichts Neues da ist": {
-  "title": "3 Sekunden – so lange starrst du auf dein Handy, bevor du merkst, dass nichts Neues da ist",
-  "hook": "Du entsperrst dein Handy – und hast schon vergessen, warum.",
-  "tags": [
-   "psychologie",
-   "smartphone sucht",
-   "gewohnheit",
-   "gehirn fakten",
-   "automatisiertes verhalten",
-   "digitales verhalten",
-   "alltag",
-   "kognition"
-  ]
- },
  "Warum du dich in einem leeren Raum beobachtet fühlst": {
   "title": "Warum du dich in einem leeren Raum beobachtet fühlst",
   "hook": "Niemand ist im Raum – und trotzdem spürst du einen Blick im Nacken.",
@@ -6018,6 +5946,86 @@
    "nähe",
    "soziale signale",
    "gehirn fakten"
+  ]
+ },
+ "Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst": {
+  "title": "Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst",
+  "hook": "Beim Lügen weiten sich deine Pupillen - ganz ohne dein Zutun.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lügen erkennen",
+   "pupillen",
+   "augen",
+   "mimik",
+   "body language",
+   "fakten",
+   "gehirn",
+   "nonverbal"
+  ]
+ },
+ "Warum du beim Zuhören im Gespräch öfter unterbrichst als du denkst": {
+  "title": "Warum du beim Zuhören im Gespräch öfter unterbrichst als du denkst",
+  "hook": "Im Schnitt unterbrichst du andere alle 17 Sekunden.",
+  "tags": [
+   "psychologie",
+   "kommunikation",
+   "gespräch",
+   "zuhören",
+   "körpersprache",
+   "soziales verhalten",
+   "alltagspsychologie",
+   "gehirn fakten",
+   "beziehungen",
+   "unterbrechen"
+  ]
+ },
+ "Dein Gehirn erkennt eine Gruppe als Bedrohung schneller als eine Einzelperson": {
+  "title": "Dein Gehirn erkennt eine Gruppe als Bedrohung schneller als eine Einzelperson",
+  "hook": "Drei fremde Blicke reichen, damit dein Gehirn Alarm schlägt.",
+  "tags": [
+   "psychologie",
+   "gruppenverhalten",
+   "körpersprache",
+   "angst",
+   "soziale situationen",
+   "gehirn fakten",
+   "evolution",
+   "blickkontakt",
+   "stress",
+   "alltagspsychologie"
+  ]
+ },
+ "Warum du bei einem Vorstellungsgespräch schneller blinzelst": {
+  "title": "Warum du bei einem Vorstellungsgespräch schneller blinzelst",
+  "hook": "In stressigen Momenten blinzelst du doppelt so oft wie sonst.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "blinzeln",
+   "stress",
+   "bewerbungsgespräch",
+   "nonverbal",
+   "mimik",
+   "nervosität",
+   "gehirn fakten",
+   "alltag"
+  ]
+ },
+ "3 Sekunden Verzögerung verraten, ob jemand wirklich zuhört": {
+  "title": "3 Sekunden Verzögerung verraten, ob jemand wirklich zuhört",
+  "hook": "Drei Sekunden Reaktionszeit verraten, ob dir wirklich zugehört wird.",
+  "tags": [
+   "psychologie",
+   "kommunikation",
+   "zuhören",
+   "gespräch",
+   "beziehungen",
+   "körpersprache",
+   "soziales verhalten",
+   "alltagspsychologie",
+   "emotionen",
+   "aufmerksamkeit"
   ]
  }
 }
