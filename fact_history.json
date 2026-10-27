@@ -1,82 +1,4 @@
 {
- "Warum du dich in einem leeren Raum beobachtet fühlst": {
-  "title": "Warum du dich in einem leeren Raum beobachtet fühlst",
-  "hook": "Niemand ist im Raum – und trotzdem spürst du einen Blick im Nacken.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "angst",
-   "wahrnehmung",
-   "evolutionspsychologie",
-   "überlebensinstinkt",
-   "unheimlich",
-   "verhalten"
-  ]
- },
- "Warum du im Fahrstuhl automatisch nach oben schaust": {
-  "title": "Warum du im Fahrstuhl automatisch nach oben schaust",
-  "hook": "Steig in einen vollen Aufzug und schau, wohin alle Blicke wandern.",
-  "tags": [
-   "psychologie",
-   "aufzug",
-   "sozialpsychologie",
-   "körpersprache",
-   "verhalten",
-   "gehirn fakten",
-   "nähe und distanz",
-   "blickkontakt",
-   "alltag",
-   "soziales verhalten"
-  ]
- },
- "Dein Gehirn hasst es, wenn du eine Nachricht ungelesen lässt": {
-  "title": "Dein Gehirn hasst es, wenn du eine Nachricht ungelesen lässt",
-  "hook": "Eine ungelesene Nachricht kann sich anfühlen wie eine offene Rechnung.",
-  "tags": [
-   "psychologie",
-   "zeigarnik effekt",
-   "gehirn fakten",
-   "smartphone",
-   "nachrichten",
-   "verhalten",
-   "aufmerksamkeit",
-   "social media",
-   "gewohnheiten",
-   "stress"
-  ]
- },
- "3 Sekunden – so lange hält dein Gehirn einen Fremden für vertrauenswürdig": {
-  "title": "3 Sekunden – so lange hält dein Gehirn einen Fremden für vertrauenswürdig",
-  "hook": "Dein Gehirn entscheidet in Sekunden, ob es jemandem vertraut.",
-  "tags": [
-   "psychologie",
-   "vertrauen",
-   "erster eindruck",
-   "sozialpsychologie",
-   "gesichtserkennung",
-   "mimik",
-   "gehirn fakten",
-   "verhalten",
-   "kommunikation",
-   "wahrnehmung"
-  ]
- },
- "Warum geteilte Angst sich weniger beängstigend anfühlt": {
-  "title": "Warum geteilte Angst sich weniger beängstigend anfühlt",
-  "hook": "Angst allein fühlt sich größer an als Angst zu zweit.",
-  "tags": [
-   "psychologie",
-   "angst",
-   "soziale pufferung",
-   "stress",
-   "beziehungen",
-   "cortisol",
-   "gehirn fakten",
-   "verhalten",
-   "emotionen",
-   "nähe"
-  ]
- },
  "Dein Gehirn verwechselt Erwartung mit Erinnerung": {
   "title": "Dein Gehirn verwechselt Erwartung mit Erinnerung",
   "hook": "Manche Erinnerungen hast du nie erlebt, nur erwartet.",
@@ -6026,6 +5948,84 @@
    "alltagspsychologie",
    "emotionen",
    "aufmerksamkeit"
+  ]
+ },
+ "Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst": {
+  "title": "Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst",
+  "hook": "Im Gespräch wandert dein Blick ständig zur Augenbraue.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "mimik",
+   "augenbraue",
+   "mikroexpression",
+   "gesichtsausdruck",
+   "gehirn fakten",
+   "nonverbale kommunikation",
+   "soziale psychologie",
+   "alltagspsychologie"
+  ]
+ },
+ "Dein Gehirn braucht einen fremden Akzent, um misstrauischer zu werden": {
+  "title": "Dein Gehirn braucht einen fremden Akzent, um misstrauischer zu werden",
+  "hook": "Ein fremder Akzent lässt dein Gehirn automatisch misstrauischer werden.",
+  "tags": [
+   "psychologie",
+   "akzent",
+   "stimme",
+   "vertrauen",
+   "vorurteile",
+   "sprache",
+   "kognitive verzerrung",
+   "gehirn fakten",
+   "soziale psychologie",
+   "kommunikation"
+  ]
+ },
+ "Warum du beim Zuhören öfter die Stirn in Falten legst": {
+  "title": "Warum du beim Zuhören öfter die Stirn in Falten legst",
+  "hook": "Diese Stirnfalte zeigt nicht Ärger, sondern Konzentration.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "mimik",
+   "stirnfalte",
+   "konzentration",
+   "gesichtsausdruck",
+   "kommunikation",
+   "gehirn fakten"
+  ]
+ },
+ "Warum du im Wartezimmer automatisch leiser atmest": {
+  "title": "Warum du im Wartezimmer automatisch leiser atmest",
+  "hook": "In einem stillen Raum fängst du an, flacher zu atmen.",
+  "tags": [
+   "psychologie",
+   "stille",
+   "atmung",
+   "verhalten",
+   "alltagspsychologie",
+   "wachsamkeit",
+   "soziales verhalten",
+   "gehirn fakten",
+   "wartezimmer",
+   "körperreaktion"
+  ]
+ },
+ "Dein Gehirn hält eine tiefere Stimme für größer, nicht nur männlicher": {
+  "title": "Dein Gehirn hält eine tiefere Stimme für größer, nicht nur männlicher",
+  "hook": "Eine tiefe Stimme lässt dich automatisch an einen großen Menschen denken.",
+  "tags": [
+   "psychologie",
+   "stimme",
+   "wahrnehmung",
+   "körpersprache",
+   "soziale psychologie",
+   "tonlage",
+   "gehirn fakten",
+   "stimme am telefon",
+   "dominanz",
+   "alltagspsychologie"
   ]
  }
 }
