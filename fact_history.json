@@ -1,84 +1,4 @@
 {
- "Dein Gehirn verwechselt Erwartung mit Erinnerung": {
-  "title": "Dein Gehirn verwechselt Erwartung mit Erinnerung",
-  "hook": "Manche Erinnerungen hast du nie erlebt, nur erwartet.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "erinnerung",
-   "quellenverwechslung",
-   "gehirn fakten",
-   "kognition",
-   "vorstellungskraft",
-   "verhalten",
-   "wahrnehmung",
-   "falsche erinnerung"
-  ]
- },
- "Der Grund, warum du beim Gähnen eines anderen mitmachst": {
-  "title": "Der Grund, warum du beim Gähnen eines anderen mitmachst",
-  "hook": "Jemand gähnt, und wenige Sekunden später gähnst du auch.",
-  "tags": [
-   "psychologie",
-   "gähnen",
-   "empathie",
-   "spiegelneuronen",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "verhalten",
-   "körper",
-   "ansteckend",
-   "beziehungen"
-  ]
- },
- "Warum dir eine fremde Berührung am Arm vertrauter vorkommt als erwartet": {
-  "title": "Warum dir eine fremde Berührung am Arm vertrauter vorkommt als erwartet",
-  "hook": "Eine kurze Berührung am Arm kann mehr bewirken als tausend Worte.",
-  "tags": [
-   "psychologie",
-   "berührung",
-   "oxytocin",
-   "körpersprache",
-   "vertrauen",
-   "sozialpsychologie",
-   "verhalten",
-   "beziehungen",
-   "kommunikation",
-   "gehirn fakten"
-  ]
- },
- "Dein Gehirn braucht Musik, um Zeit schneller vergehen zu lassen": {
-  "title": "Dein Gehirn braucht Musik, um Zeit schneller vergehen zu lassen",
-  "hook": "Mit Musik im Ohr vergeht Wartezeit fast wie im Flug.",
-  "tags": [
-   "psychologie",
-   "musikpsychologie",
-   "zeitwahrnehmung",
-   "gehirn fakten",
-   "wartezeit",
-   "aufmerksamkeit",
-   "verhalten",
-   "alltag",
-   "musik",
-   "kognition"
-  ]
- },
- "3 Minuten – so lange braucht dein Gehirn, um einen Raum als sicher einzustufen": {
-  "title": "3 Minuten – so lange braucht dein Gehirn, um einen Raum als sicher einzustufen",
-  "hook": "Betritt einen neuen Raum, und dein Gehirn startet sofort einen stillen Check.",
-  "tags": [
-   "psychologie",
-   "sicherheit",
-   "gehirn fakten",
-   "wahrnehmung",
-   "stress",
-   "neue orte",
-   "verhalten",
-   "nervensystem",
-   "alltag",
-   "umgebung"
-  ]
- },
  "Warum geteiltes Lachen dich enger mit jemandem verbindet als ein Gespräch": {
   "title": "Warum geteiltes Lachen dich enger mit jemandem verbindet als ein Gespräch",
   "hook": "Ein gemeinsames Lachen bindet stärker als ein langes Gespräch.",
@@ -6026,6 +5946,78 @@
    "stimme am telefon",
    "dominanz",
    "alltagspsychologie"
+  ]
+ },
+ "Warum du beim Zuhören öfter die Füße in Richtung Tür drehst": {
+  "title": "Warum du beim Zuhören öfter die Füße in Richtung Tür drehst",
+  "hook": "Deine Füße verraten, ob du ein Gespräch beenden willst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "gestik",
+   "soziale situationen",
+   "alltagspsychologie",
+   "fakten",
+   "gehirn",
+   "menschliches verhalten",
+   "kommunikation"
+  ]
+ },
+ "3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist": {
+  "title": "3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist",
+  "hook": "Ein echtes Kompliment kommt fast ohne Zögern aus dem Mund.",
+  "tags": [
+   "psychologie",
+   "komplimente",
+   "körpersprache",
+   "ehrlichkeit",
+   "kommunikation",
+   "soziale situationen",
+   "lügen erkennen",
+   "alltagspsychologie"
+  ]
+ },
+ "Dein Gehirn hält ein gespiegeltes Gesicht für vertrauenswürdiger": {
+  "title": "Dein Gehirn hält ein gespiegeltes Gesicht für vertrauenswürdiger",
+  "hook": "Übernimmst du unbewusst die Mimik deines Gegenübers, mag er dich mehr.",
+  "tags": [
+   "mimik",
+   "psychologie",
+   "körpersprache",
+   "sympathie",
+   "erster eindruck",
+   "soziale situationen",
+   "nonverbale kommunikation",
+   "emotionen"
+  ]
+ },
+ "Warum dir ein fremdes Zimmer unbewusst Angst einflößen kann": {
+  "title": "Warum dir ein fremdes Zimmer unbewusst Angst einflößen kann",
+  "hook": "Betrittst du einen Raum, scannt dein Gehirn zuerst die Ecken.",
+  "tags": [
+   "psychologie",
+   "gehirn",
+   "wahrnehmung",
+   "alltagspsychologie",
+   "sicherheit",
+   "raumgefühl",
+   "unterbewusstsein",
+   "verhalten"
+  ]
+ },
+ "Dein Gehirn erkennt Unsicherheit an der Art, wie du nickst": {
+  "title": "Dein Gehirn erkennt Unsicherheit an der Art, wie du nickst",
+  "hook": "Nickst du zu schnell, wirkt das weniger überzeugend als du denkst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "gestik",
+   "nonverbale kommunikation",
+   "vorstellungsgespräch",
+   "kommunikation",
+   "soziale situationen",
+   "verhalten"
   ]
  }
 }
