@@ -1,62 +1,4 @@
 {
- "Warum geteiltes Lachen dich enger mit jemandem verbindet als ein Gespräch": {
-  "title": "Warum geteiltes Lachen dich enger mit jemandem verbindet als ein Gespräch",
-  "hook": "Ein gemeinsames Lachen bindet stärker als ein langes Gespräch.",
-  "tags": [
-   "psychologie",
-   "lachen",
-   "beziehungen",
-   "sozialpsychologie",
-   "endorphine",
-   "verhalten",
-   "gehirn fakten",
-   "verbindung",
-   "freundschaft",
-   "emotionen"
-  ]
- },
- "Warum du beim Lügen am Telefon öfter 'äh' sagst als persönlich": {
-  "title": "Warum du beim Lügen am Telefon öfter 'äh' sagst als persönlich",
-  "hook": "Am Telefon zu lügen ist schwerer, als du denkst.",
-  "tags": [
-   "psychologie",
-   "lügen",
-   "stimme",
-   "telefon",
-   "kommunikation",
-   "körpersprache",
-   "gehirn fakten",
-   "sozialpsychologie"
-  ]
- },
- "Dein Gehirn belohnt dich fürs Aufschieben – kurzfristig": {
-  "title": "Dein Gehirn belohnt dich fürs Aufschieben – kurzfristig",
-  "hook": "Aufschieben fühlt sich besser an als Arbeiten. Das ist kein Zufall.",
-  "tags": [
-   "psychologie",
-   "prokrastination",
-   "aufschieben",
-   "motivation",
-   "gehirn fakten",
-   "verhalten",
-   "belohnungssystem",
-   "selbstkontrolle"
-  ]
- },
- "3 Sekunden – so lange hält dein Gehirn Blickkontakt für angenehm": {
-  "title": "3 Sekunden – so lange hält dein Gehirn Blickkontakt für angenehm",
-  "hook": "Es gibt eine unsichtbare Grenze beim Blickkontakt, und dein Gehirn kennt sie genau.",
-  "tags": [
-   "psychologie",
-   "blickkontakt",
-   "körpersprache",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "kommunikation",
-   "erster eindruck",
-   "verhalten"
-  ]
- },
  "Warum du beim Lesen eines Buches die Stimme des Autors hörst": {
   "title": "Warum du beim Lesen eines Buches die Stimme des Autors hörst",
   "hook": "Beim Lesen hörst du eine Stimme, die gar nicht deine eigene ist.",
@@ -1331,18 +1273,18 @@
  },
  "Warum du beim Flüstern automatisch näher an jemanden rückst": {
   "title": "Warum du beim Flüstern automatisch näher an jemanden rückst",
-  "hook": "Flüstern zwingt dich körperlich dazu, Abstand aufzugeben.",
+  "hook": "Sobald du flüsterst, verringert sich dein Abstand automatisch.",
   "tags": [
    "psychologie",
-   "flüstern",
    "körpersprache",
+   "flüstern",
    "nähe",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
    "vertrauen",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "kommunikation",
-   "beziehungen",
-   "verhalten"
+   "gehirn",
+   "soziales verhalten",
+   "kommunikation"
   ]
  },
  "Dein Gehirn braucht nur 2 Minuten, um eine Gruppe zu spüren": {
@@ -6018,6 +5960,64 @@
    "kommunikation",
    "soziale situationen",
    "verhalten"
+  ]
+ },
+ "Dein Gehirn traut einem Lächeln mit Augenkontakt mehr als ohne": {
+  "title": "Dein Gehirn traut einem Lächeln mit Augenkontakt mehr als ohne",
+  "hook": "Ein Lächeln ohne Blickkontakt überzeugt dein Gehirn kaum.",
+  "tags": [
+   "psychologie",
+   "mimik",
+   "lächeln",
+   "blickkontakt",
+   "körpersprache",
+   "nonverbale kommunikation",
+   "erster eindruck",
+   "sympathie"
+  ]
+ },
+ "Warum du in einer fremden Gruppe zuerst nach dem Lauten suchst": {
+  "title": "Warum du in einer fremden Gruppe zuerst nach dem Lauten suchst",
+  "hook": "Du suchst in einer neuen Gruppe zuerst die laute Person.",
+  "tags": [
+   "psychologie",
+   "gruppendynamik",
+   "sozialepsychologie",
+   "körpersprache",
+   "status",
+   "aufmerksamkeit",
+   "erster eindruck",
+   "soziale situationen"
+  ]
+ },
+ "Dein Gehirn hält ein zögerndes Nein für eine versteckte Zustimmung": {
+  "title": "Dein Gehirn hält ein zögerndes Nein für eine versteckte Zustimmung",
+  "hook": "Ein zögerndes Nein klingt für dein Gehirn fast wie ein Ja.",
+  "tags": [
+   "psychologie",
+   "kommunikation",
+   "entscheidungen",
+   "zögern",
+   "stimme",
+   "körpersprache",
+   "alltagspsychologie",
+   "soziales verhalten",
+   "gehirn",
+   "wahrnehmung"
+  ]
+ },
+ "Warum du bei einer Umarmung automatisch die Augen schließt": {
+  "title": "Warum du bei einer Umarmung automatisch die Augen schließt",
+  "hook": "Bei einer echten Umarmung schließt du oft automatisch die Augen.",
+  "tags": [
+   "psychologie",
+   "berührung",
+   "umarmung",
+   "körpersprache",
+   "nähe",
+   "sinne",
+   "beziehung",
+   "nonverbale kommunikation"
   ]
  }
 }
