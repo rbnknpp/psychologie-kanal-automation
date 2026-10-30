@@ -1,76 +1,4 @@
 {
- "Warum du beim Lesen eines Buches die Stimme des Autors hörst": {
-  "title": "Warum du beim Lesen eines Buches die Stimme des Autors hörst",
-  "hook": "Beim Lesen hörst du eine Stimme, die gar nicht deine eigene ist.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "lesen",
-   "innere stimme",
-   "kognition",
-   "sprache",
-   "neuropsychologie",
-   "bücher",
-   "wahrnehmung",
-   "alltagspsychologie"
-  ]
- },
- "Dein Gehirn merkt sich Melodien besser als Gesichter": {
-  "title": "Dein Gehirn merkt sich Melodien besser als Gesichter",
-  "hook": "Du erkennst einen Song nach drei Tönen, aber nicht das Gesicht von letzter Woche.",
-  "tags": [
-   "psychologie",
-   "musikpsychologie",
-   "gedächtnis",
-   "gehirn fakten",
-   "erinnerung",
-   "emotionen",
-   "neuropsychologie",
-   "sozialpsychologie"
-  ]
- },
- "3 Sekunden – so lange zögerst du, bevor du eine Entschuldigung sagst": {
-  "title": "3 Sekunden – so lange zögerst du, bevor du eine Entschuldigung sagst",
-  "hook": "Bevor du dich entschuldigst, zögert dein Gehirn fast immer drei Sekunden.",
-  "tags": [
-   "psychologie",
-   "sozialpsychologie",
-   "beziehungen",
-   "kommunikation",
-   "verhalten",
-   "gehirn fakten",
-   "emotionen",
-   "status"
-  ]
- },
- "Warum dir ein Lächeln auffällt, bevor du den Rest des Gesichts siehst": {
-  "title": "Warum dir ein Lächeln auffällt, bevor du den Rest des Gesichts siehst",
-  "hook": "Ein Lächeln erkennt dein Gehirn schneller als jedes andere Gesichtsdetail.",
-  "tags": [
-   "psychologie",
-   "mimik",
-   "erster eindruck",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "körpersprache",
-   "emotionen",
-   "wahrnehmung"
-  ]
- },
- "Dein Gehirn verändert sich, wenn du eine neue Sprache lernst": {
-  "title": "Dein Gehirn verändert sich, wenn du eine neue Sprache lernst",
-  "hook": "Sprichst du zwei Sprachen, hast du quasi zwei leicht verschiedene Persönlichkeiten.",
-  "tags": [
-   "psychologie",
-   "sprache",
-   "zweisprachigkeit",
-   "gehirn fakten",
-   "kultur",
-   "persönlichkeit",
-   "kognition",
-   "verhalten"
-  ]
- },
  "Warum du beim Lügen automatisch die Satzstruktur komplizierter machst": {
   "title": "Warum du beim Lügen automatisch die Satzstruktur komplizierter machst",
   "hook": "Lügner reden tatsächlich anders als sie denken.",
@@ -6018,6 +5946,76 @@
    "sinne",
    "beziehung",
    "nonverbale kommunikation"
+  ]
+ },
+ "Warum du beim Lügen seltener blinzelst als sonst": {
+  "title": "Warum du beim Lügen seltener blinzelst als sonst",
+  "hook": "Beim Lügen blinzelst du oft seltener, nicht öfter.",
+  "tags": [
+   "körpersprache",
+   "lügen erkennen",
+   "psychologie",
+   "blinzeln",
+   "mimik",
+   "nonverbale kommunikation",
+   "augen",
+   "verhalten"
+  ]
+ },
+ "Dein Gehirn braucht eine fremde Berührung an der Hand länger zum Einordnen": {
+  "title": "Dein Gehirn braucht eine fremde Berührung an der Hand länger zum Einordnen",
+  "hook": "Eine fremde Hand auf deiner braucht länger, um verarbeitet zu werden.",
+  "tags": [
+   "psychologie",
+   "berührung",
+   "vertrauen",
+   "gehirn",
+   "körpersprache",
+   "nähe",
+   "soziales verhalten",
+   "neuropsychologie"
+  ]
+ },
+ "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum": {
+  "title": "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum",
+  "hook": "Ein Gesicht ohne Augenbrauen wirkt sofort seltsam vertraut-fremd.",
+  "tags": [
+   "mimik",
+   "psychologie",
+   "gesichtserkennung",
+   "körpersprache",
+   "gehirn",
+   "wahrnehmung",
+   "emotionen",
+   "augenbrauen"
+  ]
+ },
+ "3 Sekunden Stille nach einer Frage verändern, wie ehrlich die Antwort wirkt": {
+  "title": "3 Sekunden Stille nach einer Frage verändern, wie ehrlich die Antwort wirkt",
+  "hook": "Drei Sekunden Stille nach einer Frage verändern alles.",
+  "tags": [
+   "kommunikation",
+   "psychologie",
+   "gespräch",
+   "vertrauen",
+   "körpersprache",
+   "lügen erkennen",
+   "stille",
+   "zwischenmenschlich"
+  ]
+ },
+ "Warum du in einer fremden Stadt automatisch schneller läufst als zu Hause": {
+  "title": "Warum du in einer fremden Stadt automatisch schneller läufst als zu Hause",
+  "hook": "In einer fremden Stadt läufst du unbewusst schneller als zu Hause.",
+  "tags": [
+   "psychologie",
+   "alltag",
+   "stress",
+   "umweltpsychologie",
+   "verhalten",
+   "stadt",
+   "orientierung",
+   "gewohnheit"
   ]
  }
 }
