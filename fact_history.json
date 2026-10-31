@@ -1,84 +1,4 @@
 {
- "Warum du beim Lügen automatisch die Satzstruktur komplizierter machst": {
-  "title": "Warum du beim Lügen automatisch die Satzstruktur komplizierter machst",
-  "hook": "Lügner reden tatsächlich anders als sie denken.",
-  "tags": [
-   "psychologie",
-   "lügen",
-   "körpersprache",
-   "kommunikation",
-   "gehirn fakten",
-   "sozialpsychologie",
-   "verhalten",
-   "sprache",
-   "lügendetektor",
-   "alltagspsychologie"
-  ]
- },
- "3 Tage reichen, damit dein Gehirn ein neues Gesicht vergisst": {
-  "title": "3 Tage reichen, damit dein Gehirn ein neues Gesicht vergisst",
-  "hook": "Ein fremdes Gesicht verschwindet aus deinem Kopf schneller als du denkst.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "gehirn fakten",
-   "wahrnehmung",
-   "erinnerung",
-   "gesichter",
-   "zeugenaussage",
-   "kognition",
-   "neuropsychologie",
-   "alltagspsychologie"
-  ]
- },
- "Der Grund, warum Erwartung einen Film besser macht als der Film selbst": {
-  "title": "Der Grund, warum Erwartung einen Film besser macht als der Film selbst",
-  "hook": "Die Vorfreude auf etwas kann schöner sein als das Erlebnis selbst.",
-  "tags": [
-   "psychologie",
-   "dopamin",
-   "vorfreude",
-   "motivation",
-   "gehirn fakten",
-   "belohnungssystem",
-   "verhalten",
-   "neurowissenschaft",
-   "emotionen",
-   "alltagspsychologie"
-  ]
- },
- "Warum dir eine fremde Stimme am Telefon ein ganzes Bild vom Menschen malt": {
-  "title": "Warum dir eine fremde Stimme am Telefon ein ganzes Bild vom Menschen malt",
-  "hook": "Allein eine Stimme reicht, damit du dir ein komplettes Gesicht vorstellst.",
-  "tags": [
-   "psychologie",
-   "stimme",
-   "erster eindruck",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "wahrnehmung",
-   "kommunikation",
-   "telefon",
-   "verhalten",
-   "alltagspsychologie"
-  ]
- },
- "Dein Gehirn belohnt dich fürs Aufräumen mit einem winzigen Glücksschub": {
-  "title": "Dein Gehirn belohnt dich fürs Aufräumen mit einem winzigen Glücksschub",
-  "hook": "Aufräumen fühlt sich nicht zufällig gut an, dein Gehirn belohnt dich dafür.",
-  "tags": [
-   "psychologie",
-   "aufräumen",
-   "dopamin",
-   "gehirn fakten",
-   "motivation",
-   "ordnung",
-   "verhalten",
-   "selbstwirksamkeit",
-   "alltagspsychologie",
-   "produktivität"
-  ]
- },
  "3 Sekunden – so lange brauchst du, um eine Melodie als Ohrwurm abzuspeichern": {
   "title": "3 Sekunden – so lange brauchst du, um eine Melodie als Ohrwurm abzuspeichern",
   "hook": "Drei Sekunden Musik reichen, damit sie den ganzen Tag in deinem Kopf bleibt.",
@@ -6016,6 +5936,78 @@
    "stadt",
    "orientierung",
    "gewohnheit"
+  ]
+ },
+ "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst": {
+  "title": "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
+  "hook": "Ein winziges Augenbrauen-Zucken verrät mehr als ein Wort.",
+  "tags": [
+   "körpersprache",
+   "mimik",
+   "psychologie",
+   "nonverbale kommunikation",
+   "eyebrow flash",
+   "gesichtsausdruck",
+   "soziale signale",
+   "alltagspsychologie"
+  ]
+ },
+ "Warum du beim Lügen öfter die Nase berührst": {
+  "title": "Warum du beim Lügen öfter die Nase berührst",
+  "hook": "Beim Lügen juckt deine Nase öfter als sonst.",
+  "tags": [
+   "lügen erkennen",
+   "körpersprache",
+   "psychologie",
+   "pinocchio effekt",
+   "stress",
+   "nonverbale kommunikation",
+   "mimik",
+   "gestik",
+   "nervosität",
+   "gehirn fakten"
+  ]
+ },
+ "Warum dir ein Lächeln ohne Blinzeln unheimlich vorkommt": {
+  "title": "Warum dir ein Lächeln ohne Blinzeln unheimlich vorkommt",
+  "hook": "Ein Lächeln ohne Blinzeln wirkt sofort unheimlich auf dich.",
+  "tags": [
+   "mimik",
+   "lächeln",
+   "körpersprache",
+   "psychologie",
+   "blinzeln",
+   "gesichtsausdruck",
+   "nonverbale kommunikation",
+   "vertrauen"
+  ]
+ },
+ "Dein Gehirn vertraut Fremden mehr, die deinen Namen richtig aussprechen": {
+  "title": "Dein Gehirn vertraut Fremden mehr, die deinen Namen richtig aussprechen",
+  "hook": "Spricht jemand deinen Namen richtig aus, vertraust du ihm schneller.",
+  "tags": [
+   "psychologie",
+   "vertrauen",
+   "erster eindruck",
+   "kommunikation",
+   "name effekt",
+   "sozialpsychologie",
+   "alltagspsychologie",
+   "beziehungen"
+  ]
+ },
+ "Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst": {
+  "title": "Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst",
+  "hook": "In jeder Schlange hältst du automatisch denselben Abstand ein.",
+  "tags": [
+   "proxemik",
+   "persönlicher raum",
+   "psychologie",
+   "körpersprache",
+   "warteschlange",
+   "soziales verhalten",
+   "alltagspsychologie",
+   "öffentlicher raum"
   ]
  }
 }
