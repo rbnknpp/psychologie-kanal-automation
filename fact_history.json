@@ -1,84 +1,4 @@
 {
- "3 Sekunden – so lange brauchst du, um eine Melodie als Ohrwurm abzuspeichern": {
-  "title": "3 Sekunden – so lange brauchst du, um eine Melodie als Ohrwurm abzuspeichern",
-  "hook": "Drei Sekunden Musik reichen, damit sie den ganzen Tag in deinem Kopf bleibt.",
-  "tags": [
-   "psychologie",
-   "musikpsychologie",
-   "ohrwurm",
-   "gehirn fakten",
-   "gedächtnis",
-   "musik",
-   "verhalten",
-   "zeigarnik effekt",
-   "alltagspsychologie",
-   "sound"
-  ]
- },
- "Warum ein Kompliment manchmal unangenehmer ist als Kritik": {
-  "title": "Warum ein Kompliment manchmal unangenehmer ist als Kritik",
-  "hook": "Ein Kompliment kann sich seltsamer anfühlen als eine kritische Bemerkung.",
-  "tags": [
-   "psychologie",
-   "selbstbild",
-   "kritik",
-   "komplimente",
-   "gehirn fakten",
-   "selbstverifikation",
-   "verhalten",
-   "emotionen",
-   "sozialpsychologie",
-   "alltagspsychologie"
-  ]
- },
- "Dein Gehirn braucht Hintergrundgeräusche, um sich konzentrieren zu können": {
-  "title": "Dein Gehirn braucht Hintergrundgeräusche, um sich konzentrieren zu können",
-  "hook": "Völlige Stille kann dich schlechter konzentrieren lassen als leises Hintergrundgeräusch.",
-  "tags": [
-   "psychologie",
-   "konzentration",
-   "gehirn fakten",
-   "produktivität",
-   "geräusche",
-   "lernen",
-   "verhalten",
-   "stress",
-   "alltagspsychologie",
-   "fokus"
-  ]
- },
- "Warum dein Gehirn eine Entscheidung trifft, bevor du es merkst": {
-  "title": "Warum dein Gehirn eine Entscheidung trifft, bevor du es merkst",
-  "hook": "Dein Gehirn entscheidet sich oft, bevor dir die Entscheidung bewusst wird.",
-  "tags": [
-   "psychologie",
-   "entscheidungen",
-   "gehirn fakten",
-   "neurowissenschaft",
-   "bewusstsein",
-   "verhalten",
-   "freier wille",
-   "kognition",
-   "alltagspsychologie",
-   "gehirn"
-  ]
- },
- "Der Grund, warum dir ein Geruch sofort eine alte Erinnerung zurückbringt": {
-  "title": "Der Grund, warum dir ein Geruch sofort eine alte Erinnerung zurückbringt",
-  "hook": "Ein einziger Geruch kann dich sofort zehn Jahre zurückversetzen.",
-  "tags": [
-   "psychologie",
-   "gerüche",
-   "erinnerung",
-   "gehirn fakten",
-   "emotionen",
-   "proust effekt",
-   "limbisches system",
-   "gedächtnis",
-   "alltagspsychologie",
-   "sinne"
-  ]
- },
  "Warum du beim Lügen seltener blinzelst": {
   "title": "Warum du beim Lügen seltener blinzelst",
   "hook": "Lügner blinzeln seltener, nicht öfter – fast jeder glaubt das Gegenteil.",
@@ -6008,6 +5928,78 @@
    "soziales verhalten",
    "alltagspsychologie",
    "öffentlicher raum"
+  ]
+ },
+ "Warum du bei einem Kompliment zuerst wegschaust": {
+  "title": "Warum du bei einem Kompliment zuerst wegschaust",
+  "hook": "Bei einem echten Kompliment schaust du kurz weg, nicht hin.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "komplimente",
+   "blickkontakt",
+   "mimik",
+   "nonverbale kommunikation",
+   "soziales verhalten",
+   "alltagspsychologie"
+  ]
+ },
+ "Warum du beim Zuhören öfter auf den Mund statt die Augen schaust": {
+  "title": "Warum du beim Zuhören öfter auf den Mund statt die Augen schaust",
+  "hook": "Bei lauten Geräuschen wandert dein Blick zum Mund.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lippenlesen",
+   "kommunikation",
+   "gehirn",
+   "wahrnehmung",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "sprache verstehen",
+   "soziale situationen"
+  ]
+ },
+ "3 Sekunden entscheiden, ob ein Nicken als Zustimmung gilt": {
+  "title": "3 Sekunden entscheiden, ob ein Nicken als Zustimmung gilt",
+  "hook": "Ein Nicken wirkt nur echt, wenn es länger als eine Sekunde dauert.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "zuhören",
+   "nonverbale kommunikation",
+   "gespräch",
+   "nicken",
+   "kommunikation",
+   "soziales verhalten"
+  ]
+ },
+ "Warum du bei einer Entschuldigung auf die Stimme hörst, nicht auf die Worte": {
+  "title": "Warum du bei einer Entschuldigung auf die Stimme hörst, nicht auf die Worte",
+  "hook": "Eine Entschuldigung überzeugt dich durch den Tonfall, nicht die Worte.",
+  "tags": [
+   "psychologie",
+   "stimme",
+   "entschuldigung",
+   "kommunikation",
+   "prosodie",
+   "emotionen",
+   "ehrlichkeit",
+   "nonverbale kommunikation"
+  ]
+ },
+ "Dein Gehirn behandelt eine Videotelefon-Pause anders als eine echte": {
+  "title": "Dein Gehirn behandelt eine Videotelefon-Pause anders als eine echte",
+  "hook": "Eine Gesprächspause im Videoanruf fühlt sich länger an als sie ist.",
+  "tags": [
+   "psychologie",
+   "videocall",
+   "kommunikation",
+   "alltagspsychologie",
+   "gehirn",
+   "technik",
+   "gespräch",
+   "soziales verhalten"
   ]
  }
 }
