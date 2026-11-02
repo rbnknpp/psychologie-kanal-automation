@@ -134,3 +134,13 @@ LONGFORM_PLAYLIST_NAME = "Videos"
 # Lokale Lauf-Ordner (output/<Datum>/) werden nach so vielen Tagen geloescht -
 # aber nur, wenn zu diesem Zeitpunkt alle Videos darin bereits hochgeladen sind
 OUTPUT_RETENTION_DAYS = 14
+
+# --- Abo-Aufruf-Test (Robin 02.11.2026) ----------------------------------------
+# Jeder zweite Short bekommt einen kurzen Abo-Satz am Ende des gesprochenen Textes.
+# fact_history.json merkt sich je Titel "abo_aufruf", damit Kai beide Gruppen vergleichen kann.
+SUBSCRIBE_TEST = True
+SUBSCRIBE_LINES = [
+    "Folg mir für mehr Körpersprache, die du ab morgen überall siehst.",
+    "Abonnier für mehr solcher Signale, die dir sonst entgehen.",
+    "Mehr davon jeden Tag, wenn du den Kanal abonnierst.",
+]

@@ -27,7 +27,8 @@ def record_facts(facts):
 
     history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
     for f in facts:
-        history[f["title"]] = {"title": f["title"], "hook": f.get("hook"), "tags": f.get("tags", [])}
+        history[f["title"]] = {"title": f["title"], "hook": f.get("hook"), "tags": f.get("tags", []),
+                               "abo_aufruf": f.get("abo_aufruf", False)}
     history = dict(list(history.items())[-400:])
     HISTORY_FILE.write_text(json.dumps(history, ensure_ascii=False, indent=1), encoding="utf-8")
 

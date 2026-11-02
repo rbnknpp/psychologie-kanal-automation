@@ -197,6 +197,10 @@ def run(shorts_n: int = None, skip_longform: bool = False):
     shorts_facts = generate_facts(shorts_n)
 
     for i, fact in enumerate(shorts_facts, start=1):
+        # Abo-Aufruf-Test: jeder zweite Short (Startpunkt wechselt taeglich) endet mit einem Abo-Satz
+        fact["abo_aufruf"] = bool(getattr(config, "SUBSCRIBE_TEST", False)) and (i + datetime.date.today().toordinal()) % 2 == 0
+        if fact["abo_aufruf"]:
+            fact["script"] = f"{fact['script'].rstrip()} {config.SUBSCRIBE_LINES[i % len(config.SUBSCRIBE_LINES)]}"
         item_dir = shorts_dir / f"{i:02d}-{_slugify(fact['title'])}"
         item_dir.mkdir(parents=True, exist_ok=True)
         (item_dir / "fact.json").write_text(json.dumps(fact, ensure_ascii=False, indent=2), encoding="utf-8")

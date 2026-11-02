@@ -48,11 +48,13 @@ Pro Fakt:
 - "thumbnail_text": SEHR kurze knackige Kernaussage fuers Titelbild, 2-5 Woerter,
   komplett anders formuliert als der Titel (keine Wiederholung), wirkt wie ein Schlagwort
   (z.B. "DEIN GEHIRN LUEGT", "DER 5-EURO-FEHLER")
-- "hook": der allererste gesprochene Satz (max 9 Woerter), muss in der ersten Sekunde fesseln: direkt mit der ueberraschenden Aussage oder einer Du-Situation starten, keine Einleitung wie "Wusstest du" oder "Heute"
+- "hook": der allererste gesprochene Satz (max 9 Woerter), muss in der ersten Sekunde fesseln: direkt mit der ueberraschenden Aussage oder einer Du-Situation starten, keine Einleitung wie "Wusstest du" oder "Heute".
+  Wenn es der Fakt hergibt, steckt im Hook eine konkrete Zahl (Sekunden, Zentimeter, Prozent, Anzahl),
+  z.B. "3 Zentimeter entscheiden, ob du dich wohlfuehlst" (Robin 02.11.2026: Zahlen-Hooks laufen am besten)
 - "script": der komplette gesprochene Text (inkl. hook am Anfang), 170-205 Woerter (Ziel: 60-75 Sekunden - kuerzere Shorts laufen auf dem Kanal deutlich schlechter),
   natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz,
   der inhaltlich wieder zum Hook passt, sodass das Video beim Wiederholen nahtlos weiterlaeuft
-  (kein "abonniere" o.ae. - das wird separat hinzugefuegt). Ein einziger Absatz, keine
+  (kein "abonniere" o.ae. - ein Abo-Aufruf wird bei einem Teil der Shorts automatisch angehaengt). Ein einziger Absatz, keine
   Zeilenumbrueche.
 - "description": YouTube-Beschreibung, 2-3 Saetze + 4-6 relevante Hashtags
 - "comment_prompt": Kurze, lockere Diskussionsfrage zum Fakt fuers erste Kommentar
@@ -64,10 +66,13 @@ Pro Fakt:
   (z.B. "human brain", "person thinking", "city night walk", "hands typing phone")
 
 Abwechslung ist Pflicht - die Videos duerfen NICHT wie aus einer Schablone wirken:
-- Themen-Schwerpunkt (Robin 20.10.2026, aus den Kanal-Zahlen): mindestens 60 % der Fakten aus
-  Koerpersprache, Luegen erkennen, Beruehrung, Mimik/Laecheln, Stimme und soziale Situationen
-  (erste Eindruecke, Fremde, Gruppen, Naehe). Diese Themen laufen auf dem Kanal mit Abstand am
-  besten. Der Rest gemischt aus Alltagspsychologie.
+- Themen-Schwerpunkt (Robin 02.11.2026, aus den Kanal-Zahlen): mindestens 80 % der Fakten aus
+  Koerpersprache und Nonverbalem: Abstand/Naehe, Haltung, Haende, Arme, Mimik/Laecheln, Blick,
+  Beruehrung, Stimme/Tonlage, Luegen erkennen und erste Eindruecke. Diese Themen laufen auf dem Kanal
+  mit Abstand am besten. Der Rest gemischt aus sozialer Alltagspsychologie.
+- Mindestens 3 von 5 Titeln enthalten eine konkrete Zahl (z.B. "3 Zentimeter Mundwinkel entscheiden,
+  ob ein Laecheln echt wirkt", "In 3 Sekunden steht dein erster Eindruck"). Die Zahl muss fachlich
+  stimmen - lieber keine Zahl als eine erfundene.
 - Variiere die Titel-Formulierung: hoechstens die Haelfte der Titel darf mit "Warum du..."
   beginnen. Nutze auch Fragen, Zahlen ("3 Sekunden, die..."),
   Behauptungen ("Dein Gehirn glaubt...") oder kurze Aussagen.
