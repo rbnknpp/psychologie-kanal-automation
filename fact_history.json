@@ -1,82 +1,4 @@
 {
- "Warum du beim Lügen seltener blinzelst": {
-  "title": "Warum du beim Lügen seltener blinzelst",
-  "hook": "Lügner blinzeln seltener, nicht öfter – fast jeder glaubt das Gegenteil.",
-  "tags": [
-   "psychologie",
-   "lügen erkennen",
-   "körpersprache",
-   "blinzeln",
-   "gehirn fakten",
-   "täuschung",
-   "mimik",
-   "sozialpsychologie",
-   "nonverbale kommunikation",
-   "verhalten"
-  ]
- },
- "Dein Gehirn verzeiht Fremden schneller als Freunden": {
-  "title": "Dein Gehirn verzeiht Fremden schneller als Freunden",
-  "hook": "Einem Fremden verzeihst du einen Fehler oft schneller als deinem besten Freund.",
-  "tags": [
-   "psychologie",
-   "beziehungen",
-   "vertrauen",
-   "erwartungen",
-   "sozialpsychologie",
-   "freundschaft",
-   "verhalten",
-   "emotionen",
-   "verzeihen",
-   "gehirn fakten"
-  ]
- },
- "3 Sekunden – so lange hält ein erster Satz deine Stimmung": {
-  "title": "3 Sekunden – so lange hält ein erster Satz deine Stimmung",
-  "hook": "Der erste Satz eines Gesprächs prägt deine Stimmung für die nächsten Minuten.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "priming effekt",
-   "gespräche",
-   "erster eindruck",
-   "sozialpsychologie",
-   "emotionen",
-   "gehirn fakten",
-   "alltag",
-   "verhalten"
-  ]
- },
- "Warum Kritik lauter nachhallt als Lob": {
-  "title": "Warum Kritik lauter nachhallt als Lob",
-  "hook": "Ein einziges kritisches Wort überstrahlt zehn ehrliche Komplimente.",
-  "tags": [
-   "psychologie",
-   "negativitätsverzerrung",
-   "kritik",
-   "selbstwert",
-   "gehirn fakten",
-   "verhalten",
-   "emotionen",
-   "sozialpsychologie",
-   "feedback",
-   "alltag"
-  ]
- },
- "Dein Gehirn zählt Treppenstufen, ohne dass du es merkst": {
-  "title": "Dein Gehirn zählt Treppenstufen, ohne dass du es merkst",
-  "hook": "Du zählst Treppenstufen, auch wenn du nie bewusst anfängst.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "treppensteigen",
-   "automatische bewegung",
-   "kleinhirn",
-   "alltagspsychologie",
-   "gewohnheiten",
-   "motorik"
-  ]
- },
  "Warum geliehene Dinge schneller kaputtgehen – gefühlt": {
   "title": "Warum geliehene Dinge schneller kaputtgehen – gefühlt",
   "hook": "Ein geliehener Gegenstand fühlt sich in deinen Händen fragiler an als dein eigener.",
@@ -6001,5 +5923,90 @@
    "gespräch",
    "soziales verhalten"
   ]
+ },
+ "Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst": {
+  "title": "Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst",
+  "hook": "Zeigst du jemandem dein Handgelenk, mag dein Gehirn ihn.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "gestik",
+   "sympathie",
+   "nonverbale kommunikation",
+   "mikroausdrücke",
+   "handgelenk",
+   "vertrauen",
+   "alltagspsychologie",
+   "soziales verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist": {
+  "title": "In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist",
+  "hook": "0,4 Sekunden reichen, um einen Blick zu deuten.",
+  "tags": [
+   "psychologie",
+   "blickkontakt",
+   "mimik",
+   "amygdala",
+   "körpersprache",
+   "erster eindruck",
+   "emotionserkennung",
+   "augen",
+   "nonverbale kommunikation",
+   "unterbewusstsein"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst": {
+  "title": "Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst",
+  "hook": "Füße verraten mehr über Interesse als jedes Gesicht.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "gestik",
+   "füße",
+   "interesse erkennen",
+   "alltagspsychologie",
+   "menschliches verhalten",
+   "fluchtreflex",
+   "fakten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du bei schlechten Neuigkeiten automatisch tiefer atmest": {
+  "title": "Warum du bei schlechten Neuigkeiten automatisch tiefer atmest",
+  "hook": "Ein tiefer Atemzug kommt oft, bevor du reagierst.",
+  "tags": [
+   "psychologie",
+   "körperreaktion",
+   "stress",
+   "nervensystem",
+   "atmung",
+   "emotionen",
+   "stressreaktion",
+   "alltagspsychologie",
+   "körper und geist",
+   "unbewusstes verhalten"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen": {
+  "title": "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
+  "hook": "2 Sekunden reichen, damit dein Gehirn Gefahr wittert.",
+  "tags": [
+   "psychologie",
+   "mimik",
+   "mikroexpressionen",
+   "körpersprache",
+   "gefahr erkennen",
+   "gesichtsausdruck",
+   "bauchgefühl",
+   "nonverbale kommunikation",
+   "gehirn",
+   "fakten"
+  ],
+  "abo_aufruf": false
  }
 }
