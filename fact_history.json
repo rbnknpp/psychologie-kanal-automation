@@ -1,52 +1,4 @@
 {
- "Warum geliehene Dinge schneller kaputtgehen – gefühlt": {
-  "title": "Warum geliehene Dinge schneller kaputtgehen – gefühlt",
-  "hook": "Ein geliehener Gegenstand fühlt sich in deinen Händen fragiler an als dein eigener.",
-  "tags": [
-   "psychologie",
-   "verlustaversion",
-   "verantwortung",
-   "verhalten",
-   "alltag",
-   "besitz",
-   "gehirn fakten",
-   "entscheidungen",
-   "sozialpsychologie",
-   "gewohnheiten"
-  ]
- },
- "Warum dir eigene Fotos fremd vorkommen": {
-  "title": "Warum dir eigene Fotos fremd vorkommen",
-  "hook": "Auf Fotos siehst du anders aus, als du dich im Spiegel kennst – und das irritiert dich.",
-  "tags": [
-   "psychologie",
-   "selbstwahrnehmung",
-   "spiegel effekt",
-   "gehirn fakten",
-   "fotos",
-   "mere exposure effekt",
-   "verhalten",
-   "alltag",
-   "wahrnehmung",
-   "sozialpsychologie"
-  ]
- },
- "Dein Gehirn bevorzugt runde Zahlen – auch wenn sie falsch sind": {
-  "title": "Dein Gehirn bevorzugt runde Zahlen – auch wenn sie falsch sind",
-  "hook": "19,99 Euro fühlt sich günstiger an als 20 Euro, obwohl der Unterschied winzig ist.",
-  "tags": [
-   "psychologie",
-   "preispsychologie",
-   "konsumverhalten",
-   "zahlen effekt",
-   "marketing",
-   "gehirn fakten",
-   "verhalten",
-   "einkaufen",
-   "entscheidungen",
-   "sozialpsychologie"
-  ]
- },
  "Warum dir dein eigener Name in einem lauten Raum auffällt": {
   "title": "Warum dir dein eigener Name in einem lauten Raum auffällt",
   "hook": "Mitten in einer lauten Party hörst du trotzdem sofort deinen eigenen Namen.",
@@ -6008,5 +5960,56 @@
    "fakten"
   ],
   "abo_aufruf": false
+ },
+ "Warum du beim Zuhören öfter mit den Fingern trommelst, als dir bewusst ist": {
+  "title": "Warum du beim Zuhören öfter mit den Fingern trommelst, als dir bewusst ist",
+  "hook": "Trommelnde Finger verraten mehr als nur Langeweile.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "gestik",
+   "nervosität",
+   "übersprungshandlung",
+   "nonverbale kommunikation",
+   "finger",
+   "alltagspsychologie",
+   "mimik",
+   "verhalten"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn stuft einen schnellen Gang automatisch als kompetent ein": {
+  "title": "Dein Gehirn stuft einen schnellen Gang automatisch als kompetent ein",
+  "hook": "Wie schnell jemand geht, verändert, wie kompetent er wirkt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "erster eindruck",
+   "gang",
+   "bewegung",
+   "kompetenz",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "wahrnehmung",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Warten auf eine Antwort automatisch den Atem anhältst": {
+  "title": "Warum du beim Warten auf eine Antwort automatisch den Atem anhältst",
+  "hook": "Vor einer wichtigen Antwort hältst du oft kurz die Luft an.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "atmung",
+   "stress",
+   "nervosität",
+   "alltagspsychologie",
+   "nonverbale kommunikation",
+   "autonomes nervensystem",
+   "warten",
+   "verhalten"
+  ],
+  "abo_aufruf": true
  }
 }

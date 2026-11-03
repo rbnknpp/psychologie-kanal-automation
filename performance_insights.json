@@ -1,87 +1,100 @@
 {
-  "generated_at": "2026-11-02T13:27:54.375636",
+  "generated_at": "2026-11-03T12:45:55.270195",
   "lookback_days": 10,
   "top": [
     {
       "video_id": "MvHm8myW6t8",
       "title": "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
       "views": 102,
-      "retention": 31.2
+      "retention": 31.2,
+      "engaged_pct": 40.2
     },
     {
-      "video_id": "vom0G3GmdWc",
-      "title": "Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm",
-      "views": 91,
-      "retention": 46.8
+      "video_id": "1qdZ26KQBOU",
+      "title": "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst",
+      "views": 59,
+      "retention": 33.6,
+      "engaged_pct": 28.8
     },
     {
       "video_id": "xQAUZcqMQNw",
       "title": "Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert",
-      "views": 81,
-      "retention": 12.1
+      "views": 57,
+      "retention": 13.8,
+      "engaged_pct": 10.5
     },
     {
-      "video_id": "xb_8exmqFww",
-      "title": "Dein Gehirn erkennt ein erzwungenes Lachen an der Tonlage",
-      "views": 76,
-      "retention": 23.6
+      "video_id": "qFI5OUht63g",
+      "title": "Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst",
+      "views": 56,
+      "retention": 43.9,
+      "engaged_pct": 33.9
     },
     {
-      "video_id": "QLhl5HMgkys",
-      "title": "Dein Gehirn braucht nur eine Silbe, um Wut zu erkennen",
-      "views": 76,
-      "retention": 37.7
+      "video_id": "2VJo8VZv0DU",
+      "title": "Warum du bei einer Entschuldigung zuerst auf die Hände schaust",
+      "views": 56,
+      "retention": 24.1,
+      "engaged_pct": 21.4
     },
     {
-      "video_id": "TIzZxrGJz08",
-      "title": "Warum du beim Lügen öfter nach oben schaust",
-      "views": 73,
-      "retention": 24.5
+      "video_id": "kGpVh54INm4",
+      "title": "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
+      "views": 55,
+      "retention": 15.9,
+      "engaged_pct": 20.0
     },
     {
-      "video_id": "BiUujc59Buk",
-      "title": "Warum dir eine fremde Hand auf der Schulter mehr sagt als Worte",
-      "views": 66,
-      "retention": 38.5
+      "video_id": "9UcuxMwoWeo",
+      "title": "Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst",
+      "views": 41,
+      "retention": 34.9,
+      "engaged_pct": 36.6
     },
     {
-      "video_id": "2ecdRamnN94",
-      "title": "Warum du bei einem Fremden zuerst auf die Schuhe schaust",
-      "views": 65,
-      "retention": 31.3
+      "video_id": "h7be5MkdROY",
+      "title": "Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst",
+      "views": 39,
+      "retention": 20.4,
+      "engaged_pct": 43.6
     }
   ],
   "flop": [
     {
-      "video_id": "QuNO5_TpTvI",
-      "title": "Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen",
-      "views": 15,
-      "retention": 0.3
-    },
-    {
-      "video_id": "piqD6z7doEM",
-      "title": "Dein Gehirn erkennt Unsicherheit an der Art, wie du nickst",
-      "views": 15,
-      "retention": 14.7
+      "video_id": "vom0G3GmdWc",
+      "title": "Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm",
+      "views": 16,
+      "retention": 73.6,
+      "engaged_pct": 50.0
     },
     {
       "video_id": "Wlnh5oYwBjQ",
       "title": "3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist",
       "views": 16,
-      "retention": 68.2
+      "retention": 68.2,
+      "engaged_pct": 25.0
+    },
+    {
+      "video_id": "QuNO5_TpTvI",
+      "title": "Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen",
+      "views": 16,
+      "retention": 0.3,
+      "engaged_pct": 100.0
     },
     {
       "video_id": "b_eYOPy4wjo",
       "title": "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz",
       "views": 16,
-      "retention": 23.6
+      "retention": 23.6,
+      "engaged_pct": 37.5
     },
     {
-      "video_id": "aA2xfe1LmP0",
-      "title": "Gewitter in der Ferne – 3 Stunden Regengeräusche zum Einschlafen",
+      "video_id": "_-Smrnu-1ck",
+      "title": "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum",
       "views": 17,
-      "retention": 1.0
+      "retention": 24.9,
+      "engaged_pct": 35.3
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter die Arme verschränkst, als du denkst\" (102 Views, 31.2% Bindung) | Hook: \"Verschränkte Arme bedeuten nicht automatisch Ablehnung.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm\" (91 Views, 46.8% Bindung) | Hook: \"Eine Berührung am Rücken wirkt vertrauter als eine am Arm.\" | Themen: psychologie, berührung, körpersprache, vertrauen\n- \"Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert\" (81 Views, 12.1% Bindung)\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Tonlage\" (76 Views, 23.6% Bindung) | Hook: \"Ein gespieltes Lachen klingt anders, auch wenn du es nicht bewusst hörst.\" | Themen: psychologie, lachen, stimme, emotionen\n- \"Dein Gehirn braucht nur eine Silbe, um Wut zu erkennen\" (76 Views, 37.7% Bindung) | Hook: \"Eine einzige Silbe reicht, damit dein Gehirn Wut erkennt.\" | Themen: psychologie, stimme, emotionserkennung, wut\n- \"Warum du beim Lügen öfter nach oben schaust\" (73 Views, 24.5% Bindung) | Hook: \"Dein Blick wandert nach oben, wenn du dir etwas ausdenkst.\" | Themen: psychologie, körpersprache, lügen erkennen, blickrichtung\n- \"Warum dir eine fremde Hand auf der Schulter mehr sagt als Worte\" (66 Views, 38.5% Bindung) | Hook: \"Eine Hand auf deiner Schulter kann mehr sagen als ein Satz.\" | Themen: psychologie, berührung, trost, emotionen\n- \"Warum du bei einem Fremden zuerst auf die Schuhe schaust\" (65 Views, 31.3% Bindung) | Hook: \"Bei einem Fremden wandert dein Blick zuerst zu den Schuhen.\" | Themen: psychologie, körpersprache, erster eindruck, schuhe\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen\" (15 Views, 0.3% Bindung)\n- \"Dein Gehirn erkennt Unsicherheit an der Art, wie du nickst\" (15 Views, 14.7% Bindung) | Hook: \"Nickst du zu schnell, wirkt das weniger überzeugend als du denkst.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist\" (16 Views, 68.2% Bindung) | Hook: \"Ein echtes Kompliment kommt fast ohne Zögern aus dem Mund.\" | Themen: psychologie, komplimente, körpersprache, ehrlichkeit\n- \"Dein Gehirn traut einem Flüstern mehr als einem normalen Satz\" (16 Views, 23.6% Bindung) | Hook: \"Ein geflüstertes Wort wirkt ehrlicher als ein lautes.\" | Themen: stimme, psychologie, vertrauen, kommunikation\n- \"Gewitter in der Ferne – 3 Stunden Regengeräusche zum Einschlafen\" (17 Views, 1.0% Bindung)"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter die Arme verschränkst, als du denkst\" (102 Views, 31.2% Bindung, 40.2% nicht weitergewischt) | Hook: \"Verschränkte Arme bedeuten nicht automatisch Ablehnung.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst\" (59 Views, 33.6% Bindung, 28.8% nicht weitergewischt) | Hook: \"In einer Gruppe verraten deine Füße, wen du am liebsten magst.\" | Themen: körpersprache, psychologie, füße körpersprache, sympathie\n- \"Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert\" (57 Views, 13.8% Bindung, 10.5% nicht weitergewischt)\n- \"Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst\" (56 Views, 43.9% Bindung, 33.9% nicht weitergewischt) | Hook: \"Manche Berührungen fühlen sich falsch an, bevor sie überhaupt enden.\" | Themen: psychologie, körpersprache, berührung, umarmung\n- \"Warum du bei einer Entschuldigung zuerst auf die Hände schaust\" (56 Views, 24.1% Bindung, 21.4% nicht weitergewischt) | Hook: \"Dein Blick wandert bei Entschuldigungen zuerst zu den Händen.\" | Themen: körpersprache, psychologie, vertrauen, gestik\n- \"Kennst du das? Du erkennst schlechte Laune an der Türklinke\" (55 Views, 15.9% Bindung, 20.0% nicht weitergewischt) | Hook: \"Wie jemand eine Tür schließt, verrät seine Stimmung.\" | Themen: körpersprache, psychologie, stimmung, alltagspsychologie\n- \"Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst\" (41 Views, 34.9% Bindung, 36.6% nicht weitergewischt) | Hook: \"Beim Lügen weiten sich deine Pupillen - ganz ohne dein Zutun.\" | Themen: psychologie, körpersprache, lügen erkennen, pupillen\n- \"Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst\" (39 Views, 20.4% Bindung, 43.6% nicht weitergewischt) | Hook: \"Im Gespräch wandert dein Blick ständig zur Augenbraue.\" | Themen: psychologie, körpersprache, mimik, augenbraue\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm\" (16 Views, 73.6% Bindung, 50.0% nicht weitergewischt) | Hook: \"Eine Berührung am Rücken wirkt vertrauter als eine am Arm.\" | Themen: psychologie, berührung, körpersprache, vertrauen\n- \"3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist\" (16 Views, 68.2% Bindung, 25.0% nicht weitergewischt) | Hook: \"Ein echtes Kompliment kommt fast ohne Zögern aus dem Mund.\" | Themen: psychologie, komplimente, körpersprache, ehrlichkeit\n- \"Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen\" (16 Views, 0.3% Bindung, 100.0% nicht weitergewischt)\n- \"Dein Gehirn traut einem Flüstern mehr als einem normalen Satz\" (16 Views, 23.6% Bindung, 37.5% nicht weitergewischt) | Hook: \"Ein geflüstertes Wort wirkt ehrlicher als ein lautes.\" | Themen: stimme, psychologie, vertrauen, kommunikation\n- \"Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum\" (17 Views, 24.9% Bindung, 35.3% nicht weitergewischt) | Hook: \"Ein Gesicht ohne Augenbrauen wirkt sofort seltsam vertraut-fremd.\" | Themen: mimik, psychologie, gesichtserkennung, körpersprache"
 }
