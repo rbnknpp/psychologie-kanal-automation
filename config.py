@@ -70,7 +70,9 @@ BOOK_LINE = (
 
 # Anzahl Shorts pro Tag. Robin 23.10.2026: zurueck auf 5 - der Test mit 10/Tag (14.-22.10.) brachte
 # nicht mehr Aufrufe; lieber weniger, dafuer staerkere Shorts.
-SHORTS_PER_RUN = 5
+# Robin 03.11.2026: auf 3 - Median-Aufrufe je Short fielen von 70 (KW41) auf ~20, Abos stehen seit
+# 4 Wochen bei 1.120. Weniger, dafuer nur die Themen, die getragen haben.
+SHORTS_PER_RUN = 3
 
 # Longform-Kompilation: bekommt EIGENE, andere Fakten als die Shorts (kein
 # Wiederverwerten). Start-Anzahl an Fakten, danach werden bei Bedarf weitere
@@ -93,7 +95,7 @@ YOUTUBE_TOKEN_FILE = ROOT / "token.json"
 # gedacht), wird das jeweilige Video stattdessen sofort veroeffentlicht.
 PUBLISH_TIMEZONE = "Europe/Berlin"
 # Der Lauf startet um ~07:15 (oft verspaetet), daher erst ab 11:00.
-PUBLISH_TIMES = ["11:00", "13:00", "15:00", "17:00", "19:00", "20:00"]
+PUBLISH_TIMES = ["12:00", "17:00", "19:30", "20:00"]
 
 # Untertitel-Upload kostet 400 Kontingent-Einheiten pro Video. Bei Shorts sind die
 # Untertitel ohnehin eingebrannt, daher dort weglassen - sonst reicht das Tageskontingent
@@ -102,14 +104,16 @@ UPLOAD_CAPTIONS_FOR_SHORTS = False
 
 # Entspannungs-/Einschlafvideo: kommt an diesen Tagen ZUSAETZLICH zum taeglichen langen Video
 # (Robin 20.10.2026: mind. 1-2 Std, beruhigende Musik mit Melodie + sanfte Stimme)
-HYPNOSIS_WEEKDAYS = [0, 1, 2, 3, 4, 5, 6]  # taeglich (Robin 23.10.2026: Einschlafvideos laufen am besten)
+# Robin 03.11.2026: nur noch sonntags (4-Wochen-Test bis 30.11.) - taeglich brachten sie 0-9 Aufrufe
+HYPNOSIS_WEEKDAYS = [6]
 HYPNOSIS_TOTAL_SECONDS = 2 * 60 * 60   # Videolaenge; nach der Stimme laeuft die Musik weiter
 HYPNOSIS_SCRIPT_WORDS = 3600       # ca. 35-45 Min gesprochener Text inkl. Pausen
 HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
 
 # Langes Video (Robin 23.10.2026): "regen" = 3 Std Regengeraeusche + Musik statt Themen-Langvideo
-# ("themen" schaltet zurueck auf run_longform).
-LONGFORM_MODE = "regen"
+# ("themen" schaltet zurueck auf run_longform, "aus" = kein taegliches langes Video).
+# Robin 03.11.2026: "aus" - Regenvideos kamen seit 23.10. auf 0-17 Aufrufe.
+LONGFORM_MODE = "aus"
 RAIN_TOTAL_SECONDS = 3 * 60 * 60
 # Einmal pro Woche eine 8-Std-Version (Robin 23.10.2026): laeuft die ganze Nacht durch und bringt
 # die meisten Wiedergabestunden fuer die Monetarisierung (4.000 Std.)

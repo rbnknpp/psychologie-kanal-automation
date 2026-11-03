@@ -229,7 +229,10 @@ def run(shorts_n: int = None, skip_longform: bool = False):
         return run_dir
 
     # --- Langes Video: seit 23.10.2026 Regen-Video (3 Std), sonst Themen-Deep-Dive
-    if getattr(config, "LONGFORM_MODE", "themen") == "regen":
+    mode = getattr(config, "LONGFORM_MODE", "themen")
+    if mode == "aus":
+        print("[3/3] Langes Video ist abgeschaltet (config.LONGFORM_MODE = 'aus').")
+    elif mode == "regen":
         print("[3/3] Regen-Video...")
         try:
             manifest.append(run_rain(run_dir))

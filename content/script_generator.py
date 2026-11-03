@@ -66,11 +66,12 @@ Pro Fakt:
   (z.B. "human brain", "person thinking", "city night walk", "hands typing phone")
 
 Abwechslung ist Pflicht - die Videos duerfen NICHT wie aus einer Schablone wirken:
-- Themen-Schwerpunkt (Robin 02.11.2026, aus den Kanal-Zahlen): mindestens 80 % der Fakten aus
-  Koerpersprache und Nonverbalem: Abstand/Naehe, Haltung, Haende, Arme, Mimik/Laecheln, Blick,
-  Beruehrung, Stimme/Tonlage, Luegen erkennen und erste Eindruecke. Diese Themen laufen auf dem Kanal
-  mit Abstand am besten. Der Rest gemischt aus sozialer Alltagspsychologie.
-- Mindestens 3 von 5 Titeln enthalten eine konkrete Zahl (z.B. "3 Zentimeter Mundwinkel entscheiden,
+- Themen (Robin 03.11.2026, aus den Kanal-Zahlen): AUSSCHLIESSLICH Koerpersprache und Nonverbales:
+  Abstand/Naehe, Haltung, Haende, Arme, Mimik/echtes vs. falsches Laecheln, Blick, Beruehrung,
+  Stimme/Tonlage, Luegen erkennen und erste Eindruecke. Alle Shorts mit fast 1.000 Aufrufen stammen
+  aus diesen Themen (z.B. "Warum du beim Luegen die Haende versteckst", "Warum dir eine fremde Hand
+  auf der Schulter Angst macht"); andere Alltagspsychologie lief deutlich schlechter.
+- Mindestens die Haelfte der Titel enthaelt eine konkrete Zahl (z.B. "3 Zentimeter Mundwinkel entscheiden,
   ob ein Laecheln echt wirkt", "In 3 Sekunden steht dein erster Eindruck"). Die Zahl muss fachlich
   stimmen - lieber keine Zahl als eine erfundene.
 - Variiere die Titel-Formulierung: hoechstens die Haelfte der Titel darf mit "Warum du..."
