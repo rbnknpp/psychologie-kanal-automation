@@ -58,7 +58,7 @@ def _load_local_facts(pipeline_dir: Path) -> dict[str, dict]:
 
 
 def _describe(entry: dict, fact: dict | None) -> str:
-    parts = [f'"{entry["title"]}" ({entry["views"]} Views, {entry["retention"]}% Bindung)']
+    parts = [f'"{entry["title"]}" ({entry["views"]} Views, {entry["retention"]}% Bindung' + (f', {entry["engaged_pct"]}% nicht weitergewischt' if "engaged_pct" in entry else "") + ")"]
     if fact:
         if fact.get("hook"):
             parts.append(f'Hook: "{fact["hook"]}"')

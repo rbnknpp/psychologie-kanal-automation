@@ -65,7 +65,11 @@ def get_top_videos(creds, start_date: str, end_date: str, max_results: int = 3) 
         return []
 
     video_ids = [r[0] for r in rows]
-    stats_by_id = {r[0]: {"views": int(r[1]), "retention": round(r[2], 1)} for r in rows}
+    stats_by_id = {
+        r[0]: {"views": int(r[1]), "retention": round(r[2], 1),
+               **({"engaged_pct": round(100 * int(r[3]) / int(r[1]), 1)} if len(r) > 3 and int(r[1]) else {})}
+        for r in rows
+    }
 
     details = youtube.videos().list(part="snippet", id=",".join(video_ids)).execute()
     titles_by_id = {v["id"]: v["snippet"]["title"] for v in details.get("items", [])}
@@ -96,15 +100,17 @@ def get_ranked_videos(
     "schlecht angekommen" gewertet, obwohl das nur ein Zeit-, kein Qualitaetseffekt ist."""
     youtube, yt_analytics = _build_clients(creds)
     fetch_n = max_results if order == "top" else max(50, max_results * 8)
-    resp = yt_analytics.reports().query(
-        ids="channel==MINE",
-        startDate=start_date,
-        endDate=end_date,
-        metrics="views,averageViewPercentage",
-        dimensions="video",
-        sort="-views",
-        maxResults=fetch_n,
-    ).execute()
+    # engagedViews (Robin 03.11.2026): Aufrufe, bei denen nicht sofort weitergewischt wurde. Das Verhaeltnis
+    # engaged/views zeigt bei Shorts, ob der Einstieg haelt. Kennt die API die Metrik nicht, ohne sie weiter.
+    def _query(metrics):
+        return yt_analytics.reports().query(
+            ids="channel==MINE", startDate=start_date, endDate=end_date,
+            metrics=metrics, dimensions="video", sort="-views", maxResults=fetch_n,
+        ).execute()
+    try:
+        resp = _query("views,averageViewPercentage,engagedViews")
+    except Exception:
+        resp = _query("views,averageViewPercentage")
 
     rows = [r for r in resp.get("rows", []) if int(r[1]) >= min_views]
     if not rows:
@@ -113,7 +119,11 @@ def get_ranked_videos(
         rows = list(reversed(rows))
 
     video_ids = [r[0] for r in rows]
-    stats_by_id = {r[0]: {"views": int(r[1]), "retention": round(r[2], 1)} for r in rows}
+    stats_by_id = {
+        r[0]: {"views": int(r[1]), "retention": round(r[2], 1),
+               **({"engaged_pct": round(100 * int(r[3]) / int(r[1]), 1)} if len(r) > 3 and int(r[1]) else {})}
+        for r in rows
+    }
 
     details = youtube.videos().list(part="snippet", id=",".join(video_ids)).execute()
     titles_by_id = {v["id"]: v["snippet"]["title"] for v in details.get("items", [])}
