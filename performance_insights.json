@@ -1,27 +1,13 @@
 {
-  "generated_at": "2026-11-03T12:45:55.270195",
+  "generated_at": "2026-11-04T12:58:51.487910",
   "lookback_days": 10,
   "top": [
-    {
-      "video_id": "MvHm8myW6t8",
-      "title": "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
-      "views": 102,
-      "retention": 31.2,
-      "engaged_pct": 40.2
-    },
     {
       "video_id": "1qdZ26KQBOU",
       "title": "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst",
       "views": 59,
       "retention": 33.6,
       "engaged_pct": 28.8
-    },
-    {
-      "video_id": "xQAUZcqMQNw",
-      "title": "Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert",
-      "views": 57,
-      "retention": 13.8,
-      "engaged_pct": 10.5
     },
     {
       "video_id": "qFI5OUht63g",
@@ -31,18 +17,18 @@
       "engaged_pct": 33.9
     },
     {
-      "video_id": "2VJo8VZv0DU",
-      "title": "Warum du bei einer Entschuldigung zuerst auf die Hände schaust",
-      "views": 56,
-      "retention": 24.1,
-      "engaged_pct": 21.4
+      "video_id": "rp1CW1-XXKs",
+      "title": "Warum du bei einem Kompliment zuerst wegschaust",
+      "views": 47,
+      "retention": 36.1,
+      "engaged_pct": 23.4
     },
     {
-      "video_id": "kGpVh54INm4",
-      "title": "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
-      "views": 55,
-      "retention": 15.9,
-      "engaged_pct": 20.0
+      "video_id": "MvHm8myW6t8",
+      "title": "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
+      "views": 44,
+      "retention": 26.9,
+      "engaged_pct": 43.2
     },
     {
       "video_id": "9UcuxMwoWeo",
@@ -57,15 +43,36 @@
       "views": 39,
       "retention": 20.4,
       "engaged_pct": 43.6
+    },
+    {
+      "video_id": "CLwlxdVXi2Q",
+      "title": "Warum du beim Flüstern automatisch näher an jemanden rückst",
+      "views": 34,
+      "retention": 16.7,
+      "engaged_pct": 23.5
+    },
+    {
+      "video_id": "xQAUZcqMQNw",
+      "title": "Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert",
+      "views": 33,
+      "retention": 3.8,
+      "engaged_pct": 15.2
     }
   ],
   "flop": [
     {
-      "video_id": "vom0G3GmdWc",
-      "title": "Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm",
-      "views": 16,
-      "retention": 73.6,
-      "engaged_pct": 50.0
+      "video_id": "H0w9nn5qAGE",
+      "title": "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
+      "views": 15,
+      "retention": 23.5,
+      "engaged_pct": 46.7
+    },
+    {
+      "video_id": "kGpVh54INm4",
+      "title": "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
+      "views": 15,
+      "retention": 14.7,
+      "engaged_pct": 26.7
     },
     {
       "video_id": "Wlnh5oYwBjQ",
@@ -82,19 +89,12 @@
       "engaged_pct": 100.0
     },
     {
-      "video_id": "b_eYOPy4wjo",
-      "title": "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz",
+      "video_id": "UDSpznTkllY",
+      "title": "Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst",
       "views": 16,
-      "retention": 23.6,
-      "engaged_pct": 37.5
-    },
-    {
-      "video_id": "_-Smrnu-1ck",
-      "title": "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum",
-      "views": 17,
-      "retention": 24.9,
-      "engaged_pct": 35.3
+      "retention": 51.0,
+      "engaged_pct": 31.2
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter die Arme verschränkst, als du denkst\" (102 Views, 31.2% Bindung, 40.2% nicht weitergewischt) | Hook: \"Verschränkte Arme bedeuten nicht automatisch Ablehnung.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst\" (59 Views, 33.6% Bindung, 28.8% nicht weitergewischt) | Hook: \"In einer Gruppe verraten deine Füße, wen du am liebsten magst.\" | Themen: körpersprache, psychologie, füße körpersprache, sympathie\n- \"Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert\" (57 Views, 13.8% Bindung, 10.5% nicht weitergewischt)\n- \"Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst\" (56 Views, 43.9% Bindung, 33.9% nicht weitergewischt) | Hook: \"Manche Berührungen fühlen sich falsch an, bevor sie überhaupt enden.\" | Themen: psychologie, körpersprache, berührung, umarmung\n- \"Warum du bei einer Entschuldigung zuerst auf die Hände schaust\" (56 Views, 24.1% Bindung, 21.4% nicht weitergewischt) | Hook: \"Dein Blick wandert bei Entschuldigungen zuerst zu den Händen.\" | Themen: körpersprache, psychologie, vertrauen, gestik\n- \"Kennst du das? Du erkennst schlechte Laune an der Türklinke\" (55 Views, 15.9% Bindung, 20.0% nicht weitergewischt) | Hook: \"Wie jemand eine Tür schließt, verrät seine Stimmung.\" | Themen: körpersprache, psychologie, stimmung, alltagspsychologie\n- \"Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst\" (41 Views, 34.9% Bindung, 36.6% nicht weitergewischt) | Hook: \"Beim Lügen weiten sich deine Pupillen - ganz ohne dein Zutun.\" | Themen: psychologie, körpersprache, lügen erkennen, pupillen\n- \"Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst\" (39 Views, 20.4% Bindung, 43.6% nicht weitergewischt) | Hook: \"Im Gespräch wandert dein Blick ständig zur Augenbraue.\" | Themen: psychologie, körpersprache, mimik, augenbraue\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm\" (16 Views, 73.6% Bindung, 50.0% nicht weitergewischt) | Hook: \"Eine Berührung am Rücken wirkt vertrauter als eine am Arm.\" | Themen: psychologie, berührung, körpersprache, vertrauen\n- \"3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist\" (16 Views, 68.2% Bindung, 25.0% nicht weitergewischt) | Hook: \"Ein echtes Kompliment kommt fast ohne Zögern aus dem Mund.\" | Themen: psychologie, komplimente, körpersprache, ehrlichkeit\n- \"Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen\" (16 Views, 0.3% Bindung, 100.0% nicht weitergewischt)\n- \"Dein Gehirn traut einem Flüstern mehr als einem normalen Satz\" (16 Views, 23.6% Bindung, 37.5% nicht weitergewischt) | Hook: \"Ein geflüstertes Wort wirkt ehrlicher als ein lautes.\" | Themen: stimme, psychologie, vertrauen, kommunikation\n- \"Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum\" (17 Views, 24.9% Bindung, 35.3% nicht weitergewischt) | Hook: \"Ein Gesicht ohne Augenbrauen wirkt sofort seltsam vertraut-fremd.\" | Themen: mimik, psychologie, gesichtserkennung, körpersprache"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst\" (59 Views, 33.6% Bindung, 28.8% nicht weitergewischt) | Hook: \"In einer Gruppe verraten deine Füße, wen du am liebsten magst.\" | Themen: körpersprache, psychologie, füße körpersprache, sympathie\n- \"Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst\" (56 Views, 43.9% Bindung, 33.9% nicht weitergewischt) | Hook: \"Manche Berührungen fühlen sich falsch an, bevor sie überhaupt enden.\" | Themen: psychologie, körpersprache, berührung, umarmung\n- \"Warum du bei einem Kompliment zuerst wegschaust\" (47 Views, 36.1% Bindung, 23.4% nicht weitergewischt) | Hook: \"Bei einem echten Kompliment schaust du kurz weg, nicht hin.\" | Themen: psychologie, körpersprache, komplimente, blickkontakt\n- \"Warum du beim Zuhören öfter die Arme verschränkst, als du denkst\" (44 Views, 26.9% Bindung, 43.2% nicht weitergewischt) | Hook: \"Verschränkte Arme bedeuten nicht automatisch Ablehnung.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst\" (41 Views, 34.9% Bindung, 36.6% nicht weitergewischt) | Hook: \"Beim Lügen weiten sich deine Pupillen - ganz ohne dein Zutun.\" | Themen: psychologie, körpersprache, lügen erkennen, pupillen\n- \"Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst\" (39 Views, 20.4% Bindung, 43.6% nicht weitergewischt) | Hook: \"Im Gespräch wandert dein Blick ständig zur Augenbraue.\" | Themen: psychologie, körpersprache, mimik, augenbraue\n- \"Warum du beim Flüstern automatisch näher an jemanden rückst\" (34 Views, 16.7% Bindung, 23.5% nicht weitergewischt) | Hook: \"Sobald du flüsterst, verringert sich dein Abstand automatisch.\" | Themen: psychologie, körpersprache, flüstern, nähe\n- \"Warum sich dein erster Eindruck in 3 Sekunden festsetzt – und kaum wieder ändert\" (33 Views, 3.8% Bindung, 15.2% nicht weitergewischt)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst\" (15 Views, 23.5% Bindung, 46.7% nicht weitergewischt) | Hook: \"Ein winziges Augenbrauen-Zucken verrät mehr als ein Wort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"Kennst du das? Du erkennst schlechte Laune an der Türklinke\" (15 Views, 14.7% Bindung, 26.7% nicht weitergewischt) | Hook: \"Wie jemand eine Tür schließt, verrät seine Stimmung.\" | Themen: körpersprache, psychologie, stimmung, alltagspsychologie\n- \"3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist\" (16 Views, 68.2% Bindung, 25.0% nicht weitergewischt) | Hook: \"Ein echtes Kompliment kommt fast ohne Zögern aus dem Mund.\" | Themen: psychologie, komplimente, körpersprache, ehrlichkeit\n- \"Herbstregen – 3 Stunden Regengeräusche & sanfte Musik zum Einschlafen\" (16 Views, 0.3% Bindung, 100.0% nicht weitergewischt)\n- \"Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst\" (16 Views, 51.0% Bindung, 31.2% nicht weitergewischt) | Hook: \"In jeder Schlange hältst du automatisch denselben Abstand ein.\" | Themen: proxemik, persönlicher raum, psychologie, körpersprache"
 }

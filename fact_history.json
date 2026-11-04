@@ -1,52 +1,4 @@
 {
- "Warum dir dein eigener Name in einem lauten Raum auffällt": {
-  "title": "Warum dir dein eigener Name in einem lauten Raum auffällt",
-  "hook": "Mitten in einer lauten Party hörst du trotzdem sofort deinen eigenen Namen.",
-  "tags": [
-   "psychologie",
-   "cocktailparty effekt",
-   "aufmerksamkeit",
-   "gehirn fakten",
-   "namen",
-   "wahrnehmung",
-   "sozialpsychologie",
-   "verhalten",
-   "gehör",
-   "alltag"
-  ]
- },
- "5 Minuten Gespräch reichen, um Fremde als Freunde zu fühlen": {
-  "title": "5 Minuten Gespräch reichen, um Fremde als Freunde zu fühlen",
-  "hook": "Ein tiefes Fünf-Minuten-Gespräch kann sich vertrauter anfühlen als Jahre Smalltalk.",
-  "tags": [
-   "psychologie",
-   "beziehungen",
-   "vertrauen",
-   "sozialpsychologie",
-   "nähe",
-   "gespräche",
-   "verhalten",
-   "emotionen",
-   "gehirn fakten",
-   "kommunikation"
-  ]
- },
- "Warum dir ein Lied aus der Jugend sofort Gänsehaut gibt": {
-  "title": "Warum dir ein Lied aus der Jugend sofort Gänsehaut gibt",
-  "hook": "Ein Song aus der Schulzeit läuft, und sofort hast du Gänsehaut.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "musik",
-   "nostalgie",
-   "erinnerung",
-   "reminiszenz effekt",
-   "gehirn fakten",
-   "emotionen",
-   "jugend",
-   "gedächtnis"
-  ]
- },
  "Dein Gehirn erschafft Freunde, die es nie gab": {
   "title": "Dein Gehirn erschafft Freunde, die es nie gab",
   "hook": "Du kennst diese Serienfigur besser als manche echten Freunde.",
@@ -6011,5 +5963,56 @@
    "verhalten"
   ],
   "abo_aufruf": true
+ },
+ "Warum du beim Zweifeln automatisch an deinem Ohr ziehst": {
+  "title": "Warum du beim Zweifeln automatisch an deinem Ohr ziehst",
+  "hook": "Beim Zweifeln greifst du öfter ans Ohr, als dir bewusst ist.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "übersprungshandlung",
+   "gestik",
+   "unbewusste gesten",
+   "nonverbale kommunikation",
+   "mimik",
+   "alltagspsychologie",
+   "unsicherheit",
+   "ohr geste"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn braucht nur 7 Sekunden für einen stabilen ersten Eindruck": {
+  "title": "Dein Gehirn braucht nur 7 Sekunden für einen stabilen ersten Eindruck",
+  "hook": "7 Sekunden reichen deinem Gehirn für ein festes Urteil.",
+  "tags": [
+   "erster eindruck",
+   "psychologie",
+   "körpersprache",
+   "bestätigungsfehler",
+   "sozialpsychologie",
+   "wahrnehmung",
+   "vorurteile",
+   "alltagspsychologie",
+   "urteil",
+   "sekunden"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum du beim Zuhören öfter die Handflächen nach unten drehst": {
+  "title": "Warum du beim Zuhören öfter die Handflächen nach unten drehst",
+  "hook": "Zeigst du beim Reden nach unten, wirkst du bestimmter.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "gestik",
+   "handflächen",
+   "kommunikation",
+   "nonverbale kommunikation",
+   "rhetorik",
+   "überzeugungskraft",
+   "alltagspsychologie",
+   "sprechen"
+  ],
+  "abo_aufruf": false
  }
 }
