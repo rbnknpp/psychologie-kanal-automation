@@ -1,52 +1,4 @@
 {
- "Dein Gehirn erschafft Freunde, die es nie gab": {
-  "title": "Dein Gehirn erschafft Freunde, die es nie gab",
-  "hook": "Du kennst diese Serienfigur besser als manche echten Freunde.",
-  "tags": [
-   "psychologie",
-   "parasoziale beziehung",
-   "gehirn",
-   "medien",
-   "youtube psychologie",
-   "sozialpsychologie",
-   "serien",
-   "verhalten",
-   "gehirn fakten",
-   "beziehungen"
-  ]
- },
- "3 Sekunden Stille reichen, um ein Gespräch unangenehm zu machen": {
-  "title": "3 Sekunden Stille reichen, um ein Gespräch unangenehm zu machen",
-  "hook": "Vier Sekunden Stille im Gespräch, und es fühlt sich ewig an.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "gespräch",
-   "stille",
-   "sozialpsychologie",
-   "verhalten",
-   "gehirn fakten",
-   "small talk",
-   "körpersprache",
-   "beziehungen"
-  ]
- },
- "Warum ein voller Terminkalender dich glücklicher wirken lässt": {
-  "title": "Warum ein voller Terminkalender dich glücklicher wirken lässt",
-  "hook": "Wer ständig beschäftigt wirkt, gilt automatisch als wichtiger.",
-  "tags": [
-   "psychologie",
-   "alltag",
-   "produktivität",
-   "status",
-   "arbeit",
-   "stress",
-   "gehirn fakten",
-   "zeitmanagement",
-   "verhalten",
-   "sozialpsychologie"
-  ]
- },
  "Dein Gehirn hält Verluste für schlimmer als gleich große Gewinne": {
   "title": "Dein Gehirn hält Verluste für schlimmer als gleich große Gewinne",
   "hook": "Zwanzig Euro verlieren fühlt sich schlimmer an als zwanzig gewinnen.",
@@ -6014,5 +5966,56 @@
    "sprechen"
   ],
   "abo_aufruf": false
+ },
+ "Warum du beim Lächeln über einen Witz zuerst die Schultern hebst": {
+  "title": "Warum du beim Lächeln über einen Witz zuerst die Schultern hebst",
+  "hook": "Echtes Lachen hebt zuerst deine Schultern, nicht den Mund.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lachen",
+   "nonverbale kommunikation",
+   "emotionen",
+   "mimik",
+   "alltag",
+   "gehirn",
+   "menschliches verhalten",
+   "schultern"
+  ],
+  "abo_aufruf": true
+ },
+ "3 Grad Kippung im Stand verraten, ob du dich sicher fühlst": {
+  "title": "3 Grad Kippung im Stand verraten, ob du dich sicher fühlst",
+  "hook": "3 Grad Gewichtsverlagerung zeigen, wie sicher du dich fühlst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "standhaltung",
+   "selbstbewusstsein",
+   "nonverbale kommunikation",
+   "gleichgewicht",
+   "haltung",
+   "alltag",
+   "gehirn",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Zuhören öfter den Oberkörper nach vorne beugst": {
+  "title": "Warum du beim Zuhören öfter den Oberkörper nach vorne beugst",
+  "hook": "Echtes Interesse zeigt sich an deinem Oberkörper, nicht am Gesicht.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "interesse zeigen",
+   "gesprächspsychologie",
+   "oberkörper haltung",
+   "mimik und gestik",
+   "alltagspsychologie",
+   "soziale psychologie",
+   "körperhaltung"
+  ],
+  "abo_aufruf": true
  }
 }
