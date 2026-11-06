@@ -1,52 +1,4 @@
 {
- "Dein Gehirn hält Verluste für schlimmer als gleich große Gewinne": {
-  "title": "Dein Gehirn hält Verluste für schlimmer als gleich große Gewinne",
-  "hook": "Zwanzig Euro verlieren fühlt sich schlimmer an als zwanzig gewinnen.",
-  "tags": [
-   "psychologie",
-   "verlustaversion",
-   "entscheidungen",
-   "verhaltensökonomie",
-   "gehirn fakten",
-   "geld psychologie",
-   "verhalten",
-   "sozialpsychologie",
-   "risiko",
-   "gewinn verlust"
-  ]
- },
- "Warum dir ein Raum voller Fremder weniger Angst macht als einer Person": {
-  "title": "Warum dir ein Raum voller Fremder weniger Angst macht als einer Person",
-  "hook": "Vor hundert Fremden zu sprechen fühlt sich oft leichter an als vor einem.",
-  "tags": [
-   "psychologie",
-   "sozialangst",
-   "gehirn fakten",
-   "verhalten",
-   "sozialpsychologie",
-   "lampenfieber",
-   "kommunikation",
-   "gruppe",
-   "gesicht",
-   "angst"
-  ]
- },
- "Dein Gehirn macht aus einer Lüge schneller eine Wahrheit, als du denkst": {
-  "title": "Dein Gehirn macht aus einer Lüge schneller eine Wahrheit, als du denkst",
-  "hook": "Hörst du eine falsche Info oft genug, hältst du sie irgendwann für wahr.",
-  "tags": [
-   "psychologie",
-   "wahrheitseffekt",
-   "kognition",
-   "gehirn fakten",
-   "verhalten",
-   "manipulation",
-   "medien",
-   "werbung",
-   "desinformation",
-   "sozialpsychologie"
-  ]
- },
  "Warum ein Spiegelbild dich kritischer macht als ein Foto": {
   "title": "Warum ein Spiegelbild dich kritischer macht als ein Foto",
   "hook": "Dein Spiegelbild zeigt dich seitenverkehrt, und dein Gehirn merkt es nicht.",
@@ -6017,5 +5969,56 @@
    "körperhaltung"
   ],
   "abo_aufruf": true
+ },
+ "Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist": {
+  "title": "Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist",
+  "hook": "Gesenkte Augenbrauen bedeuten Konzentration, nicht Ärger.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "mimik",
+   "augenbrauen",
+   "konzentration",
+   "nonverbale kommunikation",
+   "gesichtsausdruck",
+   "aufmerksamkeit",
+   "alltagspsychologie",
+   "gehirn"
+  ],
+  "abo_aufruf": false
+ },
+ "2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust": {
+  "title": "2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust",
+  "hook": "Wie schnell du zurückwinkst, zeigt echte Freude.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "winken",
+   "gestik",
+   "soziales verhalten",
+   "nonverbale kommunikation",
+   "reaktionszeit",
+   "freude",
+   "alltagspsychologie",
+   "mimik"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn hält einen geraden Rücken für selbstbewusster als breite Schultern": {
+  "title": "Dein Gehirn hält einen geraden Rücken für selbstbewusster als breite Schultern",
+  "hook": "Nicht breite Schultern wirken stark, sondern dein Rücken.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "haltung",
+   "selbstbewusstsein",
+   "wirbelsäule",
+   "nonverbale kommunikation",
+   "ausstrahlung",
+   "körperhaltung",
+   "alltagspsychologie",
+   "soziale wahrnehmung"
+  ],
+  "abo_aufruf": false
  }
 }
