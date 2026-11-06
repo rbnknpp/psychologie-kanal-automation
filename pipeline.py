@@ -230,7 +230,9 @@ def run(shorts_n: int = None, skip_longform: bool = False):
 
     # --- Langes Video: seit 23.10.2026 Regen-Video (3 Std), sonst Themen-Deep-Dive
     mode = getattr(config, "LONGFORM_MODE", "themen")
-    if mode == "aus":
+    if getattr(config, "LONGFORM_SKIP_ON_HYPNOSIS_DAYS", False) and datetime.date.today().weekday() in config.HYPNOSIS_WEEKDAYS:
+        print("[3/3] Heute kein Themen-Langvideo - an Hypnose-Tagen kommt nur das Stunden-Video.")
+    elif mode == "aus":
         print("[3/3] Langes Video ist abgeschaltet (config.LONGFORM_MODE = 'aus').")
     elif mode == "regen":
         print("[3/3] Regen-Video...")

@@ -113,7 +113,10 @@ HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
 # Langes Video (Robin 23.10.2026): "regen" = 3 Std Regengeraeusche + Musik statt Themen-Langvideo
 # ("themen" schaltet zurueck auf run_longform, "aus" = kein taegliches langes Video).
 # Robin 03.11.2026: "aus" - Regenvideos kamen seit 23.10. auf 0-17 Aufrufe.
-LONGFORM_MODE = "aus"
+# Robin 06.11.2026: wieder taeglich ein ~10-Min-Themenvideo ("themen"), ausser an den Hypnose-Tagen
+# (dort kommt das Stunden-Video). Bestes Langvideo bisher: Themenvideo "erster Eindruck" (~90 Aufrufe).
+LONGFORM_MODE = "themen"
+LONGFORM_SKIP_ON_HYPNOSIS_DAYS = True
 RAIN_TOTAL_SECONDS = 3 * 60 * 60
 # Einmal pro Woche eine 8-Std-Version (Robin 23.10.2026): laeuft die ganze Nacht durch und bringt
 # die meisten Wiedergabestunden fuer die Monetarisierung (4.000 Std.)
