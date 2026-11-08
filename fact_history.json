@@ -1,46 +1,4 @@
 {
- "Der Grund, warum du beim Warten auf eine Antwort ständig das Handy checkst": {
-  "title": "Der Grund, warum du beim Warten auf eine Antwort ständig das Handy checkst",
-  "hook": "Noch keine Antwort auf deine Nachricht? Dein Daumen weiß das schon.",
-  "tags": [
-   "psychologie",
-   "dopamin",
-   "smartphone sucht",
-   "verhalten",
-   "gehirn fakten",
-   "soziale medien",
-   "belohnungssystem",
-   "warten"
-  ]
- },
- "Warum dir ein Raum nach dem Aufräumen ruhiger vorkommt, als er wirklich ist": {
-  "title": "Warum dir ein Raum nach dem Aufräumen ruhiger vorkommt, als er wirklich ist",
-  "hook": "Ein aufgeräumter Raum fühlt sich leiser an, auch ganz ohne Geräusche.",
-  "tags": [
-   "psychologie",
-   "aufräumen",
-   "wahrnehmung",
-   "gehirn fakten",
-   "stress reduktion",
-   "konzentration",
-   "ordnung",
-   "verhalten"
-  ]
- },
- "Dein Gehirn erkennt Freude in einer Stimme schneller als in einem Gesicht": {
-  "title": "Dein Gehirn erkennt Freude in einer Stimme schneller als in einem Gesicht",
-  "hook": "Bevor du ein Gesicht siehst, erkennt dein Gehirn schon die Stimmung in der Stimme.",
-  "tags": [
-   "psychologie",
-   "stimme",
-   "emotionserkennung",
-   "gehirn fakten",
-   "kommunikation",
-   "telefon",
-   "wahrnehmung",
-   "sozialpsychologie"
-  ]
- },
  "Warum dich dein eigener Herzschlag nachts lauter stört": {
   "title": "Warum dich dein eigener Herzschlag nachts lauter stört",
   "hook": "Nachts im Bett hörst du plötzlich deinen eigenen Herzschlag.",
@@ -6031,6 +5989,57 @@
    "großzügigkeit",
    "verhaltensforschung",
    "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Zuhören öfter den Kopf schräg hältst als sonst": {
+  "title": "Warum du beim Zuhören öfter den Kopf schräg hältst als sonst",
+  "hook": "Ein schräger Kopf heißt: dein Gehirn hört wirklich zu.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "kopfneigung",
+   "zuhören",
+   "nonverbale kommunikation",
+   "gestik",
+   "interesse zeigen",
+   "mimik",
+   "alltagspsychologie",
+   "soziale signale"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit": {
+  "title": "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit",
+  "hook": "3 Zentimeter Fußabstand verraten, wie sicher du dich fühlst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "füße",
+   "unsicherheit",
+   "nonverbale kommunikation",
+   "stresssignale",
+   "mimik",
+   "gestik",
+   "verhandeln",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum deine Stimme höher wird, wenn du jemanden beeindrucken willst": {
+  "title": "Warum deine Stimme höher wird, wenn du jemanden beeindrucken willst",
+  "hook": "Willst du überzeugen, steigt deine Stimme unbewusst höher.",
+  "tags": [
+   "stimme",
+   "psychologie",
+   "körpersprache",
+   "nervosität",
+   "kommunikation",
+   "tonlage",
+   "bewerbungsgespräch",
+   "nonverbale kommunikation",
+   "stimmlage",
+   "alltagspsychologie"
   ],
   "abo_aufruf": false
  }
