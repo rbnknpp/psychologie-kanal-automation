@@ -1,52 +1,4 @@
 {
- "Warum dich dein eigener Herzschlag nachts lauter stört": {
-  "title": "Warum dich dein eigener Herzschlag nachts lauter stört",
-  "hook": "Nachts im Bett hörst du plötzlich deinen eigenen Herzschlag.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "schlaf",
-   "wahrnehmung",
-   "herzschlag",
-   "nachts",
-   "aufmerksamkeit",
-   "verhalten",
-   "sinne",
-   "stille"
-  ]
- },
- "3 Fragen, bevor dein Gehirn eine Entscheidung wirklich trifft": {
-  "title": "3 Fragen, bevor dein Gehirn eine Entscheidung wirklich trifft",
-  "hook": "Du denkst, du wägst gerade ab. Meistens ist das schon vorbei.",
-  "tags": [
-   "psychologie",
-   "entscheidungen",
-   "gehirn fakten",
-   "bauchgefühl",
-   "verhalten",
-   "bewusstsein",
-   "unterbewusstsein",
-   "intuition",
-   "kognition",
-   "sozialpsychologie"
-  ]
- },
- "Der Grund, warum du beim Lachen anderer automatisch mitlachst": {
-  "title": "Der Grund, warum du beim Lachen anderer automatisch mitlachst",
-  "hook": "Jemand lacht neben dir, und du lachst mit – ohne den Witz zu kennen.",
-  "tags": [
-   "psychologie",
-   "lachen",
-   "sozialpsychologie",
-   "gehirn fakten",
-   "emotionen",
-   "spiegelneuronen",
-   "verhalten",
-   "beziehungen",
-   "gruppe",
-   "kommunikation"
-  ]
- },
  "Warum dir eine Warteschlange länger vorkommt als die Fahrt danach": {
   "title": "Warum dir eine Warteschlange länger vorkommt als die Fahrt danach",
   "hook": "Zehn Minuten Warten fühlen sich oft länger an als eine Stunde Fahrt.",
@@ -6040,6 +5992,57 @@
    "nonverbale kommunikation",
    "stimmlage",
    "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Zuhören öfter dein Kinn anhebst, wenn du zustimmst": {
+  "title": "Warum du beim Zuhören öfter dein Kinn anhebst, wenn du zustimmst",
+  "hook": "Dein Kinn hebt sich, bevor du 'Ja' sagst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "kinn",
+   "zustimmung",
+   "gestik",
+   "alltagspsychologie",
+   "mimik",
+   "körpersignale",
+   "kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "In 2 Sekunden entscheidet dein Gehirn, ob ein Raum dir gehört": {
+  "title": "In 2 Sekunden entscheidet dein Gehirn, ob ein Raum dir gehört",
+  "hook": "2 Sekunden reichen, um zu sehen, wem ein Raum gehört.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "raumbeanspruchung",
+   "status",
+   "nonverbale kommunikation",
+   "hierarchie",
+   "selbstbewusstsein",
+   "alltagspsychologie",
+   "meeting",
+   "erster eindruck"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum du beim Trösten automatisch die gleiche Haltung einnimmst": {
+  "title": "Warum du beim Trösten automatisch die gleiche Haltung einnimmst",
+  "hook": "Beim Trösten kopiert dein Körper die Haltung des anderen.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "spiegelneuronen",
+   "mitgefühl",
+   "trösten",
+   "nonverbale kommunikation",
+   "körperhaltung",
+   "empathie",
+   "alltagspsychologie",
+   "beziehungen"
   ],
   "abo_aufruf": false
  }
