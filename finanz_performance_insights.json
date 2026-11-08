@@ -1,56 +1,64 @@
 {
-  "generated_at": "2026-11-01T21:53:44.992076",
+  "generated_at": "2026-11-08T21:52:55.914977",
   "lookback_days": 14,
   "top": [
     {
-      "video_id": "VLzKoUt743A",
-      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
+      "video_id": "sAkCueGtt20",
+      "title": "Warum du Geld auf dem Konto anders wahrnimmst als Bargeld im Sparschwein",
       "views": 2,
-      "retention": 10.5
-    },
-    {
-      "video_id": "Ds52d0Gkww0",
-      "title": "Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst",
-      "views": 2,
-      "retention": 39.1
+      "retention": 0,
+      "engaged_pct": 0.0
     },
     {
       "video_id": "AiPX4LWYZjo",
       "title": "Kennst du das? Du zahlst mehr, weil die Schlange kurz war",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
+    },
+    {
+      "video_id": "RaQnOneqtLg",
+      "title": "Der Grund, warum du bei einer Preiserhöhung von 1 Cent nichts merkst",
+      "views": 1,
+      "retention": 12.1,
+      "engaged_pct": 100.0
     },
     {
       "video_id": "ALOI3JnX3cg",
       "title": "Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
     },
     {
-      "video_id": "chCrPBo1vak",
-      "title": "Der Trick, mit dem Supermärkte deinen Blick lenken",
+      "video_id": "GkVMsSCa4gw",
+      "title": "13 faszinierende Finanz-Fakten, die du kennen solltest",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
     },
     {
-      "video_id": "PnEaiuHjkFo",
-      "title": "Der Grund, warum du bei Rabatten die Prozentzahl falsch einschaetzt",
+      "video_id": "pHTrR4dU8Ws",
+      "title": "Kennst du das? Du planst ein Budget und hältst es trotzdem nie ein",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
     },
     {
       "video_id": "1mUB3hQRGLE",
       "title": "Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
     },
     {
       "video_id": "OD4uTlN3b5c",
       "title": "Warum dein Gehirn Fixkosten schneller vergisst als Extra-Ausgaben",
       "views": 1,
-      "retention": 0
+      "retention": 0,
+      "engaged_pct": 0.0
     }
   ],
   "flop": [],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (2 Views, 10.5% Bindung)\n- \"Warum ein Haushaltsbuch dich ehrlicher macht, als du denkst\" (2 Views, 39.1% Bindung)\n- \"Kennst du das? Du zahlst mehr, weil die Schlange kurz war\" (1 Views, 0% Bindung)\n- \"Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist\" (1 Views, 0% Bindung)\n- \"Der Trick, mit dem Supermärkte deinen Blick lenken\" (1 Views, 0% Bindung)\n- \"Der Grund, warum du bei Rabatten die Prozentzahl falsch einschaetzt\" (1 Views, 0% Bindung)\n- \"Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet\" (1 Views, 0% Bindung)\n- \"Warum dein Gehirn Fixkosten schneller vergisst als Extra-Ausgaben\" (1 Views, 0% Bindung)"
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du Geld auf dem Konto anders wahrnimmst als Bargeld im Sparschwein\" (2 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"Kennst du das? Du zahlst mehr, weil die Schlange kurz war\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"Der Grund, warum du bei einer Preiserhöhung von 1 Cent nichts merkst\" (1 Views, 12.1% Bindung, 100.0% nicht weitergewischt)\n- \"Die Zahl, die zeigt ab wann ein Schnaeppchen gar keins mehr ist\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"13 faszinierende Finanz-Fakten, die du kennen solltest\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"Kennst du das? Du planst ein Budget und hältst es trotzdem nie ein\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"Die Zahl, die zeigt wie viel ein 'kleiner' Dauerkonsum wirklich kostet\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)\n- \"Warum dein Gehirn Fixkosten schneller vergisst als Extra-Ausgaben\" (1 Views, 0% Bindung, 0.0% nicht weitergewischt)"
 }
