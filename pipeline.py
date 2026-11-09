@@ -137,8 +137,9 @@ def run_longform(run_dir, extra_avoid: list[str] = None, out_name: str = "compil
         batch_size = 3  # bei Nachgenerieren kleinere Haeppchen
 
     if total_duration < config.LONGFORM_MIN_DURATION_SECONDS:
-        print(f"  WARNUNG: Longform-Video erreicht nur {total_duration/60:.1f} Min "
-              f"(Ziel {config.LONGFORM_MIN_DURATION_SECONDS/60:.0f} Min), LONGFORM_MAX_FACTS erreicht.")
+        # Regel Robin 09.11.2026: Longform immer mindestens 10 Minuten - sonst nicht hochladen
+        raise RuntimeError(f"Longform-Video nur {total_duration/60:.1f} Min "
+                           f"(Pflicht {config.LONGFORM_MIN_DURATION_SECONDS/60:.0f} Min) - wird nicht hochgeladen.")
 
     print("Baue Longform-Video (mit Intro)...")
     compilation_out = run_dir / f"{out_name}.mp4"
@@ -242,10 +243,13 @@ def run(shorts_n: int = None, skip_longform: bool = False):
             print(f"  Regen-Video fehlgeschlagen, wird heute ausgelassen: {e}")
     else:
         print("[3/3] Longform-Video...")
-        long_meta, longform_facts = run_longform(
-            run_dir, extra_avoid=[f["title"] for f in shorts_facts]
-        )
-        manifest.append(long_meta)
+        try:
+            long_meta, longform_facts = run_longform(
+                run_dir, extra_avoid=[f["title"] for f in shorts_facts]
+            )
+            manifest.append(long_meta)
+        except RuntimeError as e:
+            print(f"  Longform ausgelassen: {e}")
     (run_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )

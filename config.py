@@ -80,7 +80,7 @@ SHORTS_PER_RUN = 3
 # die YouTube-Monetarisierung: Mid-Roll-Werbung braucht Videos ab 8 Minuten).
 LONGFORM_FACTS_START = 10
 LONGFORM_MIN_DURATION_SECONDS = 600  # 10 Minuten
-LONGFORM_MAX_FACTS = 22  # Sicherheitsgrenze gegen Endlos-Nachgenerieren
+LONGFORM_MAX_FACTS = 30  # Sicherheitsgrenze gegen Endlos-Nachgenerieren
 
 # YouTube-Upload
 YOUTUBE_CATEGORY_ID = "27"  # Education

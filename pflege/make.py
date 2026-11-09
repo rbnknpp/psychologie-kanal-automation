@@ -43,6 +43,8 @@ REVIEW = os.getenv("PFLEGE_REVIEW", "1") == "1"
 LONG_DAYS = {0, 2, 4}  # Mo, Mi, Fr
 SHORT_TIMES = ["12:30", "18:30"]
 LONG_TIME = "17:00"
+LONG_MIN_SECONDS = 600  # Regel Robin 09.11.2026: Longform immer mindestens 10 Minuten
+LONG_MIN_WORDS = 1500  # ca. 10,5 Min. mit Piper (thorsten, length_scale 1.05)
 
 GREEN = (31, 95, 74); SAND = (247, 242, 234); ORANGE = (224, 123, 57); DARK = (24, 38, 32); MINT = (226, 238, 231)
 FONT_B = next((p for p in ["/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf", r"C:\Windows\Fonts\segoeuib.ttf"] if Path(p).exists()), None)
@@ -102,8 +104,8 @@ TOOL = {
 }
 
 
-def script(topic, kind, avoid):
-    n_scenes, words = (6, "130-160") if kind == "short" else (16, "650-850")
+def script(topic, kind, avoid, hint=""):
+    n_scenes, words = (6, "130-160") if kind == "short" else (30, "1700-1950")
     if topic["reihe"] == "angehoerige":
         facts = page_text(topic["quelle"])
         rules = (
@@ -127,13 +129,16 @@ def script(topic, kind, avoid):
         "Kein „kostenlos“ bei der Pflegebox – stattdessen „ohne Zuzahlung“ mit Bedingung. Keine Heilversprechen.\n" + rules
     )
     user = (
-        f"Thema: {topic['titel']}\nFormat: {'YouTube-Short (60-75 Sekunden)' if kind == 'short' else 'Erklärvideo (4-6 Minuten)'}\n"
+        f"Thema: {topic['titel']}\nFormat: {'YouTube-Short (60-75 Sekunden)' if kind == 'short' else 'Erklärvideo (mindestens 10, ideal 11-13 Minuten)'}\n"
         f"Genau {n_scenes} Szenen, insgesamt {words} gesprochene Wörter. Erste Szene = starker Einstieg mit Alltagsproblem.\n{cta}\n"
+        + (("Für die Länge: Vertiefe mit Alltagsbeispielen, typischen Fehlern, Schritt-für-Schritt-Erklärungen und kurzen Zusammenfassungen – "
+            "aber ohne neue Zahlen oder Fakten außerhalb der Vorgaben.\n") if kind == "long" else "")
+        + hint
         + (f"Diese Titel gab es schon, wähle einen anderen Blickwinkel: {avoid}\n" if avoid else "")
     )
     client = anthropic.Anthropic()
     resp = client.messages.create(
-        model=config.ANTHROPIC_MODEL, max_tokens=8000, system=system,
+        model=config.ANTHROPIC_MODEL, max_tokens=16000, system=system,
         tools=[TOOL], tool_choice={"type": "tool", "name": "skript"},
         messages=[{"role": "user", "content": user}],
     )
@@ -152,6 +157,16 @@ def speakable(t):
     t = re.sub(r"(\d)\s?€", r"\1 Euro", t).replace("€", "Euro").replace("§§", "Paragrafen").replace("§", "Paragraf")
     t = t.replace("z. B.", "zum Beispiel").replace("z.B.", "zum Beispiel").replace("ca.", "circa")
     return t
+
+
+def spoken_words(data):
+    return sum(len(str(sz.get("sprecher", "")).split()) for sz in data["szenen"])
+
+
+def video_seconds(p):
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
+                         check=True, capture_output=True, text=True).stdout.strip()
+    return float(out or 0)
 
 
 def wav_seconds(p):
@@ -271,7 +286,7 @@ def render(data, topic, kind, workdir):
     lst.write_text("".join(f"file '{c.name}'\n" for c in clips), encoding="utf-8")
     joined = workdir / "joined.mp4"
     run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(joined)])
-    music = build_music_loop(workdir / "music.wav", seed=topic["slug"] + kind, minutes=2.0 if kind == "short" else 8.0)
+    music = build_music_loop(workdir / "music.wav", seed=topic["slug"] + kind, minutes=2.0 if kind == "short" else 14.0)
     out = workdir / "video.mp4"
     run(["ffmpeg", "-y", "-i", str(joined), "-stream_loop", "-1", "-i", str(music),
          "-filter_complex", "[1:a]volume=0.10[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
@@ -342,8 +357,21 @@ def main():
         avoid = [t for t in st["titles"] if t.startswith(topic["slug"] + "|")][-6:]
         print(f"[{kind}] {topic['titel']}")
         try:
-            data = script(topic, kind, [x.split("|", 1)[1] for x in avoid])
+            titles_avoid = [x.split("|", 1)[1] for x in avoid]
+            data = script(topic, kind, titles_avoid)
+            if kind == "long":
+                for _ in range(2):
+                    n = spoken_words(data)
+                    if n >= LONG_MIN_WORDS:
+                        break
+                    print(f"  Skript zu kurz ({n} Wörter), neuer Versuch")
+                    data = script(topic, kind, titles_avoid, hint=f"WICHTIG: Der letzte Entwurf hatte nur {n} Wörter. Schreibe mindestens 1800 gesprochene Wörter.\n")
             path, thumb = render(data, topic, kind, OUT / today.isoformat() / f"{i}-{kind}-{topic['slug']}")
+            if kind == "long":
+                secs = video_seconds(path)
+                print(f"  Länge: {secs / 60:.1f} Min")
+                if secs < LONG_MIN_SECONDS:
+                    raise RuntimeError(f"Longform nur {secs / 60:.1f} Min - Regel: mindestens 10 Min, wird nicht hochgeladen")
             print("  gerendert:", path, f"{path.stat().st_size // 1024} KB")
             if a.test:
                 continue
