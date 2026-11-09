@@ -147,7 +147,7 @@ def script(topic, kind, avoid, hint="", n_scenes=None, words=None, part=None):
         cta = f"Letzte Szene: Hinweis, dass alle Details und Werkzeuge auf pflege-mit-plan.com stehen."
     else:
         rules = (
-            "Zielgruppe: Auszubildende in der Pflege (Pflegefachfrau/-mann, Pflegehilfe). Anrede „du“, locker, klar, prüfungsnah.\n"
+            "Zielgruppe: Auszubildende in der Pflege – generalistische Ausbildung Pflegefachfrau/-mann UND Pflegeassistenz/Pflegefachassistenz. Anrede „du“, locker, klar, prüfungsnah. Wo sich Aufgaben unterscheiden, kurz sagen, was die Assistenz übernimmt und was der Fachkraft vorbehalten ist (ohne landesspezifische Details zu erfinden).\n"
             "Nur gesichertes Lehrbuch-Grundwissen. KEINE Medikamente, Wirkstoffe, Dosierungen, Grenzwerte für Therapieentscheidungen "
             "oder ärztlichen Entscheidungen. Bei Normalwerten nur allgemein anerkannte Erwachsenen-Richtwerte und den Hinweis, "
             "dass Einrichtungsstandards und die Praxisanleitung gelten. Keine erfundenen Studien, Zahlen oder Zitate.\n"

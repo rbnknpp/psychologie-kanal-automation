@@ -71,6 +71,25 @@ AZUBI = [
     ("behandlungspflege", "Behandlungspflege und Grundpflege", "ambulante Pflege Buch"),
     ("muster12", "Verordnung häuslicher Krankenpflege (Muster 12)", "häusliche Krankenpflege Buch"),
     ("expertenstandards", "Expertenstandards im Überblick", "Expertenstandards Pflege Buch"),
+    # Ergänzt 09.11.2026 (Robin): Lernvideos für Pflegefachfrau/-mann UND Pflegeassistenz / Pflegefachassistenz
+    ("ausbildung-ueberblick", "Pflegefachfrau, Pflegeassistenz – welche Ausbildung passt?", "Pflegeausbildung Buch"),
+    ("aufgaben-assistenz", "Was darf die Pflegeassistenz – und was nicht?", "Pflegeassistenz Lehrbuch"),
+    ("grundpflege-bett", "Ganzkörperwaschung im Bett Schritt für Schritt", "Grundpflege Lehrbuch"),
+    ("mundpflege", "Mundpflege und Zahnprothese richtig versorgen", "Mundpflege Pflege Buch"),
+    ("an-auskleiden", "An- und Auskleiden bei Halbseitenlähmung", "Pflege Hemiplegie Buch"),
+    ("essen-anreichen", "Essen anreichen – würdevoll und sicher", "Essen anreichen Pflege"),
+    ("blutdruck-messen", "Blutdruck messen Schritt für Schritt", "Blutdruckmessgerät Pflege Lehrbuch"),
+    ("puls-atmung", "Puls und Atmung richtig zählen und beobachten", "Krankenbeobachtung Pflege Buch"),
+    ("transfer", "Transfer vom Bett in den Rollstuhl", "Transfer Pflege Mobilisation Buch"),
+    ("kompression", "Kompressionsstrümpfe anziehen – so geht es leichter", "Kompressionsstrümpfe Anziehhilfe"),
+    ("ausscheidung", "Ausscheidungen beobachten: Urin und Stuhl", "Krankenbeobachtung Pflege Buch"),
+    ("wunde-beobachten", "Wunden beobachten und dokumentieren", "Wundversorgung Pflege Buch"),
+    ("notfall-sturz", "Sturz im Dienst – was tun?", "Erste Hilfe Pflege Buch"),
+    ("biografiearbeit", "Biografiearbeit in der Pflege", "Biografiearbeit Pflege Buch"),
+    ("kommunikation-angehoerige", "Gespräche mit Angehörigen professionell führen", "Kommunikation Pflege Buch"),
+    ("berichte-schreiben", "Pflegebericht schreiben – Formulierungshilfen", "Pflegebericht Formulierungshilfen"),
+    ("zwischenpruefung", "Zwischenprüfung Pflegeausbildung – so bereitest du dich vor", "Zwischenprüfung Pflegeausbildung"),
+    ("praxisanleitung", "Praxisanleitung: so holst du am meisten raus", "Praxisanleitung Pflege Buch"),
 ]
 
 
