@@ -11,6 +11,7 @@ Aufruf:  python -m pflege.make            (Tageslauf)
          python -m pflege.make --test     (1 Short, nur rendern, kein Upload)
 """
 import argparse
+import copy
 import datetime as dt
 import html
 import json
@@ -104,8 +105,37 @@ TOOL = {
 }
 
 
-def script(topic, kind, avoid, hint=""):
-    n_scenes, words = (6, "130-160") if kind == "short" else (30, "1700-1950")
+TOOL_LONG = copy.deepcopy(TOOL)
+TOOL_LONG["input_schema"]["properties"]["szenen"]["items"]["properties"]["sprecher"]["description"] = (
+    "Gesprochener Text dieser Szene, 55-75 Wörter (4-6 Sätze), erklärend mit Beispiel")
+
+
+LONG_PARTS = [
+    "Einstieg mit einem typischen Alltagsproblem, warum das Thema wichtig ist, Grundlagen und Begriffe einfach erklärt",
+    "Schritt für Schritt das konkrete Vorgehen, mit Alltagsbeispielen und was man dabei beachten muss",
+    "Typische Fehler und wie man sie vermeidet, Praxistipps, kurze Zusammenfassung der wichtigsten Punkte und Abschluss",
+]
+
+
+def long_script(topic, avoid, hint=""):
+    """Langvideo in 3 Teilen schreiben (je 10 Szenen, ca. 650 Wörter) - ein einzelner Aufruf wird zu kurz."""
+    data, done = None, []
+    for k, inhalt in enumerate(LONG_PARTS):
+        note = (f"Dies ist TEIL {k + 1} VON 3 eines Erklärvideos von mindestens 10 Minuten. Inhalt dieses Teils: {inhalt}.\n"
+                + (f"Bereits behandelt (nicht wiederholen): {'; '.join(done)}\n" if done else ""))
+        part = {"first": k == 0, "last": k == len(LONG_PARTS) - 1, "note": note}
+        d = script(topic, "long", avoid, hint=hint, n_scenes=10, words="620-720", part=part)
+        done += [sz.get("tafel", "") for sz in d["szenen"]]
+        if data is None:
+            data = d
+        else:
+            data["szenen"] += d["szenen"]
+    return data
+
+
+def script(topic, kind, avoid, hint="", n_scenes=None, words=None, part=None):
+    if n_scenes is None:
+        n_scenes, words = (6, "130-160") if kind == "short" else (30, "1700-1950")
     if topic["reihe"] == "angehoerige":
         facts = page_text(topic["quelle"])
         rules = (
@@ -123,6 +153,8 @@ def script(topic, kind, avoid, hint=""):
             "dass Einrichtungsstandards und die Praxisanleitung gelten. Keine erfundenen Studien, Zahlen oder Zitate.\n"
         )
         cta = "Letzte Szene: Abo-Hinweis für die Reihe „Pflege lernen“ und Verweis auf das Pflege-Lexikon auf pflege-mit-plan.com."
+    if part and not part["last"]:
+        cta = "KEIN Abschluss, keine Verabschiedung, kein Abo-Hinweis – das Video geht im nächsten Teil weiter."
     system = (
         "Du schreibst deutsche Erklärvideo-Skripte für den YouTube-Kanal „Pflege mit Plan“ (Ratgeber aus dem Pflegealltag, "
         "geprüft von einer Pflegedienstleitung). Nenne niemals einen Arbeitgeber, keine Personen-Namen, keine Patientendaten. "
@@ -130,7 +162,10 @@ def script(topic, kind, avoid, hint=""):
     )
     user = (
         f"Thema: {topic['titel']}\nFormat: {'YouTube-Short (60-75 Sekunden)' if kind == 'short' else 'Erklärvideo (mindestens 10, ideal 11-13 Minuten)'}\n"
-        f"Genau {n_scenes} Szenen, insgesamt {words} gesprochene Wörter. Erste Szene = starker Einstieg mit Alltagsproblem.\n{cta}\n"
+        + (part["note"] if part else "")
+        + f"Genau {n_scenes} Szenen, insgesamt {words} gesprochene Wörter. "
+        + ("Erste Szene = starker Einstieg mit Alltagsproblem.\n" if not part or part["first"] else "")
+        + f"{cta}\n"
         + (("Für die Länge: Vertiefe mit Alltagsbeispielen, typischen Fehlern, Schritt-für-Schritt-Erklärungen und kurzen Zusammenfassungen – "
             "aber ohne neue Zahlen oder Fakten außerhalb der Vorgaben.\n") if kind == "long" else "")
         + hint
@@ -139,7 +174,7 @@ def script(topic, kind, avoid, hint=""):
     client = anthropic.Anthropic()
     resp = client.messages.create(
         model=config.ANTHROPIC_MODEL, max_tokens=16000, system=system,
-        tools=[TOOL], tool_choice={"type": "tool", "name": "skript"},
+        tools=[TOOL if kind == "short" else TOOL_LONG], tool_choice={"type": "tool", "name": "skript"},
         messages=[{"role": "user", "content": user}],
     )
     data = next(b for b in resp.content if b.type == "tool_use").input
@@ -358,14 +393,14 @@ def main():
         print(f"[{kind}] {topic['titel']}")
         try:
             titles_avoid = [x.split("|", 1)[1] for x in avoid]
-            data = script(topic, kind, titles_avoid)
+            data = script(topic, kind, titles_avoid) if kind == "short" else long_script(topic, titles_avoid)
             if kind == "long":
                 for _ in range(2):
                     n = spoken_words(data)
                     if n >= LONG_MIN_WORDS:
                         break
                     print(f"  Skript zu kurz ({n} Wörter), neuer Versuch")
-                    data = script(topic, kind, titles_avoid, hint=f"WICHTIG: Der letzte Entwurf hatte nur {n} Wörter. Schreibe mindestens 1800 gesprochene Wörter.\n")
+                    data = long_script(topic, titles_avoid, hint=f"WICHTIG: Der letzte Entwurf hatte nur {n} Wörter. Schreibe ausführlicher: jede Szene mindestens 60 gesprochene Wörter.\n")
             path, thumb = render(data, topic, kind, OUT / today.isoformat() / f"{i}-{kind}-{topic['slug']}")
             if kind == "long":
                 secs = video_seconds(path)
