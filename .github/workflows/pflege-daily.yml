@@ -1,0 +1,80 @@
+name: Pflege mit Plan (YouTube)
+
+on:
+  schedule:
+    - cron: "5 6 * * *"   # 07:05 MEZ – Shorts 12:30/18:30, Erklaervideo Mo/Mi/Fr 17:00
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Testlauf: 1 Short rendern, nicht hochladen"
+        type: boolean
+        default: false
+
+concurrency:
+  group: pflege-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PIPER_MODEL: de_DE-thorsten-high
+      PIPER_LENGTH_SCALE: "1.05"
+      PIPER_NOISE_SCALE: "0.8"
+      PIPER_NOISE_W: "0.9"
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: utf-8
+      # Robin 09.11.2026: erste Videos nur privat zur Sichtung. Auf "0" setzen, sobald freigegeben.
+      PFLEGE_REVIEW: "1"
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ffmpeg und Schriften
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg fonts-liberation
+      - name: Python-Pakete
+        run: pip install -r requirements.txt
+      - name: Piper-Stimme (Cache)
+        id: voice-cache
+        uses: actions/cache@v4
+        with:
+          path: assets/voices
+          key: piper-voice-${{ env.PIPER_MODEL }}
+      - name: Piper-Stimme herunterladen
+        if: steps.voice-cache.outputs.cache-hit != 'true'
+        run: python -m piper.download_voices --download-dir assets/voices "$PIPER_MODEL"
+      - name: YouTube-Zugang (Kanal Pflege mit Plan)
+        env:
+          YT_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YT_TOKEN: ${{ secrets.YOUTUBE_TOKEN_PFLEGE }}
+        run: |
+          printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
+          printf '%s' "$YT_TOKEN" > token.json
+      - name: Videos erzeugen und hochladen
+        run: |
+          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test; else python -m pflege.make; fi
+      - name: Testvideo als Artefakt
+        if: ${{ inputs.test == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pflege-test
+          path: output/pflege/**/video.mp4
+      - name: Zustand sichern
+        if: ${{ always() && inputs.test != true }}
+        run: |
+          git config user.name "pflege-bot"
+          git config user.email "pflege-bot@users.noreply.github.com"
+          git add pflege/state.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Pflege-Kanal: Zustand aktualisiert [skip ci]"
+            git pull --rebase -q && git push -q
+          fi
