@@ -9,6 +9,10 @@ on:
         description: "Testlauf: 1 Short rendern, nicht hochladen"
         type: boolean
         default: false
+      only:
+        description: "Nur short oder long erzeugen (leer = Tagesplan)"
+        type: string
+        default: ""
 
 concurrency:
   group: pflege-daily
@@ -61,7 +65,9 @@ jobs:
           printf '%s' "$YT_TOKEN" > token.json
       - name: Videos erzeugen und hochladen
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test; else python -m pflege.make; fi
+          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test
+          elif [ -n "${{ inputs.only }}" ]; then python -m pflege.make --only "${{ inputs.only }}"
+          else python -m pflege.make; fi
       - name: Testvideo als Artefakt
         if: ${{ inputs.test == true }}
         uses: actions/upload-artifact@v4

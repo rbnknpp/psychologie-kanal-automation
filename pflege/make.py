@@ -140,6 +140,9 @@ def script(topic, kind, avoid):
     data = next(b for b in resp.content if b.type == "tool_use").input
     if not data.get("szenen"):
         raise ValueError("Skript ohne Szenen")
+    data["titel"] = (data.get("titel") or data.get("title") or topic["titel"]).strip()
+    data["beschreibung"] = (data.get("beschreibung") or data.get("description") or topic["titel"]).strip()
+    data["tags"] = data.get("tags") or []
     return data
 
 
@@ -318,6 +321,7 @@ def upload(path, thumb, data, topic, kind, when):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--test", action="store_true")
+    ap.add_argument("--only", choices=["short", "long"], help="nur diese Art erzeugen (Nachholen)")
     a = ap.parse_args()
     today = dt.datetime.now(TZ).date()
     rng = random.Random(today.isoformat())
@@ -326,6 +330,10 @@ def main():
     if today.weekday() in LONG_DAYS:
         reihe = "angehoerige" if (today.isocalendar().week + today.weekday()) % 2 == 0 else "azubi"
         jobs.append(("long", reihe, LONG_TIME))
+    if a.only == "long" and not any(j[0] == "long" for j in jobs):
+        jobs.append(("long", "angehoerige", LONG_TIME))
+    if a.only:
+        jobs = [j for j in jobs if j[0] == a.only]
     if a.test:
         jobs = jobs[:1]
     failures = 0
