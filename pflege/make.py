@@ -282,7 +282,7 @@ def render(data, topic, kind, workdir):
 
 # ---------------------------------------------------------------- Metadaten / Upload
 def description(data, topic, kind):
-    link = topic["quelle"] if topic["reihe"] == "angehoerige" else SITE + "/lexikon"
+    link = topic["quelle"] if topic["reihe"] == "angehoerige" else SITE + "/pflege-lernen"
     amazon = f"https://www.amazon.de/s?k={requests.utils.quote(topic['amazon'])}&tag={config.AMAZON_TAG}"
     lines = [data["beschreibung"].strip(), "",
              f"👉 Alles Wichtige zum Thema: {link}",
