@@ -1,10 +1,12 @@
 {
  "used": {
   "pflegegrad-beantragen": 1,
-  "schweigepflicht": 1
+  "schweigepflicht": 1,
+  "widerspruch": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
-  "schweigepflicht|Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht"
+  "schweigepflicht|Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht",
+  "widerspruch|Pflegegrad abgelehnt – Widerspruch innerhalb eines Monats"
  ]
 }
