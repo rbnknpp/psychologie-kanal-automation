@@ -32,8 +32,8 @@ jobs:
       PIPER_NOISE_W: "0.9"
       PYTHONUNBUFFERED: "1"
       PYTHONIOENCODING: utf-8
-      # Robin 09.11.2026: erste Videos nur privat zur Sichtung. Auf "0" setzen, sobald freigegeben.
-      PFLEGE_REVIEW: "1"
+      # Robin 09.11.2026: ab sofort automatisch veroeffentlichen (geplant zu den festen Uhrzeiten).
+      PFLEGE_REVIEW: "0"
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
@@ -68,12 +68,13 @@ jobs:
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test
           elif [ -n "${{ inputs.only }}" ]; then python -m pflege.make --only "${{ inputs.only }}"
           else python -m pflege.make; fi
-      - name: Testvideo als Artefakt
-        if: ${{ inputs.test == true }}
+      - name: Videos als Artefakt (3 Tage, zum Ansehen)
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: pflege-test
           path: output/pflege/**/video.mp4
+          retention-days: 3
       - name: Zustand sichern
         if: ${{ always() && inputs.test != true }}
         run: |
