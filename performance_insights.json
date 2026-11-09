@@ -1,21 +1,7 @@
 {
-  "generated_at": "2026-11-08T21:52:54.295851",
-  "lookback_days": 14,
+  "generated_at": "2026-11-09T13:51:30.159995",
+  "lookback_days": 10,
   "top": [
-    {
-      "video_id": "1qdZ26KQBOU",
-      "title": "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst",
-      "views": 59,
-      "retention": 33.6,
-      "engaged_pct": 28.8
-    },
-    {
-      "video_id": "qFI5OUht63g",
-      "title": "Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst",
-      "views": 56,
-      "retention": 43.9,
-      "engaged_pct": 33.9
-    },
     {
       "video_id": "rp1CW1-XXKs",
       "title": "Warum du bei einem Kompliment zuerst wegschaust",
@@ -31,48 +17,55 @@
       "engaged_pct": 32.7
     },
     {
-      "video_id": "MvHm8myW6t8",
-      "title": "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
-      "views": 45,
-      "retention": 26.6,
-      "engaged_pct": 44.4
-    },
-    {
-      "video_id": "9UcuxMwoWeo",
-      "title": "Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst",
-      "views": 42,
-      "retention": 33.5,
-      "engaged_pct": 38.1
-    },
-    {
-      "video_id": "h7be5MkdROY",
-      "title": "Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst",
-      "views": 39,
-      "retention": 20.4,
-      "engaged_pct": 43.6
-    },
-    {
       "video_id": "2L77mNhhVC8",
       "title": "Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst",
       "views": 38,
       "retention": 32.2,
       "engaged_pct": 26.3
+    },
+    {
+      "video_id": "QQVNOKv-x8g",
+      "title": "Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst",
+      "views": 32,
+      "retention": 29.1,
+      "engaged_pct": 31.2
+    },
+    {
+      "video_id": "JM_NigDHIHE",
+      "title": "Warum du beim Lügen öfter die Nase berührst",
+      "views": 31,
+      "retention": 26.4,
+      "engaged_pct": 19.4
+    },
+    {
+      "video_id": "0TohJLrC-lU",
+      "title": "Warum du beim Lügen seltener blinzelst als sonst",
+      "views": 29,
+      "retention": 12.8,
+      "engaged_pct": 17.2
+    },
+    {
+      "video_id": "987wFP4TLgI",
+      "title": "Warum du beim Zuhören öfter auf den Mund statt die Augen schaust",
+      "views": 28,
+      "retention": 14.2,
+      "engaged_pct": 25.0
+    },
+    {
+      "video_id": "P1SORSbPIAw",
+      "title": "Warum dir ein Lächeln ohne Blinzeln unheimlich vorkommt",
+      "views": 27,
+      "retention": 32.8,
+      "engaged_pct": 14.8
     }
   ],
   "flop": [
     {
-      "video_id": "kGpVh54INm4",
-      "title": "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
+      "video_id": "1qm3bj3IQto",
+      "title": "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
       "views": 15,
-      "retention": 14.7,
-      "engaged_pct": 26.7
-    },
-    {
-      "video_id": "H0w9nn5qAGE",
-      "title": "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
-      "views": 15,
-      "retention": 23.5,
-      "engaged_pct": 46.7
+      "retention": 28.5,
+      "engaged_pct": 13.3
     },
     {
       "video_id": "PgCe40TX25g",
@@ -82,11 +75,18 @@
       "engaged_pct": 20.0
     },
     {
-      "video_id": "1qm3bj3IQto",
-      "title": "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
+      "video_id": "H0w9nn5qAGE",
+      "title": "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
       "views": 15,
-      "retention": 28.5,
-      "engaged_pct": 13.3
+      "retention": 23.5,
+      "engaged_pct": 46.7
+    },
+    {
+      "video_id": "CLwlxdVXi2Q",
+      "title": "Warum du beim Flüstern automatisch näher an jemanden rückst",
+      "views": 15,
+      "retention": 14.9,
+      "engaged_pct": 20.0
     },
     {
       "video_id": "8sFlTKJiepY",
@@ -96,5 +96,5 @@
       "engaged_pct": 37.5
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst\" (59 Views, 33.6% Bindung, 28.8% nicht weitergewischt) | Hook: \"In einer Gruppe verraten deine Füße, wen du am liebsten magst.\" | Themen: körpersprache, psychologie, füße körpersprache, sympathie\n- \"Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst\" (56 Views, 43.9% Bindung, 33.9% nicht weitergewischt) | Hook: \"Manche Berührungen fühlen sich falsch an, bevor sie überhaupt enden.\" | Themen: psychologie, körpersprache, berührung, umarmung\n- \"Warum du bei einem Kompliment zuerst wegschaust\" (52 Views, 36.1% Bindung, 21.2% nicht weitergewischt) | Hook: \"Bei einem echten Kompliment schaust du kurz weg, nicht hin.\" | Themen: psychologie, körpersprache, komplimente, blickkontakt\n- \"In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist\" (49 Views, 15.8% Bindung, 32.7% nicht weitergewischt) | Hook: \"0,4 Sekunden reichen, um einen Blick zu deuten.\" | Themen: psychologie, blickkontakt, mimik, amygdala\n- \"Warum du beim Zuhören öfter die Arme verschränkst, als du denkst\" (45 Views, 26.6% Bindung, 44.4% nicht weitergewischt) | Hook: \"Verschränkte Arme bedeuten nicht automatisch Ablehnung.\" | Themen: körpersprache, psychologie, gestik, nonverbale kommunikation\n- \"Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst\" (42 Views, 33.5% Bindung, 38.1% nicht weitergewischt) | Hook: \"Beim Lügen weiten sich deine Pupillen - ganz ohne dein Zutun.\" | Themen: psychologie, körpersprache, lügen erkennen, pupillen\n- \"Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst\" (39 Views, 20.4% Bindung, 43.6% nicht weitergewischt) | Hook: \"Im Gespräch wandert dein Blick ständig zur Augenbraue.\" | Themen: psychologie, körpersprache, mimik, augenbraue\n- \"Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst\" (38 Views, 32.2% Bindung, 26.3% nicht weitergewischt) | Hook: \"Füße verraten mehr über Interesse als jedes Gesicht.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, gestik\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Kennst du das? Du erkennst schlechte Laune an der Türklinke\" (15 Views, 14.7% Bindung, 26.7% nicht weitergewischt) | Hook: \"Wie jemand eine Tür schließt, verrät seine Stimmung.\" | Themen: körpersprache, psychologie, stimmung, alltagspsychologie\n- \"Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst\" (15 Views, 23.5% Bindung, 46.7% nicht weitergewischt) | Hook: \"Ein winziges Augenbrauen-Zucken verrät mehr als ein Wort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"Warum du bei schlechten Neuigkeiten automatisch tiefer atmest\" (15 Views, 57.6% Bindung, 20.0% nicht weitergewischt) | Hook: \"Ein tiefer Atemzug kommt oft, bevor du reagierst.\" | Themen: psychologie, körperreaktion, stress, nervensystem\n- \"Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen\" (15 Views, 28.5% Bindung, 13.3% nicht weitergewischt) | Hook: \"2 Sekunden reichen, damit dein Gehirn Gefahr wittert.\" | Themen: psychologie, mimik, mikroexpressionen, körpersprache\n- \"Warum du beim Warten auf eine Antwort automatisch den Atem anhältst\" (16 Views, 11.8% Bindung, 37.5% nicht weitergewischt) | Hook: \"Vor einer wichtigen Antwort hältst du oft kurz die Luft an.\" | Themen: psychologie, körpersprache, atmung, stress"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du bei einem Kompliment zuerst wegschaust\" (52 Views, 36.1% Bindung, 21.2% nicht weitergewischt) | Hook: \"Bei einem echten Kompliment schaust du kurz weg, nicht hin.\" | Themen: psychologie, körpersprache, komplimente, blickkontakt\n- \"In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist\" (49 Views, 15.8% Bindung, 32.7% nicht weitergewischt) | Hook: \"0,4 Sekunden reichen, um einen Blick zu deuten.\" | Themen: psychologie, blickkontakt, mimik, amygdala\n- \"Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst\" (38 Views, 32.2% Bindung, 26.3% nicht weitergewischt) | Hook: \"Füße verraten mehr über Interesse als jedes Gesicht.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, gestik\n- \"Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst\" (32 Views, 29.1% Bindung, 31.2% nicht weitergewischt) | Hook: \"Zeigst du jemandem dein Handgelenk, mag dein Gehirn ihn.\" | Themen: körpersprache, psychologie, gestik, sympathie\n- \"Warum du beim Lügen öfter die Nase berührst\" (31 Views, 26.4% Bindung, 19.4% nicht weitergewischt) | Hook: \"Beim Lügen juckt deine Nase öfter als sonst.\" | Themen: lügen erkennen, körpersprache, psychologie, pinocchio effekt\n- \"Warum du beim Lügen seltener blinzelst als sonst\" (29 Views, 12.8% Bindung, 17.2% nicht weitergewischt) | Hook: \"Beim Lügen blinzelst du oft seltener, nicht öfter.\" | Themen: körpersprache, lügen erkennen, psychologie, blinzeln\n- \"Warum du beim Zuhören öfter auf den Mund statt die Augen schaust\" (28 Views, 14.2% Bindung, 25.0% nicht weitergewischt) | Hook: \"Bei lauten Geräuschen wandert dein Blick zum Mund.\" | Themen: psychologie, körpersprache, lippenlesen, kommunikation\n- \"Warum dir ein Lächeln ohne Blinzeln unheimlich vorkommt\" (27 Views, 32.8% Bindung, 14.8% nicht weitergewischt) | Hook: \"Ein Lächeln ohne Blinzeln wirkt sofort unheimlich auf dich.\" | Themen: mimik, lächeln, körpersprache, psychologie\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen\" (15 Views, 28.5% Bindung, 13.3% nicht weitergewischt) | Hook: \"2 Sekunden reichen, damit dein Gehirn Gefahr wittert.\" | Themen: psychologie, mimik, mikroexpressionen, körpersprache\n- \"Warum du bei schlechten Neuigkeiten automatisch tiefer atmest\" (15 Views, 57.6% Bindung, 20.0% nicht weitergewischt) | Hook: \"Ein tiefer Atemzug kommt oft, bevor du reagierst.\" | Themen: psychologie, körperreaktion, stress, nervensystem\n- \"Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst\" (15 Views, 23.5% Bindung, 46.7% nicht weitergewischt) | Hook: \"Ein winziges Augenbrauen-Zucken verrät mehr als ein Wort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"Warum du beim Flüstern automatisch näher an jemanden rückst\" (15 Views, 14.9% Bindung, 20.0% nicht weitergewischt) | Hook: \"Sobald du flüsterst, verringert sich dein Abstand automatisch.\" | Themen: psychologie, körpersprache, flüstern, nähe\n- \"Warum du beim Warten auf eine Antwort automatisch den Atem anhältst\" (16 Views, 11.8% Bindung, 37.5% nicht weitergewischt) | Hook: \"Vor einer wichtigen Antwort hältst du oft kurz die Luft an.\" | Themen: psychologie, körpersprache, atmung, stress"
 }
