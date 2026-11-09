@@ -2,11 +2,13 @@
  "used": {
   "pflegegrad-beantragen": 1,
   "schweigepflicht": 1,
-  "widerspruch": 1
+  "widerspruch": 1,
+  "md-begutachtung": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
   "schweigepflicht|Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht",
-  "widerspruch|Pflegegrad abgelehnt – Widerspruch innerhalb eines Monats"
+  "widerspruch|Pflegegrad abgelehnt – Widerspruch innerhalb eines Monats",
+  "md-begutachtung|MD-Begutachtung vorbereiten: Warum der Alltag zählt, nicht die Diagnose (Teil 1)"
  ]
 }
