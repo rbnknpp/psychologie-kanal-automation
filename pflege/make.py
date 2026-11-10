@@ -101,7 +101,7 @@ TOOL = {
                 },
             },
         },
-        "required": ["titel", "beschreibung", "tags", "szenen"],
+        "required": ["titel", "beschreibung", "cover", "tags", "szenen"],
     },
 }
 
