@@ -86,6 +86,7 @@ TOOL = {
         "properties": {
             "titel": {"type": "string", "description": "YouTube-Titel, max. 90 Zeichen, neugierig, ehrlich, ohne Clickbait-Lügen"},
             "beschreibung": {"type": "string", "description": "2-4 Sätze worum es geht"},
+            "cover": {"type": "string", "description": "Text fürs Titelbild (TikTok-Raster): 2-5 Wörter, prägnant, ohne Emojis, z. B. „Pflegegrad beantragen“"},
             "tags": {"type": "array", "items": {"type": "string"}},
             "szenen": {
                 "type": "array",
@@ -330,6 +331,90 @@ def render(data, topic, kind, workdir):
     return out, thumb
 
 
+# ---------------------------------------------------------------- TikTok: Titelbild (Intro) + Abspann (Outro)
+# Robin 10.11.2026: einheitliches Titelbild als 1. Bild (= Vorschaubild im TikTok-Profilraster) und kurzer Abspann.
+# Das Profilraster zeigt ungefähr den mittleren 3:4-Ausschnitt -> alles Wichtige zwischen y=300 und y=1620.
+COVER_SECONDS = 1.2
+OUTRO_TEXT = "Mehr Pflege-Tipps? Jetzt Pflege mit Plan folgen. Alles zum Nachlesen auf pflege-mit-plan punkt com."
+
+
+def tiktok_cover(data, reihe, path):
+    W, H = 1080, 1920
+    img = Image.new("RGB", (W, H), GREEN)
+    d = ImageDraw.Draw(img)
+    d.ellipse([-260, H - 520, 520, H + 260], fill=(38, 110, 86))
+    d.ellipse([W - 420, -320, W + 320, 420], fill=(38, 110, 86))
+    # Reihe als Etikett
+    label = "FÜR ANGEHÖRIGE" if reihe == "angehoerige" else "PFLEGE LERNEN"
+    fl = font(FONT_B, 44); lw = d.textlength(label, font=fl)
+    d.rounded_rectangle([(W - lw) / 2 - 40, 360, (W + lw) / 2 + 40, 446], radius=43, fill=ORANGE if reihe == "angehoerige" else SAND)
+    d.text(((W - lw) / 2, 375), label, font=fl, fill=(255, 255, 255) if reihe == "angehoerige" else GREEN)
+    # Titel gross und mittig
+    text = (data.get("cover") or data["titel"]).strip().rstrip(".!?")
+    size = 150
+    ft = font(FONT_B, size); lines = wrap(d, text, ft, W - 160)
+    while (len(lines) > 4 or any(d.textlength(x, font=ft) > W - 160 for x in lines)) and size > 70:
+        size -= 8; ft = font(FONT_B, size); lines = wrap(d, text, ft, W - 160)
+    lh = size * 1.12
+    top = 960 - len(lines) * lh / 2
+    for i, ln in enumerate(lines):
+        d.text(((W - d.textlength(ln, font=ft)) / 2, top + i * lh), ln, font=ft, fill=(255, 255, 255))
+    y = top + len(lines) * lh + 30
+    d.rounded_rectangle([W / 2 - 70, y, W / 2 + 70, y + 14], radius=7, fill=ORANGE)
+    # Marke unten
+    heart(d, W / 2 - 200, 1520, 60, (255, 255, 255))
+    d.text((W / 2 - 150, 1490), "Pflege mit Plan", font=font(FONT_B, 54), fill=(255, 255, 255))
+    img.save(path, quality=94)
+
+
+def tiktok_outro(reihe, path):
+    W, H = 1080, 1920
+    img = Image.new("RGB", (W, H), SAND)
+    d = ImageDraw.Draw(img)
+    d.ellipse([-W * 0.25, H * 0.72, W * 0.45, H * 1.3], fill=MINT)
+    d.ellipse([W * 0.7, -H * 0.25, W * 1.25, H * 0.3], fill=MINT)
+    heart(d, W / 2, 620, 260, GREEN)
+    fb = font(FONT_B, 92)
+    for i, ln in enumerate(["Mehr Pflege-Tipps?", "Jetzt folgen!"]):
+        d.text(((W - d.textlength(ln, font=fb)) / 2, 860 + i * 110), ln, font=fb, fill=GREEN)
+    sub = "Jeden Tag neu für Angehörige" if reihe == "angehoerige" else "Jeden Tag neu für Azubis"
+    fr = font(FONT_R, 54)
+    d.text(((W - d.textlength(sub, font=fr)) / 2, 1110), sub, font=fr, fill=DARK)
+    url = "pflege-mit-plan.com"
+    fu = font(FONT_B, 60); uw = d.textlength(url, font=fu)
+    d.rounded_rectangle([(W - uw) / 2 - 50, 1260, (W + uw) / 2 + 50, 1370], radius=55, fill=ORANGE)
+    d.text(((W - uw) / 2, 1280), url, font=fu, fill=(255, 255, 255))
+    img.save(path, quality=94)
+
+
+def tiktok_version(path, data, reihe):
+    """Titelbild (1,2 s) vor das Video, Abspann mit Stimme dahinter. Rückgabe: Pfad der TikTok-Fassung."""
+    wd = Path(path).parent
+    cover, outro, owav = wd / "tt_cover.jpg", wd / "tt_outro.jpg", wd / "tt_outro.wav"
+    tiktok_cover(data, reihe, cover)
+    tiktok_outro(reihe, outro)
+    piper_engine.speak_to_wav(OUTRO_TEXT, str(owav), length_scale=1.05)
+    od = wav_seconds(owav) + 0.8
+    out = wd / "video_tiktok.mp4"
+    run(["ffmpeg", "-y",
+         "-loop", "1", "-t", f"{COVER_SECONDS}", "-framerate", "30", "-i", str(cover),
+         "-f", "lavfi", "-t", f"{COVER_SECONDS}", "-i", "anullsrc=r=44100:cl=stereo",
+         "-i", str(path),
+         "-loop", "1", "-t", f"{od:.2f}", "-framerate", "30", "-i", str(outro),
+         "-i", str(owav),
+         "-filter_complex",
+         "[0:v]scale=1080:1920,setsar=1,fps=30,format=yuv420p[v0];"
+         "[2:v]scale=1080:1920,setsar=1,fps=30,format=yuv420p[v1];"
+         f"[3:v]scale=1080:1920,setsar=1,fps=30,format=yuv420p,fade=t=in:st=0:d=0.3[v2];"
+         "[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];"
+         "[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];"
+         f"[4:a]aformat=sample_rates=44100:channel_layouts=stereo,apad=pad_dur=0.8[a2];"
+         "[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[v][a]",
+         "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)])
+    return out
+
+
 # ---------------------------------------------------------------- Metadaten / Upload
 def description(data, topic, kind):
     link = topic["quelle"] if topic["reihe"] == "angehoerige" else SITE + "/pflege-lernen"
@@ -445,7 +530,7 @@ def main():
                 continue
             if kind == "short":
                 try:
-                    tiktok_queue(path, data, topic, reihe)
+                    tiktok_queue(tiktok_version(path, data, reihe), data, topic, reihe)
                 except Exception as e:  # noqa: BLE001
                     print("  TikTok FEHLER:", str(e)[:300])
             if not a.tiktok_only:
