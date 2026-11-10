@@ -368,10 +368,41 @@ def upload(path, thumb, data, topic, kind, when):
 
 
 # ---------------------------------------------------------------- Tageslauf
+GAMING_UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
+TIKTOK_TAGS = {
+    "angehoerige": "#pflege #pflegendeangehörige #pflegegrad #pflegetipps #angehörige",
+    "azubi": "#pflegeausbildung #pflegeazubi #pflegefachfrau #pflegefachmann #pflegeassistenz",
+}
+
+
+def tiktok_queue(path, data, topic, reihe):
+    """Short zusätzlich als TikTok-Entwurf einreihen (gaming-upload pumpt alle 30 Min ins Postfach)."""
+    tok = os.environ.get("PFLEGE_UPLOAD_TOKEN", "").strip()
+    if not tok:
+        print("  TikTok: kein PFLEGE_UPLOAD_TOKEN, übersprungen")
+        return None
+    h = {"x-gaming-token": tok, "Content-Type": "application/json"}
+    name = re.sub(r"[^\w\-]", "_", f"pflege-{topic['slug']}-{dt.datetime.now(TZ):%H%M%S}")[:70] + ".mp4"
+    r = requests.post(GAMING_UPLOAD, json={"action": "upload_url", "name": name}, headers=h, timeout=60).json()
+    if "signed_url" not in r:
+        raise RuntimeError(f"TikTok upload_url: {r}")
+    with open(path, "rb") as f:
+        up = requests.put(r["signed_url"], data=f, headers={"Content-Type": "video/mp4", "x-upsert": "true"}, timeout=300)
+    if up.status_code >= 300:
+        raise RuntimeError(f"TikTok Upload {up.status_code}: {up.text[:200]}")
+    caption = f"{data['titel']} 💚 Mehr auf pflege-mit-plan.com\n{TIKTOK_TAGS.get(reihe, TIKTOK_TAGS['angehoerige'])}"
+    reg = requests.post(GAMING_UPLOAD, json={"action": "register", "path": r["path"], "title": data["titel"],
+                                              "caption": caption, "seconds": round(video_seconds(path), 1)},
+                        headers=h, timeout=60).json()
+    print("  TikTok eingereiht:", reg)
+    return reg
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--only", choices=["short", "long"], help="nur diese Art erzeugen (Nachholen)")
+    ap.add_argument("--tiktok-only", type=int, default=0, help="N Shorts nur für TikTok bauen (ohne YouTube)")
     a = ap.parse_args()
     today = dt.datetime.now(TZ).date()
     rng = random.Random(today.isoformat())
@@ -386,6 +417,8 @@ def main():
         jobs = [j for j in jobs if j[0] == a.only]
     if a.test:
         jobs = jobs[:1]
+    if a.tiktok_only:
+        jobs = [("short", "angehoerige" if k % 2 == 0 else "azubi", None) for k in range(a.tiktok_only)]
     failures = 0
     for i, (kind, reihe, hhmm) in enumerate(jobs):
         topic = pick(reihe, st, rng)
@@ -410,8 +443,14 @@ def main():
             print("  gerendert:", path, f"{path.stat().st_size // 1024} KB")
             if a.test:
                 continue
-            vid = upload(path, thumb, data, topic, kind, publish_at(today, hhmm))
-            print("  hochgeladen:", vid, "(privat zur Sichtung)" if REVIEW else hhmm)
+            if kind == "short":
+                try:
+                    tiktok_queue(path, data, topic, reihe)
+                except Exception as e:  # noqa: BLE001
+                    print("  TikTok FEHLER:", str(e)[:300])
+            if not a.tiktok_only:
+                vid = upload(path, thumb, data, topic, kind, publish_at(today, hhmm))
+                print("  hochgeladen:", vid, "(privat zur Sichtung)" if REVIEW else hhmm)
             st["used"][topic["slug"]] = st["used"].get(topic["slug"], 0) + 1
             st["titles"].append(f"{topic['slug']}|{data['titel']}")
             st["titles"] = st["titles"][-400:]

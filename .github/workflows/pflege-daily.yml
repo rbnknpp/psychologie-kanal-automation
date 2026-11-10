@@ -13,6 +13,10 @@ on:
         description: "Nur short oder long erzeugen (leer = Tagesplan)"
         type: string
         default: ""
+      tiktok_only:
+        description: "Anzahl Shorts nur fuer TikTok (ohne YouTube)"
+        type: string
+        default: ""
 
 concurrency:
   group: pflege-daily
@@ -35,6 +39,7 @@ jobs:
       # Robin 09.11.2026: ab sofort automatisch veroeffentlichen (geplant zu den festen Uhrzeiten).
       PFLEGE_REVIEW: "0"
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      PFLEGE_UPLOAD_TOKEN: ${{ secrets.PFLEGE_UPLOAD_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -66,6 +71,7 @@ jobs:
       - name: Videos erzeugen und hochladen
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test
+          elif [ -n "${{ inputs.tiktok_only }}" ]; then python -m pflege.make --tiktok-only "${{ inputs.tiktok_only }}"
           elif [ -n "${{ inputs.only }}" ]; then python -m pflege.make --only "${{ inputs.only }}"
           else python -m pflege.make; fi
       - name: Videos als Artefakt (3 Tage, zum Ansehen)
