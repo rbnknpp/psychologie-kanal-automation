@@ -5,7 +5,12 @@
   "widerspruch": 1,
   "md-begutachtung": 1,
   "treppenlift": 1,
-  "pflegeplanung": 1
+  "pflegeplanung": 1,
+  "beratungsbesuch": 1,
+  "dokumentation": 1,
+  "pflegekurs": 1,
+  "fachbegriffe": 1,
+  "badumbau": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -13,6 +18,11 @@
   "widerspruch|Pflegegrad abgelehnt – Widerspruch innerhalb eines Monats",
   "md-begutachtung|MD-Begutachtung vorbereiten: Warum der Alltag zählt, nicht die Diagnose (Teil 1)",
   "treppenlift|Treppenlift mit Zuschuss: Bis zu 4.180 € von der Pflegekasse",
-  "pflegeplanung|Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten"
+  "pflegeplanung|Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten",
+  "beratungsbesuch|Beratungsbesuch § 37.3: Verpassen Sie das, kann Ihr Pflegegeld gekürzt werden",
+  "dokumentation|Pflegedokumentation: Was wirklich rein muss (und was nicht)",
+  "pflegekurs|Kostenloser Pflegekurs für Angehörige – das steht Ihnen zu",
+  "fachbegriffe|7 Fachbegriffe, die in JEDER Pflegeprüfung drankommen",
+  "badumbau|Badumbau mit bis zu 4.180 € Zuschuss von der Pflegekasse – so geht's"
  ]
 }
