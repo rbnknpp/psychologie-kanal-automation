@@ -1,200 +1,4 @@
 {
- "Warum dir Hintergrundmusik im Supermarkt dein Kaufverhalten verändert": {
-  "title": "Warum dir Hintergrundmusik im Supermarkt dein Kaufverhalten verändert",
-  "hook": "Langsame Musik im Supermarkt lässt dich mehr Geld ausgeben, ohne dass du es merkst.",
-  "tags": [
-   "psychologie",
-   "supermarkt",
-   "musik",
-   "konsumverhalten",
-   "marketing",
-   "unterbewusstsein",
-   "verhalten",
-   "einkaufen"
-  ]
- },
- "Dein Gehirn merkt sich unfertige Aufgaben besser als erledigte": {
-  "title": "Dein Gehirn merkt sich unfertige Aufgaben besser als erledigte",
-  "hook": "Eine halb erledigte Aufgabe bleibt viel hartnäckiger im Kopf als eine fertige.",
-  "tags": [
-   "psychologie",
-   "zeigarnik effekt",
-   "gehirn fakten",
-   "produktivität",
-   "aufgaben",
-   "stress",
-   "alltagspsychologie",
-   "konzentration"
-  ]
- },
- "Ein einzelnes falsches Wort kann eine ganze Erinnerung verändern": {
-  "title": "Ein einzelnes falsches Wort kann eine ganze Erinnerung verändern",
-  "hook": "Ein einziges anderes Wort in einer Frage kann deine Erinnerung umschreiben.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "erinnerung",
-   "kognition",
-   "gehirn fakten",
-   "wahrnehmung",
-   "falsche erinnerung",
-   "experiment"
-  ]
- },
- "Warum du beim Treppensteigen automatisch dein Handy wegsteckst": {
-  "title": "Warum du beim Treppensteigen automatisch dein Handy wegsteckst",
-  "hook": "Auf der Treppe checken fast alle Menschen plötzlich weniger ihr Handy.",
-  "tags": [
-   "psychologie",
-   "aufmerksamkeit",
-   "gehirn fakten",
-   "alltagsverhalten",
-   "koordination",
-   "handy",
-   "treppe",
-   "kognition"
-  ]
- },
- "Dein Gehirn hält ein Lächeln für echt, selbst wenn es gespielt ist": {
-  "title": "Dein Gehirn hält ein Lächeln für echt, selbst wenn es gespielt ist",
-  "hook": "Ein gespieltes Lächeln kann deine Stimmung trotzdem heben.",
-  "tags": [
-   "psychologie",
-   "lächeln",
-   "facial feedback",
-   "stimmung",
-   "gefühle",
-   "gehirn fakten",
-   "emotionen",
-   "sozialpsychologie"
-  ]
- },
- "Warum ein Geschenk ohne Anlass dich mehr berührt als eines zum Geburtstag": {
-  "title": "Warum ein Geschenk ohne Anlass dich mehr berührt als eines zum Geburtstag",
-  "hook": "Ein Geschenk ohne besonderen Anlass wirkt oft bedeutsamer als eines zum Geburtstag.",
-  "tags": [
-   "psychologie",
-   "geschenke",
-   "beziehungen",
-   "zuneigung",
-   "sozialpsychologie",
-   "überraschung",
-   "gefühle",
-   "verhalten"
-  ]
- },
- "Warum dein Gehirn einen Fremden nach 3 Sekunden Lächeln sympathisch findet": {
-  "title": "Warum dein Gehirn einen Fremden nach 3 Sekunden Lächeln sympathisch findet",
-  "hook": "Drei Sekunden Lächeln reichen, damit dein Gehirn jemanden mag.",
-  "tags": [
-   "psychologie",
-   "lächeln",
-   "mimik",
-   "spiegelneuronen",
-   "körpersprache",
-   "sozialpsychologie",
-   "erster eindruck",
-   "gehirn fakten",
-   "sympathie",
-   "verhalten"
-  ]
- },
- "3 Minuten reichen, damit dein Gehirn eine Entscheidung bereut": {
-  "title": "3 Minuten reichen, damit dein Gehirn eine Entscheidung bereut",
-  "hook": "Nach nur drei Minuten beginnt dein Gehirn, eine Entscheidung zu bereuen.",
-  "tags": [
-   "psychologie",
-   "entscheidungen",
-   "reue",
-   "verhalten",
-   "gehirn fakten",
-   "alltag",
-   "kognition",
-   "emotionen",
-   "restaurant",
-   "entscheidungsfindung"
-  ]
- },
- "Warum dein Gehirn bei Regen traurigere Erinnerungen abruft": {
-  "title": "Warum dein Gehirn bei Regen traurigere Erinnerungen abruft",
-  "hook": "Bei Regen holt dein Gehirn automatisch traurigere Erinnerungen hervor.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "wetter",
-   "stimmung",
-   "gehirn fakten",
-   "emotionen",
-   "regen",
-   "erinnerung",
-   "verhalten",
-   "kognition"
-  ]
- },
- "Dein Gehirn hält handgeschriebene Notizen für wichtiger als getippte": {
-  "title": "Dein Gehirn hält handgeschriebene Notizen für wichtiger als getippte",
-  "hook": "Ein handgeschriebenes Wort bleibt in deinem Kopf länger hängen als ein getipptes.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "lernen",
-   "handschrift",
-   "gehirn fakten",
-   "notizen",
-   "kognition",
-   "studium",
-   "produktivität",
-   "verhalten"
-  ]
- },
- "Warum dir ein Geruch sofort eine ganze Szene zurückbringt": {
-  "title": "Warum dir ein Geruch sofort eine ganze Szene zurückbringt",
-  "hook": "Ein einziger Geruch kann dich in Sekunden Jahre zurückversetzen.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "gerüche",
-   "gehirn fakten",
-   "erinnerung",
-   "nostalgie",
-   "sinne",
-   "hippocampus",
-   "emotionen",
-   "verhalten"
-  ]
- },
- "3 Sekunden – so lange dauert es, bis dein Gehirn eine Lüge erkennt": {
-  "title": "3 Sekunden – so lange dauert es, bis dein Gehirn eine Lüge erkennt",
-  "hook": "In drei Sekunden merkt dein Gehirn oft schon, dass etwas nicht stimmt.",
-  "tags": [
-   "psychologie",
-   "lügen",
-   "mikroexpressionen",
-   "körpersprache",
-   "gehirn fakten",
-   "sozialpsychologie",
-   "bauchgefühl",
-   "verhalten",
-   "mimik",
-   "kommunikation"
-  ]
- },
- "Warum dein Gehirn bei Gruppenentscheidungen mutiger wird": {
-  "title": "Warum dein Gehirn bei Gruppenentscheidungen mutiger wird",
-  "hook": "In der Gruppe triffst du oft riskantere Entscheidungen als allein.",
-  "tags": [
-   "psychologie",
-   "gruppendynamik",
-   "entscheidungen",
-   "risky shift",
-   "sozialpsychologie",
-   "verhalten",
-   "gehirn fakten",
-   "teamarbeit",
-   "risiko",
-   "kognition"
-  ]
- },
  "Dein Gehirn verwechselt Aufregung manchmal mit Angst": {
   "title": "Dein Gehirn verwechselt Aufregung manchmal mit Angst",
   "hook": "Dein Körper kann Nervosität vor einer Prüfung kaum von Vorfreude unterscheiden.",
@@ -6045,6 +5849,201 @@
    "clustering",
    "gesprächspsychologie",
    "alltag"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Zuhören öfter den Stift in der Hand drehst": {
+  "title": "Warum du beim Zuhören öfter den Stift in der Hand drehst",
+  "hook": "Ein Stift in der Hand verrät, wie sehr du dich langweilst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "konzentration",
+   "aufmerksamkeit",
+   "gestik",
+   "alltagspsychologie",
+   "körperhaltung"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Sekunden Blickwechsel entscheiden, wer in einem Gespräch führt": {
+  "title": "3 Sekunden Blickwechsel entscheiden, wer in einem Gespräch führt",
+  "hook": "Drei Sekunden Blickwechsel zeigen, wer das Gespräch lenkt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "blickkontakt",
+   "soziale hierarchie",
+   "gesprächsdynamik",
+   "nonverbale kommunikation",
+   "statussignale",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht": {
+  "title": "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht",
+  "hook": "Eine hängende Schulter verrät Trauer schneller als das Gesicht.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "emotionen erkennen",
+   "mimik",
+   "haltung",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "menschliches verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum zwei Menschen beim Gehen automatisch im gleichen Takt laufen": {
+  "title": "Warum zwei Menschen beim Gehen automatisch im gleichen Takt laufen",
+  "hook": "Zwei Freunde laufen oft im exakt gleichen Schritt.",
+  "tags": [
+   "körpersprache",
+   "gangsynchronisation",
+   "psychologie",
+   "beziehung",
+   "nonverbale kommunikation",
+   "gehen",
+   "verbindung",
+   "soziale psychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Wer beim Gehen vorgeht, bestimmt oft mehr als nur das Tempo": {
+  "title": "Wer beim Gehen vorgeht, bestimmt oft mehr als nur das Tempo",
+  "hook": "Einer von euch bestimmt beim Gehen fast immer das Tempo.",
+  "tags": [
+   "körpersprache",
+   "führung",
+   "psychologie",
+   "beziehung",
+   "gehen",
+   "dominanz",
+   "soziale dynamik",
+   "paare"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ihr beim Gehen automatisch denselben Abstand haltet": {
+  "title": "Warum ihr beim Gehen automatisch denselben Abstand haltet",
+  "hook": "Zwischen euch bleibt beim Gehen fast immer derselbe Abstand.",
+  "tags": [
+   "proxemik",
+   "körpersprache",
+   "psychologie",
+   "beziehung",
+   "nähe",
+   "abstand",
+   "gehen",
+   "soziale distanz"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ihr beim Sitzen am Tisch oft denselben Winkel wählt": {
+  "title": "Warum ihr beim Sitzen am Tisch oft denselben Winkel wählt",
+  "hook": "Am Tisch sitzt ihr oft in fast demselben Winkel zueinander.",
+  "tags": [
+   "körpersprache",
+   "sitzposition",
+   "psychologie",
+   "beziehung",
+   "tischgespräch",
+   "nähe",
+   "nonverbale kommunikation",
+   "soziale psychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn merkt, wer am Tisch zuerst nach dem Essen greift": {
+  "title": "Dein Gehirn merkt, wer am Tisch zuerst nach dem Essen greift",
+  "hook": "Am Tisch verrät die Reihenfolge beim Essen eure Rangordnung.",
+  "tags": [
+   "körpersprache",
+   "soziale hierarchie",
+   "psychologie",
+   "essen",
+   "tischgespräch",
+   "gruppendynamik",
+   "status",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ihr am Tisch öfter nach denselben Dingen greift": {
+  "title": "Warum ihr am Tisch öfter nach denselben Dingen greift",
+  "hook": "Am Tisch greifen enge Freunde oft fast gleichzeitig zu.",
+  "tags": [
+   "körpersprache",
+   "spiegeln",
+   "psychologie",
+   "beziehung",
+   "essen",
+   "mimikry",
+   "soziale psychologie",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ihr beim Abschied oft schon vor dem letzten Satz zögert": {
+  "title": "Warum ihr beim Abschied oft schon vor dem letzten Satz zögert",
+  "hook": "Vor einem Abschied verlangsamt sich euer Gespräch oft spürbar.",
+  "tags": [
+   "körpersprache",
+   "abschied",
+   "psychologie",
+   "beziehung",
+   "gespräch",
+   "soziale psychologie",
+   "nähe",
+   "verzögerung"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn merkt am Blick, ob ein Abschied wirklich das Ende ist": {
+  "title": "Dein Gehirn merkt am Blick, ob ein Abschied wirklich das Ende ist",
+  "hook": "Ein letzter Blick beim Abschied dauert oft länger als gedacht.",
+  "tags": [
+   "körpersprache",
+   "blickkontakt",
+   "psychologie",
+   "abschied",
+   "beziehung",
+   "nähe",
+   "soziale psychologie",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ihr euch nach einem guten Treffen in dieselbe Richtung dreht": {
+  "title": "Warum ihr euch nach einem guten Treffen in dieselbe Richtung dreht",
+  "hook": "Nach einem schönen Treffen steht ihr oft in dieselbe Richtung gedreht.",
+  "tags": [
+   "körpersprache",
+   "abschied",
+   "psychologie",
+   "beziehung",
+   "körperausrichtung",
+   "nähe",
+   "soziale psychologie",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Am Ende zeigt sich Verbundenheit nicht in einer Geste, sondern im Zusammenspiel": {
+  "title": "Am Ende zeigt sich Verbundenheit nicht in einer Geste, sondern im Zusammenspiel",
+  "hook": "Keine einzelne Geste zeigt, wie verbunden zwei Menschen sind.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "beziehung",
+   "synchronisation",
+   "nonverbale kommunikation",
+   "soziale psychologie",
+   "nähe",
+   "zusammenfassung"
   ],
   "abo_aufruf": false
  }
