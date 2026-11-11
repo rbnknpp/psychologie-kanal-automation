@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Dein Gehirn traut einer Gruppe mehr als einer einzelnen Person – auch wenn beide lügen",
-    "Warum dir ein fremder Hund sympathischer vorkommt als ein fremder Mensch",
-    "Dein Gehirn braucht nur eine Farbe, um deine Stimmung zu drehen",
-    "Kennst du das? Du gehst schneller, wenn dich jemand beobachtet",
-    "Dein Gehirn hält laute Stimmen automatisch für kompetenter",
-    "3 Sekunden – länger schaust du niemandem direkt ins Gesicht",
-    "Warum du beim Gähnen eines anderen fast automatisch mitgähnst",
-    "Dein Gehirn erinnert sich besser an Dinge, die unfertig bleiben",
-    "Die Zahl der Berührungen, die ein Baby braucht, um ruhig zu bleiben",
-    "Warum dir ein Raum ohne Fenster schneller die Zeit stiehlt",
-    "Dein Gehirn hält Gesichter für schöner, wenn sie dir ähnlich sehen",
-    "Warum du beim Autofahren leiser wirst, wenn du dich auf die Straße konzentrierst",
-    "Dein Gehirn erfindet Erinnerungen, die nie passiert sind",
     "3 Minuten Bewegung reichen, um deine Stimmung messbar zu heben",
     "Warum du bei wichtigen Entscheidungen oft zu lange wartest",
     "Dein Gehirn reagiert auf Kritik wie auf echten Schmerz",
@@ -199,7 +186,20 @@
     "Warum ihr beim Abschied oft schon vor dem letzten Satz zögert",
     "Dein Gehirn merkt am Blick, ob ein Abschied wirklich das Ende ist",
     "Warum ihr euch nach einem guten Treffen in dieselbe Richtung dreht",
-    "Am Ende zeigt sich Verbundenheit nicht in einer Geste, sondern im Zusammenspiel"
+    "Am Ende zeigt sich Verbundenheit nicht in einer Geste, sondern im Zusammenspiel",
+    "Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst",
+    "Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest",
+    "3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut",
+    "Warum du in einer Gruppe zuerst schaust, wer zuerst lacht",
+    "Dein Gehirn zählt automatisch, wie oft du in einer Gruppe angeschaut wirst",
+    "Warum du in Stille automatisch an deiner Kleidung zupfst",
+    "3 Sekunden Verzögerung verraten, wer sich noch nicht traut mitzureden",
+    "Dein Gehirn spiegelt automatisch die Lachlautstärke der Gruppe",
+    "Warum du in einer Gruppe öfter zur Mitte des Kreises stehst, wenn du dich sicher fühlst",
+    "Dein Gehirn erkennt ein erzwungenes Lächeln in der Gruppe sofort an den Augen",
+    "Warum dein Oberkörper sich in der Gruppe zur stärksten Verbindung dreht",
+    "Dein Gehirn merkt an der Pausenlänge, wer in der Gruppe das letzte Wort hat",
+    "Am Ende verrät nicht das Gespräch selbst, sondern der Raum danach, wer dazugehört hat"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -207,6 +207,7 @@
     "Wie unbewusste Körpersprache (Handschlag, Lächeln, Blickkontakt, Gestik) in den ersten Sekunden einer Begegnung entscheidet, wie vertrauenswürdig und sympathisch wir wirken",
     "Wie unbewusste Körpersignale beim Bezahlen, Schenken und Geldausgeben zeigen, ob wir uns wohlfühlen oder innerlich zögern (Geld-Psychologie jenseits von Verhandeln und Trinkgeld)",
     "Welche unbewussten Körperhaltungen und Gesten beim Sitzen und Stehen in Gesprächen zeigen, ob jemand sich wohlfühlt oder innerlich auf Abstand geht",
-    "Wie unbewusste Körpersignale beim gemeinsamen Gehen, Sitzen am Tisch und Abschiednehmen zeigen, wie synchron und verbunden sich zwei Menschen wirklich fühlen"
+    "Wie unbewusste Körpersignale beim gemeinsamen Gehen, Sitzen am Tisch und Abschiednehmen zeigen, wie synchron und verbunden sich zwei Menschen wirklich fühlen",
+    "Wie unbewusste Körpersignale beim Lachen, Schweigen und Small Talk in Gruppen verraten, wer sich zugehörig fühlt und wer innerlich außen vor bleibt"
   ]
 }

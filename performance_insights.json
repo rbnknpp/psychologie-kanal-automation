@@ -1,20 +1,48 @@
 {
-  "generated_at": "2026-11-10T13:34:23.147250",
+  "generated_at": "2026-11-11T12:41:32.828939",
   "lookback_days": 10,
   "top": [
     {
       "video_id": "8mrar0lxUi0",
       "title": "Warum du bei einer Umarmung zuerst klopfst statt zu halten",
-      "views": 81,
-      "retention": 20.2,
-      "engaged_pct": 37.0
+      "views": 160,
+      "retention": 43.7,
+      "engaged_pct": 34.4
+    },
+    {
+      "video_id": "yoiNHTUTjWI",
+      "title": "3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst",
+      "views": 95,
+      "retention": 164.2,
+      "engaged_pct": 26.3
     },
     {
       "video_id": "iCkoPOY4jis",
       "title": "Warum du beim Zuhören öfter die Hände in die Hosentaschen steckst",
-      "views": 54,
-      "retention": 267.6,
-      "engaged_pct": 33.3
+      "views": 79,
+      "retention": 201.2,
+      "engaged_pct": 31.6
+    },
+    {
+      "video_id": "b7ZldNqbnCE",
+      "title": "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit",
+      "views": 65,
+      "retention": 26.6,
+      "engaged_pct": 40.0
+    },
+    {
+      "video_id": "F0BhhUFv6_c",
+      "title": "Warum du beim Zuhören öfter den Kopf schräg hältst als sonst",
+      "views": 58,
+      "retention": 41.9,
+      "engaged_pct": 27.6
+    },
+    {
+      "video_id": "xEquveWEHZk",
+      "title": "2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust",
+      "views": 53,
+      "retention": 43.3,
+      "engaged_pct": 26.4
     },
     {
       "video_id": "rp1CW1-XXKs",
@@ -24,48 +52,27 @@
       "engaged_pct": 21.2
     },
     {
-      "video_id": "yoiNHTUTjWI",
-      "title": "3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst",
-      "views": 51,
-      "retention": 224.6,
-      "engaged_pct": 31.4
-    },
-    {
       "video_id": "ZSo6glKUiD8",
       "title": "In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist",
       "views": 49,
       "retention": 15.8,
       "engaged_pct": 32.7
-    },
-    {
-      "video_id": "xEquveWEHZk",
-      "title": "2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust",
-      "views": 47,
-      "retention": 39.3,
-      "engaged_pct": 25.5
-    },
-    {
-      "video_id": "2L77mNhhVC8",
-      "title": "Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst",
-      "views": 38,
-      "retention": 32.2,
-      "engaged_pct": 26.3
-    },
-    {
-      "video_id": "QQVNOKv-x8g",
-      "title": "Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst",
-      "views": 32,
-      "retention": 29.1,
-      "engaged_pct": 31.2
     }
   ],
   "flop": [
     {
-      "video_id": "H0w9nn5qAGE",
-      "title": "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
+      "video_id": "1qm3bj3IQto",
+      "title": "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
       "views": 15,
-      "retention": 23.5,
-      "engaged_pct": 46.7
+      "retention": 28.5,
+      "engaged_pct": 13.3
+    },
+    {
+      "video_id": "arRs-8SkYqE",
+      "title": "Sofort einschlafen: Rosengarten im Abendregen – Geführte Einschlaf-Hypnose",
+      "views": 15,
+      "retention": 6.5,
+      "engaged_pct": 66.7
     },
     {
       "video_id": "PgCe40TX25g",
@@ -75,26 +82,19 @@
       "engaged_pct": 20.0
     },
     {
-      "video_id": "1qm3bj3IQto",
-      "title": "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
-      "views": 15,
-      "retention": 28.5,
-      "engaged_pct": 13.3
-    },
-    {
-      "video_id": "UDSpznTkllY",
-      "title": "Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst",
-      "views": 16,
-      "retention": 51.0,
-      "engaged_pct": 31.2
-    },
-    {
       "video_id": "8sFlTKJiepY",
       "title": "Warum du beim Warten auf eine Antwort automatisch den Atem anhältst",
       "views": 16,
       "retention": 11.8,
       "engaged_pct": 37.5
+    },
+    {
+      "video_id": "JM_NigDHIHE",
+      "title": "Warum du beim Lügen öfter die Nase berührst",
+      "views": 18,
+      "retention": 38.5,
+      "engaged_pct": 11.1
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du bei einer Umarmung zuerst klopfst statt zu halten\" (81 Views, 20.2% Bindung, 37.0% nicht weitergewischt) | Hook: \"Ein kurzes Klopfen auf den Rücken heißt oft: Lass uns loslassen.\" | Themen: körpersprache, psychologie, umarmung, nähe\n- \"Warum du beim Zuhören öfter die Hände in die Hosentaschen steckst\" (54 Views, 267.6% Bindung, 33.3% nicht weitergewischt) | Hook: \"Hände in den Taschen bedeuten oft: Ich fühle mich unsicher.\" | Themen: körpersprache, psychologie, gestik, hände\n- \"Warum du bei einem Kompliment zuerst wegschaust\" (52 Views, 36.1% Bindung, 21.2% nicht weitergewischt) | Hook: \"Bei einem echten Kompliment schaust du kurz weg, nicht hin.\" | Themen: psychologie, körpersprache, komplimente, blickkontakt\n- \"3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst\" (51 Views, 224.6% Bindung, 31.4% nicht weitergewischt) | Hook: \"Nach oben links schauen heißt lügen, stimmt das wirklich?\" | Themen: lügen erkennen, psychologie, körpersprache, mythos\n- \"In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist\" (49 Views, 15.8% Bindung, 32.7% nicht weitergewischt) | Hook: \"0,4 Sekunden reichen, um einen Blick zu deuten.\" | Themen: psychologie, blickkontakt, mimik, amygdala\n- \"2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust\" (47 Views, 39.3% Bindung, 25.5% nicht weitergewischt) | Hook: \"Wie schnell du zurückwinkst, zeigt echte Freude.\" | Themen: körpersprache, psychologie, winken, gestik\n- \"Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst\" (38 Views, 32.2% Bindung, 26.3% nicht weitergewischt) | Hook: \"Füße verraten mehr über Interesse als jedes Gesicht.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, gestik\n- \"Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst\" (32 Views, 29.1% Bindung, 31.2% nicht weitergewischt) | Hook: \"Zeigst du jemandem dein Handgelenk, mag dein Gehirn ihn.\" | Themen: körpersprache, psychologie, gestik, sympathie\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst\" (15 Views, 23.5% Bindung, 46.7% nicht weitergewischt) | Hook: \"Ein winziges Augenbrauen-Zucken verrät mehr als ein Wort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"Warum du bei schlechten Neuigkeiten automatisch tiefer atmest\" (15 Views, 57.6% Bindung, 20.0% nicht weitergewischt) | Hook: \"Ein tiefer Atemzug kommt oft, bevor du reagierst.\" | Themen: psychologie, körperreaktion, stress, nervensystem\n- \"Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen\" (15 Views, 28.5% Bindung, 13.3% nicht weitergewischt) | Hook: \"2 Sekunden reichen, damit dein Gehirn Gefahr wittert.\" | Themen: psychologie, mimik, mikroexpressionen, körpersprache\n- \"Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst\" (16 Views, 51.0% Bindung, 31.2% nicht weitergewischt) | Hook: \"In jeder Schlange hältst du automatisch denselben Abstand ein.\" | Themen: proxemik, persönlicher raum, psychologie, körpersprache\n- \"Warum du beim Warten auf eine Antwort automatisch den Atem anhältst\" (16 Views, 11.8% Bindung, 37.5% nicht weitergewischt) | Hook: \"Vor einer wichtigen Antwort hältst du oft kurz die Luft an.\" | Themen: psychologie, körpersprache, atmung, stress"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du bei einer Umarmung zuerst klopfst statt zu halten\" (160 Views, 43.7% Bindung, 34.4% nicht weitergewischt) | Hook: \"Ein kurzes Klopfen auf den Rücken heißt oft: Lass uns loslassen.\" | Themen: körpersprache, psychologie, umarmung, nähe\n- \"3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst\" (95 Views, 164.2% Bindung, 26.3% nicht weitergewischt) | Hook: \"Nach oben links schauen heißt lügen, stimmt das wirklich?\" | Themen: lügen erkennen, psychologie, körpersprache, mythos\n- \"Warum du beim Zuhören öfter die Hände in die Hosentaschen steckst\" (79 Views, 201.2% Bindung, 31.6% nicht weitergewischt) | Hook: \"Hände in den Taschen bedeuten oft: Ich fühle mich unsicher.\" | Themen: körpersprache, psychologie, gestik, hände\n- \"3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit\" (65 Views, 26.6% Bindung, 40.0% nicht weitergewischt) | Hook: \"3 Zentimeter Fußabstand verraten, wie sicher du dich fühlst.\" | Themen: körpersprache, psychologie, füße, unsicherheit\n- \"Warum du beim Zuhören öfter den Kopf schräg hältst als sonst\" (58 Views, 41.9% Bindung, 27.6% nicht weitergewischt) | Hook: \"Ein schräger Kopf heißt: dein Gehirn hört wirklich zu.\" | Themen: körpersprache, psychologie, kopfneigung, zuhören\n- \"2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust\" (53 Views, 43.3% Bindung, 26.4% nicht weitergewischt) | Hook: \"Wie schnell du zurückwinkst, zeigt echte Freude.\" | Themen: körpersprache, psychologie, winken, gestik\n- \"Warum du bei einem Kompliment zuerst wegschaust\" (52 Views, 36.1% Bindung, 21.2% nicht weitergewischt) | Hook: \"Bei einem echten Kompliment schaust du kurz weg, nicht hin.\" | Themen: psychologie, körpersprache, komplimente, blickkontakt\n- \"In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist\" (49 Views, 15.8% Bindung, 32.7% nicht weitergewischt) | Hook: \"0,4 Sekunden reichen, um einen Blick zu deuten.\" | Themen: psychologie, blickkontakt, mimik, amygdala\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen\" (15 Views, 28.5% Bindung, 13.3% nicht weitergewischt) | Hook: \"2 Sekunden reichen, damit dein Gehirn Gefahr wittert.\" | Themen: psychologie, mimik, mikroexpressionen, körpersprache\n- \"Sofort einschlafen: Rosengarten im Abendregen – Geführte Einschlaf-Hypnose\" (15 Views, 6.5% Bindung, 66.7% nicht weitergewischt)\n- \"Warum du bei schlechten Neuigkeiten automatisch tiefer atmest\" (15 Views, 57.6% Bindung, 20.0% nicht weitergewischt) | Hook: \"Ein tiefer Atemzug kommt oft, bevor du reagierst.\" | Themen: psychologie, körperreaktion, stress, nervensystem\n- \"Warum du beim Warten auf eine Antwort automatisch den Atem anhältst\" (16 Views, 11.8% Bindung, 37.5% nicht weitergewischt) | Hook: \"Vor einer wichtigen Antwort hältst du oft kurz die Luft an.\" | Themen: psychologie, körpersprache, atmung, stress\n- \"Warum du beim Lügen öfter die Nase berührst\" (18 Views, 38.5% Bindung, 11.1% nicht weitergewischt) | Hook: \"Beim Lügen juckt deine Nase öfter als sonst.\" | Themen: lügen erkennen, körpersprache, psychologie, pinocchio effekt"
 }
