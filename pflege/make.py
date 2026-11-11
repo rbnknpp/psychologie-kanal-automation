@@ -504,6 +504,9 @@ def main():
         jobs = jobs[:1]
     if a.tiktok_only:
         jobs = [("short", "angehoerige" if k % 2 == 0 else "azubi", None) for k in range(a.tiktok_only)]
+    elif not a.only and not a.test:
+        # Robin 11.11.2026: 3 Pflege-TikToks pro Tag -> dritter Short nur für TikTok (hhmm=None = kein YouTube-Upload)
+        jobs.append(("short", "angehoerige" if today.toordinal() % 2 == 0 else "azubi", None))
     failures = 0
     for i, (kind, reihe, hhmm) in enumerate(jobs):
         topic = pick(reihe, st, rng)
@@ -533,7 +536,7 @@ def main():
                     tiktok_queue(tiktok_version(path, data, reihe), data, topic, reihe)
                 except Exception as e:  # noqa: BLE001
                     print("  TikTok FEHLER:", str(e)[:300])
-            if not a.tiktok_only:
+            if not a.tiktok_only and hhmm is not None:
                 vid = upload(path, thumb, data, topic, kind, publish_at(today, hhmm))
                 print("  hochgeladen:", vid, "(privat zur Sichtung)" if REVIEW else hhmm)
             st["used"][topic["slug"]] = st["used"].get(topic["slug"], 0) + 1
