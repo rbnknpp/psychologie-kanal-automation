@@ -13,7 +13,10 @@
   "badumbau": 1,
   "demenz": 1,
   "uebergabe": 1,
-  "pflege-und-beruf": 1
+  "pflege-und-beruf": 1,
+  "tagespflege": 1,
+  "zwischenpruefung": 1,
+  "krankenhaus-entlassung": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -29,6 +32,9 @@
   "badumbau|Badumbau mit bis zu 4.180 € Zuschuss von der Pflegekasse – so geht's",
   "demenz|Demenz zu Hause – erste Schritte",
   "uebergabe|Übergabe in der Pflege: So machst du es richtig (und nicht so)",
-  "pflege-und-beruf|Pflegezeit oder Familienpflegezeit: Was passt zu Ihnen?"
+  "pflege-und-beruf|Pflegezeit oder Familienpflegezeit: Was passt zu Ihnen?",
+  "tagespflege|Tagespflege: Was sie bringt – und was sie kostet",
+  "zwischenpruefung|Zwischenprüfung Pflegeausbildung – so bereitest du dich vor",
+  "krankenhaus-entlassung|Entlassung aus dem Krankenhaus: Ist die Pflege zu Hause wirklich gesichert?"
  ]
 }
