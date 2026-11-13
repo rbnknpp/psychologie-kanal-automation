@@ -421,8 +421,12 @@ def description(data, topic, kind):
     amazon = f"https://www.amazon.de/s?k={requests.utils.quote(topic['amazon'])}&tag={config.AMAZON_TAG}"
     lines = [data["beschreibung"].strip(), "",
              f"👉 Alles Wichtige zum Thema: {link}",
-             f"📚 Passende Bücher auf Amazon: {amazon}",
-             "(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)", "",
+             f"📚 Passende Bücher auf Amazon: {amazon}"]
+    if topic["reihe"] == "angehoerige":
+        # Robin 13.11.2026: eigene Bücher (live auf Amazon) in jede Angehörigen-Beschreibung
+        lines += [f"📖 Mein Pflegetagebuch zum Ausfüllen: https://www.amazon.de/dp/B0HR97VS62?tag={config.AMAZON_TAG}",
+                  f"🆘 Meine Pflege-Notfallmappe: https://www.amazon.de/dp/B0HRKB47NW?tag={config.AMAZON_TAG}"]
+    lines += ["(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)", "",
              DISCLAIMER, "",
              "#Pflege #" + ("pflegendeAngehörige" if topic["reihe"] == "angehoerige" else "Pflegeausbildung") + " #PflegeMitPlan"]
     if kind == "short":
