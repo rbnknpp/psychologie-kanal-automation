@@ -48,8 +48,12 @@ jobs:
           cache: pip
       - name: ffmpeg und Schriften
         run: |
-          sudo apt-get update -q
-          sudo apt-get install -y -q ffmpeg fonts-liberation
+          # 3 Versuche – am 11.11.2026 fiel der Lauf wegen eines kurzzeitig gestörten Ubuntu-Spiegels aus
+          for i in 1 2 3; do
+            sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-liberation && break
+            echo "apt-Versuch $i fehlgeschlagen, warte 60 s"; sleep 60
+          done
+          command -v ffmpeg
       - name: Python-Pakete
         run: pip install -r requirements.txt
       - name: Piper-Stimme (Cache)
