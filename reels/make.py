@@ -226,8 +226,8 @@ class Reel:
         d = ImageDraw.Draw(im)
         f = F(FONT_BLACK, size)
         lines = wrap(d, text.upper() if len(text) < 40 else text, f, maxw)
-        while len(lines) > 4 and size > 70:
-            size -= 8
+        while (len(lines) > 4 or max(d.textlength(l, font=f) for l in lines) > maxw) and size > 60:
+            size -= 6
             f = F(FONT_BLACK, size)
             lines = wrap(d, text.upper() if len(text) < 40 else text, f, maxw)
         lh = int(size * 1.08)
@@ -504,8 +504,9 @@ def process(job):
             urls = api("upload_urls", item_id=it["id"])
             put(urls["final"]["url"], final)
             put(urls["preview"]["url"], prev)
+            if k + 1 < n:
+                api("progress", order_id=job["order_id"], progress=25 + int(55 * (k + 1) / n))
             api("done", item_id=it["id"], preview_path=urls["preview"]["path"], final_path=urls["final"]["path"])
-            api("progress", order_id=job["order_id"], progress=25 + int(55 * (k + 1) / n))
             print(f"  [{no}] Video {k + 1}/{n} fertig ({reel.total:.1f} s)")
 
 
