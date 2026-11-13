@@ -16,7 +16,11 @@
   "pflege-und-beruf": 1,
   "tagespflege": 1,
   "zwischenpruefung": 1,
-  "krankenhaus-entlassung": 1
+  "krankenhaus-entlassung": 1,
+  "pflegedienst-finden": 1,
+  "delegation": 1,
+  "pflegebox": 1,
+  "pruefung-lernen": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -35,6 +39,10 @@
   "pflege-und-beruf|Pflegezeit oder Familienpflegezeit: Was passt zu Ihnen?",
   "tagespflege|Tagespflege: Was sie bringt – und was sie kostet",
   "zwischenpruefung|Zwischenprüfung Pflegeausbildung – so bereitest du dich vor",
-  "krankenhaus-entlassung|Entlassung aus dem Krankenhaus: Ist die Pflege zu Hause wirklich gesichert?"
+  "krankenhaus-entlassung|Entlassung aus dem Krankenhaus: Ist die Pflege zu Hause wirklich gesichert?",
+  "pflegedienst-finden|Ambulanten Pflegedienst finden: So vergleichen Sie richtig",
+  "delegation|Delegation in der Pflege: Was darf die Pflege wirklich?",
+  "pflegebox|Pflegebox ohne Zuzahlung",
+  "pruefung-lernen|Prüfungsangst? So lernst du wirklich effektiv für die Pflegeprüfung"
  ]
 }
