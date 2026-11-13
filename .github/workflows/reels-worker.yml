@@ -1,0 +1,55 @@
+name: Altovate Reels (Kundenaufträge)
+
+# Holt alle 15 Min neue Reels-Aufträge aus dem Kundenportal (reels-portal) und rendert sie.
+# DATENSCHUTZ: Repo und Logs sind öffentlich – keine Kundendaten ausgeben, keine Artefakte hochladen.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: reels-worker
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: utf-8
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      REELS_WORKER_TOKEN: ${{ secrets.REELS_WORKER_TOKEN }}
+    steps:
+      - name: Offene Aufträge?
+        id: check
+        run: |
+          n=$(curl -s -X POST https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/reels-portal \
+            -H "Content-Type: application/json" -H "x-reels-worker: $REELS_WORKER_TOKEN" \
+            -d '{"action":"jobs"}' | python3 -c "import sys,json;print(len(json.load(sys.stdin).get('jobs',[])))" || echo 0)
+          echo "Offene Aufträge: $n"
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.n != '0'
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.n != '0'
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ffmpeg und Schriften
+        if: steps.check.outputs.n != '0'
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-liberation fonts-montserrat && break
+            echo "apt-Versuch $i fehlgeschlagen, warte 60 s"; sleep 60
+          done
+          command -v ffmpeg
+      - name: Python-Pakete
+        if: steps.check.outputs.n != '0'
+        run: pip install -q anthropic requests Pillow numpy python-dotenv
+      - name: Reels produzieren
+        if: steps.check.outputs.n != '0'
+        run: python -m reels.make
