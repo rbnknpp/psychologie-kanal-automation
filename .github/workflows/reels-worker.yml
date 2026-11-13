@@ -1,4 +1,4 @@
-name: Altovate Reels (Kundenaufträge)
+name: Reelwerk (Kundenaufträge)
 
 # Holt alle 15 Min neue Reels-Aufträge aus dem Kundenportal (reels-portal) und rendert sie.
 # DATENSCHUTZ: Repo und Logs sind öffentlich – keine Kundendaten ausgeben, keine Artefakte hochladen.

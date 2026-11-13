@@ -1,4 +1,4 @@
-"""Altovate Reels – automatische Produktion für das Kundenportal (reels-portal).
+"""Reelwerk – automatische Produktion für das Kundenportal (reels-portal).
 
 Ablauf pro Lauf (GitHub-Workflow reels-worker, alle 15 Min):
   1. Offene Aufträge holen (neue Briefings + Änderungswünsche)
@@ -103,7 +103,7 @@ TOOL = {
 def drehbuch(job, n_images):
     items = [{"item_id": it["id"], "titel": it["titel"], "aenderungswunsch": it.get("change_comment") or None} for it in job["items"]]
     system = (
-        "Du bist Creative Director einer Social-Media-Agentur (altovate GmbH) und schreibst deutsche Kurzvideo-Drehbücher für Reels, "
+        "Du bist Creative Director des Videostudios Reelwerk und schreibst deutsche Kurzvideo-Drehbücher für Reels, "
         "die nur mit Bewegungstext, Kundenbildern und Musik funktionieren (kein Sprecher). Regeln: kurze, starke Sätze; Du- oder Sie-Form "
         "passend zur Branche (Pflege, Praxen, seriöse Betriebe: Sie); keine erfundenen Zahlen, Preise, Auszeichnungen, Bewertungen oder "
         "Rabatte; keine Heilversprechen; nichts behaupten, was nicht im Briefing steht. Jedes Reel eines Pakets hat einen anderen Blickwinkel "
@@ -445,7 +445,7 @@ def watermark_png(path):
     d = ImageDraw.Draw(tile)
     f = F(FONT_BLACK, 54)
     for row in range(0, 1600, 190):
-        d.text((-100 + (row // 190 % 2) * 160, row), "VORSCHAU · ALTOVATE   " * 4, font=f, fill=(255, 255, 255, 120))
+        d.text((-100 + (row // 190 % 2) * 160, row), "VORSCHAU · REELWERK   " * 4, font=f, fill=(255, 255, 255, 120))
     tile = tile.rotate(28, resample=Image.BICUBIC)
     im.paste(tile, (-440, -160), tile)
     d2 = ImageDraw.Draw(im)
