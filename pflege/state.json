@@ -20,7 +20,10 @@
   "pflegedienst-finden": 1,
   "delegation": 1,
   "pflegebox": 1,
-  "pruefung-lernen": 1
+  "pruefung-lernen": 1,
+  "pflegegeld-sachleistung": 1,
+  "intertrigo": 1,
+  "entlastung": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -43,6 +46,9 @@
   "pflegedienst-finden|Ambulanten Pflegedienst finden: So vergleichen Sie richtig",
   "delegation|Delegation in der Pflege: Was darf die Pflege wirklich?",
   "pflegebox|Pflegebox ohne Zuzahlung",
-  "pruefung-lernen|Prüfungsangst? So lernst du wirklich effektiv für die Pflegeprüfung"
+  "pruefung-lernen|Prüfungsangst? So lernst du wirklich effektiv für die Pflegeprüfung",
+  "pflegegeld-sachleistung|Pflegegeld, Pflegedienst oder beides? So finden Sie die richtige Lösung",
+  "intertrigo|Intertrigoprophylaxe: So verhinderst du wunde Hautfalten",
+  "entlastung|Überlastet durch Pflege? So organisieren Sie echte Entlastung"
  ]
 }
