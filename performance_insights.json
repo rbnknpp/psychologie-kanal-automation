@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-14T12:08:31.455708",
+  "generated_at": "2026-11-15T12:42:22.861537",
   "lookback_days": 10,
   "top": [
     {
       "video_id": "40W8xwbFGM8",
       "title": "Warum du beim Zuhören öfter den Stift in der Hand drehst",
-      "views": 176,
-      "retention": 36.5,
-      "engaged_pct": 42.6
+      "views": 185,
+      "retention": 36.3,
+      "engaged_pct": 43.2
     },
     {
       "video_id": "8mrar0lxUi0",
@@ -19,9 +19,23 @@
     {
       "video_id": "xxWt61E0wa0",
       "title": "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht",
-      "views": 106,
-      "retention": 33.6,
-      "engaged_pct": 25.5
+      "views": 111,
+      "retention": 31.9,
+      "engaged_pct": 26.1
+    },
+    {
+      "video_id": "3_4gRBRfJvs",
+      "title": "5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst",
+      "views": 105,
+      "retention": 210.6,
+      "engaged_pct": 40.0
+    },
+    {
+      "video_id": "I8o6xf7LVPQ",
+      "title": "3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut",
+      "views": 104,
+      "retention": 38.9,
+      "engaged_pct": 48.1
     },
     {
       "video_id": "wgdqPcTacWg",
@@ -43,43 +57,22 @@
       "views": 84,
       "retention": 193.7,
       "engaged_pct": 31.0
-    },
-    {
-      "video_id": "b7ZldNqbnCE",
-      "title": "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit",
-      "views": 82,
-      "retention": 25.6,
-      "engaged_pct": 40.2
-    },
-    {
-      "video_id": "kiumMDZ-4i8",
-      "title": "3 Sekunden Blickwechsel entscheiden, wer in einem Gespräch führt",
-      "views": 70,
-      "retention": 38.5,
-      "engaged_pct": 45.7
     }
   ],
   "flop": [
-    {
-      "video_id": "jlg8TqWz6-4",
-      "title": "Warum du beim Bezahlen öfter dein Portemonnaie fester umschließt",
-      "views": 18,
-      "retention": 8.0,
-      "engaged_pct": 61.1
-    },
-    {
-      "video_id": "vQPf4tVZVv8",
-      "title": "Warum du beim Zuhören öfter die Handflächen nach unten drehst",
-      "views": 18,
-      "retention": 24.7,
-      "engaged_pct": 44.4
-    },
     {
       "video_id": "258-r_bsrRY",
       "title": "Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist",
       "views": 18,
       "retention": 33.6,
       "engaged_pct": 22.2
+    },
+    {
+      "video_id": "jlg8TqWz6-4",
+      "title": "Warum du beim Bezahlen öfter dein Portemonnaie fester umschließt",
+      "views": 20,
+      "retention": 8.0,
+      "engaged_pct": 55.0
     },
     {
       "video_id": "QRLSGC1MV7I",
@@ -91,10 +84,17 @@
     {
       "video_id": "6Z7brlwfuLw",
       "title": "3 Grad Kippung im Stand verraten, ob du dich sicher fühlst",
-      "views": 24,
+      "views": 25,
       "retention": 38.5,
+      "engaged_pct": 24.0
+    },
+    {
+      "video_id": "YXh1msbYrB4",
+      "title": "Dein Gehirn hält einen geraden Rücken für selbstbewusster als breite Schultern",
+      "views": 32,
+      "retention": 31.1,
       "engaged_pct": 25.0
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter den Stift in der Hand drehst\" (176 Views, 36.5% Bindung, 42.6% nicht weitergewischt) | Hook: \"Ein Stift in der Hand verrät, wie sehr du dich langweilst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, konzentration\n- \"Warum du bei einer Umarmung zuerst klopfst statt zu halten\" (173 Views, 58.6% Bindung, 34.7% nicht weitergewischt) | Hook: \"Ein kurzes Klopfen auf den Rücken heißt oft: Lass uns loslassen.\" | Themen: körpersprache, psychologie, umarmung, nähe\n- \"Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht\" (106 Views, 33.6% Bindung, 25.5% nicht weitergewischt) | Hook: \"Eine hängende Schulter verrät Trauer schneller als das Gesicht.\" | Themen: psychologie, körpersprache, emotionen erkennen, mimik\n- \"Warum du beim Zögern automatisch die Lippen zusammenpresst\" (101 Views, 34.8% Bindung, 35.6% nicht weitergewischt) | Hook: \"Zusammengepresste Lippen verraten einen inneren Konflikt sofort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst\" (96 Views, 164.2% Bindung, 26.0% nicht weitergewischt) | Hook: \"Nach oben links schauen heißt lügen, stimmt das wirklich?\" | Themen: lügen erkennen, psychologie, körpersprache, mythos\n- \"Warum du beim Zuhören öfter die Hände in die Hosentaschen steckst\" (84 Views, 193.7% Bindung, 31.0% nicht weitergewischt) | Hook: \"Hände in den Taschen bedeuten oft: Ich fühle mich unsicher.\" | Themen: körpersprache, psychologie, gestik, hände\n- \"3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit\" (82 Views, 25.6% Bindung, 40.2% nicht weitergewischt) | Hook: \"3 Zentimeter Fußabstand verraten, wie sicher du dich fühlst.\" | Themen: körpersprache, psychologie, füße, unsicherheit\n- \"3 Sekunden Blickwechsel entscheiden, wer in einem Gespräch führt\" (70 Views, 38.5% Bindung, 45.7% nicht weitergewischt) | Hook: \"Drei Sekunden Blickwechsel zeigen, wer das Gespräch lenkt.\" | Themen: körpersprache, psychologie, blickkontakt, soziale hierarchie\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Bezahlen öfter dein Portemonnaie fester umschließt\" (18 Views, 8.0% Bindung, 61.1% nicht weitergewischt)\n- \"Warum du beim Zuhören öfter die Handflächen nach unten drehst\" (18 Views, 24.7% Bindung, 44.4% nicht weitergewischt) | Hook: \"Zeigst du beim Reden nach unten, wirkst du bestimmter.\" | Themen: körpersprache, psychologie, gestik, handflächen\n- \"Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist\" (18 Views, 33.6% Bindung, 22.2% nicht weitergewischt) | Hook: \"Gesenkte Augenbrauen bedeuten Konzentration, nicht Ärger.\" | Themen: körpersprache, psychologie, mimik, augenbrauen\n- \"Warum deine Stimme höher wird, wenn du jemanden beeindrucken willst\" (23 Views, 48.5% Bindung, 21.7% nicht weitergewischt) | Hook: \"Willst du überzeugen, steigt deine Stimme unbewusst höher.\" | Themen: stimme, psychologie, körpersprache, nervosität\n- \"3 Grad Kippung im Stand verraten, ob du dich sicher fühlst\" (24 Views, 38.5% Bindung, 25.0% nicht weitergewischt) | Hook: \"3 Grad Gewichtsverlagerung zeigen, wie sicher du dich fühlst.\" | Themen: körpersprache, psychologie, standhaltung, selbstbewusstsein"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter den Stift in der Hand drehst\" (185 Views, 36.3% Bindung, 43.2% nicht weitergewischt) | Hook: \"Ein Stift in der Hand verrät, wie sehr du dich langweilst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, konzentration\n- \"Warum du bei einer Umarmung zuerst klopfst statt zu halten\" (173 Views, 58.6% Bindung, 34.7% nicht weitergewischt) | Hook: \"Ein kurzes Klopfen auf den Rücken heißt oft: Lass uns loslassen.\" | Themen: körpersprache, psychologie, umarmung, nähe\n- \"Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht\" (111 Views, 31.9% Bindung, 26.1% nicht weitergewischt) | Hook: \"Eine hängende Schulter verrät Trauer schneller als das Gesicht.\" | Themen: psychologie, körpersprache, emotionen erkennen, mimik\n- \"5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst\" (105 Views, 210.6% Bindung, 40.0% nicht weitergewischt) | Hook: \"5 Zentimeter Abstand entscheiden, wie glaubwürdig du wirkst.\" | Themen: körpersprache, psychologie, proxemik, abstand\n- \"3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut\" (104 Views, 38.9% Bindung, 48.1% nicht weitergewischt) | Hook: \"Ein Lächeln über 3 Sekunden wirkt plötzlich unecht.\" | Themen: mimik, körpersprache, psychologie, lächeln\n- \"Warum du beim Zögern automatisch die Lippen zusammenpresst\" (101 Views, 34.8% Bindung, 35.6% nicht weitergewischt) | Hook: \"Zusammengepresste Lippen verraten einen inneren Konflikt sofort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n- \"3 Grad Augenbewegung verraten, ob du lügst oder dich erinnerst\" (96 Views, 164.2% Bindung, 26.0% nicht weitergewischt) | Hook: \"Nach oben links schauen heißt lügen, stimmt das wirklich?\" | Themen: lügen erkennen, psychologie, körpersprache, mythos\n- \"Warum du beim Zuhören öfter die Hände in die Hosentaschen steckst\" (84 Views, 193.7% Bindung, 31.0% nicht weitergewischt) | Hook: \"Hände in den Taschen bedeuten oft: Ich fühle mich unsicher.\" | Themen: körpersprache, psychologie, gestik, hände\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist\" (18 Views, 33.6% Bindung, 22.2% nicht weitergewischt) | Hook: \"Gesenkte Augenbrauen bedeuten Konzentration, nicht Ärger.\" | Themen: körpersprache, psychologie, mimik, augenbrauen\n- \"Warum du beim Bezahlen öfter dein Portemonnaie fester umschließt\" (20 Views, 8.0% Bindung, 55.0% nicht weitergewischt)\n- \"Warum deine Stimme höher wird, wenn du jemanden beeindrucken willst\" (23 Views, 48.5% Bindung, 21.7% nicht weitergewischt) | Hook: \"Willst du überzeugen, steigt deine Stimme unbewusst höher.\" | Themen: stimme, psychologie, körpersprache, nervosität\n- \"3 Grad Kippung im Stand verraten, ob du dich sicher fühlst\" (25 Views, 38.5% Bindung, 24.0% nicht weitergewischt) | Hook: \"3 Grad Gewichtsverlagerung zeigen, wie sicher du dich fühlst.\" | Themen: körpersprache, psychologie, standhaltung, selbstbewusstsein\n- \"Dein Gehirn hält einen geraden Rücken für selbstbewusster als breite Schultern\" (32 Views, 31.1% Bindung, 25.0% nicht weitergewischt) | Hook: \"Nicht breite Schultern wirken stark, sondern dein Rücken.\" | Themen: körpersprache, psychologie, haltung, selbstbewusstsein"
 }

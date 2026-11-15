@@ -1,52 +1,4 @@
 {
- "Warum dir ein Geruch sofort eine ganze Erinnerung zurückbringt": {
-  "title": "Warum dir ein Geruch sofort eine ganze Erinnerung zurückbringt",
-  "hook": "Ein einziger Geruch kann dich in Sekunden Jahre zurückversetzen.",
-  "tags": [
-   "psychologie",
-   "proust effekt",
-   "geruch",
-   "erinnerung",
-   "gedächtnis",
-   "gehirn fakten",
-   "limbisches system",
-   "emotionen",
-   "nostalgie",
-   "sinneswahrnehmung"
-  ]
- },
- "Dein Gehirn macht aus Zufall ein Muster": {
-  "title": "Dein Gehirn macht aus Zufall ein Muster",
-  "hook": "Dein Gehirn erfindet Zusammenhänge, selbst wenn keine existieren.",
-  "tags": [
-   "psychologie",
-   "apophänie",
-   "zufall",
-   "muster",
-   "wahrnehmung",
-   "gehirn fakten",
-   "kognitive verzerrung",
-   "verschwörungstheorien",
-   "evolution",
-   "denkfehler"
-  ]
- },
- "Warum geliehenes Geld sich weniger real anfühlt": {
-  "title": "Warum geliehenes Geld sich weniger real anfühlt",
-  "hook": "Geld mit Karte fühlt sich für dein Gehirn weniger echt an als Bargeld.",
-  "tags": [
-   "psychologie",
-   "geld",
-   "konsumverhalten",
-   "bargeld",
-   "kartenzahlung",
-   "gehirn fakten",
-   "verhaltensökonomie",
-   "alltagspsychologie",
-   "finanzen",
-   "ausgeben"
-  ]
- },
  "Ein Spiegel im Raum verändert, wie ehrlich du bist": {
   "title": "Ein Spiegel im Raum verändert, wie ehrlich du bist",
   "hook": "Ein Spiegel im Raum reicht, damit Menschen sich anders verhalten.",
@@ -6030,5 +5982,56 @@
    "mimik und gestik"
   ],
   "abo_aufruf": false
+ },
+ "Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst": {
+  "title": "Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst",
+  "hook": "Versteckte Hände unter dem Tisch wirken sofort unsicherer.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "vertrauen",
+   "bewerbungsgespräch",
+   "hände",
+   "nonverbale kommunikation",
+   "erster eindruck",
+   "gestik",
+   "body language",
+   "kommunikation"
+  ],
+  "abo_aufruf": true
+ },
+ "3 Sekunden Blickkontakt entscheiden, ob ein Fremder dir hilft": {
+  "title": "3 Sekunden Blickkontakt entscheiden, ob ein Fremder dir hilft",
+  "hook": "3 Sekunden Blickkontakt verdoppeln, ob dir jemand hilft.",
+  "tags": [
+   "blickkontakt",
+   "psychologie",
+   "körpersprache",
+   "hilfsbereitschaft",
+   "sozialpsychologie",
+   "fremde",
+   "vertrauen",
+   "augenkontakt",
+   "bystander effekt",
+   "alltag"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn hält eine tiefe Stimme automatisch für glaubwürdiger": {
+  "title": "Dein Gehirn hält eine tiefe Stimme automatisch für glaubwürdiger",
+  "hook": "Eine tiefere Stimme wird sofort als glaubwürdiger eingestuft.",
+  "tags": [
+   "stimme",
+   "psychologie",
+   "körpersprache",
+   "glaubwürdigkeit",
+   "kommunikation",
+   "tonlage",
+   "autorität",
+   "rhetorik",
+   "stimmlage",
+   "wirkung"
+  ],
+  "abo_aufruf": true
  }
 }
