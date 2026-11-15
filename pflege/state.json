@@ -23,7 +23,10 @@
   "pruefung-lernen": 1,
   "pflegegeld-sachleistung": 1,
   "intertrigo": 1,
-  "entlastung": 1
+  "entlastung": 1,
+  "steuern": 1,
+  "lagerung": 1,
+  "essen-anreichen": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -49,6 +52,9 @@
   "pruefung-lernen|Prüfungsangst? So lernst du wirklich effektiv für die Pflegeprüfung",
   "pflegegeld-sachleistung|Pflegegeld, Pflegedienst oder beides? So finden Sie die richtige Lösung",
   "intertrigo|Intertrigoprophylaxe: So verhinderst du wunde Hautfalten",
-  "entlastung|Überlastet durch Pflege? So organisieren Sie echte Entlastung"
+  "entlastung|Überlastet durch Pflege? So organisieren Sie echte Entlastung",
+  "steuern|Pflegepauschbetrag bei der Steuer",
+  "lagerung|Lagerung & Mobilisation: Die Grundprinzipien, die du wirklich können musst",
+  "essen-anreichen|Essen anreichen: Warum Tempo der größte Fehler ist"
  ]
 }
