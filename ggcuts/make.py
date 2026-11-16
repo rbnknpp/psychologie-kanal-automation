@@ -108,7 +108,7 @@ genuine reactions (jump scares, disbelief, hype), community moments (chat banter
 Avoid: sponsor reads, ads, bathroom breaks, menus/loading, quiet talk, anything that needs long context.
 
 Below are transcribed windows around loudness peaks (timestamps in seconds of the VOD).
-Choose the {n} best, non-overlapping clips. Each clip: 15-45 seconds, must start right before the payoff/hook
+Choose the {n} best, non-overlapping clips (ranked best first; some may be dropped later if his facecam is not visible). Each clip: 15-45 seconds, must start right before the payoff/hook
 (no slow intro) and end shortly after the reaction. Use the timestamps.
 
 Return ONLY JSON: {{"clips":[{{"start":float,"end":float,"hook":"max 6 words, punchy, English, no emoji",
@@ -161,16 +161,35 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     return " ".join(w.word.strip() for w in words)
 
 
-def has_facecam_box(video):
-    """Gameplay-Szene: Facecam unten links mit tuerkisem Rahmen. Just Chatting: Kamera bildfuellend."""
-    jpg = WORK / "probe.jpg"
-    sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", str(video), "-frames:v", "1", "-vf", "scale=1920:1080", str(jpg)])
+def frame_at(video, t, name):
+    jpg = WORK / name
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", str(video), "-frames:v", "1", "-vf", "scale=1920:1080", str(jpg)])
     from PIL import Image
-    im = np.asarray(Image.open(jpg).convert("RGB")).astype(int)
-    strip = np.concatenate([im[800:980, 12:18].reshape(-1, 3), im[800:980, 440:448].reshape(-1, 3)])
-    r, g, b = strip.mean(axis=0)
-    print(f"  Rahmenfarbe r{r:.0f} g{g:.0f} b{b:.0f}")
-    return g > 140 and b > 140 and r < 150
+    return np.asarray(Image.open(jpg).convert("RGB"))
+
+
+def faces(img, min_size=60, neighbors=5):
+    import cv2
+    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    gray = cv2.equalizeHist(cv2.cvtColor(np.ascontiguousarray(img), cv2.COLOR_RGB2GRAY))
+    return casc.detectMultiScale(gray, scaleFactor=1.08, minNeighbors=neighbors, minSize=(min_size, min_size))
+
+
+def layout(video, dur):
+    """'cam' = Gameplay mit Facecam-Box unten links, 'full' = Kamera bildfuellend (Just Chatting),
+    None = keine Facecam sichtbar (Desktop, Menue, Pause) -> Clip verwerfen (Kampagnenregel: Facecam immer sichtbar)."""
+    votes = []
+    for i in range(5):
+        t = max(0.5, min(dur - 1, 0.5 + i * (dur - 1.5) / 4))
+        im = frame_at(video, round(t, 1), f"probe{i}.jpg")
+        box = len(faces(im[760:1010, 10:450], min_size=40, neighbors=4)) > 0
+        center = len(faces(im[:, 560:1360], min_size=120, neighbors=5)) > 0
+        votes.append("cam" if box else "full" if center else None)
+        print(f"  Probe {t:.0f}s -> {votes[-1]}", flush=True)
+    for lay in ("cam", "full"):
+        if votes.count(lay) >= 2:
+            return lay
+    return None
 
 
 def render(vod, start, end, name, hook):
@@ -179,10 +198,12 @@ def render(vod, start, end, name, hook):
     sh(["yt-dlp", "--no-progress", "-f", "b[vcodec!=none][height<=1080]/b[vcodec!=none]", "-S", "res:1080,fps",
         "--download-sections", f"*{start:.1f}-{end:.1f}", "--force-keyframes-at-cuts", "-o", str(raw),
         f"https://www.twitch.tv/videos/{vod}"])
-    print("Dateien:", [(p.name, p.stat().st_size) for p in WORK.iterdir()], flush=True)
-    print(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-of", "csv=p=0",
-                          str(raw)], capture_output=True, text=True).stdout.strip().replace(chr(10), " | "), flush=True)
-    cam_layout = has_facecam_box(raw)
+    lay = layout(raw, end - start)
+    if lay is None:
+        print("  keine Facecam sichtbar - Clip verworfen", flush=True)
+        raw.unlink(missing_ok=True)
+        return None, "", None
+    cam_layout = lay == "cam"
     ass = WORK / f"{name}.ass"
     text = subtitles(raw, ass, hook, 1430 if cam_layout else 1500)
     x, y, w, h = CAM
@@ -250,13 +271,18 @@ def main():
         used = [(c["start"], c["end"]) for c in info["clips"]] + [tuple(x) for x in info.get("rejected", [])]
         ts = peaks(audio, skip=used)
         cands = [(t, transcribe_window(audio, t)) for t in ts]
-        picks = choose(cands, need, title)
+        picks = choose(cands, need + 3, title)
         for c in picks:
             s, e = float(c["start"]), float(c["end"])
             if any(not (e <= us or s >= ue) for us, ue in used):
                 continue
             name = f"timmy_{vod}_{int(s)}"
+            if done >= a.count:
+                break
             out, text, cam = render(vod, s - 0.3, e + 0.4, name, c.get("hook", ""))
+            if out is None:
+                info.setdefault("rejected", []).append([s, e])
+                continue
             caption = f"{c.get('caption', '').strip()} twitch.tv/{CHANNEL} {TAGS}"
             secs = round(e - s, 1)
             if not a.test:

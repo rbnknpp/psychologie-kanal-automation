@@ -43,7 +43,7 @@ jobs:
           echo "/tmp/ff/bin" >> "$GITHUB_PATH"
           /tmp/ff/bin/ffmpeg -version | head -1
       - name: Python-Pakete
-        run: pip install -U yt-dlp "faster-whisper==1.2.1" "av==18.0.0" anthropic requests numpy Pillow
+        run: pip install -U yt-dlp "faster-whisper==1.2.1" "av==18.0.0" anthropic requests numpy Pillow "opencv-python-headless<5"
       - name: Whisper-Modell (Cache)
         uses: actions/cache@v4
         with:
