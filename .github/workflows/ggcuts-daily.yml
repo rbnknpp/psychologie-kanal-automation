@@ -43,7 +43,7 @@ jobs:
             echo "apt-Versuch $i fehlgeschlagen, warte 60 s"; sleep 60
           done
       - name: Python-Pakete
-        run: pip install -U yt-dlp faster-whisper anthropic requests numpy Pillow
+        run: pip install -U yt-dlp "faster-whisper==1.2.1" "av==18.0.0" anthropic requests numpy Pillow
       - name: Whisper-Modell (Cache)
         uses: actions/cache@v4
         with:
