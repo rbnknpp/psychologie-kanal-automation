@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Anzahl Clips"
+        description: "Anzahl Clips gesamt (leer/0 = per_day je Kampagne aus campaigns.json)"
         type: string
-        default: "3"
+        default: "0"
       test:
         description: "Testlauf: rendern, nicht einreihen"
         type: boolean
@@ -51,8 +51,8 @@ jobs:
           key: whisper-small-v1
       - name: Clips erzeugen und einreihen
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then python -m ggcuts.make --count "${{ inputs.count || 3 }}" --test
-          else python -m ggcuts.make --count "${{ inputs.count || 3 }}"; fi
+          if [ "${{ inputs.test }}" = "true" ]; then python -m ggcuts.make --count "${{ inputs.count || 0 }}" --test
+          else python -m ggcuts.make --count "${{ inputs.count || 0 }}"; fi
       - name: Testclips sichern
         if: ${{ inputs.test }}
         uses: actions/upload-artifact@v4
