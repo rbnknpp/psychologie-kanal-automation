@@ -1,212 +1,4 @@
 {
- "Ein Spiegel im Raum verändert, wie ehrlich du bist": {
-  "title": "Ein Spiegel im Raum verändert, wie ehrlich du bist",
-  "hook": "Ein Spiegel im Raum reicht, damit Menschen sich anders verhalten.",
-  "tags": [
-   "psychologie",
-   "spiegel",
-   "selbstwahrnehmung",
-   "ehrlichkeit",
-   "self awareness",
-   "gehirn fakten",
-   "sozialpsychologie",
-   "verhalten",
-   "alltagspsychologie",
-   "experiment"
-  ]
- },
- "Dein Gehirn mag Gesichter lieber leicht asymmetrisch": {
-  "title": "Dein Gehirn mag Gesichter lieber leicht asymmetrisch",
-  "hook": "Perfekt symmetrische Gesichter wirken auf uns seltsam unecht.",
-  "tags": [
-   "psychologie",
-   "gesichter",
-   "symmetrie",
-   "attraktivität",
-   "uncanny valley",
-   "gehirn fakten",
-   "wahrnehmung",
-   "schönheit",
-   "sozialpsychologie",
-   "erster eindruck"
-  ]
- },
- "Warum ein Kompliment vor Zeugen mehr wiegt": {
-  "title": "Warum ein Kompliment vor Zeugen mehr wiegt",
-  "hook": "Ein Kompliment vor anderen fühlt sich stärker an als unter vier Augen.",
-  "tags": [
-   "psychologie",
-   "lob",
-   "kompliment",
-   "sozialpsychologie",
-   "status",
-   "gehirn fakten",
-   "teamarbeit",
-   "motivation",
-   "beziehungen",
-   "anerkennung"
-  ]
- },
- "Dein Gehirn verwechselt Wärme mit Vertrauen": {
-  "title": "Dein Gehirn verwechselt Wärme mit Vertrauen",
-  "hook": "Ein warmer Kaffee in der Hand lässt dich andere freundlicher einschätzen.",
-  "tags": [
-   "psychologie",
-   "wärme",
-   "vertrauen",
-   "kaffee",
-   "gehirn fakten",
-   "sozialpsychologie",
-   "experiment",
-   "erster eindruck",
-   "beziehungen",
-   "wahrnehmung"
-  ]
- },
- "Warum du beim Zweifeln automatisch den Kopf schräg legst": {
-  "title": "Warum du beim Zweifeln automatisch den Kopf schräg legst",
-  "hook": "Wenn du unsicher bist, kippt dein Kopf fast automatisch zur Seite.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "gehirn fakten",
-   "nonverbale kommunikation",
-   "unsicherheit",
-   "mimik",
-   "verhalten",
-   "alltagspsychologie",
-   "soziale signale",
-   "gesprächsverhalten"
-  ]
- },
- "Ein Grund, warum du beim Warten auf dem Bahnsteig öfter auf die Gleise schaust": {
-  "title": "Ein Grund, warum du beim Warten auf dem Bahnsteig öfter auf die Gleise schaust",
-  "hook": "Warum schauen fast alle Wartenden immer wieder in dieselbe Richtung?",
-  "tags": [
-   "psychologie",
-   "alltagsverhalten",
-   "gehirn fakten",
-   "warten",
-   "bahnsteig",
-   "kontrollbedürfnis",
-   "sozialpsychologie",
-   "verhalten",
-   "blickverhalten",
-   "gewohnheiten"
-  ]
- },
- "Dein Gehirn mag dich selbst mehr, wenn du im Spiegel lächelst": {
-  "title": "Dein Gehirn mag dich selbst mehr, wenn du im Spiegel lächelst",
-  "hook": "Ein Lächeln im Spiegel verändert, wie dein Gehirn dich selbst bewertet.",
-  "tags": [
-   "psychologie",
-   "selbstbild",
-   "gehirn fakten",
-   "lächeln",
-   "mimik",
-   "emotionen",
-   "spiegel",
-   "selbstwahrnehmung",
-   "wohlbefinden",
-   "alltagspsychologie"
-  ]
- },
- "Warum du beim Zuhören automatisch nickst, auch wenn du nicht zustimmst": {
-  "title": "Warum du beim Zuhören automatisch nickst, auch wenn du nicht zustimmst",
-  "hook": "Du nickst oft, ohne überhaupt zuzustimmen.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "nicken",
-   "kommunikation",
-   "gehirn fakten",
-   "soziale signale",
-   "zuhören",
-   "alltagsverhalten",
-   "nonverbal",
-   "gesprächspsychologie"
-  ]
- },
- "Dein Gehirn hält dich für ehrlicher, wenn du laut denkst": {
-  "title": "Dein Gehirn hält dich für ehrlicher, wenn du laut denkst",
-  "hook": "Wer laut denkt, wirkt auf andere glaubwürdiger.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "glaubwürdigkeit",
-   "sprache",
-   "gehirn fakten",
-   "soziale wahrnehmung",
-   "rhetorik",
-   "vertrauen",
-   "alltagspsychologie",
-   "gesprächsverhalten"
-  ]
- },
- "Ein Fenster im Büro verändert, wie produktiv du dich fühlst": {
-  "title": "Ein Fenster im Büro verändert, wie produktiv du dich fühlst",
-  "hook": "Ein Blick nach draußen reicht, um dich wacher zu machen.",
-  "tags": [
-   "psychologie",
-   "produktivität",
-   "tageslicht",
-   "büro",
-   "gehirn fakten",
-   "konzentration",
-   "innere uhr",
-   "arbeitsalltag",
-   "wohlbefinden",
-   "alltagspsychologie"
-  ]
- },
- "Warum du beim Warten auf eine SMS öfter aufs Handy schaust, als nötig": {
-  "title": "Warum du beim Warten auf eine SMS öfter aufs Handy schaust, als nötig",
-  "hook": "Du checkst dein Handy öfter, wenn du auf etwas wartest.",
-  "tags": [
-   "psychologie",
-   "smartphone",
-   "warten",
-   "zeigarnik effekt",
-   "gehirn fakten",
-   "alltagsverhalten",
-   "aufmerksamkeit",
-   "handy sucht",
-   "soziale medien",
-   "unruhe"
-  ]
- },
- "3 Sekunden entscheiden, ob ein Witz bei dir ankommt": {
-  "title": "3 Sekunden entscheiden, ob ein Witz bei dir ankommt",
-  "hook": "Ein Witz muss in drei Sekunden seine Pointe liefern.",
-  "tags": [
-   "psychologie",
-   "humor",
-   "timing",
-   "witze",
-   "gehirn fakten",
-   "kommunikation",
-   "komik",
-   "überraschung",
-   "alltagspsychologie",
-   "soziale interaktion"
-  ]
- },
- "Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden": {
-  "title": "Dein Gehirn unterscheidet zwischen echtem und falschem Lächeln in Millisekunden",
-  "hook": "Dein Gehirn erkennt ein falsches Lächeln fast sofort.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "lächeln",
-   "emotionen",
-   "gehirn fakten",
-   "mimik",
-   "soziale wahrnehmung",
-   "duchenne lächeln",
-   "echtheit",
-   "gesichtsausdruck"
-  ]
- },
  "Warum dir eine fremde Sprache im Hintergrund die Konzentration raubt": {
   "title": "Warum dir eine fremde Sprache im Hintergrund die Konzentration raubt",
   "hook": "Gespräche in einer fremden Sprache lenken dich stärker ab als erwartet.",
@@ -6033,5 +5825,206 @@
    "wirkung"
   ],
   "abo_aufruf": true
+ },
+ "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken": {
+  "title": "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken",
+  "hook": "Ein offenes Handgelenk verrät mehr als jeder Blick.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "flirten",
+   "nonverbale kommunikation",
+   "handgelenk",
+   "anziehung",
+   "body language",
+   "beziehungspsychologie",
+   "erste eindrücke",
+   "dating"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Sekunden Pause vor einer Antwort entscheiden, ob du als ehrlich giltst": {
+  "title": "3 Sekunden Pause vor einer Antwort entscheiden, ob du als ehrlich giltst",
+  "hook": "3 Sekunden Pause verändern, wie ehrlich du wirkst.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "kommunikation",
+   "vertrauen",
+   "glaubwürdigkeit",
+   "gesprächsführung",
+   "lügen erkennen",
+   "nonverbale kommunikation",
+   "body language",
+   "soziale psychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust": {
+  "title": "Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust",
+  "hook": "Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "mimik",
+   "vertrauen",
+   "nonverbale kommunikation",
+   "stirn",
+   "mikroausdrücke",
+   "gesichtsausdruck",
+   "alltagspsychologie",
+   "gesprächspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Trösten zuerst den Abstand prüfst, bevor du näherkommst": {
+  "title": "Warum du beim Trösten zuerst den Abstand prüfst, bevor du näherkommst",
+  "hook": "Bevor du tröstest, misst dein Körper unbewusst den Abstand.",
+  "tags": [
+   "körpersprache",
+   "trost",
+   "psychologie",
+   "nonverbale kommunikation",
+   "nähe",
+   "empathie",
+   "emotionen",
+   "beziehungen"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn liest Schweigen beim Trösten als Angebot, nicht als Leere": {
+  "title": "Dein Gehirn liest Schweigen beim Trösten als Angebot, nicht als Leere",
+  "hook": "Schweigen beim Trösten ist kein Fehler, sondern ein Angebot.",
+  "tags": [
+   "schweigen",
+   "trost",
+   "psychologie",
+   "trauer",
+   "stille",
+   "emotionale unterstützung",
+   "beziehungen",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum eine kurze Berührung am Arm mehr zeigt als lange Umarmungen": {
+  "title": "Warum eine kurze Berührung am Arm mehr zeigt als lange Umarmungen",
+  "hook": "Eine kurze Berührung verrät mehr als eine lange Umarmung.",
+  "tags": [
+   "berührung",
+   "trost",
+   "psychologie",
+   "körpersprache",
+   "timing",
+   "umarmung",
+   "nähe",
+   "emotionen"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn erkennt angenommenen Trost an einem Detail: der Atmung": {
+  "title": "Dein Gehirn erkennt angenommenen Trost an einem Detail: der Atmung",
+  "hook": "Dein Atem zeigt, ob du Trost wirklich annimmst.",
+  "tags": [
+   "atmung",
+   "trost",
+   "psychologie",
+   "körpersprache",
+   "nervensystem",
+   "entspannung",
+   "emotionen",
+   "nähe"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum getröstete Menschen die Schultern zuerst senken, nicht das Gesicht entspannen": {
+  "title": "Warum getröstete Menschen die Schultern zuerst senken, nicht das Gesicht entspannen",
+  "hook": "Nicht das Gesicht, sondern deine Schultern zeigen echten Trost.",
+  "tags": [
+   "schultern",
+   "körpersprache",
+   "trost",
+   "psychologie",
+   "stress",
+   "entspannung",
+   "emotionen",
+   "nähe"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Blick verrät, ob du Trost suchst oder nur Höflichkeit zeigst": {
+  "title": "Dein Blick verrät, ob du Trost suchst oder nur Höflichkeit zeigst",
+  "hook": "Dein Blick verrät, ob du Trost willst oder nur höflich bist.",
+  "tags": [
+   "blickkontakt",
+   "trost",
+   "psychologie",
+   "körpersprache",
+   "augen",
+   "nähe",
+   "emotionen",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum manche Menschen beim Trösten die Arme verschränken, obwohl sie dankbar sind": {
+  "title": "Warum manche Menschen beim Trösten die Arme verschränken, obwohl sie dankbar sind",
+  "hook": "Verschränkte Arme bedeuten beim Trösten nicht immer Ablehnung.",
+  "tags": [
+   "verschränkte arme",
+   "körpersprache",
+   "trost",
+   "psychologie",
+   "selbstschutz",
+   "emotionen",
+   "nähe",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn erkennt in 2 Sekunden, ob ein Trostversuch angenommen wird": {
+  "title": "Dein Gehirn erkennt in 2 Sekunden, ob ein Trostversuch angenommen wird",
+  "hook": "In 2 Sekunden erkennt dein Gehirn, ob Trost ankommt.",
+  "tags": [
+   "reflex",
+   "trost",
+   "psychologie",
+   "körpersprache",
+   "zeitfenster",
+   "emotionen",
+   "nähe",
+   "reaktion"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum manche Menschen Trost abwehren, indem sie sofort lachen": {
+  "title": "Warum manche Menschen Trost abwehren, indem sie sofort lachen",
+  "hook": "Lachen bei Trost ist oft kein Zeichen von Leichtigkeit.",
+  "tags": [
+   "lachen",
+   "trost",
+   "psychologie",
+   "emotionen",
+   "schutzmechanismus",
+   "körpersprache",
+   "nähe",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Am Ende zeigt nicht die Geste, sondern das Nachlassen der Spannung echten Trost": {
+  "title": "Am Ende zeigt nicht die Geste, sondern das Nachlassen der Spannung echten Trost",
+  "hook": "Nicht die Geste selbst beweist Trost, sondern das, was danach bleibt.",
+  "tags": [
+   "trost",
+   "körpersprache",
+   "psychologie",
+   "entspannung",
+   "emotionen",
+   "nähe",
+   "zusammenfassung",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
  }
 }

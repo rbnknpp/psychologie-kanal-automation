@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Warum du beim Verhandeln automatisch leiser wirst, wenn du unsicher bist",
-    "Dein Gehirn hält runde Preise für ehrlicher als krumme",
-    "Warum du beim Geld zählen automatisch langsamer sprichst",
-    "Dein Gehirn traut einer festen Unterschrift mehr als einer zittrigen",
-    "Warum du beim Shoppen mit Freunden mehr Geld ausgibst",
-    "Dein Gehirn schätzt Preise anders ein, wenn du lächelst",
-    "Warum du beim Geldgeben die Handfläche unbewusst anders hältst",
-    "Dein Gehirn erinnert sich an teure Fehler emotionaler als an günstige",
-    "Warum du beim Zuhören automatisch die Stimme des Anderen imitierst",
-    "Dein Gehirn erkennt ein erzwungenes Lachen an der Tonlage",
-    "Warum du beim Lügen öfter Füllwörter benutzt",
-    "Dein Gehirn hält Menschen für ehrlicher, wenn sie dir die offene Handfläche zeigen",
-    "Kennst du das? Fremde wirken sympathischer, wenn sie dich beim Reden ansehen",
     "Warum dir eine fremde Stimme am Telefon vertrauter vorkommt als erwartet",
     "Dein Gehirn bewertet Menschen in Gruppen anders als allein",
     "3 Sekunden Verzögerung verraten, ob eine Entschuldigung echt gemeint ist",
@@ -199,7 +186,20 @@
     "Am Ende verrät nicht ein Zeichen, sondern die Summe aller Signale, wie ungeduldig du wirklich bist",
     "Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst",
     "3 Sekunden Blickkontakt entscheiden, ob ein Fremder dir hilft",
-    "Dein Gehirn hält eine tiefe Stimme automatisch für glaubwürdiger"
+    "Dein Gehirn hält eine tiefe Stimme automatisch für glaubwürdiger",
+    "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken",
+    "3 Sekunden Pause vor einer Antwort entscheiden, ob du als ehrlich giltst",
+    "Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust",
+    "Warum du beim Trösten zuerst den Abstand prüfst, bevor du näherkommst",
+    "Dein Gehirn liest Schweigen beim Trösten als Angebot, nicht als Leere",
+    "Warum eine kurze Berührung am Arm mehr zeigt als lange Umarmungen",
+    "Dein Gehirn erkennt angenommenen Trost an einem Detail: der Atmung",
+    "Warum getröstete Menschen die Schultern zuerst senken, nicht das Gesicht entspannen",
+    "Dein Blick verrät, ob du Trost suchst oder nur Höflichkeit zeigst",
+    "Warum manche Menschen beim Trösten die Arme verschränken, obwohl sie dankbar sind",
+    "Dein Gehirn erkennt in 2 Sekunden, ob ein Trostversuch angenommen wird",
+    "Warum manche Menschen Trost abwehren, indem sie sofort lachen",
+    "Am Ende zeigt nicht die Geste, sondern das Nachlassen der Spannung echten Trost"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -211,6 +211,7 @@
     "Wie unbewusste Körpersignale beim Lachen, Schweigen und Small Talk in Gruppen verraten, wer sich zugehörig fühlt und wer innerlich außen vor bleibt",
     "Wie unbewusste Körpersignale bei kleinen Berührungen im Alltag (Schulterklopfen, Armberühren, Handauflegen) zeigen, welche Beziehung zwei Menschen wirklich zueinander haben",
     "Wie unbewusste Körpersignale bei Streit und Meinungsverschiedenheiten zeigen, ob jemand verteidigt, einlenkt oder innerlich abschaltet",
-    "Wie unbewusste Körpersignale beim Warten (in der Schlange, im Wartezimmer, auf eine Antwort) zeigen, wie ungeduldig oder nervös jemand wirklich ist"
+    "Wie unbewusste Körpersignale beim Warten (in der Schlange, im Wartezimmer, auf eine Antwort) zeigen, wie ungeduldig oder nervös jemand wirklich ist",
+    "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt"
   ]
 }
