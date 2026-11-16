@@ -15,7 +15,93 @@
      "hook": "Giveaway winner goes missing...",
      "manual": true,
      "posted": "https://www.tiktok.com/@gg.cuts.tv/video/7708722697060027670"
+    },
+    {
+     "start": 9569.4,
+     "end": 9598.6,
+     "hook": "Leave my booty alone bro",
+     "caption": "Chaos erupts mid-stream 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-16"
+    },
+    {
+     "start": 13933.5,
+     "end": 13962.9,
+     "hook": "No-scope snipe insane skill",
+     "caption": "Clean no-scope shocks everyone 🎯 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-16"
+    },
+    {
+     "start": 12432.0,
+     "end": 12462.0,
+     "hook": "I swear I didn't sabotage",
+     "caption": "Timmy swears on the ski lodge 😤 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "full",
+     "date": "2026-11-16"
     }
+   ],
+   "rejected": [
+    [
+     3982.2,
+     4007.2
+    ],
+    [
+     432.0,
+     487.0
+    ],
+    [
+     3952.0,
+     4007.0
+    ],
+    [
+     4548.0,
+     4603.0
+    ],
+    [
+     9562.0,
+     9617.0
+    ],
+    [
+     11380.0,
+     11435.0
+    ],
+    [
+     11480.0,
+     11535.0
+    ],
+    [
+     12432.0,
+     12487.0
+    ],
+    [
+     13210.0,
+     13265.0
+    ],
+    [
+     13538.0,
+     13593.0
+    ],
+    [
+     13672.0,
+     13727.0
+    ],
+    [
+     13776.0,
+     13831.0
+    ],
+    [
+     13908.0,
+     13963.0
+    ],
+    [
+     14066.0,
+     14121.0
+    ],
+    [
+     14486.0,
+     14541.0
+    ]
    ]
   }
  }
