@@ -188,11 +188,54 @@ def border_match(im, box, color):
     return hits >= 6
 
 
+def face_track(video, dur, crop_w=608):
+    """Gesicht verfolgen (4 Bilder/s): liefert [(t, x_links)] fuer einen 608 px breiten Ausschnitt (1920x1080),
+    weich gefuehrt wie eine Kamera. None, wenn in < 30 % der Bilder ein Gesicht erkannt wird."""
+    from PIL import Image
+    d = WORK / "trk"
+    if d.exists():
+        for f in d.iterdir():
+            f.unlink()
+    d.mkdir(exist_ok=True)
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-vf", "fps=4,scale=960:540", str(d / "f%04d.jpg")])
+    files = sorted(d.iterdir())
+    raw, prev = [], None
+    for f in files:
+        im = np.asarray(Image.open(f).convert("RGB"))
+        fs = [tuple(int(v) for v in x) for x in faces(im, min_size=40, neighbors=6)]
+        cx = None
+        if fs:
+            big = max(fs, key=lambda q: q[2] * q[3])
+            cands = [q for q in fs if q[2] * q[3] >= 0.5 * big[2] * big[3]]
+            pick = min(cands, key=lambda q: abs((q[0] + q[2] / 2) * 2 - prev)) if prev is not None else big
+            cx = (pick[0] + pick[2] / 2) * 2
+            prev = cx
+        raw.append(cx)
+    hits = sum(c is not None for c in raw)
+    print(f"  Gesicht in {hits}/{len(raw)} Bildern", flush=True)
+    if not raw or hits < 0.3 * len(raw):
+        return None
+    first = next(c for c in raw if c is not None)
+    filled, last = [], first
+    for c in raw:
+        last = c if c is not None else last
+        filled.append(last)
+    med = [float(np.median(filled[max(0, i - 3):i + 4])) for i in range(len(filled))]
+    cam, out = med[0], []
+    for i, target in enumerate(med):
+        if abs(target - cam) > 45:          # tote Zone: kleine Bewegungen ignorieren
+            cam += (target - cam) * 0.5      # weich nachfuehren
+        x = int(min(max(cam - crop_w / 2, 0), 1920 - crop_w)) // 2 * 2
+        out.append((i / 4, x))
+    return out
+
+
 def layout(video, dur, camp):
     """('cam', box) = Gameplay mit Facecam-Box (Position je Streamer in campaigns.json: cam_box + cam_border),
     ('full', None) = Kamera bildfuellend (Just Chatting), (None, None) = keine Facecam sichtbar -> Clip verwerfen."""
-    if camp.get("layout") == "full":  # IRL-/Kamera-Streams ohne Facecam-Box: immer Mitte bildfuellend
-        return "full", None
+    if camp.get("layout") == "full":  # IRL-/Kamera-Streams ohne Facecam-Box: Ausschnitt folgt dem Gesicht
+        track = face_track(video, dur)
+        return ("track", track) if track else (None, None)
     votes = []
     box = tuple(camp["cam_box"]) if camp.get("cam_box") else None
     for i in range(5):
@@ -237,6 +280,12 @@ def render(camp, vod, start, end, name, hook):
                 f"[b]crop={gw}:1080:(1920-{gw})/2:0,scale=1080:{game_h},format=yuv420p[game];"
                 f"[cam][game]vstack=inputs=2[st]")
         ov_y = cam_h - 80
+    elif lay == "track":
+        cmd = WORK / f"{name}.cmd"
+        cmd.write_text("".join(f"{t:.2f} crop@trk x {x};\n" for t, x in box), encoding="utf-8")
+        base = (f"[0:v]scale=1920:1080,sendcmd=f={cmd.name},crop@trk=608:1080:{box[0][1]}:0,"
+                f"scale=1080:1920,format=yuv420p[st]")
+        ov_y = 180
     else:
         base = "[0:v]scale=1920:1080,crop=608:1080:656:0,scale=1080:1920,format=yuv420p[st]"
         ov_y = 180
