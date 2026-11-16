@@ -50,10 +50,17 @@ def vod_url(camp, vod):
 
 
 def vods(camp):
-    out = subprocess.run(["yt-dlp", "--flat-playlist", "-J",
-                          f"https://www.twitch.tv/{camp['channel']}/videos?filter=archives&sort=time"],
-                         capture_output=True, text=True, encoding="utf-8", check=True).stdout
-    return [(e["id"].lstrip("v"), e.get("title", ""), e.get("duration") or 0) for e in json.loads(out)["entries"]]
+    import time
+    for attempt in range(4):  # Twitch liefert vom Runner gelegentlich eine leere Liste
+        out = subprocess.run(["yt-dlp", "--flat-playlist", "-J",
+                              f"https://www.twitch.tv/{camp['channel']}/videos?filter=archives&sort=time"],
+                             capture_output=True, text=True, encoding="utf-8", check=True).stdout
+        entries = json.loads(out).get("entries") or []
+        if entries:
+            return [(e["id"].lstrip("v"), e.get("title", ""), e.get("duration") or 0) for e in entries]
+        print(f"  VOD-Liste leer, neuer Versuch {attempt + 1}", flush=True)
+        time.sleep(20)
+    return []
 
 
 def peaks(audio, top=14, win=2.0, skip=(), guard=90):
