@@ -256,7 +256,7 @@ def render(camp, vod, start, end, name, hook):
     return out, text, cam_layout
 
 
-def queue(path, title, caption, seconds):
+def queue(path, title, caption, seconds, camp=None):
     tok = os.environ.get("GGCUTS_UPLOAD_TOKEN", "").strip()
     if not tok:
         print("  kein GGCUTS_UPLOAD_TOKEN – nicht eingereiht")
@@ -270,7 +270,9 @@ def queue(path, title, caption, seconds):
     if up.status_code >= 300:
         raise RuntimeError(f"Upload {up.status_code}: {up.text[:200]}")
     reg = requests.post(UPLOAD, json={"action": "register", "path": r["path"], "title": title, "caption": caption,
-                                      "seconds": seconds}, headers=h, timeout=60).json()
+                                      "seconds": seconds,
+                                      "cr_campaign": (camp or {}).get("name") if (camp or {}).get("content_rewards") else None,
+                                      "cr_campaign_id": (camp or {}).get("content_rewards")}, headers=h, timeout=60).json()
     print("  eingereiht:", reg)
     return reg
 
@@ -320,7 +322,7 @@ def run_campaign(camp, count, test, st):
                 continue
             caption = f"{c.get('caption', '').strip()} {camp['caption_suffix']}"
             if not test:
-                queue(out, f"{camp['name']}: {c.get('hook') or c.get('caption', '')[:50]}", caption, round(e - s, 1))
+                queue(out, f"{camp['name']}: {c.get('hook') or c.get('caption', '')[:50]}", caption, round(e - s, 1), camp)
             info["clips"].append({"start": s, "end": e, "hook": c.get("hook"), "caption": caption,
                                   "layout": "cam" if cam else "full", "date": dt.date.today().isoformat()})
             used.append((s, e))
