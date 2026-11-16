@@ -26,12 +26,9 @@ import requests
 HERE = Path(__file__).parent
 WORK = HERE / "work"
 STATE = HERE / "state.json"
-OVERLAY = HERE / "overlay_skiimasktimmy.png"
-CHANNEL = "skiimasktimmy"
+CAMPAIGNS = json.loads((HERE / "campaigns.json").read_text(encoding="utf-8"))
 UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
 MAX_PER_VOD = 9
-CAM = (22, 772, 420, 226)  # Facecam-Box im 1920x1080-Stream (Gameplay-Szene)
-TAGS = "#skiimasktimmy #twitchclips #fps #gaming"
 
 
 def sh(cmd, **kw):
@@ -48,9 +45,13 @@ def save_state(st):
 
 
 # ---------------------------------------------------------------- VOD + Kandidaten
-def vods():
+def vod_url(camp, vod):
+    return f"https://www.twitch.tv/videos/{vod}"
+
+
+def vods(camp):
     out = subprocess.run(["yt-dlp", "--flat-playlist", "-J",
-                          f"https://www.twitch.tv/{CHANNEL}/videos?filter=archives&sort=time"],
+                          f"https://www.twitch.tv/{camp['channel']}/videos?filter=archives&sort=time"],
                          capture_output=True, text=True, encoding="utf-8", check=True).stdout
     return [(e["id"].lstrip("v"), e.get("title", ""), e.get("duration") or 0) for e in json.loads(out)["entries"]]
 
@@ -96,16 +97,16 @@ def transcribe_window(audio, t, pre=30, post=25):
     return [(round(x.start + s, 1), round(x.end + s, 1), x.text.strip()) for x in segs]
 
 
-def choose(cands, n, title):
+def choose(cands, n, title, camp):
     import anthropic
     lines = []
     for i, (t, segs) in enumerate(cands):
         lines.append(f"### Kandidat {i} (Lautstaerke-Spitze bei {t:.0f}s)")
         lines += [f"[{a:.1f}-{b:.1f}] {txt}" for a, b, txt in segs] or ["(kaum Sprache)"]
-    prompt = f"""You pick TikTok clips from a Twitch VOD of streamer SkiiMaskTimmy (stream title: {title!r}).
-Campaign formats that perform: clutch plays, extraction tension, funny moments & fails, first impressions / hot takes,
-genuine reactions (jump scares, disbelief, hype), community moments (chat banter, giveaways).
-Avoid: sponsor reads, ads, bathroom breaks, menus/loading, quiet talk, anything that needs long context.
+    prompt = f"""You pick TikTok clips from a Twitch VOD of streamer {camp['name']} (stream title: {title!r}).
+Campaign formats that perform: {camp.get('formats', 'clutch plays, funny moments & fails, genuine reactions, hot takes, chat banter')}.
+Avoid: sponsor reads, ads, gambling, bathroom breaks, menus/loading, quiet talk, anything that needs long context
+or shows the streamer in a negative light.
 
 Below are transcribed windows around loudness peaks (timestamps in seconds of the VOD).
 Choose the {n} best, non-overlapping clips (ranked best first; some may be dropped later if his facecam is not visible). Each clip: 15-45 seconds, must start right before the payoff/hook
@@ -175,35 +176,47 @@ def faces(img, min_size=60, neighbors=5):
     return casc.detectMultiScale(gray, scaleFactor=1.08, minNeighbors=neighbors, minSize=(min_size, min_size))
 
 
-def layout(video, dur):
-    """'cam' = Gameplay mit Facecam-Box unten links, 'full' = Kamera bildfuellend (Just Chatting),
-    None = keine Facecam sichtbar (Desktop, Menue, Pause) -> Clip verwerfen (Kampagnenregel: Facecam immer sichtbar)."""
+def border_match(im, box, color):
+    """Rahmen der Facecam-Box vorhanden? color = "teal" (animiert leuchtend) oder [r, g, b] mit Toleranz."""
+    x, y, w, h = box
+    band = im[max(0, y - 14):y + 8].astype(int)
+    def ok(px):
+        if color == "teal":
+            return px[1] > 150 and px[2] > 150 and px[1] - px[0] > 35
+        return sum(abs(int(px[k]) - color[k]) for k in range(3)) < 90
+    hits = sum(1 for xx in range(x + 40, x + w - 20, 20) if any(ok(px) for px in band[:, xx]))
+    return hits >= 6
+
+
+def layout(video, dur, camp):
+    """('cam', box) = Gameplay mit Facecam-Box (Position je Streamer in campaigns.json: cam_box + cam_border),
+    ('full', None) = Kamera bildfuellend (Just Chatting), (None, None) = keine Facecam sichtbar -> Clip verwerfen."""
     votes = []
+    box = tuple(camp["cam_box"]) if camp.get("cam_box") else None
     for i in range(5):
         t = max(0.5, min(dur - 1, 0.5 + i * (dur - 1.5) / 4))
         im = frame_at(video, round(t, 1), f"probe{i}.jpg")
-        # tuerkiser (animiert leuchtender) oberer Rahmen der Facecam-Box bei y~766-770, an 18 Stellen pruefen
-        band = im[758:780].astype(int)
-        hits = sum(1 for x in range(60, 420, 20)
-                   if any(px[1] > 150 and px[2] > 150 and px[1] - px[0] > 35 for px in band[:, x]))
-        box = hits >= 6
-        center = len(faces(im[:, 560:1360], min_size=120, neighbors=5)) > 0
-        votes.append("cam" if box else "full" if center else None)
+        if box and border_match(im, box, camp.get("cam_border", "teal")):
+            votes.append("cam")
+        elif len(faces(im[:, 560:1360], min_size=120, neighbors=5)) > 0:
+            votes.append("full")
+        else:
+            votes.append(None)
         print(f"  Probe {t:.0f}s -> {votes[-1]}", flush=True)
     if votes.count("cam") >= 3:
-        return "cam"
+        return "cam", box
     if votes.count("full") >= 3:
-        return "full"
-    return None
+        return "full", None
+    return None, None
 
 
-def render(vod, start, end, name, hook):
+def render(camp, vod, start, end, name, hook):
     raw = WORK / f"{name}_raw.mp4"
     out = WORK / f"{name}.mp4"
     sh(["yt-dlp", "--no-progress", "-f", "b[vcodec!=none][height<=1080]/b[vcodec!=none]", "-S", "res:1080,fps",
         "--download-sections", f"*{start:.1f}-{end:.1f}", "--force-keyframes-at-cuts", "-o", str(raw),
-        f"https://www.twitch.tv/videos/{vod}"])
-    lay = layout(raw, end - start)
+        vod_url(camp, vod)])
+    lay, box = layout(raw, end - start, camp)
     if lay is None:
         print("  keine Facecam sichtbar - Clip verworfen", flush=True)
         raw.unlink(missing_ok=True)
@@ -211,20 +224,29 @@ def render(vod, start, end, name, hook):
     cam_layout = lay == "cam"
     ass = WORK / f"{name}.ass"
     text = subtitles(raw, ass, hook, 1430 if cam_layout else 1500)
-    x, y, w, h = CAM
+    ov_file = HERE / camp["overlay"] if camp.get("overlay") else None
     if cam_layout:
-        fc = (f"[0:v]scale=1920:1080,split=2[a][b];"
-              f"[a]crop={w}:{h}:{x}:{y},scale=1080:582,format=yuv420p[cam];"
-              f"[b]crop=872:1080:524:0,scale=1080:1338,format=yuv420p[game];"
-              f"[cam][game]vstack=inputs=2[st];[1:v]scale=980:-2,format=rgba[ov];"
-              f"[st][ov]overlay=(W-w)/2:502[o1];[o1]ass={ass.name}:fontsdir=fonts[v]")
+        x, y, w, h = box
+        cam_h = min(760, int(1080 * h / w) // 2 * 2)
+        game_h = 1920 - cam_h
+        gw = int(1080 * 1080 / game_h) // 2 * 2
+        base = (f"[0:v]scale=1920:1080,split=2[a][b];"
+                f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h},format=yuv420p[cam];"
+                f"[b]crop={gw}:1080:(1920-{gw})/2:0,scale=1080:{game_h},format=yuv420p[game];"
+                f"[cam][game]vstack=inputs=2[st]")
+        ov_y = cam_h - 80
     else:
-        fc = (f"[0:v]scale=1920:1080,crop=608:1080:656:0,scale=1080:1920,format=yuv420p[st];"
-              f"[1:v]scale=980:-2,format=rgba[ov];[st][ov]overlay=(W-w)/2:180[o1];[o1]ass={ass.name}:fontsdir=fonts[v]")
+        base = "[0:v]scale=1920:1080,crop=608:1080:656:0,scale=1080:1920,format=yuv420p[st]"
+        ov_y = 180
+    if ov_file:
+        fc = base + f";[1:v]scale=980:-2,format=rgba[ov];[st][ov]overlay=(W-w)/2:{ov_y}[o1];[o1]ass={ass.name}:fontsdir=fonts[v]"
+    else:
+        fc = base + f";[st]ass={ass.name}:fontsdir=fonts[v]"
     fonts = WORK / "fonts"
     fonts.mkdir(exist_ok=True)
     (fonts / "Anton-Regular.ttf").write_bytes((HERE / "fonts" / "Anton-Regular.ttf").read_bytes())
-    sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "1", "-i", raw.name, "-i", str(OVERLAY.resolve()),
+    inputs = ["-i", raw.name] + (["-i", str(ov_file.resolve())] if ov_file else [])
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "1", *inputs,
         "-filter_complex", fc, "-map", "[v]", "-map", "0:a", "-r", "30", "-c:v", "libx264", "-preset", "medium",
         "-crf", "21", "-maxrate", "6M", "-bufsize", "12M", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart",
         out.name], cwd=WORK)
@@ -251,59 +273,74 @@ def queue(path, title, caption, seconds):
     return reg
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--count", type=int, default=3)
-    ap.add_argument("--test", action="store_true", help="rendern, nicht einreihen")
-    a = ap.parse_args()
-    WORK.mkdir(exist_ok=True)
-    st = load_state()
+def run_campaign(camp, count, test, st):
     done = 0
-    vl = vods()
-    print(f"{len(vl)} VODs gefunden:", [(v, int(d)) for v, _, d in vl[:4]], flush=True)
+    vl = vods(camp)
+    print(f"[{camp['key']}] {len(vl)} VODs:", [(v, int(d)) for v, _, d in vl[:4]], flush=True)
     for vod, title, dur in vl[:4]:
         info = st["vods"].setdefault(vod, {"title": title, "clips": []})
+        info.setdefault("campaign", camp["key"])
         if len(info["clips"]) >= MAX_PER_VOD or (dur and dur < 1800):
-            print(f"  VOD {vod} übersprungen ({len(info['clips'])} Clips, {dur}s)")
             continue
-        need = a.count - done
+        need = count - done
         if need <= 0:
             break
         print(f"VOD {vod}: {title} ({(dur or 0)/3600:.1f} h), bisher {len(info['clips'])} Clips", flush=True)
         audio = WORK / f"{vod}.m4a"
         if not audio.exists():
-            sh(["yt-dlp", "-q", "-f", "Audio_Only/worstaudio", "-N", "8", "-o", str(audio), f"https://www.twitch.tv/videos/{vod}"])
+            sh(["yt-dlp", "-q", "-f", "Audio_Only/worstaudio/ba", "-N", "8", "-o", str(audio), vod_url(camp, vod)])
         used = [(c["start"], c["end"]) for c in info["clips"]] + [tuple(x) for x in info.get("rejected", [])]
         ts = peaks(audio, skip=used)
         cands = [(t, transcribe_window(audio, t)) for t in ts]
-        picks = choose(cands, need + 3, title)
+        picks = choose(cands, need + 3, title, camp)
         for c in picks:
+            if done >= count:
+                break
             s, e = float(c["start"]), float(c["end"])
             if any(not (e <= us or s >= ue) for us, ue in used):
                 continue
-            name = f"timmy_{vod}_{int(s)}"
-            if done >= a.count:
-                break
-            out, text, cam = render(vod, s - 0.3, e + 0.4, name, c.get("hook", ""))
+            out, text, cam = render(camp, vod, s - 0.3, e + 0.4, f"{camp['key']}_{vod}_{int(s)}", c.get("hook", ""))
             if out is None:
                 info.setdefault("rejected", []).append([s, e])
                 continue
-            caption = f"{c.get('caption', '').strip()} twitch.tv/{CHANNEL} {TAGS}"
-            secs = round(e - s, 1)
-            if not a.test:
-                queue(out, c.get("hook") or c.get("caption", "")[:60], caption, secs)
+            caption = f"{c.get('caption', '').strip()} {camp['caption_suffix']}"
+            if not test:
+                queue(out, f"{camp['name']}: {c.get('hook') or c.get('caption', '')[:50]}", caption, round(e - s, 1))
             info["clips"].append({"start": s, "end": e, "hook": c.get("hook"), "caption": caption,
                                   "layout": "cam" if cam else "full", "date": dt.date.today().isoformat()})
             used.append((s, e))
             done += 1
             save_state(st)
-        info.setdefault("rejected", []).extend([[t - 30, t + 25] for t in ts])  # Kandidaten nicht erneut pruefen
+        info.setdefault("rejected", []).extend([[t - 30, t + 25] for t in ts])
         save_state(st)
         audio.unlink(missing_ok=True)
-        if done >= a.count:
+        if done >= count:
             break
-    print(f"fertig: {done} Clips")
-    if done == 0:
+    return done
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--count", type=int, default=0, help="Gesamtzahl (0 = per_day je Kampagne)")
+    ap.add_argument("--only", default="", help="nur diese Kampagne (key)")
+    ap.add_argument("--test", action="store_true", help="rendern, nicht einreihen")
+    a = ap.parse_args()
+    WORK.mkdir(exist_ok=True)
+    st = load_state()
+    camps = [c for c in CAMPAIGNS if c.get("active", True) and (not a.only or c["key"] == a.only)]
+    total = 0
+    for i, camp in enumerate(camps):
+        n = camp.get("per_day", 1)
+        if a.count:
+            n = a.count // len(camps) + (1 if i < a.count % len(camps) else 0)
+        if n <= 0:
+            continue
+        try:
+            total += run_campaign(camp, n, a.test, st)
+        except Exception as e:  # eine kaputte Kampagne soll die anderen nicht blockieren
+            print(f"[{camp['key']}] Fehler: {e}", flush=True)
+    print(f"fertig: {total} Clips")
+    if total == 0:
         sys.exit("keine Clips erzeugt")
 
 

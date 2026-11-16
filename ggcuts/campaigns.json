@@ -1,0 +1,15 @@
+[
+ {
+  "key": "skiimasktimmy",
+  "name": "SkiiMaskTimmy",
+  "platform": "twitch",
+  "channel": "skiimasktimmy",
+  "per_day": 3,
+  "overlay": "overlay_skiimasktimmy.png",
+  "caption_suffix": "twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+  "cam_box": [22, 772, 420, 226],
+  "cam_border": "teal",
+  "formats": "clutch plays, extraction tension, funny moments & fails, first impressions / hot takes, genuine reactions (jump scares, disbelief, hype), community moments (chat banter, giveaways)",
+  "content_rewards": "9a53cf91-e0ac-4157-bed0-81eb7095827d"
+ }
+]
