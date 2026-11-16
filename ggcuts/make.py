@@ -164,7 +164,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 def has_facecam_box(video):
     """Gameplay-Szene: Facecam unten links mit tuerkisem Rahmen. Just Chatting: Kamera bildfuellend."""
     jpg = WORK / "probe.jpg"
-    sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", "2", "-i", str(video), "-frames:v", "1", "-vf", "scale=1920:1080", str(jpg)])
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", str(video), "-frames:v", "1", "-vf", "scale=1920:1080", str(jpg)])
     from PIL import Image
     im = np.asarray(Image.open(jpg).convert("RGB")).astype(int)
     strip = np.concatenate([im[800:980, 12:18].reshape(-1, 3), im[800:980, 440:448].reshape(-1, 3)])
@@ -176,8 +176,11 @@ def has_facecam_box(video):
 def render(vod, start, end, name, hook):
     raw = WORK / f"{name}_raw.mp4"
     out = WORK / f"{name}.mp4"
-    sh(["yt-dlp", "-q", "-f", "1080p60/720p60/best", "--download-sections", f"*{start}-{end}",
-        "--force-keyframes-at-cuts", "-o", str(raw), f"https://www.twitch.tv/videos/{vod}"])
+    sh(["yt-dlp", "-q", "-f", "b[vcodec!=none][height<=1080]/b[vcodec!=none]", "-S", "res:1080,fps",
+        "--download-sections", f"*{start:.1f}-{end:.1f}", "--force-keyframes-at-cuts", "-o", str(raw),
+        f"https://www.twitch.tv/videos/{vod}"])
+    print(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-of", "csv=p=0",
+                          str(raw)], capture_output=True, text=True).stdout.strip().replace(chr(10), " | "), flush=True)
     cam_layout = has_facecam_box(raw)
     ass = WORK / f"{name}.ass"
     text = subtitles(raw, ass, hook, 1430 if cam_layout else 1500)
