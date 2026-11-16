@@ -13,3 +13,4 @@ __pycache__/
 report/token_*.json
 report/client_secret.json
 report/reports/
+ggcuts/work/
