@@ -26,7 +26,11 @@
   "entlastung": 1,
   "steuern": 1,
   "lagerung": 1,
-  "essen-anreichen": 1
+  "essen-anreichen": 1,
+  "verhinderungspflege": 1,
+  "aspiration": 1,
+  "expertenstandards": 1,
+  "geld-pro-pflegegrad": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -55,6 +59,10 @@
   "entlastung|Überlastet durch Pflege? So organisieren Sie echte Entlastung",
   "steuern|Pflegepauschbetrag bei der Steuer",
   "lagerung|Lagerung & Mobilisation: Die Grundprinzipien, die du wirklich können musst",
-  "essen-anreichen|Essen anreichen: Warum Tempo der größte Fehler ist"
+  "essen-anreichen|Essen anreichen: Warum Tempo der größte Fehler ist",
+  "verhinderungspflege|Verhinderungspflege und Kurzzeitpflege",
+  "aspiration|Aspirationsprophylaxe: So verhinderst du das Verschlucken beim Essen",
+  "expertenstandards|Expertenstandards in der Pflege – Was steckt wirklich dahinter? (Teil 1/3)",
+  "geld-pro-pflegegrad|Wie viel Geld gibt es bei Pflegegrad 1 bis 5?"
  ]
 }
