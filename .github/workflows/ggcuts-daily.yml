@@ -13,6 +13,10 @@ on:
         description: "Testlauf: rendern, nicht einreihen"
         type: boolean
         default: false
+      only:
+        description: "Nur diese Kampagne (key aus campaigns.json, leer = alle)"
+        type: string
+        default: ""
 
 concurrency:
   group: ggcuts-daily
@@ -30,6 +34,7 @@ jobs:
       PYTHONIOENCODING: utf-8
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       GGCUTS_UPLOAD_TOKEN: ${{ secrets.GGCUTS_UPLOAD_TOKEN }}
+      ONLY: ${{ inputs.only }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -51,8 +56,8 @@ jobs:
           key: whisper-small-v1
       - name: Clips erzeugen und einreihen
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then python -m ggcuts.make --count "${{ inputs.count || 0 }}" --test
-          else python -m ggcuts.make --count "${{ inputs.count || 0 }}"; fi
+          if [ "${{ inputs.test }}" = "true" ]; then python -m ggcuts.make --count "${{ inputs.count || 0 }}" --only "$ONLY" --test
+          else python -m ggcuts.make --count "${{ inputs.count || 0 }}" --only "$ONLY"; fi
       - name: Testclips sichern
         if: ${{ inputs.test }}
         uses: actions/upload-artifact@v4
