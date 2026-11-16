@@ -228,14 +228,17 @@ def main():
     WORK.mkdir(exist_ok=True)
     st = load_state()
     done = 0
-    for vod, title, dur in vods()[:4]:
+    vl = vods()
+    print(f"{len(vl)} VODs gefunden:", [(v, int(d)) for v, _, d in vl[:4]], flush=True)
+    for vod, title, dur in vl[:4]:
         info = st["vods"].setdefault(vod, {"title": title, "clips": []})
-        if len(info["clips"]) >= MAX_PER_VOD or dur < 1800:
+        if len(info["clips"]) >= MAX_PER_VOD or (dur and dur < 1800):
+            print(f"  VOD {vod} übersprungen ({len(info['clips'])} Clips, {dur}s)")
             continue
         need = a.count - done
         if need <= 0:
             break
-        print(f"VOD {vod}: {title} ({dur/3600:.1f} h), bisher {len(info['clips'])} Clips", flush=True)
+        print(f"VOD {vod}: {title} ({(dur or 0)/3600:.1f} h), bisher {len(info['clips'])} Clips", flush=True)
         audio = WORK / f"{vod}.m4a"
         if not audio.exists():
             sh(["yt-dlp", "-q", "-f", "Audio_Only/worstaudio", "-N", "8", "-o", str(audio), f"https://www.twitch.tv/videos/{vod}"])
