@@ -176,9 +176,10 @@ def has_facecam_box(video):
 def render(vod, start, end, name, hook):
     raw = WORK / f"{name}_raw.mp4"
     out = WORK / f"{name}.mp4"
-    sh(["yt-dlp", "-q", "-f", "b[vcodec!=none][height<=1080]/b[vcodec!=none]", "-S", "res:1080,fps",
+    sh(["yt-dlp", "--no-progress", "-f", "b[vcodec!=none][height<=1080]/b[vcodec!=none]", "-S", "res:1080,fps",
         "--download-sections", f"*{start:.1f}-{end:.1f}", "--force-keyframes-at-cuts", "-o", str(raw),
         f"https://www.twitch.tv/videos/{vod}"])
+    print("Dateien:", [(p.name, p.stat().st_size) for p in WORK.iterdir()], flush=True)
     print(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-of", "csv=p=0",
                           str(raw)], capture_output=True, text=True).stdout.strip().replace(chr(10), " | "), flush=True)
     cam_layout = has_facecam_box(raw)
