@@ -220,13 +220,26 @@ def face_track(video, dur, crop_w=608):
     for c in raw:
         last = c if c is not None else last
         filled.append(last)
-    med = [float(np.median(filled[max(0, i - 3):i + 4])) for i in range(len(filled))]
-    cam, out = med[0], []
-    for i, target in enumerate(med):
-        if abs(target - cam) > 45:          # tote Zone: kleine Bewegungen ignorieren
-            cam += (target - cam) * 0.5      # weich nachfuehren
-        x = int(min(max(cam - crop_w / 2, 0), 1920 - crop_w)) // 2 * 2
-        out.append((i / 4, x))
+    med = np.array([float(np.median(filled[max(0, i - 2):i + 3])) for i in range(len(filled))])
+    # auf 30 Bilder/s hochrechnen und weich glaetten -> gleitende Kamerafahrt statt Spruengen
+    fps = 30
+    n = max(2, int(round(len(med) / 4 * fps)))
+    tt = np.arange(n) / fps
+    target = np.interp(tt, np.arange(len(med)) / 4, med)
+    sig = int(0.35 * fps)
+    k = np.exp(-0.5 * (np.arange(-3 * sig, 3 * sig + 1) / sig) ** 2)
+    k /= k.sum()
+    pad = np.pad(target, (3 * sig, 3 * sig), mode="edge")
+    smooth = np.convolve(pad, k, mode="valid")
+    # Kamera mit Traegheit (kritisch gedaempfte Feder) und Hoechstgeschwindigkeit
+    cam, vel, out = smooth[0], 0.0, []
+    vmax = 900 / fps                       # max. 900 px/s
+    for i, tgt in enumerate(smooth):
+        acc = (tgt - cam) * 0.02 - vel * 0.28
+        vel = float(np.clip(vel + acc * 1.0, -vmax, vmax))
+        cam += vel
+        x = int(round(min(max(cam - crop_w / 2, 0), 1920 - crop_w)))
+        out.append((tt[i], x))
     return out
 
 
@@ -282,7 +295,7 @@ def render(camp, vod, start, end, name, hook):
         ov_y = cam_h - 80
     elif lay == "track":
         cmd = WORK / f"{name}.cmd"
-        cmd.write_text("".join(f"{t:.2f} crop@trk x {x};\n" for t, x in box), encoding="utf-8")
+        cmd.write_text("".join(f"{t:.3f} crop@trk x {x};\n" for t, x in box), encoding="utf-8")
         base = (f"[0:v]scale=1920:1080,sendcmd=f={cmd.name},crop@trk=608:1080:{box[0][1]}:0,"
                 f"scale=1080:1920,format=yuv420p[st]")
         ov_y = 180
