@@ -117,8 +117,9 @@ Skip weak windows - if fewer than {n} are good, return fewer.
 
 {chr(10).join(lines)}"""
     msg = anthropic.Anthropic().messages.create(model=os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5"),
-                                                max_tokens=2000, messages=[{"role": "user", "content": prompt}])
-    txt = msg.content[0].text
+                                                max_tokens=8000, messages=[{"role": "user", "content": prompt}])
+    txt = "".join(getattr(b, "text", "") for b in msg.content if getattr(b, "type", "") == "text")
+    print("Claude:", txt[:600], flush=True)
     data = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
     clips = [c for c in data.get("clips", []) if 7 <= float(c["end"]) - float(c["start"]) <= 60]
     return sorted(clips, key=lambda c: -float(c.get("score", 0)))[:n]
