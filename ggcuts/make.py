@@ -182,13 +182,18 @@ def layout(video, dur):
     for i in range(5):
         t = max(0.5, min(dur - 1, 0.5 + i * (dur - 1.5) / 4))
         im = frame_at(video, round(t, 1), f"probe{i}.jpg")
-        box = len(faces(im[760:1010, 10:450], min_size=40, neighbors=4)) > 0
+        # tuerkiser (animiert leuchtender) oberer Rahmen der Facecam-Box bei y~766-770, an 18 Stellen pruefen
+        band = im[758:780].astype(int)
+        hits = sum(1 for x in range(60, 420, 20)
+                   if any(px[1] > 150 and px[2] > 150 and px[1] - px[0] > 35 for px in band[:, x]))
+        box = hits >= 6
         center = len(faces(im[:, 560:1360], min_size=120, neighbors=5)) > 0
         votes.append("cam" if box else "full" if center else None)
         print(f"  Probe {t:.0f}s -> {votes[-1]}", flush=True)
-    for lay in ("cam", "full"):
-        if votes.count(lay) >= 2:
-            return lay
+    if votes.count("cam") >= 3:
+        return "cam"
+    if votes.count("full") >= 3:
+        return "full"
     return None
 
 
