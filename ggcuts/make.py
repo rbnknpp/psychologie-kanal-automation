@@ -28,7 +28,7 @@ WORK = HERE / "work"
 STATE = HERE / "state.json"
 CAMPAIGNS = json.loads((HERE / "campaigns.json").read_text(encoding="utf-8"))
 UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
-MAX_PER_VOD = 9
+MAX_PER_VOD = 9  # bei langen VODs (>6 h) gilt das je 4-h-Abschnitt nicht – dort begrenzt scan_pos
 
 
 def sh(cmd, **kw):
@@ -191,6 +191,8 @@ def border_match(im, box, color):
 def layout(video, dur, camp):
     """('cam', box) = Gameplay mit Facecam-Box (Position je Streamer in campaigns.json: cam_box + cam_border),
     ('full', None) = Kamera bildfuellend (Just Chatting), (None, None) = keine Facecam sichtbar -> Clip verwerfen."""
+    if camp.get("layout") == "full":  # IRL-/Kamera-Streams ohne Facecam-Box: immer Mitte bildfuellend
+        return "full", None
     votes = []
     box = tuple(camp["cam_box"]) if camp.get("cam_box") else None
     for i in range(5):
@@ -280,18 +282,31 @@ def run_campaign(camp, count, test, st):
     for vod, title, dur in vl[:4]:
         info = st["vods"].setdefault(vod, {"title": title, "clips": []})
         info.setdefault("campaign", camp["key"])
-        if len(info["clips"]) >= MAX_PER_VOD or (dur and dur < 1800):
+        long_vod = bool(dur and dur > 6 * 3600)
+        if (not long_vod and len(info["clips"]) >= MAX_PER_VOD) or (dur and dur < 1800):
             continue
         need = count - done
         if need <= 0:
             break
         print(f"VOD {vod}: {title} ({(dur or 0)/3600:.1f} h), bisher {len(info['clips'])} Clips", flush=True)
+        # Sehr lange VODs (z. B. 48-h-Marathons) in 4-h-Abschnitten durchgehen, Fortschritt in scan_pos
+        off = 0.0
+        sect = []
+        if dur and dur > 6 * 3600:
+            off = float(info.get("scan_pos", 300))
+            if off > dur - 1800:  # VOD ausgeschoepft
+                continue
+            end = min(dur - 60, off + 4 * 3600)
+            sect = ["--download-sections", f"*{off:.0f}-{end:.0f}"]
+            info["scan_pos"] = end
+            print(f"  langer VOD: Abschnitt {off/3600:.1f}-{end/3600:.1f} h", flush=True)
         audio = WORK / f"{vod}.m4a"
         if not audio.exists():
-            sh(["yt-dlp", "-q", "-f", "Audio_Only/worstaudio/ba", "-N", "8", "-o", str(audio), vod_url(camp, vod)])
+            sh(["yt-dlp", "-q", "-f", "Audio_Only/worstaudio/ba", "-N", "8", *sect, "-o", str(audio), vod_url(camp, vod)])
         used = [(c["start"], c["end"]) for c in info["clips"]] + [tuple(x) for x in info.get("rejected", [])]
-        ts = peaks(audio, skip=used)
-        cands = [(t, transcribe_window(audio, t)) for t in ts]
+        ts = peaks(audio, skip=[(a - off, b - off) for a, b in used])
+        cands = [(t + off, [(a + off, b + off, txt) for a, b, txt in transcribe_window(audio, t)]) for t in ts]
+        ts = [t + off for t in ts]
         picks = choose(cands, need + 3, title, camp)
         for c in picks:
             if done >= count:
