@@ -420,27 +420,36 @@ def norm(w):
 
 
 def align(scenes, words):
-    """Ordnet jeder Szene Start/Ende und Wort-Zeiten zu (Szenen-Text wurde hintereinander gesprochen)."""
-    wi = 0
-    for sc in scenes:
-        toks = [t for t in sc["say"].split() if norm(t)]
-        sc["words"] = []
-        for t in toks:
-            # nächstes passendes Wort suchen (Zahlen spricht die Stimme ggf. als mehrere Wörter)
-            j = wi
-            while j < len(words) and j < wi + 6 and norm(words[j][2]) != norm(t):
-                j += 1
-            if j < len(words) and j < wi + 6:
-                sc["words"].append((words[j][0], words[j][1], t))
-                wi = j + 1
-            elif wi < len(words):
-                sc["words"].append((words[wi][0], words[wi][1], t))
-                wi += 1
+    """Ordnet jeder Szene Start/Ende und die gesprochenen Wörter (mit Zeiten) zu.
+    Grobe Aufteilung nach Wortanteil, dann Szenengrenze auf das passende erste Wort verschieben
+    (die Stimme spricht Zahlen oft als mehrere Wörter, daher kein starrer 1:1-Abgleich)."""
+    toks = [[t for t in sc["say"].split() if norm(t)] for sc in scenes]
+    total = sum(len(t) for t in toks) or 1
+    n = len(words)
+    bounds, cum = [0], 0
+    for i, tk in enumerate(toks[:-1]):
+        cum += len(tk)
+        guess = round(cum / total * n)
+        first = norm(toks[i + 1][0]) if toks[i + 1] else ""
+        best = guess
+        for d in range(0, 7):
+            hit = [g for g in (guess - d, guess + d) if bounds[-1] < g < n and norm(words[g][2]) == first]
+            if hit:
+                best = hit[0]
+                break
+        bounds.append(max(bounds[-1], min(best, n)))
+    bounds.append(n)
     for i, sc in enumerate(scenes):
-        sc["t0"] = sc["words"][0][0] if sc["words"] else (scenes[i - 1]["t1"] if i else 0)
+        sc["words"] = list(words[bounds[i]:bounds[i + 1]])
+    end = words[-1][1] if words else 2.0
+    last = 0.0
     for i, sc in enumerate(scenes):
-        sc["t0"] = 0.0 if i == 0 else sc["t0"] - 0.08
-        sc["t1"] = scenes[i + 1]["words"][0][0] - 0.08 if i + 1 < len(scenes) and scenes[i + 1]["words"] else (sc["words"][-1][1] + 0.9 if sc["words"] else sc["t0"] + 2)
+        sc["t0"] = 0.0 if i == 0 else (sc["words"][0][0] - 0.08 if sc["words"] else last)
+        last = sc["words"][-1][1] if sc["words"] else last + 1.0
+    for i, sc in enumerate(scenes):
+        sc["t1"] = scenes[i + 1]["t0"] if i + 1 < len(scenes) else end + 0.9
+        if sc["t1"] <= sc["t0"]:
+            sc["t1"] = sc["t0"] + 0.5
 
 
 def chunks(words, maxw=4, maxc=26):
