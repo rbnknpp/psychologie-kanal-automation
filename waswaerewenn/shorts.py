@@ -120,8 +120,18 @@ def render_short(wd, tl, seg, titel, out):
 
 
 def slots(start, days):
+    """2 Termine pro Tag; Termine, die schon (fast) vorbei sind, werden übersprungen."""
+    from zoneinfo import ZoneInfo
+    now = dt.datetime.now(ZoneInfo("Europe/Berlin")) + dt.timedelta(minutes=30)
     d0 = dt.date.fromisoformat(start)
-    return [(str(d0 + dt.timedelta(days=k)), hh) for k in range(days) for hh in TIMES]
+    out = []
+    for k in range(days):
+        for hh in TIMES:
+            h, m = map(int, hh.split(":"))
+            when = dt.datetime.combine(d0 + dt.timedelta(days=k), dt.time(h, m), ZoneInfo("Europe/Berlin"))
+            if when > now:
+                out.append((str(d0 + dt.timedelta(days=k)), hh))
+    return out
 
 
 def make_shorts(ep, wd, start, days, upload=False, main_video=None):

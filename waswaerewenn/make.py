@@ -227,7 +227,10 @@ def publish_at(day, hhmm="17:00"):
 def upload(path, thumb, ep, when):
     from upload.upload_video import upload as yt_upload
     desc = ep["beschreibung"].strip() + "\n\nAnimationen und Stimme mit KI-Unterstützung erstellt."
-    vid = yt_upload(str(path), ep["titel"][:100], desc, ep.get("tags", []), publish_at=when, thumbnail_path=str(thumb))
+    if when == "now":
+        vid = yt_upload(str(path), ep["titel"][:100], desc, ep.get("tags", []), privacy_status="public", thumbnail_path=str(thumb))
+    else:
+        vid = yt_upload(str(path), ep["titel"][:100], desc, ep.get("tags", []), publish_at=when, thumbnail_path=str(thumb))
     print("hochgeladen:", vid, "Veröffentlichung", when)
     return vid
 
@@ -239,21 +242,30 @@ def main():
     ap.add_argument("--publish", default="", help="Datum YYYY-MM-DD (17 Uhr) -> geplant hochladen")
     ap.add_argument("--shorts-from", default="", help="Shorts ab diesem Datum (2/Tag, 12 und 19 Uhr) planen")
     ap.add_argument("--shorts-days", type=int, default=2)
+    ap.add_argument("--time", default="17:00", help="Uhrzeit der Veröffentlichung (Berlin)")
+    ap.add_argument("--render-only-upload", action="store_true", help="vorhandenes Video hochladen, nicht neu rendern")
     a = ap.parse_args()
     if a.auto and not a.folge:
         from waswaerewenn.autor import next_episode
         a.folge = str(next_episode())
     ep = json.loads(Path(a.folge).read_text(encoding="utf-8"))
     wd = OUT / Path(a.folge).stem
-    path, secs = render(ep, wd)
-    thumb = thumbnail(ep, wd)
+    if a.render_only_upload and (wd / "video.mp4").exists() and (wd / "thumb.jpg").exists():
+        path, secs, thumb = wd / "video.mp4", json.loads((wd / "timeline.json").read_text(encoding="utf-8"))["total"], wd / "thumb.jpg"
+    else:
+        path, secs = render(ep, wd)
+        thumb = thumbnail(ep, wd)
     print(f"fertig: {path} ({secs / 60:.1f} min), Titelbild {thumb}")
     vid = None
     if a.publish:
-        vid = upload(path, thumb, ep, publish_at(a.publish))
+        vid = upload(path, thumb, ep, "now" if a.publish == "now" else publish_at(a.publish, a.time))
     if a.shorts_from:
         from waswaerewenn.shorts import make_shorts
-        make_shorts(ep, wd, a.shorts_from, a.shorts_days, upload=bool(a.publish), main_video=vid)
+        start = a.shorts_from
+        if start == "today":
+            import datetime as dt
+            start = dt.date.today().isoformat()
+        make_shorts(ep, wd, start, a.shorts_days, upload=bool(a.publish), main_video=vid)
 
 
 if __name__ == "__main__":

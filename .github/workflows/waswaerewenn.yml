@@ -2,7 +2,7 @@ name: Was waere wenn (YouTube)
 
 on:
   schedule:
-    - cron: "0 7 * * 0,2,4"   # So/Di/Do 08:00 MEZ: Folge fuer den naechsten Tag (Mo/Mi/Fr 17 Uhr) + Shorts (12/19 Uhr)
+    - cron: "0 7 * * 0,2,4,6"   # Sa/So/Di/Do 08:00 MEZ: Folge fuer den naechsten Tag (Mo/Mi/Fr/So 17 Uhr) + Shorts (12/19 Uhr)
   workflow_dispatch:
     inputs:
       folge:
@@ -14,7 +14,7 @@ on:
         type: string
         default: ""
       shorts_days:
-        description: "Tage mit je 2 Shorts (leer = 2, freitags 3)"
+        description: "Tage mit je 2 Shorts (leer = 2, sonntags 1)"
         type: string
         default: ""
       test:
@@ -67,7 +67,8 @@ jobs:
         run: |
           DAY="${PUBLISH:-$(TZ=Europe/Berlin date -d tomorrow +%F)}"
           DOW=$(date -d "$DAY" +%u)
-          N="${SHORTS_DAYS:-$([ "$DOW" = "5" ] && echo 3 || echo 2)}"
+          # Mo->Mo+Di, Mi->Mi+Do, Fr->Fr+Sa, So->So  => jeden Tag 2 Shorts
+          N="${SHORTS_DAYS:-$([ "$DOW" = "7" ] && echo 1 || echo 2)}"
           ARGS="--shorts-from $DAY --shorts-days $N"
           if [ "${{ inputs.test }}" != "true" ]; then ARGS="$ARGS --publish $DAY"; fi
           if [ -n "$FOLGE" ]; then python -m waswaerewenn.make "$FOLGE" $ARGS
