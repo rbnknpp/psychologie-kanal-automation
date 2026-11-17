@@ -31,7 +31,7 @@ OUT = ROOT / "output" / "waswaerewenn"
 W, H, FPS = 1920, 1080, 30
 BILDER = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/site-bilder"
 MODEL = "@cf/leonardo/lucid-origin"
-STYLE = "3D pixar style animation still, vibrant colors, cinematic lighting, highly detailed, no text, no letters, no watermark"
+STYLE = "3D pixar style animation still, vibrant colors, cinematic lighting, highly detailed, planets without rings unless saturn, no text, no letters, no watermark"
 YELLOW, WHITE, BLACK = (255, 214, 70), (255, 255, 255), (0, 0, 0)
 XFADE = 0.45
 
@@ -186,6 +186,13 @@ def render(ep, wd):
         af = "[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a]"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", af, "-map", "0:v", "-map", "[a]",
                     "-t", f"{total:.2f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)], check=True)
+    # Zeitachse für die Shorts (Szenenzeiten, Bild je Szene, Untertitel-Wörter)
+    (wd / "bilder").mkdir(exist_ok=True)
+    for gi, g in enumerate(groups):
+        g["img_src"].save(wd / "bilder" / f"{gi:03d}.jpg", quality=92)
+    (wd / "timeline.json").write_text(json.dumps({"total": total, "scenes": [
+        {"t0": sc["t0"], "t1": sc["t1"], "bild": f"bilder/{sc['_g']:03d}.jpg", "titel": sc.get("titel", ""),
+         "words": [list(w) for w in sc["words"]]} for sc in scenes]}, ensure_ascii=False), encoding="utf-8")
     return out, total
 
 
@@ -209,16 +216,44 @@ def thumbnail(ep, wd):
     return p
 
 
+def publish_at(day, hhmm="17:00"):
+    import datetime as dt
+    from zoneinfo import ZoneInfo
+    h, m = map(int, hhmm.split(":"))
+    local = dt.datetime.combine(dt.date.fromisoformat(day), dt.time(h, m), ZoneInfo("Europe/Berlin"))
+    return local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def upload(path, thumb, ep, when):
+    from upload.upload_video import upload as yt_upload
+    desc = ep["beschreibung"].strip() + "\n\nAnimationen und Stimme mit KI-Unterstützung erstellt."
+    vid = yt_upload(str(path), ep["titel"][:100], desc, ep.get("tags", []), publish_at=when, thumbnail_path=str(thumb))
+    print("hochgeladen:", vid, "Veröffentlichung", when)
+    return vid
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("folge")
-    ap.add_argument("--upload", action="store_true")
+    ap.add_argument("folge", nargs="?", default="", help="Folgen-JSON; leer + --auto = nächste Folge von Claude schreiben lassen")
+    ap.add_argument("--auto", action="store_true")
+    ap.add_argument("--publish", default="", help="Datum YYYY-MM-DD (17 Uhr) -> geplant hochladen")
+    ap.add_argument("--shorts-from", default="", help="Shorts ab diesem Datum (2/Tag, 12 und 19 Uhr) planen")
+    ap.add_argument("--shorts-days", type=int, default=2)
     a = ap.parse_args()
+    if a.auto and not a.folge:
+        from waswaerewenn.autor import next_episode
+        a.folge = str(next_episode())
     ep = json.loads(Path(a.folge).read_text(encoding="utf-8"))
     wd = OUT / Path(a.folge).stem
     path, secs = render(ep, wd)
     thumb = thumbnail(ep, wd)
     print(f"fertig: {path} ({secs / 60:.1f} min), Titelbild {thumb}")
+    vid = None
+    if a.publish:
+        vid = upload(path, thumb, ep, publish_at(a.publish))
+    if a.shorts_from:
+        from waswaerewenn.shorts import make_shorts
+        make_shorts(ep, wd, a.shorts_from, a.shorts_days, upload=bool(a.publish), main_video=vid)
 
 
 if __name__ == "__main__":

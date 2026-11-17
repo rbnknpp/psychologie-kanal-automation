@@ -406,5 +406,47 @@
    "say": "Schreib es in die Kommentare, und abonnier den Kanal, damit du die nächste Folge nicht verpasst.",
    "bild": "gleich"
   }
+ ],
+ "shorts": [
+  {
+   "von": 15,
+   "bis": 20,
+   "titel": "Die Erde stoppt – und du fliegst mit 1.000 km/h weiter"
+  },
+  {
+   "von": 21,
+   "bis": 26,
+   "titel": "Die Erde stoppt – wer hätte die besten Plätze?"
+  },
+  {
+   "von": 33,
+   "bis": 38,
+   "titel": "Die Erde stoppt – der Sturm des Jahrtausends"
+  },
+  {
+   "von": 46,
+   "bis": 54,
+   "titel": "Die Erde stoppt – wohin verschwinden die Ozeane?"
+  },
+  {
+   "von": 55,
+   "bis": 58,
+   "titel": "Die Erde stoppt – du wärst plötzlich schwerer"
+  },
+  {
+   "von": 59,
+   "bis": 63,
+   "titel": "Die Erde stoppt – ein Tag dauert ein ganzes Jahr"
+  },
+  {
+   "von": 65,
+   "bis": 70,
+   "titel": "Die Erde stoppt – die Menschheit müsste ewig wandern"
+  },
+  {
+   "von": 82,
+   "bis": 85,
+   "titel": "Kann die Erde wirklich stehen bleiben?"
+  }
  ]
 }
