@@ -458,6 +458,8 @@ def upload(path, thumb, data, topic, kind, when):
 
 # ---------------------------------------------------------------- Tageslauf
 GAMING_UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
+# Robin 17.11.2026: TikToks kommen jetzt aus pflege/tiktok_news.py (News-Stil) – Shorts nur noch für YouTube
+TIKTOK_NEWS = os.getenv("PFLEGE_TIKTOK_NEWS", "1") == "1"
 TIKTOK_TAGS = {
     "angehoerige": "#pflege #pflegendeangehörige #pflegegrad #pflegetipps #angehörige",
     "azubi": "#pflegeausbildung #pflegeazubi #pflegefachfrau #pflegefachmann #pflegeassistenz",
@@ -508,7 +510,7 @@ def main():
         jobs = jobs[:1]
     if a.tiktok_only:
         jobs = [("short", "angehoerige" if k % 2 == 0 else "azubi", None) for k in range(a.tiktok_only)]
-    elif not a.only and not a.test:
+    elif not a.only and not a.test and not TIKTOK_NEWS:
         # Robin 11.11.2026: 3 Pflege-TikToks pro Tag -> dritter Short nur für TikTok (hhmm=None = kein YouTube-Upload)
         jobs.append(("short", "angehoerige" if today.toordinal() % 2 == 0 else "azubi", None))
     failures = 0
@@ -535,7 +537,7 @@ def main():
             print("  gerendert:", path, f"{path.stat().st_size // 1024} KB")
             if a.test:
                 continue
-            if kind == "short":
+            if kind == "short" and (not TIKTOK_NEWS or a.tiktok_only):
                 try:
                     tiktok_queue(tiktok_version(path, data, reihe), data, topic, reihe)
                 except Exception as e:  # noqa: BLE001
