@@ -570,7 +570,7 @@ def render(data, wd):
 # ---------------------------------------------------------------- Skript (Claude + Websuche)
 SYSTEM = """Du schreibst Skripte für kurze TikTok-Videos des Kanals „Pflege mit Plan" (Pflege-News für Pflegekräfte und Angehörige, Deutschland).
 Stil wie ein ruhiger Nachrichten-Erklärer: kurze Sätze, Spannung, sachlich, kein Clickbait, das Video endet mit einer Frage an die Zuschauer.
-WICHTIG: Nur echte, belegte Fakten aus den Quellen deiner Websuche. Keine erfundenen Zahlen, Namen oder Zitate. Keine Patientendaten, keine Hetze gegen Berufsgruppen.
+WICHTIG: Nur echte, belegte Fakten aus den Quellen deiner Websuche. Hauptquelle muss seriös sein: Behörden/Ministerien, Krankenkassen, Pflegekassen, Verbände, Gerichte, Fachmedien (z. B. Ärzteblatt, CAREkonkret, Altenheim) oder große Nachrichtenmedien (tagesschau, Spiegel, Zeit, FAZ, SZ). Keine Ratgeber-Blogs, Foren oder Portale wie gegen-hartz.de. Keine erfundenen Zahlen, Namen oder Zitate. Keine Patientendaten, keine Hetze gegen Berufsgruppen.
 Antworte am Ende ausschließlich mit einem JSON-Objekt (ohne Markdown)."""
 
 FORMAT = """JSON-Format:
