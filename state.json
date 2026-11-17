@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Warum dir eine fremde Stimme am Telefon vertrauter vorkommt als erwartet",
-    "Dein Gehirn bewertet Menschen in Gruppen anders als allein",
-    "3 Sekunden Verzögerung verraten, ob eine Entschuldigung echt gemeint ist",
-    "Warum du bei neuen Bekanntschaften schneller lächelst als sonst",
-    "Dein Gehirn braucht weniger als eine Sekunde, um Dominanz in einer Stimme zu hören",
-    "Die ersten 100 Millisekunden entscheiden über dein Urteil",
-    "Warum du beim Händeschütteln automatisch die Schulter drehst",
-    "Dein Gehirn braucht eine Pause, um Blickkontakt auszuhalten",
-    "Warum offene Handflächen dich automatisch sympathischer machen",
-    "Dein Gehirn spiegelt fremde Gesten, ohne dass du es merkst",
-    "3 Grad Kopfneigung entscheiden, ob du als freundlich giltst",
-    "Warum ein Lächeln ansteckender ist als ein Gähnen",
-    "Dein Gehirn traut einer tieferen Stimme automatisch mehr",
     "Warum unsymmetrische Gesten dich unglaubwürdig machen",
     "Am Ende zählt nicht die Geste, sondern das Gesamtbild",
     "Warum du beim Lügen öfter nach oben schaust",
@@ -199,7 +186,20 @@
     "Warum manche Menschen beim Trösten die Arme verschränken, obwohl sie dankbar sind",
     "Dein Gehirn erkennt in 2 Sekunden, ob ein Trostversuch angenommen wird",
     "Warum manche Menschen Trost abwehren, indem sie sofort lachen",
-    "Am Ende zeigt nicht die Geste, sondern das Nachlassen der Spannung echten Trost"
+    "Am Ende zeigt nicht die Geste, sondern das Nachlassen der Spannung echten Trost",
+    "Warum deine Fußspitzen verraten, wen du wirklich interessant findest",
+    "3 Grad Kopfdrehung verraten, ob du jemandem wirklich zuhörst",
+    "Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln",
+    "Warum echtes Nicken nie exakt im gleichen Rhythmus kommt",
+    "Dein Gehirn braucht 0,3 Sekunden, um eine Kopfneigung zu erkennen",
+    "Warum hochgezogene Augenbrauen beim Zuhören Überraschung verraten",
+    "Dein Gehirn unterscheidet ein höfliches von einem echten Lächeln beim Zuhören",
+    "Warum deine Pupillen sich beim echten Zuhören leicht weiten",
+    "Dein Gehirn erkennt ein verzögertes Nicken als Unsicherheit",
+    "Warum deine Augenbrauen beim Verstehen kurz zusammenfallen und wieder lösen",
+    "Dein Gehirn verrät sich durch eine zu lange Pause vor dem Nicken",
+    "Warum ein leichtes Kopfschütteln beim Zuhören oft unbemerkt Zustimmung zeigt",
+    "Am Ende zeigt nicht eine Geste, sondern das Zusammenspiel von Nicken, Blick und Brauen echtes Interesse"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -212,6 +212,7 @@
     "Wie unbewusste Körpersignale bei kleinen Berührungen im Alltag (Schulterklopfen, Armberühren, Handauflegen) zeigen, welche Beziehung zwei Menschen wirklich zueinander haben",
     "Wie unbewusste Körpersignale bei Streit und Meinungsverschiedenheiten zeigen, ob jemand verteidigt, einlenkt oder innerlich abschaltet",
     "Wie unbewusste Körpersignale beim Warten (in der Schlange, im Wartezimmer, auf eine Antwort) zeigen, wie ungeduldig oder nervös jemand wirklich ist",
-    "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt"
+    "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt",
+    "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt"
   ]
 }
