@@ -122,10 +122,18 @@
      "caption": "Kai's wild self-roast mid mission 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
      "layout": "full",
      "date": "2026-11-16"
+    },
+    {
+     "start": 15635.1,
+     "end": 15658.3,
+     "hook": "Niko is dead, call ambulance",
+     "caption": "GTA chaos hits different 😱 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
+     "layout": "full",
+     "date": "2026-11-17"
     }
    ],
    "campaign": "kaicenat",
-   "scan_pos": 14700.0,
+   "scan_pos": 29100.0,
    "rejected": [
     [
      14084.9,
@@ -190,6 +198,150 @@
     [
      14344.0,
      14399.0
+    ],
+    [
+     14976.0,
+     15031.0
+    ],
+    [
+     15162.0,
+     15217.0
+    ],
+    [
+     15264.0,
+     15319.0
+    ],
+    [
+     15604.0,
+     15659.0
+    ],
+    [
+     19360.0,
+     19415.0
+    ],
+    [
+     19590.0,
+     19645.0
+    ],
+    [
+     21082.0,
+     21137.0
+    ],
+    [
+     21572.0,
+     21627.0
+    ],
+    [
+     21906.0,
+     21961.0
+    ],
+    [
+     22142.0,
+     22197.0
+    ],
+    [
+     23000.0,
+     23055.0
+    ],
+    [
+     24456.0,
+     24511.0
+    ],
+    [
+     25028.0,
+     25083.0
+    ],
+    [
+     26676.0,
+     26731.0
+    ]
+   ]
+  },
+  "2930662512": {
+   "title": "3x Bodycam Giveaways 🎁 | NO AUDIO Challenge 🧟‍♂️ | !razer !hostinger !iem",
+   "clips": [
+    {
+     "start": 283.0,
+     "end": 312.0,
+     "hook": "The ultimate self-prank reveal",
+     "caption": "He got himself 😂 chat can't stop laughing twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "full",
+     "date": "2026-11-17"
+    },
+    {
+     "start": 6640.0,
+     "end": 6680.0,
+     "hook": "I'm Jimmy chant takes over",
+     "caption": "The 'I'm Jimmy' meme hits different 🤣 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-17"
+    },
+    {
+     "start": 2335.0,
+     "end": 2363.0,
+     "hook": "We're getting married, apparently",
+     "caption": "Timmy just proposed to a viewer 💍 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-17"
+    }
+   ],
+   "campaign": "skiimasktimmy",
+   "rejected": [
+    [
+     276.0,
+     331.0
+    ],
+    [
+     2312.0,
+     2367.0
+    ],
+    [
+     6312.0,
+     6367.0
+    ],
+    [
+     6476.0,
+     6531.0
+    ],
+    [
+     6642.0,
+     6697.0
+    ],
+    [
+     7868.0,
+     7923.0
+    ],
+    [
+     8520.0,
+     8575.0
+    ],
+    [
+     8716.0,
+     8771.0
+    ],
+    [
+     9008.0,
+     9063.0
+    ],
+    [
+     9896.0,
+     9951.0
+    ],
+    [
+     10058.0,
+     10113.0
+    ],
+    [
+     10184.0,
+     10239.0
+    ],
+    [
+     10500.0,
+     10555.0
+    ],
+    [
+     11050.0,
+     11105.0
     ]
    ]
   }
