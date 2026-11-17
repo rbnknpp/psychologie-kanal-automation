@@ -1,1 +1,14 @@
-{"erledigt": [{"thema": "Was wäre, wenn die Erde plötzlich aufhört, sich zu drehen?", "datei": "001_erde_stoppt.json", "datum": "2026-11-17"}]}
+{
+ "erledigt": [
+  {
+   "thema": "Was wäre, wenn die Erde plötzlich aufhört, sich zu drehen?",
+   "datei": "001_erde_stoppt.json",
+   "datum": "2026-11-17"
+  },
+  {
+   "thema": "Was wäre, wenn du nie wieder schlafen müsstest?",
+   "datei": "002_was_waere_wenn_du_nie_wieder_schlafen_mu.json",
+   "datum": "2026-11-17"
+  }
+ ]
+}
