@@ -70,10 +70,13 @@ def next_episode():
     # 2) Skript
     last = ""
     for attempt in range(3):
-        with client.messages.stream(model=config.ANTHROPIC_MODEL, max_tokens=32000, system=SYSTEM, messages=[{
+        # Skript ist reines Schreiben: ohne Denkphase, damit das Token-Budget fürs JSON reicht
+        with client.messages.stream(model=config.ANTHROPIC_MODEL, max_tokens=48000, system=SYSTEM,
+                                    thinking={"type": "disabled"}, messages=[{
                 "role": "user", "content": f"{hint}\n\nFaktenblatt:\n{facts}\n\n{FORMAT}"}]) as s:
             msg = s.get_final_message()
         last = "".join(b.text for b in msg.content if b.type == "text")
+        print(f"  Antwort: stop={msg.stop_reason}, {len(last)} Zeichen, Ausgabe-Tokens {msg.usage.output_tokens}")
         try:
             ep = json.loads(last[last.find("{"):last.rfind("}") + 1])
             words = sum(len(x["say"].split()) for x in ep["szenen"])
