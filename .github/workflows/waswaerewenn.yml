@@ -28,9 +28,30 @@ concurrency:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
+  guard:
+    # Hauptauslöser ist Supabase (pg_cron -> workflow_dispatch). Der GitHub-Zeitplan ist nur Reserve:
+    # lief heute schon ein Dispatch, wird der geplante Lauf übersprungen (keine doppelten Videos).
+    runs-on: ubuntu-24.04
+    outputs:
+      skip: ${{ steps.chk.outputs.skip }}
+    steps:
+      - id: chk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          skip=0
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            n=$(gh run list -R "$GITHUB_REPOSITORY" -w "${{ github.workflow }}" --created ">=$(date -u +%F)" --json event -q '[.[]|select(.event=="workflow_dispatch")]|length')
+            [ "${n:-0}" -gt 0 ] && skip=1
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+          echo "skip=$skip"
   run:
+    needs: guard
+    if: needs.guard.outputs.skip != '1'
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     env:
