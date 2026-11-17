@@ -22,7 +22,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+import pflege.tiktok_news as _pt  # noqa: E402
 from pflege.tiktok_news import align, chunks, font, tts, wrap  # noqa: E402
+_pt.RATE = os.getenv("WWW_RATE", "+0%")  # erzählend, etwas ruhiger als die TikToks
 
 HERE = Path(__file__).resolve().parent
 OUT = ROOT / "output" / "waswaerewenn"

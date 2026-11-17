@@ -535,6 +535,8 @@ def render(data, wd):
         ts = t - sc["t0"]
         fr = bg.copy()
         im = sc["_img"]
+        if (sc.get("element") or {}).get("typ") in ("zahl", "tabelle", "liste"):
+            im = None  # große Karten stehen allein (wie im Vorbild), sonst überlappen Bild und Karte
         if im is not None:
             same = si > 0 and scenes[si - 1]["_img"] is im
             # gleichmäßiger langsamer Zoom über alle Szenen mit demselben Bild
@@ -579,7 +581,7 @@ def render(data, wd):
 # ---------------------------------------------------------------- Skript (Claude + Websuche)
 SYSTEM = """Du schreibst Skripte für kurze TikTok-Videos des Kanals „Pflege mit Plan" (Pflege-News für Pflegekräfte und Angehörige, Deutschland).
 Stil wie ein ruhiger Nachrichten-Erklärer: kurze Sätze, Spannung, sachlich, kein Clickbait, das Video endet mit einer Frage an die Zuschauer.
-WICHTIG: Nur echte, belegte Fakten aus den Quellen deiner Websuche. Hauptquelle muss seriös sein: Behörden/Ministerien, Krankenkassen, Pflegekassen, Verbände, Gerichte, Fachmedien (z. B. Ärzteblatt, CAREkonkret, Altenheim) oder große Nachrichtenmedien (tagesschau, Spiegel, Zeit, FAZ, SZ). Keine Ratgeber-Blogs, Foren oder Portale wie gegen-hartz.de. Keine erfundenen Zahlen, Namen oder Zitate. Keine Patientendaten, keine Hetze gegen Berufsgruppen.
+WICHTIG: Nur echte, belegte Fakten aus den Quellen deiner Websuche. Hauptquelle muss seriös sein: Behörden/Ministerien, Krankenkassen, Pflegekassen, Verbände, Gerichte, Fachmedien (z. B. Ärzteblatt, CAREkonkret, Altenheim) oder große Nachrichtenmedien (tagesschau, Spiegel, Zeit, FAZ, SZ). Keine Ratgeber-Blogs, Foren oder Portale wie gegen-hartz.de oder buerger-geld.org – auch nicht als Umweg („via“): quelle_url muss direkt auf die seriöse Quelle zeigen. Keine erfundenen Zahlen, Namen oder Zitate. Keine Patientendaten, keine Hetze gegen Berufsgruppen.
 Antworte am Ende ausschließlich mit einem JSON-Objekt (ohne Markdown)."""
 
 FORMAT = """JSON-Format:

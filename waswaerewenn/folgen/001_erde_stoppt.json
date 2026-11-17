@@ -2,70 +2,409 @@
  "titel": "Was wäre, wenn die Erde plötzlich aufhört, sich zu drehen?",
  "thumb_text": "ERDE STOPPT?!",
  "thumb_bild": "a cartoon boy with messy brown hair and an orange hoodie screaming in shock while being blown away by a huge storm, planet earth cracking behind him, dramatic red sky",
- "beschreibung": "Was passiert, wenn sich die Erde von einer Sekunde auf die andere nicht mehr dreht? Superschallstürme, Riesenwellen, ein Tag, der ein halbes Jahr dauert, und Ozeane, die zu den Polen wandern. Ein Gedankenexperiment mit echten Fakten aus der Physik.\n\nKapitel:\n0:00 Die letzte Sekunde\n1:00 1.000 km/h – ohne Bremse\n2:30 Der Sturm des Jahrtausends\n3:30 Die Ozeane wandern\n4:30 Ein Tag, der ein halbes Jahr dauert\n5:30 Kann das wirklich passieren?\n\nWelches Szenario sollen wir als Nächstes durchspielen? Schreib es in die Kommentare!\n\n#waswärewenn #wissen #gedankenexperiment #erde #physik",
- "tags": ["was wäre wenn", "erde hört auf sich zu drehen", "gedankenexperiment", "wissen", "physik", "erde", "deutsch"],
+ "beschreibung": "Was passiert, wenn sich die Erde von einer Sekunde auf die andere nicht mehr dreht? Superschallstürme, Riesenwellen, Satelliten, die über den Himmel wandern, ein Tag, der ein ganzes Jahr dauert, und eine Menschheit, die der Dämmerung hinterherwandern muss. Ein Gedankenexperiment mit echten Fakten aus der Physik.\n\nWelches Szenario sollen wir als Nächstes durchspielen? Schreib es in die Kommentare!\n\n#waswärewenn #wissen #gedankenexperiment #erde #physik",
+ "tags": [
+  "was wäre wenn",
+  "erde hört auf sich zu drehen",
+  "gedankenexperiment",
+  "wissen",
+  "physik",
+  "erde",
+  "deutsch"
+ ],
  "figur": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans",
  "szenen": [
-  {"say": "Stell dir vor, es ist ein ganz normaler Dienstagmorgen.", "bild": "Leo walking to school on a sunny street in a small German town, morning light", "titel": ""},
-  {"say": "Die Vögel zwitschern, der Bus kommt pünktlich, und du denkst an die Mathearbeit.", "bild": "gleich"},
-  {"say": "Und dann, ohne jede Vorwarnung, hört die Erde auf, sich zu drehen.", "bild": "planet earth in space suddenly frozen, glowing red warning light around it, dramatic", "titel": "STOPP."},
-  {"say": "Nicht langsam. Nicht über Jahre. Sondern in einer einzigen Sekunde.", "bild": "gleich"},
-  {"say": "Was dann passiert, ist das gewaltigste Ereignis in der Geschichte unseres Planeten.", "bild": "gleich"},
-  {"say": "Und genau das spielen wir heute durch. Schritt für Schritt.", "bild": "Leo looking up at the sky with a worried face, a giant question mark in the clouds"},
-  {"say": "Um zu verstehen, was passiert, müssen wir zuerst wissen, wie schnell wir eigentlich gerade unterwegs sind.", "bild": "Leo standing on top of a small cartoon planet earth, looking surprised"},
-  {"say": "Die Erde dreht sich einmal am Tag um sich selbst.", "bild": "cartoon planet earth spinning in space with motion lines, stars in background"},
-  {"say": "Am Äquator bedeutet das: Der Boden unter deinen Füßen rast mit rund eintausendsechshundertsiebzig Kilometern pro Stunde durchs All.", "bild": "gleich", "titel": "1.670 km/h"},
-  {"say": "Das ist schneller als ein Passagierflugzeug. Schneller als der Schall.", "bild": "a cartoon airplane being overtaken by a running cartoon earth, funny race", "titel": ""},
-  {"say": "In Deutschland sind es immer noch etwa tausend Kilometer pro Stunde.", "bild": "Leo standing on a map of Germany with a giant speedometer next to him showing very high speed", "titel": "≈ 1.000 km/h"},
-  {"say": "Du merkst davon nichts, weil sich alles mitbewegt. Du, die Luft, die Häuser, das Meer.", "bild": "Leo sitting calmly on a bench drinking cocoa, houses and trees around him, everything peaceful"},
-  {"say": "Genau wie in einem Flugzeug, in dem du ganz ruhig deinen Saft trinken kannst.", "bild": "Leo sitting in an airplane seat drinking juice, clouds outside the window"},
-  {"say": "Aber jetzt kommt das Problem.", "bild": "gleich", "titel": "DAS PROBLEM"},
-  {"say": "Wenn die Erde plötzlich stoppt, dann stoppt nur der Boden. Aber alles, was nicht fest mit ihm verbunden ist, fliegt einfach weiter.", "bild": "a car slamming its brakes and the cartoon passengers flying forward, cartoon style, no gore"},
-  {"say": "So wie du nach vorne kippst, wenn ein Auto eine Vollbremsung macht.", "bild": "gleich"},
-  {"say": "Nur eben nicht mit fünfzig Kilometern pro Stunde, sondern mit tausend.", "bild": "Leo, people, cows and cars flying through the air sideways at high speed over a landscape, cartoonish and funny, not violent", "titel": "1.000 km/h"},
-  {"say": "Menschen, Autos, Bäume, Häuser, Kühe: Alles würde mit Überschallgeschwindigkeit nach Osten geschleudert.", "bild": "gleich"},
-  {"say": "Selbst Felsen und ganze Berghänge würden ins Rutschen geraten.", "bild": "a cartoon mountain with rocks sliding off it, dust clouds, dramatic"},
-  {"say": "Die einzigen Menschen, die halbwegs Glück hätten, wären die an den Polen.", "bild": "Leo in a thick winter jacket standing alone at the north pole with a penguin and a polar bear, calm snowy scene"},
-  {"say": "Denn dort ist die Drehgeschwindigkeit fast null. Am Nordpol würdest du dich einfach nur einmal am Tag im Kreis drehen.", "bild": "gleich", "titel": "NORDPOL: ≈ 0 km/h"},
-  {"say": "Aber auch dort wäre es nicht lange ruhig. Denn jetzt kommt die Luft.", "bild": "dark storm clouds gathering over a snowy landscape, wind starting to blow"},
-  {"say": "Unsere Atmosphäre ist nicht fest mit der Erde verschraubt. Sie würde einfach weiterrasen.", "bild": "a gigantic cartoon storm sweeping over the earth, swirling winds, dramatic sky", "titel": "DER STURM"},
-  {"say": "Das wäre ein Wind, gegen den der stärkste Hurrikan der Geschichte wie ein laues Lüftchen wirkt.", "bild": "gleich"},
-  {"say": "Die stärksten Hurrikane erreichen Windgeschwindigkeiten von etwa dreihundert Kilometern pro Stunde.", "bild": "a cartoon hurricane seen from above, spiral clouds over the ocean", "titel": "Hurrikan: ≈ 300 km/h"},
-  {"say": "Dieser Sturm wäre an vielen Orten mehr als dreimal so schnell.", "bild": "gleich", "titel": "Erdstopp: > 1.000 km/h"},
-  {"say": "Er würde Wälder entwurzeln, Städte abtragen und Staub und Trümmer um den halben Planeten wirbeln.", "bild": "a cartoon city being swept by an extreme wind storm, trees flying, debris, dramatic but not gory"},
-  {"say": "Und durch die Reibung der Luft würde es an manchen Orten richtig heiß werden.", "bild": "glowing orange hot air swirling over a desert, heat waves, dramatic"},
-  {"say": "Aber die Luft ist nicht das Einzige, was weiterfließt.", "bild": "a calm ocean with a strange glow on the horizon, ominous mood"},
-  {"say": "Auch die Ozeane würden weiterrasen. Riesige Wassermassen würden über die Küsten schwappen.", "bild": "a gigantic cartoon tsunami wave towering over a coastal city, dramatic sky", "titel": "DIE OZEANE"},
-  {"say": "Wellen, höher als Hochhäuser, würden tief ins Landesinnere vordringen.", "bild": "gleich"},
-  {"say": "Aber das Verrückteste passiert erst danach. Und zwar langsam, über Tage und Wochen.", "bild": "Leo standing on a hill looking at a flooded landscape, thoughtful"},
-  {"say": "Die Erde ist nämlich keine perfekte Kugel.", "bild": "a cartoon planet earth slightly squished, wider at the middle, with a measuring tape around it"},
-  {"say": "Weil sie sich dreht, ist sie am Äquator etwas dicker. Der Abstand zum Erdmittelpunkt ist dort rund einundzwanzig Kilometer größer als an den Polen.", "bild": "gleich", "titel": "+21 km am Äquator"},
-  {"say": "Die Fliehkraft zieht auch die Ozeane nach außen, Richtung Äquator.", "bild": "cartoon earth with ocean water bulging at the equator, arrows pointing outward"},
-  {"say": "Wenn die Drehung wegfällt, fällt auch diese Kraft weg.", "bild": "gleich"},
-  {"say": "Das Wasser würde langsam zu den Polen fließen.", "bild": "cartoon earth with water flowing from the equator toward the north and south poles, big arrows"},
-  {"say": "Am Ende hätte die Erde zwei riesige Ozeane, einen im Norden und einen im Süden.", "bild": "cartoon earth with two huge oceans at the north and south and one giant continent band around the middle", "titel": "2 OZEANE"},
-  {"say": "Und dazwischen, einmal rund um den Äquator, einen einzigen gigantischen Kontinent.", "bild": "gleich"},
-  {"say": "Große Teile von Europa, auch Deutschland, würden dabei wohl unter Wasser liegen.", "bild": "a cartoon map of Europe flooded by the ocean, only mountain tops visible", "titel": "DEUTSCHLAND?"},
-  {"say": "Dafür könnte man vielleicht zu Fuß von Afrika nach Südamerika laufen.", "bild": "Leo hiking happily across a dry seabed with a backpack, strange rocks and old shipwrecks around"},
-  {"say": "Und dann ist da noch die Sache mit Tag und Nacht.", "bild": "a split scene: half bright sunny day, half dark starry night, cartoon style", "titel": "TAG & NACHT"},
-  {"say": "Die Erde würde sich nicht mehr um sich selbst drehen. Aber sie würde weiterhin um die Sonne kreisen.", "bild": "cartoon earth orbiting the sun on a dotted path, not spinning"},
-  {"say": "Das heißt: Ein Tag würde ein ganzes Jahr dauern.", "bild": "gleich", "titel": "1 TAG = 1 JAHR"},
-  {"say": "Sechs Monate Sonne am Stück. Und danach sechs Monate Dunkelheit.", "bild": "Leo sweating under a burning sun in a dry landscape, then shivering in the dark next to it, split image"},
-  {"say": "Auf der Tagseite würde es unerträglich heiß werden. Auf der Nachtseite würde alles gefrieren.", "bild": "gleich"},
-  {"say": "Pflanzen, Tiere, die Landwirtschaft, unser ganzer Rhythmus: Alles ist auf vierundzwanzig Stunden eingestellt.", "bild": "a cartoon farm with confused animals and wilting crops, sun stuck in the sky"},
-  {"say": "Und es gibt noch ein Problem, das man nicht sieht.", "bild": "cartoon earth with glowing blue magnetic field lines around it, protecting it from solar wind"},
-  {"say": "Forscher vermuten, dass die Drehung der Erde mit hilft, unser Magnetfeld zu erzeugen.", "bild": "gleich", "titel": "MAGNETFELD"},
-  {"say": "Dieses Magnetfeld schützt uns vor gefährlicher Strahlung aus dem All. Würde es schwächer, hätten wir ein echtes Problem.", "bild": "the sun blasting a stream of glowing particles toward the earth, a weak flickering shield around the planet"},
-  {"say": "Die gute Nachricht kommt jetzt.", "bild": "Leo smiling and giving a thumbs up, bright sunny background", "titel": "ENTWARNUNG"},
-  {"say": "Dass die Erde von einer Sekunde auf die andere stoppt, ist praktisch unmöglich.", "bild": "gleich"},
-  {"say": "Es gibt keine bekannte Kraft, die einen ganzen Planeten so plötzlich abbremsen könnte.", "bild": "cartoon earth spinning happily in space with a smiling sun nearby"},
-  {"say": "Aber ganz richtig ist es auch nicht, dass sich nichts ändert.", "bild": "the cartoon moon pulling gently on the earth's oceans with glowing lines, tides"},
-  {"say": "Der Mond bremst die Erde nämlich ganz, ganz langsam ab. Durch Ebbe und Flut.", "bild": "gleich"},
-  {"say": "Dadurch wird ein Tag ungefähr alle hundert Jahre um knapp zwei Tausendstelsekunden länger.", "bild": "a giant cartoon clock with the second hand moving very slowly, Leo looking at it bored", "titel": "+ 1,7 ms / 100 Jahre"},
-  {"say": "Zur Zeit der Dinosaurier hatte ein Tag deshalb nur etwa dreiundzwanzigeinhalb Stunden.", "bild": "cartoon dinosaurs looking at a clock showing 23 hours, funny", "titel": "Dinos: ≈ 23,5 h"},
-  {"say": "Bis die Erde wirklich stillsteht, würde es also unvorstellbar lange dauern. Und vorher passieren ganz andere Dinge im Universum.", "bild": "cartoon earth in space with a wide galaxy behind it, calm and peaceful"},
-  {"say": "Du kannst die Mathearbeit am Dienstag also leider nicht ausfallen lassen.", "bild": "Leo sitting at a school desk with a math test, rolling his eyes, funny"},
-  {"say": "Aber jetzt bist du dran: Welches Was-wäre-wenn sollen wir als Nächstes durchspielen?", "bild": "Leo pointing at the viewer with a big smile, glowing question marks around him", "titel": "DEINE IDEE?"},
-  {"say": "Schreib es in die Kommentare, und abonnier den Kanal, damit du die nächste Folge nicht verpasst.", "bild": "gleich"}
+  {
+   "say": "Stell dir vor, es ist ein ganz normaler Dienstagmorgen.",
+   "bild": "Leo walking to school on a sunny street in a small German town, morning light",
+   "titel": ""
+  },
+  {
+   "say": "Die Vögel zwitschern, der Bus kommt pünktlich, und du denkst an die Mathearbeit.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und dann, ohne jede Vorwarnung, hört die Erde auf, sich zu drehen.",
+   "bild": "planet earth in space suddenly frozen, glowing red warning light around it, dramatic",
+   "titel": "STOPP."
+  },
+  {
+   "say": "Nicht langsam. Nicht über Jahre. Sondern in einer einzigen Sekunde.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Was dann passiert, ist das gewaltigste Ereignis in der Geschichte unseres Planeten.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und genau das spielen wir heute durch. Schritt für Schritt.",
+   "bild": "Leo looking up at the sky with a worried face, a giant question mark in the clouds"
+  },
+  {
+   "say": "Wir klären, wie schnell du gerade eigentlich durchs All rast, warum die Astronauten die besten Plätze hätten, wohin die Ozeane verschwinden und warum die Menschheit danach für immer wandern müsste.",
+   "bild": "a collage of cartoon scenes: a spinning earth, a space station, a giant wave and a caravan of people at sunset",
+   "titel": "IN DIESEM VIDEO"
+  },
+  {
+   "say": "Bleib bis zum Ende dran. Denn die Antwort auf die Frage, ob das wirklich passieren kann, wird dich überraschen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Um zu verstehen, was passiert, müssen wir zuerst wissen, wie schnell wir eigentlich gerade unterwegs sind.",
+   "bild": "Leo standing on top of a small cartoon planet earth, looking surprised"
+  },
+  {
+   "say": "Die Erde dreht sich einmal am Tag um sich selbst.",
+   "bild": "cartoon planet earth spinning in space with motion lines, stars in background"
+  },
+  {
+   "say": "Am Äquator bedeutet das: Der Boden unter deinen Füßen rast mit rund eintausendsechshundertsiebzig Kilometern pro Stunde durchs All.",
+   "bild": "gleich",
+   "titel": "1.670 km/h"
+  },
+  {
+   "say": "Das ist schneller als ein Passagierflugzeug. Schneller als der Schall.",
+   "bild": "a cartoon airplane being overtaken by a running cartoon earth, funny race",
+   "titel": ""
+  },
+  {
+   "say": "In Deutschland sind es immer noch etwa tausend Kilometer pro Stunde.",
+   "bild": "Leo standing on a map of Germany with a giant speedometer next to him showing very high speed",
+   "titel": "≈ 1.000 km/h"
+  },
+  {
+   "say": "Du merkst davon nichts, weil sich alles mitbewegt. Du, die Luft, die Häuser, das Meer.",
+   "bild": "Leo sitting calmly on a bench drinking cocoa, houses and trees around him, everything peaceful"
+  },
+  {
+   "say": "Genau wie in einem Flugzeug, in dem du ganz ruhig deinen Saft trinken kannst.",
+   "bild": "Leo sitting in an airplane seat drinking juice, clouds outside the window"
+  },
+  {
+   "say": "Aber jetzt kommt das Problem.",
+   "bild": "gleich",
+   "titel": "DAS PROBLEM"
+  },
+  {
+   "say": "Wenn die Erde plötzlich stoppt, dann stoppt nur der Boden. Aber alles, was nicht fest mit ihm verbunden ist, fliegt einfach weiter.",
+   "bild": "a car slamming its brakes and the cartoon passengers flying forward, cartoon style, no gore"
+  },
+  {
+   "say": "So wie du nach vorne kippst, wenn ein Auto eine Vollbremsung macht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Nur eben nicht mit fünfzig Kilometern pro Stunde, sondern mit tausend.",
+   "bild": "Leo, people, cows and cars flying through the air sideways at high speed over a landscape, cartoonish and funny, not violent",
+   "titel": "1.000 km/h"
+  },
+  {
+   "say": "Menschen, Autos, Bäume, Häuser, Kühe: Alles würde mit Überschallgeschwindigkeit nach Osten geschleudert.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Selbst Felsen und ganze Berghänge würden ins Rutschen geraten.",
+   "bild": "a cartoon mountain with rocks sliding off it, dust clouds, dramatic"
+  },
+  {
+   "say": "Und was ist mit allem, was gerade in der Luft oder im All unterwegs ist?",
+   "bild": "cartoon airplanes in a stormy sky, Leo looking up worried from a rooftop",
+   "titel": "UND DIE FLUGZEUGE?"
+  },
+  {
+   "say": "Ein Flugzeug in zehn Kilometern Höhe würde nicht sofort abstürzen. Es fliegt ja in der Luft, und die Luft rast weiter.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Aber es würde von einem Wind mitgerissen, der jede Landebahn unbrauchbar macht. Landen? Praktisch unmöglich.",
+   "bild": "a cartoon airplane being tossed around by a giant swirling storm above a destroyed airport"
+  },
+  {
+   "say": "Die Astronauten auf der Raumstation ISS hätten dagegen die besten Plätze.",
+   "bild": "the international space station orbiting a cartoon earth, two cartoon astronauts looking out of a window with popcorn",
+   "titel": "ISS: ALLES OK"
+  },
+  {
+   "say": "Die ISS kreist mit rund achtundzwanzigtausend Kilometern pro Stunde um die Erde. Mit der Drehung des Bodens hat sie nichts zu tun.",
+   "bild": "gleich",
+   "titel": "28.000 km/h"
+  },
+  {
+   "say": "Sie würde einfach weiterfliegen. Und die Crew könnte zusehen, wie unten das Chaos ausbricht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Ganz anders sieht es bei den Fernsehsatelliten aus.",
+   "bild": "a cartoon satellite dish on a house roof pointing at the sky, a satellite far above"
+  },
+  {
+   "say": "Viele davon stehen scheinbar still über einem Punkt am Himmel. Das klappt nur, weil sie genau so schnell um die Erde kreisen, wie die Erde sich dreht.",
+   "bild": "cartoon earth with a ring of satellites hovering above the equator, dotted orbit line",
+   "titel": "GEOSTATIONÄR"
+  },
+  {
+   "say": "Dreht sich die Erde nicht mehr, wandern diese Satelliten plötzlich über den Himmel. Satellitenschüsseln würden ins Leere zielen.",
+   "bild": "Leo on a roof turning a satellite dish in confusion, a satellite drifting away across the sky"
+  },
+  {
+   "say": "Die einzigen Menschen, die halbwegs Glück hätten, wären die an den Polen.",
+   "bild": "Leo in a thick winter jacket standing alone at the north pole with a penguin and a polar bear, calm snowy scene"
+  },
+  {
+   "say": "Denn dort ist die Drehgeschwindigkeit fast null. Am Nordpol würdest du dich einfach nur einmal am Tag im Kreis drehen.",
+   "bild": "gleich",
+   "titel": "NORDPOL: ≈ 0 km/h"
+  },
+  {
+   "say": "Aber auch dort wäre es nicht lange ruhig. Denn jetzt kommt die Luft.",
+   "bild": "dark storm clouds gathering over a snowy landscape, wind starting to blow"
+  },
+  {
+   "say": "Unsere Atmosphäre ist nicht fest mit der Erde verschraubt. Sie würde einfach weiterrasen.",
+   "bild": "a gigantic cartoon storm sweeping over the earth, swirling winds, dramatic sky",
+   "titel": "DER STURM"
+  },
+  {
+   "say": "Das wäre ein Wind, gegen den der stärkste Hurrikan der Geschichte wie ein laues Lüftchen wirkt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Die stärksten Hurrikane erreichen Windgeschwindigkeiten von etwa dreihundert Kilometern pro Stunde.",
+   "bild": "a cartoon hurricane seen from above, spiral clouds over the ocean",
+   "titel": "Hurrikan: ≈ 300 km/h"
+  },
+  {
+   "say": "Dieser Sturm wäre an vielen Orten mehr als dreimal so schnell.",
+   "bild": "gleich",
+   "titel": "Erdstopp: > 1.000 km/h"
+  },
+  {
+   "say": "Er würde Wälder entwurzeln, Städte abtragen und Staub und Trümmer um den halben Planeten wirbeln.",
+   "bild": "a cartoon city being swept by an extreme wind storm, trees flying, debris, dramatic but not gory"
+  },
+  {
+   "say": "Und durch die Reibung der Luft würde es an manchen Orten richtig heiß werden.",
+   "bild": "glowing orange hot air swirling over a desert, heat waves, dramatic"
+  },
+  {
+   "say": "Und nicht nur die Oberfläche hätte ein Problem. Auch das Innere der Erde.",
+   "bild": "a cutaway cartoon earth showing glowing layers: crust, mantle, liquid outer core and inner core",
+   "titel": "IM ERDINNEREN"
+  },
+  {
+   "say": "Unter der Kruste liegen der zähflüssige Mantel und ein Kern aus flüssigem Metall. Auch sie drehen sich mit.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Würde die Kruste plötzlich gestoppt, entstünden riesige Spannungen. Heftige Erdbeben und Vulkanausbrüche wären sehr wahrscheinlich.",
+   "bild": "a cartoon volcano erupting with lava next to cracked ground, dramatic orange sky"
+  },
+  {
+   "say": "Aber die Luft ist nicht das Einzige, was weiterfließt.",
+   "bild": "a calm ocean with a strange glow on the horizon, ominous mood"
+  },
+  {
+   "say": "Auch die Ozeane würden weiterrasen. Riesige Wassermassen würden über die Küsten schwappen.",
+   "bild": "a gigantic cartoon tsunami wave towering over a coastal city, dramatic sky",
+   "titel": "DIE OZEANE"
+  },
+  {
+   "say": "Wellen, höher als Hochhäuser, würden tief ins Landesinnere vordringen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Aber das Verrückteste passiert erst danach. Und zwar langsam, über Tage und Wochen.",
+   "bild": "Leo standing on a hill looking at a flooded landscape, thoughtful"
+  },
+  {
+   "say": "Die Erde ist nämlich keine perfekte Kugel.",
+   "bild": "a cartoon planet earth slightly squished, wider at the middle, with a measuring tape around it"
+  },
+  {
+   "say": "Weil sie sich dreht, ist sie am Äquator etwas dicker. Der Abstand zum Erdmittelpunkt ist dort rund einundzwanzig Kilometer größer als an den Polen.",
+   "bild": "gleich",
+   "titel": "+21 km am Äquator"
+  },
+  {
+   "say": "Die Fliehkraft zieht auch die Ozeane nach außen, Richtung Äquator.",
+   "bild": "cartoon earth with ocean water bulging at the equator, arrows pointing outward"
+  },
+  {
+   "say": "Wenn die Drehung wegfällt, fällt auch diese Kraft weg.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das Wasser würde langsam zu den Polen fließen.",
+   "bild": "cartoon earth with water flowing from the equator toward the north and south poles, big arrows"
+  },
+  {
+   "say": "Am Ende hätte die Erde zwei riesige Ozeane, einen im Norden und einen im Süden.",
+   "bild": "cartoon earth with two huge oceans at the north and south and one giant continent band around the middle",
+   "titel": "2 OZEANE"
+  },
+  {
+   "say": "Und dazwischen, einmal rund um den Äquator, einen einzigen gigantischen Kontinent.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Große Teile von Europa, auch Deutschland, würden dabei wohl unter Wasser liegen.",
+   "bild": "a cartoon map of Europe flooded by the ocean, only mountain tops visible",
+   "titel": "DEUTSCHLAND?"
+  },
+  {
+   "say": "Dafür könnte man vielleicht zu Fuß von Afrika nach Südamerika laufen.",
+   "bild": "Leo hiking happily across a dry seabed with a backpack, strange rocks and old shipwrecks around"
+  },
+  {
+   "say": "Übrigens: Du wärst danach ein kleines bisschen schwerer.",
+   "bild": "Leo standing on a bathroom scale looking surprised, funny",
+   "titel": "SCHWERER?"
+  },
+  {
+   "say": "Die Drehung erzeugt eine winzige Fliehkraft, die dich am Äquator ganz leicht nach außen zieht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Fällt sie weg, wiegst du dort etwa drei Promille mehr. Bei siebzig Kilo wären das rund zweihundert Gramm.",
+   "bild": "gleich",
+   "titel": "+ ≈ 200 g"
+  },
+  {
+   "say": "Das ist ungefähr eine Tafel Schokolade. Dein kleinstes Problem an diesem Tag.",
+   "bild": "Leo holding a big chocolate bar and shrugging, chaos in the background"
+  },
+  {
+   "say": "Und dann ist da noch die Sache mit Tag und Nacht.",
+   "bild": "a split scene: half bright sunny day, half dark starry night, cartoon style",
+   "titel": "TAG & NACHT"
+  },
+  {
+   "say": "Die Erde würde sich nicht mehr um sich selbst drehen. Aber sie würde weiterhin um die Sonne kreisen.",
+   "bild": "cartoon earth orbiting the sun on a dotted path, not spinning"
+  },
+  {
+   "say": "Das heißt: Ein Tag würde ein ganzes Jahr dauern.",
+   "bild": "gleich",
+   "titel": "1 TAG = 1 JAHR"
+  },
+  {
+   "say": "Sechs Monate Sonne am Stück. Und danach sechs Monate Dunkelheit.",
+   "bild": "Leo sweating under a burning sun in a dry landscape, then shivering in the dark next to it, split image"
+  },
+  {
+   "say": "Auf der Tagseite würde es unerträglich heiß werden. Auf der Nachtseite würde alles gefrieren.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Pflanzen, Tiere, die Landwirtschaft, unser ganzer Rhythmus: Alles ist auf vierundzwanzig Stunden eingestellt.",
+   "bild": "a cartoon farm with confused animals and wilting crops, sun stuck in the sky"
+  },
+  {
+   "say": "Wie könnten Menschen auf so einer Erde überhaupt überleben?",
+   "bild": "a group of cartoon people walking with backpacks and carts across a landscape at dusk, sun low on the horizon",
+   "titel": "ÜBERLEBEN?"
+  },
+  {
+   "say": "Die beste Gegend wäre wohl die Dämmerungszone. Der schmale Streifen zwischen Tag und Nacht.",
+   "bild": "cartoon earth seen from space, one half bright, one half dark, a glowing ring of twilight between them",
+   "titel": "DÄMMERUNGSZONE"
+  },
+  {
+   "say": "Dort ist es nicht glühend heiß und nicht eiskalt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Aber dieser Streifen bleibt nicht stehen. Weil die Erde weiter um die Sonne kreist, wandert er langsam weiter.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Am Äquator wären das rund hundert Kilometer am Tag. Die Menschen müssten also ständig mitwandern.",
+   "bild": "a long caravan of cartoon people, tents and vehicles moving across a plain at sunset, Leo leading the way",
+   "titel": "≈ 110 km / Tag"
+  },
+  {
+   "say": "Die ganze Menschheit, für immer auf Wanderschaft. Immer der Dämmerung hinterher.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und wie es auf so einem Planeten aussehen könnte, zeigt uns übrigens unser Nachbar: die Venus.",
+   "bild": "cartoon planet venus glowing yellow and orange in space with thick swirling clouds",
+   "titel": "DIE VENUS"
+  },
+  {
+   "say": "Die Venus dreht sich extrem langsam. Ein Tag auf der Venus dauert länger als ein ganzes Venusjahr.",
+   "bild": "gleich",
+   "titel": "1 TAG > 1 JAHR"
+  },
+  {
+   "say": "Allerdings ist die Venus auch von einer dichten, giftigen Wolkendecke umhüllt. Mit über vierhundertsechzig Grad ist sie heißer als ein Pizzaofen.",
+   "bild": "Leo in a space suit standing on a hot orange volcanic venus surface, sweating, with a pizza oven next to him, funny",
+   "titel": "> 460 °C"
+  },
+  {
+   "say": "Ganz so schlimm würde es bei uns nicht werden. Aber gemütlich wäre es auch nicht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und es gibt noch ein Problem, das man nicht sieht.",
+   "bild": "cartoon earth with glowing blue magnetic field lines around it, protecting it from solar wind"
+  },
+  {
+   "say": "Forscher vermuten, dass die Drehung der Erde mit hilft, unser Magnetfeld zu erzeugen.",
+   "bild": "gleich",
+   "titel": "MAGNETFELD"
+  },
+  {
+   "say": "Dieses Magnetfeld schützt uns vor gefährlicher Strahlung aus dem All. Würde es schwächer, hätten wir ein echtes Problem.",
+   "bild": "the sun blasting a stream of glowing particles toward the earth, a weak flickering shield around the planet"
+  },
+  {
+   "say": "Die gute Nachricht kommt jetzt.",
+   "bild": "Leo smiling and giving a thumbs up, bright sunny background",
+   "titel": "ENTWARNUNG"
+  },
+  {
+   "say": "Dass die Erde von einer Sekunde auf die andere stoppt, ist praktisch unmöglich.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Es gibt keine bekannte Kraft, die einen ganzen Planeten so plötzlich abbremsen könnte.",
+   "bild": "cartoon earth spinning happily in space with a smiling sun nearby"
+  },
+  {
+   "say": "Aber ganz richtig ist es auch nicht, dass sich nichts ändert.",
+   "bild": "the cartoon moon pulling gently on the earth's oceans with glowing lines, tides"
+  },
+  {
+   "say": "Der Mond bremst die Erde nämlich ganz, ganz langsam ab. Durch Ebbe und Flut.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Dadurch wird ein Tag ungefähr alle hundert Jahre um knapp zwei Tausendstelsekunden länger.",
+   "bild": "a giant cartoon clock with the second hand moving very slowly, Leo looking at it bored",
+   "titel": "+ 1,7 ms / 100 Jahre"
+  },
+  {
+   "say": "Zur Zeit der Dinosaurier hatte ein Tag deshalb nur etwa dreiundzwanzigeinhalb Stunden.",
+   "bild": "cartoon dinosaurs looking at a clock showing 23 hours, funny",
+   "titel": "Dinos: ≈ 23,5 h"
+  },
+  {
+   "say": "Bis die Erde wirklich stillsteht, würde es also unvorstellbar lange dauern. Und vorher passieren ganz andere Dinge im Universum.",
+   "bild": "cartoon earth in space with a wide galaxy behind it, calm and peaceful"
+  },
+  {
+   "say": "Du kannst die Mathearbeit am Dienstag also leider nicht ausfallen lassen.",
+   "bild": "Leo sitting at a school desk with a math test, rolling his eyes, funny"
+  },
+  {
+   "say": "Aber jetzt bist du dran: Welches Was-wäre-wenn sollen wir als Nächstes durchspielen?",
+   "bild": "Leo pointing at the viewer with a big smile, glowing question marks around him",
+   "titel": "DEINE IDEE?"
+  },
+  {
+   "say": "Schreib es in die Kommentare, und abonnier den Kanal, damit du die nächste Folge nicht verpasst.",
+   "bild": "gleich"
+  }
  ]
 }
