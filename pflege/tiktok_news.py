@@ -606,25 +606,43 @@ def script(avoid):
     user = (f"Heute ist der {today}. Suche eine aktuelle, belegte Pflege-Nachricht aus Deutschland (letzte 30 Tage) mit "
             "Überraschungseffekt: z. B. Abrechnungsbetrug, neue Regeln, Pflegegeld, Personalmangel, Gerichtsurteile, Studien. "
             f"Diese Themen gab es schon (nicht wiederholen): {avoid or 'keine'}.\n\n{FORMAT}")
-    msgs = [{"role": "user", "content": user}]
-    for _ in range(4):
-        resp = client.messages.create(model=config.ANTHROPIC_MODEL, max_tokens=16000, system=SYSTEM,
+    # Schritt 1: Recherche mit Websuche -> Faktenblatt (Text über evtl. mehrere pause_turn-Runden sammeln)
+    research = (f"Heute ist der {today}. Suche eine aktuelle, belegte Pflege-Nachricht aus Deutschland (letzte 30 Tage) mit "
+                "Überraschungseffekt: z. B. Abrechnungsbetrug, neue Regeln, Pflegegeld, Personalmangel, Gerichtsurteile, Studien. "
+                f"Diese Themen gab es schon (nicht wiederholen): {avoid or 'keine'}.\n"
+                "Gib als Ergebnis ein kurzes Faktenblatt aus: Thema, Hauptquelle (Name + URL), 6-12 belegte Fakten mit Zahlen. Noch kein Skript.")
+    msgs = [{"role": "user", "content": research}]
+    parts = []
+    for _ in range(5):
+        resp = client.messages.create(model=config.ANTHROPIC_MODEL, max_tokens=8000, system=SYSTEM.rsplit("\n", 1)[0],
                                       tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
                                       messages=msgs)
+        if resp.stop_reason == "refusal":
+            raise RuntimeError("Recherche abgelehnt")
+        parts += [b.text for b in resp.content if b.type == "text"]
         if resp.stop_reason == "pause_turn":
-            msgs = [{"role": "user", "content": user}, {"role": "assistant", "content": resp.content}]
+            msgs = msgs + [{"role": "assistant", "content": resp.content}]
             continue
         break
-    if resp.stop_reason == "refusal":
-        raise RuntimeError("Skript abgelehnt")
-    txt = "".join(b.text for b in resp.content if b.type == "text")
-    m = re.search(r"\{[\s\S]*\}\s*$", txt.strip())
-    if not m:
-        raise RuntimeError(f"kein JSON: {txt[-300:]}")
-    data = json.loads(m.group(0))
-    if not data.get("szenen"):
-        raise RuntimeError("Skript ohne Szenen")
-    return data
+    facts = "".join(parts).strip()
+    if len(facts) < 200:
+        raise RuntimeError(f"Recherche zu dünn: {facts[:200]}")
+    # Schritt 2: Skript aus dem Faktenblatt (ohne Werkzeuge, nur JSON)
+    last = ""
+    for attempt in range(2):
+        resp = client.messages.create(model=config.ANTHROPIC_MODEL, max_tokens=12000, system=SYSTEM, messages=[{
+            "role": "user", "content": f"Faktenblatt (nur diese Fakten verwenden):\n{facts}\n\n{FORMAT}\n\nAntworte nur mit dem JSON-Objekt."}])
+        if resp.stop_reason == "refusal":
+            raise RuntimeError("Skript abgelehnt")
+        last = "".join(b.text for b in resp.content if b.type == "text")
+        i, j = last.find("{"), last.rfind("}")
+        try:
+            data = json.loads(last[i:j + 1])
+            if data.get("szenen"):
+                return data
+        except Exception as e:  # noqa: BLE001
+            print("  JSON-Fehler, neuer Versuch:", e)
+    raise RuntimeError(f"kein gültiges JSON: {last[-300:]}")
 
 
 # ---------------------------------------------------------------- Upload
