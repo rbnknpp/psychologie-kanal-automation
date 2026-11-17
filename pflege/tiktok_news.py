@@ -603,6 +603,7 @@ Regeln für "szenen" (14-22 Stück, zusammen 140-190 Wörter, ca. 60-80 Sekunden
   {"typ":"liste","tag":"laut <Quelle>","titel":"Und das ist nicht alles:","punkte":[{"icon":"✨","text":"Beamen"}]}  (wächst: in Folgeszenen dieselbe Liste mit einem Punkt mehr)
   {"typ":"zahl","oben":"zurückgeholt in 2 Jahren:","wert":"7,5 Mio. €","balken":0.4}
   {"typ":"frage","text":"Den Preis zahlen die [[Ehrlichen]]."}
+- PFLICHT: Mindestens 8 Szenen mit sichtbarem Element außer "keins" (chip, ueberschrift, glow, tabelle, liste, zahl, frage), davon mindestens 2 verschiedene Kartentypen aus chip/tabelle/liste/zahl. Jede genannte Zahl wird als "zahl" oder "chip" gezeigt. Höchstens 5 Szenen mit "keins".
 - Ein Element darf über mehrere Szenen gleich bleiben (identisches Objekt wiederholen).
 - Letzte Szene: Frage an die Zuschauer + „Schreib es in die Kommentare." mit element frage.
 - Zahlen im "say" so schreiben, wie sie gesprochen werden (z. B. "siebeneinhalb Millionen Euro")."""

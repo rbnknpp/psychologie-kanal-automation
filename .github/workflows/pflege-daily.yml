@@ -99,6 +99,7 @@ jobs:
           path: |
             output/pflege/**/video.mp4
             output/pflege_tiktok/**/video.mp4
+            output/pflege_tiktok/**/script.json
           retention-days: 3
       - name: Zustand sichern
         if: ${{ always() && inputs.test != true }}
