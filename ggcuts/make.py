@@ -134,16 +134,56 @@ Skip weak windows - if fewer than {n} are good, return fewer.
 
 
 # ---------------------------------------------------------------- Rendern
+# Schutzzonen fuer TikTok + Instagram Reels (1080x1920): oben ~220 px Kopfzeile, unten ~480 px Caption/Buttons,
+# rechts ~130 px Like-/Kommentar-Leiste. Text bleibt in x 120..960 (max. 820 px breit) und y 240..1400.
+TEXT_MAX_W = 820
+SUB_FS, HOOK_FS = 96, 76
+_FONTS = {}
+
+
+def text_w(txt, size):
+    from PIL import ImageFont
+    f = _FONTS.get(size) or _FONTS.setdefault(size, ImageFont.truetype(str(HERE / "fonts" / "Anton-Regular.ttf"), size))
+    asc, desc = f.getmetrics()
+    # libass skaliert so, dass Ober- + Unterlaenge = Schriftgroesse -> Glyphen kleiner als bei PIL
+    return f.getlength(txt) * size / (asc + desc) + len(txt) * 1 + 14   # + Spacing 1 je Zeichen + Umrandung
+
+
+def fit_fs(txt, size, max_w=TEXT_MAX_W, min_size=54):
+    while size > min_size and text_w(txt, size) > max_w:
+        size -= 2
+    return size
+
+
+def wrap_hook(hook):
+    """Hook in max. 2 Zeilen umbrechen; Schrift notfalls verkleinern, damit nichts aus dem Bild ragt."""
+    words, size = hook.upper().split(), HOOK_FS
+    while True:
+        lines, cur = [], ""
+        for w in words:
+            t = f"{cur} {w}".strip()
+            if cur and text_w(t, size) > TEXT_MAX_W:
+                lines.append(cur)
+                cur = w
+            else:
+                cur = t
+        lines.append(cur)
+        if (len(lines) <= 2 and all(text_w(l, size) <= TEXT_MAX_W for l in lines)) or size <= 50:
+            return "\\N".join(lines), size
+        size -= 4
+
+
 def ass_time(t):
     return f"{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}"
 
 
-def subtitles(src, ass, hook, sub_y):
+def subtitles(src, ass, hook, sub_y, hook_y):
     segs, _ = whisper().transcribe(str(src), language="en", word_timestamps=True, vad_filter=True)
     words = [w for s in segs for w in s.words if w.word.strip()]
     head = f"""[Script Info]
 PlayResX: 1080
 PlayResY: 1920
+WrapStyle: 2
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: W,Anton,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,6,2,5,40,40,0,1
@@ -153,18 +193,21 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     ev = []
     if hook:
-        ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(3.2)},H,,0,0,0,,{{\\pos(540,{sub_y - 650})}}{hook.upper()}")
+        htxt, hfs = wrap_hook(hook)
+        ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(3.2)},H,,0,0,0,,{{\\pos(540,{hook_y})\\fs{hfs}}}{htxt}")
     for i in range(0, len(words), 3):
         grp = words[i:i + 3]
         end = grp[-1].end + 0.15
         if i + 3 < len(words):
             end = min(end, words[i + 3].start)
+        plain = " ".join(g.word.strip().upper() for g in grp)
+        fs = fit_fs(plain, SUB_FS)                 # lange Woerter -> kleinere Schrift statt Ueberlauf
         for k, w in enumerate(grp):
             we = grp[k + 1].start if k + 1 < len(grp) else end
             txt = " ".join(("{\\c&H0000E6FF&}" + g.word.strip().upper() + "{\\c&H00FFFFFF&}") if g is w
                            else g.word.strip().upper() for g in grp)
             ev.append(f"Dialogue: 0,{ass_time(w.start)},{ass_time(max(we, w.start + 0.05))},W,,0,0,0,,"
-                      f"{{\\pos(540,{sub_y})}}{txt}")
+                      f"{{\\pos(540,{sub_y})\\fs{fs}}}{txt}")
     ass.write_text(head + "\n".join(ev), encoding="utf-8")
     return " ".join(w.word.strip() for w in words)
 
@@ -288,7 +331,10 @@ def render(camp, vod, start, end, name, hook):
         return None, "", None
     cam_layout = lay == "cam"
     ass = WORK / f"{name}.ass"
-    text = subtitles(raw, ass, hook, 1430 if cam_layout else 1500)
+    # Facecam-Layout: Kamera oben (0..760), Hook im Gameplay darunter. Kamera bildfuellend: Gesicht sitzt
+    # ca. bei y 450..900 -> Hook unterhalb des Gesichts. Untertitel immer ueber der TikTok-Caption-Zone (< 1400).
+    sub_y, hook_y = (1270, 900) if cam_layout else (1320, 1170)
+    text = subtitles(raw, ass, hook, sub_y, hook_y)
     ov_file = HERE / camp["overlay"] if camp.get("overlay") else None
     if cam_layout:
         x, y, w, h = box
@@ -305,10 +351,10 @@ def render(camp, vod, start, end, name, hook):
         cmd.write_text("".join(f"{t:.3f} crop@trk x {x};\n" for t, x in box), encoding="utf-8")
         base = (f"[0:v]scale=1920:1080,sendcmd=f={cmd.name},crop@trk=608:1080:{box[0][1]}:0,"
                 f"scale=1080:1920,format=yuv420p[st]")
-        ov_y = 180
+        ov_y = 240   # unter der TikTok-/Reels-Kopfzeile
     else:
         base = "[0:v]scale=1920:1080,crop=608:1080:656:0,scale=1080:1920,format=yuv420p[st]"
-        ov_y = 180
+        ov_y = 240
     if ov_file:
         fc = base + f";[1:v]scale=980:-2,format=rgba[ov];[st][ov]overlay=(W-w)/2:{ov_y}[o1];[o1]ass={ass.name}:fontsdir=fonts[v]"
     else:
@@ -318,11 +364,48 @@ def render(camp, vod, start, end, name, hook):
     (fonts / "Anton-Regular.ttf").write_bytes((HERE / "fonts" / "Anton-Regular.ttf").read_bytes())
     inputs = ["-i", raw.name] + (["-i", str(ov_file.resolve())] if ov_file else [])
     sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "1", *inputs,
-        "-filter_complex", fc, "-map", "[v]", "-map", "0:a", "-r", "30", "-c:v", "libx264", "-preset", "medium",
-        "-crf", "21", "-maxrate", "6M", "-bufsize", "12M", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart",
-        out.name], cwd=WORK)
+        "-filter_complex", fc, "-map", "[v]", "-map", "0:a", *EXPORT, out.name], cwd=WORK)
     raw.unlink(missing_ok=True)
+    problem = qa_check(out)
+    if problem:
+        print(f"  QA-Pruefung fehlgeschlagen ({problem}) - Clip verworfen", flush=True)
+        out.unlink(missing_ok=True)
+        return None, "", None
     return out, text, cam_layout
+
+
+# TikTok/Instagram-taugliche Ausgabe: H.264 High@4.1, 30 fps konstant, Keyframe jede Sekunde (geschlossene GOP),
+# BT.709, AAC 48 kHz Stereo, moov vorne. Lange GOPs (vorher 8 s) fuehrten in der TikTok-Vorschau zu Schwarzbild.
+EXPORT = ["-r", "30", "-fps_mode", "cfr", "-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-level:v", "4.1",
+          "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-g", "30", "-keyint_min", "30", "-sc_threshold", "0",
+          "-flags", "+cgop", "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+          "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", "-movflags", "+faststart"]
+
+
+def qa_check(path):
+    """Vor dem Upload: 1080x1920, Bild- und Tonspur gleich lang, keine Schwarz-/Standbild-Strecken, fehlerfrei decodierbar."""
+    probe = lambda sel, ent: subprocess.run(["ffprobe", "-v", "error", "-select_streams", sel, "-show_entries", ent,
+                                             "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout.strip()
+    try:
+        w, h = map(int, probe("v:0", "stream=width,height").split(",")[:2])
+        vd = float(probe("v:0", "stream=duration") or 0)
+        ad = float(probe("a:0", "stream=duration") or 0)
+    except ValueError:
+        return "nicht lesbar"
+    if (w, h) != (1080, 1920):
+        return f"Format {w}x{h}"
+    if vd < 7 or abs(vd - ad) > 0.5:
+        return f"Bild {vd:.1f}s / Ton {ad:.1f}s"
+    full = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", "blackdetect=d=1.0:pix_th=0.06,freezedetect=n=0.001:d=6",
+                           "-f", "null", "-"], capture_output=True, text=True).stderr
+    bad = re.search(r"error while decoding|Invalid data found|corrupt", full, re.I)
+    if bad:
+        return "Decoder-Fehler: " + bad.group(0)
+    if "black_start" in full:
+        return "Schwarzbild " + re.findall(r"black_start:[\d.]+", full)[0]
+    if "freeze_start" in full:
+        return "Standbild " + re.findall(r"freeze_start: [\d.]+", full)[0]
+    return None
 
 
 def queue(path, title, caption, seconds, camp=None):
