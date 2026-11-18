@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Warum unsymmetrische Gesten dich unglaubwürdig machen",
-    "Am Ende zählt nicht die Geste, sondern das Gesamtbild",
-    "Warum du beim Lügen öfter nach oben schaust",
-    "Dein Gehirn braucht nur eine Silbe, um Wut zu erkennen",
-    "Warum du bei einem Fremden zuerst auf die Schuhe schaust",
-    "Dein Gehirn hält Berührung am Rücken für vertrauenswürdiger als am Arm",
-    "Warum du in einem lauten Raum automatisch lauter sprichst, als nötig",
-    "3 Sekunden Blickabwendung reichen, um als unsicher zu gelten",
-    "Warum dir eine fremde Hand auf der Schulter mehr sagt als Worte",
-    "Dein Gehirn braucht länger, um ein ernstes Gesicht zu vergessen",
-    "Warum du beim Telefonieren öfter im Kreis läufst",
-    "Dein Gehirn erkennt Ironie an der Stimme, nicht am Inhalt",
-    "Warum du beim Zuhören öfter die Arme verschränkst, als du denkst",
     "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz",
     "Warum du beim Vorstellen deinen eigenen Namen leiser sagst",
     "Warum du bei einer Entschuldigung zuerst auf die Hände schaust",
@@ -199,7 +186,20 @@
     "Warum deine Augenbrauen beim Verstehen kurz zusammenfallen und wieder lösen",
     "Dein Gehirn verrät sich durch eine zu lange Pause vor dem Nicken",
     "Warum ein leichtes Kopfschütteln beim Zuhören oft unbemerkt Zustimmung zeigt",
-    "Am Ende zeigt nicht eine Geste, sondern das Zusammenspiel von Nicken, Blick und Brauen echtes Interesse"
+    "Am Ende zeigt nicht eine Geste, sondern das Zusammenspiel von Nicken, Blick und Brauen echtes Interesse",
+    "Warum deine Augenbrauen beim Lügen kaum noch zucken",
+    "3 Grad Kopfneigung entscheiden, ob du als arrogant wirkst",
+    "Dein Gehirn merkt an deiner Handhaltung, ob du wirklich entspannt bist",
+    "Warum du beim Komplimente-Bekommen zuerst den Blick senkst",
+    "Dein Gehirn unterdrückt dein Lächeln, wenn ein Lob zu groß wirkt",
+    "Warum deine Hand zur Haarsträhne wandert, wenn dich jemand lobt",
+    "Dein Gehirn verzögert dein Danke, wenn ein Kompliment unerwartet kommt",
+    "Warum deine Schultern sich heben, wenn ein Kompliment zu persönlich wird",
+    "Dein Gehirn lässt dich bei einem Kompliment öfter die Lippen zusammenpressen",
+    "3 Sekunden Blickkontakt entscheiden, ob du ein Kompliment wirklich annimmst",
+    "Warum du nach einem Kompliment öfter kurz die Kleidung glattstreichst",
+    "Dein Gehirn speichert ein Kompliment stärker ab, wenn eine Berührung dazukommt",
+    "Am Ende zeigt nicht ein einzelnes Signal, sondern das Zusammenspiel, ob ein Kompliment wirklich ankommt"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -213,6 +213,7 @@
     "Wie unbewusste Körpersignale bei Streit und Meinungsverschiedenheiten zeigen, ob jemand verteidigt, einlenkt oder innerlich abschaltet",
     "Wie unbewusste Körpersignale beim Warten (in der Schlange, im Wartezimmer, auf eine Antwort) zeigen, wie ungeduldig oder nervös jemand wirklich ist",
     "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt",
-    "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt"
+    "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt",
+    "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird"
   ]
 }
