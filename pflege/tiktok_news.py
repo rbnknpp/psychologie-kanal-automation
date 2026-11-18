@@ -491,6 +491,46 @@ def place(base, layer, anchor, k):
     base.alpha_composite(sm, (max(0, ox), max(0, oy)) if ox >= 0 and oy >= 0 else (0, 0))
 
 
+COVER_FRAMES = 3  # die ersten 0,1 s zeigen das Titelbild -> TikTok nimmt das erste Bild als Vorschaubild
+
+
+def cover_image(data, bg, img):
+    """Einheitliches Vorschaubild fürs Profil: Marke oben, Schlagzeile groß, Illustration, Marke unten.
+    Alles Wichtige liegt im 3:4-Ausschnitt der Profil-Kachel (y 240–1680)."""
+    fr = bg.copy()
+    d = ImageDraw.Draw(fr)
+    # Kopf: grüne Pille "PFLEGE-NEWS"
+    fk = font(44, "ExtraBold")
+    tag = "PFLEGE-NEWS"
+    w = tw(d, tag, fk) + 70
+    rr(d, ((W - w) / 2, 300, (W + w) / 2, 380), 40, GREEN)
+    d.text((W / 2, 340), tag, font=fk, fill=WHITE, anchor="mm")
+    # Schlagzeile (Hook aus Szene 1, sonst Thema)
+    sc0 = (data.get("szenen") or [{}])[0]
+    head = ((sc0.get("element") or {}).get("text") if (sc0.get("element") or {}).get("typ") == "hook" else None) or data.get("thema", "")
+    head = head.replace("[[", "").replace("]]", "")
+    f = font(92, "ExtraBold")
+    lines = wrap(d, head, f, 900)[:4]
+    lh = 112
+    y0 = 450
+    for i, ln in enumerate(lines):
+        lw = tw(d, ln, f)
+        x = (W - lw) / 2
+        rr(d, (x - 24, y0 + i * lh - 6, x + lw + 24, y0 + i * lh + lh - 6), 12, WHITE)
+        d.text((x, y0 + i * lh), ln, font=f, fill=DARK)
+    # Illustration darunter
+    if img is not None:
+        top = y0 + len(lines) * lh + 30
+        room = 1560 - top
+        s = min(1.0, room / img.height)
+        ii = img.resize((int(img.width * s), int(img.height * s)), Image.LANCZOS)
+        fr.alpha_composite(ii, (int((W - ii.width) / 2), int(top)))
+    # Fuß: Marke
+    ff = font(46, "Bold")
+    d.text((W / 2, 1610), "Pflege mit Plan", font=ff, fill=GREEN_T, anchor="mm")
+    return fr
+
+
 def render(data, wd):
     wd.mkdir(parents=True, exist_ok=True)
     scenes = data["szenen"]
@@ -526,8 +566,15 @@ def render(data, wd):
                            "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium",
                            "-crf", "20", "-pix_fmt", "yuv420p", str(vid)], stdin=subprocess.PIPE)
     n = int(total * FPS)
+    first_img = next((s["_img"] for s in scenes if s["_img"] is not None), None)
+    cov = cover_image(data, bg, first_img)
+    cov.convert("RGB").save(wd / "cover.jpg", quality=92)
+    cov_bytes = cov.convert("RGB").tobytes()
     si = 0
     for fi in range(n):
+        if fi < COVER_FRAMES:
+            ff.stdin.write(cov_bytes)
+            continue
         t = fi / FPS
         while si + 1 < len(scenes) and t >= scenes[si + 1]["t0"]:
             si += 1
