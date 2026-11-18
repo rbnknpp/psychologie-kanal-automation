@@ -32,7 +32,10 @@
   "expertenstandards": 1,
   "geld-pro-pflegegrad": 1,
   "module": 1,
-  "validation": 1
+  "validation": 1,
+  "rente": 1,
+  "behandlungspflege": 1,
+  "pneumonie": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -67,6 +70,9 @@
   "expertenstandards|Expertenstandards in der Pflege – Was steckt wirklich dahinter? (Teil 1/3)",
   "geld-pro-pflegegrad|Wie viel Geld gibt es bei Pflegegrad 1 bis 5?",
   "module|Die 6 Module der Pflegegrad-Begutachtung einfach erklärt",
-  "validation|Validation nach Naomi Feil: Warum Widersprechen nicht hilft"
+  "validation|Validation nach Naomi Feil: Warum Widersprechen nicht hilft",
+  "rente|Rentenpunkte für pflegende Angehörige",
+  "behandlungspflege|Grundpflege oder Behandlungspflege? So unterscheidest du richtig",
+  "pneumonie|Pneumonieprophylaxe in der Pflege – Teil 1: Warum das so wichtig ist"
  ]
 }
