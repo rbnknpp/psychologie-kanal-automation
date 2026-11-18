@@ -138,10 +138,18 @@
      "caption": "Kai roasting in GTA4 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
      "layout": "full",
      "date": "2026-11-18"
+    },
+    {
+     "start": 46448.0,
+     "end": 46463.0,
+     "hook": "Y'all my parents? God damn!",
+     "caption": "Kai gets caught lacking 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
+     "layout": "full",
+     "date": "2026-11-18"
     }
    ],
    "campaign": "kaicenat",
-   "scan_pos": 43500.0,
+   "scan_pos": 57900.0,
    "rejected": [
     [
      14084.9,
@@ -322,6 +330,62 @@
     [
      40786.0,
      40841.0
+    ],
+    [
+     45984.0,
+     46039.0
+    ],
+    [
+     46148.0,
+     46203.0
+    ],
+    [
+     46422.0,
+     46477.0
+    ],
+    [
+     47014.0,
+     47069.0
+    ],
+    [
+     47352.0,
+     47407.0
+    ],
+    [
+     47650.0,
+     47705.0
+    ],
+    [
+     47974.0,
+     48029.0
+    ],
+    [
+     48066.0,
+     48121.0
+    ],
+    [
+     48172.0,
+     48227.0
+    ],
+    [
+     48406.0,
+     48461.0
+    ],
+    [
+     48828.0,
+     48883.0
+    ],
+    [
+     49640.0,
+     49695.0
+    ],
+    [
+     50024.0,
+     50079.0
+    ],
+    [
+     50410.0,
+     50465.0
     ]
    ]
   },
@@ -373,6 +437,30 @@
      "end": 7450.7,
      "hook": "I'm Timmy spam chaos begins",
      "caption": "Chat won't stop saying it 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-18"
+    },
+    {
+     "start": 8785.5,
+     "end": 8823.7,
+     "hook": "Giveaway countdown and winner reveal",
+     "caption": "🎉 Who wins the bodycam giveaway?! twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "full",
+     "date": "2026-11-18"
+    },
+    {
+     "start": 6988.9,
+     "end": 7027.0,
+     "hook": "Enemy almost learns his name",
+     "caption": "😱 So close to blowing his cover! twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-18"
+    },
+    {
+     "start": 11928.0,
+     "end": 11955.7,
+     "hook": "Teammate decapitated, Timmy confused",
+     "caption": "💀 How did I even die?! twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
      "layout": "cam",
      "date": "2026-11-18"
     }
@@ -490,6 +578,62 @@
     [
      12714.0,
      12769.0
+    ],
+    [
+     2452.0,
+     2507.0
+    ],
+    [
+     2626.0,
+     2681.0
+    ],
+    [
+     3260.0,
+     3315.0
+    ],
+    [
+     4848.0,
+     4903.0
+    ],
+    [
+     5284.0,
+     5339.0
+    ],
+    [
+     6972.0,
+     7027.0
+    ],
+    [
+     7218.0,
+     7273.0
+    ],
+    [
+     8298.0,
+     8353.0
+    ],
+    [
+     8778.0,
+     8833.0
+    ],
+    [
+     10304.0,
+     10359.0
+    ],
+    [
+     10646.0,
+     10701.0
+    ],
+    [
+     11692.0,
+     11747.0
+    ],
+    [
+     11912.0,
+     11967.0
+    ],
+    [
+     14188.0,
+     14243.0
     ]
    ]
   }
