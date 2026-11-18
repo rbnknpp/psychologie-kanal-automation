@@ -2,7 +2,7 @@
 
 Ablauf je Folge (waswaerewenn/folgen/NNN_*.json):
   Stimme (edge-tts, Wortzeiten) -> Bilder je Szene (Cloudflare Lucid Origin 1536x864 über Edge-Funktion site-bilder)
-  -> Bewegung (Kamerafahrten, Überblendungen), große Texteinblendungen, Untertitel, leise Musik -> video.mp4 + thumb.jpg
+  -> Bewegung (2,5D-Kamerafahrten mit Tiefenkarte + Partikel-Effekte, waswaerewenn/bewegung.py; Überblendungen), große Texteinblendungen, Untertitel, leise Musik -> video.mp4 + thumb.jpg
 
 Aufruf:  python -m waswaerewenn.make waswaerewenn/folgen/001_erde_stoppt.json [--upload]
 """
@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 import pflege.tiktok_news as _pt  # noqa: E402
 from pflege.tiktok_news import align, chunks, font, tts, wrap  # noqa: E402
+from waswaerewenn.bewegung import Shot  # noqa: E402
 _pt.RATE = os.getenv("WWW_RATE", "+0%")  # erzählend, etwas ruhiger als die TikToks
 
 HERE = Path(__file__).resolve().parent
@@ -121,13 +122,13 @@ def render(ep, wd):
             im = fetch(prompt_for(b, ep["figur"]), wd / "img")
             if im is None:
                 raise RuntimeError(f"Bild fehlt (Szene {i + 1}): {b[:60]}")
-            cur = {"img_src": im, "t0": sc["t0"], "scenes": []}
+            cur = {"img_src": im, "t0": sc["t0"], "scenes": [], "prompt": b}
             groups.append(cur)
         cur["scenes"].append(i)
         sc["_g"] = len(groups) - 1
     for gi, g in enumerate(groups):
         g["t1"] = groups[gi + 1]["t0"] if gi + 1 < len(groups) else total
-        g["big"] = g["img_src"].resize((int(W * 1.12), int(H * 1.12)), Image.LANCZOS)
+        g["shot"] = Shot(g["img_src"], gi, W, H, g["prompt"])
     titles = {i: title_layer(sc["titel"]) for i, sc in enumerate(scenes) if sc.get("titel")}
     caps = [(a, z, caption_layer(t)) for sc in scenes for a, z, t in chunks(sc["words"], maxw=4, maxc=28)]
     music = wd / "music.wav"
@@ -150,11 +151,11 @@ def render(ep, wd):
             si += 1
         g = groups[gi]
         k = (t - g["t0"]) / max(0.1, g["t1"] - g["t0"] + XFADE)
-        fr = frame_from(g["big"], *motion(gi, k))
+        fr = g["shot"].frame(k, t)
         if gi > 0 and t - g["t0"] < XFADE:  # Überblendung vom vorigen Bild
             p = groups[gi - 1]
             kp = (t - p["t0"]) / max(0.1, p["t1"] - p["t0"] + XFADE)
-            fr = Image.blend(frame_from(p["big"], *motion(gi - 1, kp)), fr, (t - g["t0"]) / XFADE)
+            fr = Image.blend(p["shot"].frame(kp, t), fr, (t - g["t0"]) / XFADE)
         fr = fr.convert("RGBA")
         if si in titles:
             ts = t - scenes[si]["t0"]

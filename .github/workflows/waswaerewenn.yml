@@ -77,6 +77,11 @@ jobs:
           done
       - name: Python-Pakete
         run: pip install -r requirements.txt
+      - name: Tiefenmodell (Cache)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/waswaerewenn
+          key: depth-anything-v2-small-onnx
       - name: YouTube-Zugang (Kanal Was waere wenn)
         env:
           YT_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
