@@ -1,21 +1,5 @@
 {
   "used_titles": [
-    "Dein Gehirn traut einem Flüstern mehr als einem normalen Satz",
-    "Warum du beim Vorstellen deinen eigenen Namen leiser sagst",
-    "Warum du bei einer Entschuldigung zuerst auf die Hände schaust",
-    "Kennst du das? Du erkennst schlechte Laune an der Türklinke",
-    "Warum du im Gespräch automatisch denselben Rhythmus sprichst wie dein Gegenüber",
-    "Warum du dich im Gespräch unbewusst zu deinem Lieblingsmenschen drehst",
-    "3 Sekunden Verspätung beim Lachen verraten, ob ein Witz wirklich ankam",
-    "Warum du bei einem Vortrag automatisch die Person anschaust, die am meisten nickt",
-    "Dein Gehirn erkennt eine erzwungene Berührung sofort - noch bevor du sie spürst",
-    "Warum du bei einer Lüge die Pupillen nicht kontrollieren kannst",
-    "Warum du beim Zuhören im Gespräch öfter unterbrichst als du denkst",
-    "Dein Gehirn erkennt eine Gruppe als Bedrohung schneller als eine Einzelperson",
-    "Warum du bei einem Vorstellungsgespräch schneller blinzelst",
-    "3 Sekunden Verzögerung verraten, ob jemand wirklich zuhört",
-    "Warum du im Gespräch öfter an der Augenbraue deines Gegenübers hängenbleibst",
-    "Dein Gehirn braucht einen fremden Akzent, um misstrauischer zu werden",
     "Warum du beim Zuhören öfter die Stirn in Falten legst",
     "Warum du im Wartezimmer automatisch leiser atmest",
     "Dein Gehirn hält eine tiefere Stimme für größer, nicht nur männlicher",
@@ -199,7 +183,23 @@
     "3 Sekunden Blickkontakt entscheiden, ob du ein Kompliment wirklich annimmst",
     "Warum du nach einem Kompliment öfter kurz die Kleidung glattstreichst",
     "Dein Gehirn speichert ein Kompliment stärker ab, wenn eine Berührung dazukommt",
-    "Am Ende zeigt nicht ein einzelnes Signal, sondern das Zusammenspiel, ob ein Kompliment wirklich ankommt"
+    "Am Ende zeigt nicht ein einzelnes Signal, sondern das Zusammenspiel, ob ein Kompliment wirklich ankommt",
+    "Warum deine Stimme am Telefon höher klingt als im echten Gespräch",
+    "Dein Gehirn hält feste Händedrücke für kompetenter, egal was gesagt wird",
+    "3 Sekunden Stille nach einer Frage entscheiden, ob du als nachdenklich oder unsicher giltst",
+    "Warum dein Blick beim Entschuldigen zuerst zur Seite wandert",
+    "Dein Gehirn hört eine Entschuldigung an der Tonhöhe",
+    "Warum deine Hände beim Entschuldigen offen bleiben, wenn es dir ernst ist",
+    "Dein Gehirn merkt, wenn eine Entschuldigung zu schnell kommt",
+    "Warum ein echtes Sorry die Schultern senkt, nicht hebt",
+    "Dein Gehirn zählt, wie oft 'aber' nach einem Sorry kommt",
+    "Warum dein Kopf sich beim ehrlichen Sorry leicht neigt",
+    "Dein Gehirn misst die Pause vor der Entschuldigung, nicht danach",
+    "Warum ein ernst gemeintes Sorry den Körper zum Gegenüber dreht",
+    "Am Ende verrät nicht ein Signal, sondern das Zusammenspiel aller Zeichen eine echte Entschuldigung",
+    "Warum deine Stimme beim Entschuldigen leiser wird, wenn es dir wirklich leidtut",
+    "Dein Gehirn merkt, ob eine Entschuldigung den Namen des anderen nennt",
+    "Warum deine Hände beim Entschuldigen die Distanz zuerst verkleinern"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -214,6 +214,7 @@
     "Wie unbewusste Körpersignale beim Warten (in der Schlange, im Wartezimmer, auf eine Antwort) zeigen, wie ungeduldig oder nervös jemand wirklich ist",
     "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt",
     "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt",
-    "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird"
+    "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird",
+    "Wie unbewusste Körpersignale beim Entschuldigen (Blickkontakt, Handhaltung, Tonfall) zeigen, ob eine Entschuldigung wirklich ernst gemeint ist oder nur der Form halber kommt"
   ]
 }
