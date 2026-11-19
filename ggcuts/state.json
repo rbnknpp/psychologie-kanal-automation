@@ -39,6 +39,30 @@
      "caption": "Timmy swears on the ski lodge 😤 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
      "layout": "full",
      "date": "2026-11-16"
+    },
+    {
+     "start": 7925.1,
+     "end": 7959.1,
+     "hook": "Timmy Pounds becomes Timmy Gooners",
+     "caption": "Squad name chaos reaches new levels 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "full",
+     "date": "2026-11-19"
+    },
+    {
+     "start": 14001.6,
+     "end": 14028.0,
+     "hook": "Headshot straight to the forehead",
+     "caption": "That shot was unreal 🎯 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-19"
+    },
+    {
+     "start": 4211.0,
+     "end": 4251.9,
+     "hook": "Accidental shot sparks apology tour",
+     "caption": "He can't stop laughing at himself 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-19"
     }
    ],
    "rejected": [
@@ -101,8 +125,65 @@
     [
      14486.0,
      14541.0
+    ],
+    [
+     2852.0,
+     2907.0
+    ],
+    [
+     4210.0,
+     4265.0
+    ],
+    [
+     4386.0,
+     4441.0
+    ],
+    [
+     7910.0,
+     7965.0
+    ],
+    [
+     10154.0,
+     10209.0
+    ],
+    [
+     11168.0,
+     11223.0
+    ],
+    [
+     11272.0,
+     11327.0
+    ],
+    [
+     11552.0,
+     11607.0
+    ],
+    [
+     12514.0,
+     12569.0
+    ],
+    [
+     13052.0,
+     13107.0
+    ],
+    [
+     13408.0,
+     13463.0
+    ],
+    [
+     13600.0,
+     13655.0
+    ],
+    [
+     13986.0,
+     14041.0
+    ],
+    [
+     15078.0,
+     15133.0
     ]
-   ]
+   ],
+   "campaign": "skiimasktimmy"
   },
   "2924282282": {
    "title": "🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 4🎮",
@@ -634,6 +715,79 @@
     [
      14188.0,
      14243.0
+    ]
+   ]
+  },
+  "2932305259": {
+   "title": "🌴PLAYING GTA 6 FOR THE FIRST TIME🌴",
+   "clips": [
+    {
+     "start": 1069.7,
+     "end": 1092.1,
+     "hook": "He drives like a what?!",
+     "caption": "Kai roasting his friend's driving 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
+     "layout": "full",
+     "date": "2026-11-19"
+    }
+   ],
+   "campaign": "kaicenat",
+   "scan_pos": 14700.0,
+   "rejected": [
+    [
+     1066.0,
+     1121.0
+    ],
+    [
+     1202.0,
+     1257.0
+    ],
+    [
+     1432.0,
+     1487.0
+    ],
+    [
+     1538.0,
+     1593.0
+    ],
+    [
+     4114.0,
+     4169.0
+    ],
+    [
+     4568.0,
+     4623.0
+    ],
+    [
+     8098.0,
+     8153.0
+    ],
+    [
+     8506.0,
+     8561.0
+    ],
+    [
+     9416.0,
+     9471.0
+    ],
+    [
+     9896.0,
+     9951.0
+    ],
+    [
+     10376.0,
+     10431.0
+    ],
+    [
+     10880.0,
+     10935.0
+    ],
+    [
+     11716.0,
+     11771.0
+    ],
+    [
+     14522.0,
+     14577.0
     ]
    ]
   }
