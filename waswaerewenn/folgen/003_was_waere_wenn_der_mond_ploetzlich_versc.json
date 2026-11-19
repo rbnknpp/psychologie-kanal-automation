@@ -1,0 +1,427 @@
+{
+ "titel": "Was wäre, wenn der Mond plötzlich verschwindet?",
+ "thumb_text": "MOND WEG?!",
+ "thumb_bild": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans, standing on a hill at night with mouth wide open in shock, pointing up at a pitch-black empty sky where the moon used to be, faint stars around, dramatic blue lighting, Pixar style",
+ "beschreibung": "Stell dir vor, du schaust heute Nacht in den Himmel – und der Mond ist einfach weg. Keine Gezeiten mehr, dunklere Nächte, und vielleicht sogar eine wild taumelnde Erdachse: Leo nimmt dich mit auf eine Reise durch ein Sonnensystem ohne unseren treuen Begleiter. Welches Szenario sollen wir als Nächstes durchspielen? Schreib es in die Kommentare!\n#waswärewenn #mond #weltraum #wissenschaft #astronomie",
+ "tags": [
+  "was wäre wenn",
+  "mond verschwindet",
+  "gezeiten",
+  "erdachse",
+  "weltraum für kinder",
+  "astronomie fakten",
+  "nasa",
+  "erde ohne mond",
+  "wissenschaft kinder",
+  "lunar laser ranging"
+ ],
+ "figur": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans",
+ "szenen": [
+  {
+   "say": "Leo liegt im Garten, schaut durch sein Teleskop und sucht den Mond.",
+   "bild": "Leo lying in a backyard at night looking through a small telescope pointed at the sky, warm house lights in background, Pixar style"
+  },
+  {
+   "say": "Aber heute ist komisch. Der Mond ist nirgends zu sehen, obwohl er genau jetzt da sein müsste.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Was, wenn der Mond nicht nur heute Nacht fehlt, sondern für immer einfach verschwindet?",
+   "bild": "Leo sitting up with a shocked expression, staring at an empty black sky full of stars but no moon, Pixar style",
+   "titel": "MOND WEG?!"
+  },
+  {
+   "say": "In diesem Video schauen wir uns an, was wirklich passieren würde – mit echten Zahlen aus der Wissenschaft.",
+   "bild": "Leo holding a glowing holographic model of Earth and Moon in his hands, excited expression, Pixar style"
+  },
+  {
+   "say": "Und ich verspreche dir: Manche Folgen sind viel verrückter, als du denkst.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Fangen wir ganz vorne an, bei dem Mond, den wir kennen.",
+   "bild": "Leo looking up at a normal full moon in a clear night sky, peaceful, Pixar style",
+   "titel": "Kapitel 1: Der Mond"
+  },
+  {
+   "say": "Der Mond ist dreitausendvierhundertvierundsiebzig Kilometer groß im Durchmesser. Das sind nur siebenundzwanzig Prozent der Größe der Erde.",
+   "bild": "Split screen comparison of Earth and Moon sizes floating in space, Pixar style"
+  },
+  {
+   "say": "Seine Masse beträgt gerade mal ein Komma zwei Prozent der Erdmasse. Trotzdem hat er einen riesigen Einfluss auf uns.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Vermutlich entstand er vor viereinhalb Milliarden Jahren, als ein marsgroßer Planet namens Theia mit der jungen Erde zusammenstieß.",
+   "bild": "Dramatic cosmic collision scene, young Earth hit by a smaller reddish planet, debris flying into space, Pixar style"
+  },
+  {
+   "say": "Leo findet das kaum zu glauben: Unser Mond ist im Grunde ein Trümmerstück aus einer uralten Katastrophe.",
+   "bild": "Leo staring in awe at the hologram of the collision, Pixar style"
+  },
+  {
+   "say": "Und jetzt stell dir vor, dieses Trümmerstück verschwindet einfach – von einer Sekunde auf die andere.",
+   "bild": "The moon hologram suddenly vanishing with a sparkle effect, Pixar style"
+  },
+  {
+   "say": "Schauen wir uns zuerst die Ozeane an, denn dort würden wir die Veränderung sofort spüren.",
+   "bild": "Leo standing on a beach looking at waves, Pixar style",
+   "titel": "Kapitel 2: Die Gezeiten"
+  },
+  {
+   "say": "Der Mond verursacht etwa zwei Drittel der Gezeitenkraft auf der Erde. Die Sonne sorgt für den Rest.",
+   "bild": "Diagram-like scene of ocean water bulging toward moon and sun, Pixar style"
+  },
+  {
+   "say": "Ohne Mond würden die Gezeiten also nicht komplett verschwinden, aber auf etwa ein Drittel ihrer heutigen Höhe schrumpfen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "In der Bay of Fundy in Kanada gibt es heute einen Tidenhub von bis zu sechzehn Metern – das ist der größte der Welt.",
+   "bild": "Massive tidal bay scene with dramatic water level difference, small boats stranded on mudflats, Pixar style",
+   "titel": "16 Meter Tidenhub"
+  },
+  {
+   "say": "Nach dem Verschwinden des Mondes wären es dort nur noch wenige Meter.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet das richtig schade, denn Gezeitenkraftwerke wie La Rance in Frankreich erzeugen bis zu zweihundertvierzig Megawatt Strom allein aus den Gezeiten.",
+   "bild": "Leo looking at a model of a tidal power plant, thoughtful expression, Pixar style"
+  },
+  {
+   "say": "Diese saubere Energiequelle würde fast vollständig wegfallen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Auch Mangroven und Wattenmeere wären in Gefahr, denn sie brauchen den regelmäßigen Wechsel von Ebbe und Flut, um Nährstoffe auszutauschen.",
+   "bild": "Mangrove forest with roots in shallow water, fish swimming between roots, Pixar style"
+  },
+  {
+   "say": "Weniger starke Gezeiten würden dort über lange Zeit die Artenvielfalt verändern.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Jetzt schauen wir uns an, was mit unseren Tagen passieren würde, denn auch die Erdrotation hängt am Mond.",
+   "bild": "Leo looking at a spinning globe on his desk, Pixar style",
+   "titel": "Kapitel 3: Die Erddrehung"
+  },
+  {
+   "say": "Der Mond bremst die Erdrotation durch seine Schwerkraft, und zwar um etwa zwei Komma drei Millisekunden pro Jahrhundert.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das klingt winzig, aber über Jahrmillionen summiert sich das gewaltig.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Vor etwa sechshundertzwanzig Millionen Jahren dauerte ein Tag nur einundzwanzig Komma neun Stunden. Das wissen Forscher aus fossilen Wachstumsringen in Korallen.",
+   "bild": "Ancient ocean scene with early coral structures, prehistoric Earth, Pixar style",
+   "titel": "21,9-Stunden-Tag"
+  },
+  {
+   "say": "Ohne den Mond würde die Erde also nicht mehr langsamer werden und ihre heutige Rotationsgeschwindigkeit behalten.",
+   "bild": "Leo holding a stopwatch next to the spinning globe, curious expression, Pixar style"
+  },
+  {
+   "say": "Das heißt, unsere Tage würden sich nicht mehr verlängern wie bisher.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Übrigens entfernt sich der Mond schon heute jedes Jahr um drei Komma acht Zentimeter von der Erde.",
+   "bild": "Moon slowly drifting away from Earth in space, measured by a laser beam, Pixar style",
+   "titel": "3,8 cm pro Jahr"
+  },
+  {
+   "say": "Das messen Forscher mit Spiegeln, die Astronauten während der Apollo-Missionen auf dem Mond aufgestellt haben.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet es faszinierend, dass wir mit Laserstrahlen bis zum Mond messen können.",
+   "bild": "Leo pointing excitedly at a laser beam graphic going to the moon, Pixar style"
+  },
+  {
+   "say": "Doch das Verschwinden des Mondes hätte noch eine viel dramatischere Folge für unseren Planeten.",
+   "bild": "Leo looking worried at the globe, Pixar style"
+  },
+  {
+   "say": "Es geht um die Neigung der Erdachse, die für unsere Jahreszeiten verantwortlich ist.",
+   "bild": "Earth model showing its tilted axis with seasons illustrated around it, Pixar style",
+   "titel": "Kapitel 4: Die Erdachse"
+  },
+  {
+   "say": "Heute ist die Erdachse um dreiundzwanzig Komma fünf Grad geneigt, und der Mond hilft, diese Neigung stabil zu halten.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Forscher wie Laskar und Robutel haben in den neunzehnhundertdreiundneunziger Jahren mit Computermodellen untersucht, was ohne den Mond passieren würde.",
+   "bild": "Leo looking at a wobbling Earth hologram on his desk, Pixar style"
+  },
+  {
+   "say": "Ihre Modelle zeigen, dass die Erdachse über Jahrmillionen chaotisch zwischen null und fünfundachtzig Grad schwanken könnte.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das ist allerdings eine Vermutung aus Simulationen, keine direkte Beobachtung.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Stell dir vor, die Erdachse würde eines Tages fast waagerecht liegen, so wie beim Planeten Uranus.",
+   "bild": "Earth tilted almost completely sideways like Uranus, dramatic extreme seasons visualized, Pixar style"
+  },
+  {
+   "say": "Dann hätten manche Regionen monatelang pralle Sonne und danach monatelang eisige Dunkelheit.",
+   "bild": "Split scene showing one half of Earth in blazing sun and the other in freezing darkness, Pixar style"
+  },
+  {
+   "say": "Leo schüttelt sich bei dem Gedanken an so extreme Jahreszeiten.",
+   "bild": "Leo shivering and looking uneasy at the hologram, Pixar style"
+  },
+  {
+   "say": "Zum Glück würde das nicht von heute auf morgen passieren, sondern sich über viele Jahrmillionen entwickeln.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Kommen wir zu etwas, das du sofort merken würdest: das Licht in der Nacht.",
+   "bild": "Leo walking outside at night holding a flashlight, Pixar style",
+   "titel": "Kapitel 5: Die Dunkelheit"
+  },
+  {
+   "say": "Ein Vollmond liefert nur etwa null Komma eins bis null Komma drei Lux Helligkeit.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das ist zwar vierhunderttausendmal schwächer als direktes Sonnenlicht, aber viel heller als eine mondlose Sternennacht mit nur null Komma null null eins Lux.",
+   "bild": "Comparison scene: moonlit forest path versus pitch-black starry forest path, Pixar style",
+   "titel": "400.000-mal schwächer"
+  },
+  {
+   "say": "Ohne Mond wären unsere Nächte also spürbar dunkler, vor allem auf dem Land ohne Straßenlaternen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet es gruselig, sich eine komplett mondlose Nacht im Wald vorzustellen.",
+   "bild": "Leo looking nervously into a very dark forest, only stars visible, Pixar style"
+  },
+  {
+   "say": "Auch spannende Himmelsereignisse würden uns fehlen, zum Beispiel die totale Sonnenfinsternis.",
+   "bild": "Leo wearing eclipse glasses looking up at a total solar eclipse, Pixar style",
+   "titel": "Kapitel 6: Keine Finsternis"
+  },
+  {
+   "say": "Die Sonne ist etwa vierhundertmal größer als der Mond, aber auch etwa vierhundertmal weiter entfernt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Deshalb erscheinen beide am Himmel fast gleich groß – ein echter kosmischer Zufall.",
+   "bild": "Diagram showing sun and moon appearing the same size from Earth's perspective, Pixar style"
+  },
+  {
+   "say": "Ohne Mond gäbe es dieses perfekte Zusammenspiel nicht mehr, und totale Sonnenfinsternisse wären für immer Geschichte.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet das richtig schade, denn er wollte unbedingt mal eine echte Sonnenfinsternis live erleben.",
+   "bild": "Leo looking disappointed, holding his eclipse glasses, Pixar style"
+  },
+  {
+   "say": "Jetzt schauen wir uns die Tierwelt an, denn viele Tiere richten sich nach dem Mond.",
+   "bild": "Leo looking through binoculars at a coral reef scene, Pixar style",
+   "titel": "Kapitel 7: Die Tierwelt"
+  },
+  {
+   "say": "Am Great Barrier Reef synchronisieren viele Korallenarten ihr Laichverhalten mit dem Vollmond, meist wenige Nächte danach.",
+   "bild": "Colorful coral reef releasing tiny glowing particles into the water under moonlight, Pixar style"
+  },
+  {
+   "say": "Ohne Mond könnte dieser perfekt abgestimmte Rhythmus durcheinandergeraten.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Auch Mistkäfer wären betroffen: Sie nutzen das polarisierte Mondlicht, um in geraden Linien zu laufen.",
+   "bild": "Small dung beetle rolling a ball under moonlight in a desert scene, Pixar style"
+  },
+  {
+   "say": "Eine Studie aus dem Jahr zweitausenddreizehn zeigte genau das.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet es wild, dass sogar winzige Käfer sich nach dem Mond orientieren.",
+   "bild": "Leo kneeling down to look closely at the dung beetle, fascinated expression, Pixar style"
+  },
+  {
+   "say": "Ohne Mond müssten viele Tierarten über lange Zeit neue Strategien entwickeln.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Kommen wir noch zu unserem Alltag und unserer Kultur, denn auch die hängen am Mond.",
+   "bild": "Leo looking at a calendar on his wall, Pixar style",
+   "titel": "Kapitel 8: Kalender & Kultur"
+  },
+  {
+   "say": "Der islamische Kalender basiert direkt auf den Mondphasen, ein Mondmonat dauert neunundzwanzig Komma dreiundfünfzig Tage.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Ohne Mondphasen müsste dieser Kalender komplett neu gedacht werden.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo denkt kurz nach: Wie würden wir überhaupt Monate zählen, wenn es keinen Mond mehr gibt?",
+   "bild": "Leo scratching his head, thoughtful expression, Pixar style"
+  },
+  {
+   "say": "Eine gute Frage, auf die es noch keine richtige Antwort gibt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Jetzt kommt die große Überraschung: Manche Dinge, die wir über den Mond glauben, stimmen gar nicht.",
+   "bild": "Leo holding up a finger with a surprised expression, lightbulb above his head, Pixar style",
+   "titel": "Mythen-Check"
+  },
+  {
+   "say": "Viele denken, der Mond schützt die Erde vor Asteroideneinschlägen wie ein Schutzschild.",
+   "bild": "Asteroid flying past a small moon toward Earth, Pixar style"
+  },
+  {
+   "say": "Doch das gilt unter Astronomen größtenteils als Mythos, denn seine Anziehungskraft und Fläche sind dafür viel zu klein.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Auch die Idee, dass Vollmond unseren Schlaf stört, konnte in größeren Studien nicht zuverlässig bestätigt werden.",
+   "bild": "Leo sleeping peacefully in bed with moonlight coming through the window, Pixar style"
+  },
+  {
+   "say": "Eine bekannte Studie von zweitausenddreizehn wird heute als umstritten eingestuft.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo ist erleichtert: Vielleicht schläft er ja doch nicht schlechter bei Vollmond.",
+   "bild": "Leo smiling and relaxing back into his pillow, Pixar style"
+  },
+  {
+   "say": "Noch eine Sache überrascht viele: Würde die Erde ohne Mond aus der Bahn geworfen?",
+   "bild": "Leo looking concerned at the Earth-sun hologram, Pixar style"
+  },
+  {
+   "say": "Die Antwort ist Nein, denn der gemeinsame Schwerpunkt von Erde und Mond liegt nur viertausendsechshundertsiebzig Kilometer vom Erdmittelpunkt entfernt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das liegt noch innerhalb der Erde, die einen Radius von sechstausenddreihunderteinundsiebzig Kilometern hat.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Die Erdbahn um die Sonne würde sich also kaum verändern.",
+   "bild": "Earth calmly orbiting the sun, Pixar style"
+  },
+  {
+   "say": "Leo atmet erleichtert auf: Wir würden also nicht einfach ins All geschleudert.",
+   "bild": "Leo wiping his forehead in relief, Pixar style"
+  },
+  {
+   "say": "Übrigens wird das Erde-Mond-System wegen der ungewöhnlichen Größe des Mondes manchmal als Doppelplanet bezeichnet.",
+   "bild": "Earth and Moon shown side by side as a double-planet system, Pixar style",
+   "titel": "Ein Doppelplanet?"
+  },
+  {
+   "say": "Ein ähnliches Verhältnis gibt es im Sonnensystem sonst nur beim Zwergplaneten-Paar Pluto und Charon.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo findet es cool, dass die Erde eigentlich ein kosmisches Einzelstück ist.",
+   "bild": "Leo looking proudly at the Earth-Moon hologram, Pixar style"
+  },
+  {
+   "say": "Fassen wir zusammen, was wirklich passieren würde, wenn der Mond plötzlich verschwindet.",
+   "bild": "Leo standing with arms crossed, confident expression, Pixar style",
+   "titel": "Die Zusammenfassung"
+  },
+  {
+   "say": "Die Gezeiten würden schwächer, aber nicht verschwinden. Die Nächte würden dunkler.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Unsere Tage würden nicht mehr länger werden, und totale Sonnenfinsternisse gäbe es nie wieder.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Über Jahrmillionen könnte sich sogar die Neigung der Erdachse chaotisch verändern, mit extremen Jahreszeiten als Folge.",
+   "bild": "Earth wobbling dramatically in space, Pixar style"
+  },
+  {
+   "say": "Doch keine Sorge: Die Erde würde nicht aus ihrer Bahn geworfen, und wir würden nicht sofort sterben.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo schaut noch einmal nach oben, froh, dass der Mond heute Nacht doch nur hinter einer Wolke versteckt war.",
+   "bild": "Leo looking up relieved as the moon peeks out from behind a cloud, Pixar style"
+  },
+  {
+   "say": "Puh, zum Glück nur ein Gedankenexperiment.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Aber jetzt weißt du, wie wichtig unser kleiner grauer Begleiter wirklich für uns ist.",
+   "bild": "Leo smiling, giving a thumbs up with the moon visible behind him, Pixar style"
+  },
+  {
+   "say": "Was denkst du: Könnten wir Menschen uns an eine Erde ohne Mond gewöhnen?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Schreib deine Meinung in die Kommentare, ich bin gespannt darauf.",
+   "bild": "Leo pointing at the camera with a friendly smile, Pixar style"
+  },
+  {
+   "say": "Und wenn du mehr verrückte Gedankenexperimente sehen willst, dann abonniere den Kanal und aktiviere die Glocke.",
+   "bild": "Leo waving goodbye next to the Was wäre wenn logo, Pixar style"
+  },
+  {
+   "say": "Bis zum nächsten Mal, wenn wir uns die nächste Frage stellen: Was wäre, wenn...?",
+   "bild": "Leo looking up at the starry sky one last time, smiling, Pixar style"
+  }
+ ],
+ "shorts": [
+  {
+   "von": 0,
+   "bis": 10,
+   "titel": "Was, wenn der Mond einfach verschwindet?"
+  },
+  {
+   "von": 12,
+   "bis": 19,
+   "titel": "So stark verändern sich die Gezeiten ohne Mond"
+  },
+  {
+   "von": 20,
+   "bis": 28,
+   "titel": "Ohne Mond würden unsere Tage nie länger"
+  },
+  {
+   "von": 29,
+   "bis": 36,
+   "titel": "Die Erdachse könnte komplett kippen!"
+  },
+  {
+   "von": 44,
+   "bis": 49,
+   "titel": "Nie wieder eine Sonnenfinsternis sehen?"
+  },
+  {
+   "von": 50,
+   "bis": 57,
+   "titel": "Diese Tiere brauchen den Mond zum Überleben"
+  },
+  {
+   "von": 62,
+   "bis": 70,
+   "titel": "Schützt der Mond uns wirklich vor Asteroiden?"
+  },
+  {
+   "von": 71,
+   "bis": 77,
+   "titel": "Würde die Erde ohne Mond aus der Bahn fliegen?"
+  }
+ ]
+}
