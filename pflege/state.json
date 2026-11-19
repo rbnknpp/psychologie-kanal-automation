@@ -35,7 +35,9 @@
   "validation": 1,
   "rente": 1,
   "behandlungspflege": 1,
-  "pneumonie": 1
+  "pneumonie": 1,
+  "hausnotruf": 1,
+  "sturz": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -73,6 +75,8 @@
   "validation|Validation nach Naomi Feil: Warum Widersprechen nicht hilft",
   "rente|Rentenpunkte für pflegende Angehörige",
   "behandlungspflege|Grundpflege oder Behandlungspflege? So unterscheidest du richtig",
-  "pneumonie|Pneumonieprophylaxe in der Pflege – Teil 1: Warum das so wichtig ist"
+  "pneumonie|Pneumonieprophylaxe in der Pflege – Teil 1: Warum das so wichtig ist",
+  "hausnotruf|Hausnotruf-Zuschuss: Zahlt die Pflegekasse wirklich alles?",
+  "sturz|Sturzprophylaxe: Was du wirklich wissen musst"
  ]
 }
