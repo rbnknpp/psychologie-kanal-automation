@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Warum du beim Zuhören öfter die Stirn in Falten legst",
-    "Warum du im Wartezimmer automatisch leiser atmest",
-    "Dein Gehirn hält eine tiefere Stimme für größer, nicht nur männlicher",
-    "Warum du beim Zuhören öfter die Füße in Richtung Tür drehst",
-    "3 Sekunden Pause verraten, ob ein Kompliment ehrlich gemeint ist",
-    "Dein Gehirn hält ein gespiegeltes Gesicht für vertrauenswürdiger",
-    "Warum dir ein fremdes Zimmer unbewusst Angst einflößen kann",
-    "Dein Gehirn erkennt Unsicherheit an der Art, wie du nickst",
-    "Warum du beim Flüstern automatisch näher an jemanden rückst",
-    "Dein Gehirn traut einem Lächeln mit Augenkontakt mehr als ohne",
-    "Warum du in einer fremden Gruppe zuerst nach dem Lauten suchst",
-    "Dein Gehirn hält ein zögerndes Nein für eine versteckte Zustimmung",
-    "Warum du bei einer Umarmung automatisch die Augen schließt",
     "Warum du beim Lügen seltener blinzelst als sonst",
     "Dein Gehirn braucht eine fremde Berührung an der Hand länger zum Einordnen",
     "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum",
@@ -199,7 +186,20 @@
     "Am Ende verrät nicht ein Signal, sondern das Zusammenspiel aller Zeichen eine echte Entschuldigung",
     "Warum deine Stimme beim Entschuldigen leiser wird, wenn es dir wirklich leidtut",
     "Dein Gehirn merkt, ob eine Entschuldigung den Namen des anderen nennt",
-    "Warum deine Hände beim Entschuldigen die Distanz zuerst verkleinern"
+    "Warum deine Hände beim Entschuldigen die Distanz zuerst verkleinern",
+    "Warum du beim Zuhören öfter den Kopf zur Seite neigst",
+    "3 Sekunden Blick nach unten entscheiden, ob du als schüchtern giltst",
+    "Dein Gehirn merkt an der Handflächenposition, ob du etwas verbirgst",
+    "Warum dein Blick beim Lügen nicht wegwandert, sondern länger hängen bleibt",
+    "Dein Gehirn braucht länger, um eine Lüge zu erfinden als die Wahrheit zu sagen",
+    "Warum deine Stimme beim Lügen eine Spur höher klingt",
+    "3 Details, an denen dein Gehirn eine zu glatte Geschichte erkennt",
+    "Warum deine Hände beim Lügen plötzlich still werden",
+    "Dein Gehirn hört ein 'Nein' anders, wenn ein 'Aber' folgt",
+    "Warum dein Lächeln beim Lügen zu früh verschwindet",
+    "Dein Gehirn merkt, wenn Worte und Kopfbewegung nicht zusammenpassen",
+    "Warum dein Atem beim Beschönigen kurz stockt",
+    "Am Ende verrät nicht ein Signal eine Lüge, sondern der Bruch im Muster"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -215,6 +215,7 @@
     "Wie unbewusste Körpersignale beim Trösten (Nähe suchen, Schweigen, kurze Berührungen) zeigen, ob jemand echten Trost annehmen kann oder innerlich auf Distanz bleibt",
     "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt",
     "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird",
-    "Wie unbewusste Körpersignale beim Entschuldigen (Blickkontakt, Handhaltung, Tonfall) zeigen, ob eine Entschuldigung wirklich ernst gemeint ist oder nur der Form halber kommt"
+    "Wie unbewusste Körpersignale beim Entschuldigen (Blickkontakt, Handhaltung, Tonfall) zeigen, ob eine Entschuldigung wirklich ernst gemeint ist oder nur der Form halber kommt",
+    "Wie unbewusste Körpersignale beim Lügen und Beschönigen (Blickrichtung, Tonhöhe, Pausen) zeigen, ob jemand gerade die Wahrheit dehnt oder wirklich ehrlich ist"
   ]
 }

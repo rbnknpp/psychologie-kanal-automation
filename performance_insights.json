@@ -1,27 +1,34 @@
 {
-  "generated_at": "2026-11-19T05:21:52.875242",
+  "generated_at": "2026-11-20T05:25:55.926472",
   "lookback_days": 10,
   "top": [
     {
+      "video_id": "XpUhsK9G-7w",
+      "title": "Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln",
+      "views": 297,
+      "retention": 31.6,
+      "engaged_pct": 39.4
+    },
+    {
       "video_id": "40W8xwbFGM8",
       "title": "Warum du beim Zuhören öfter den Stift in der Hand drehst",
-      "views": 187,
+      "views": 186,
       "retention": 36.0,
-      "engaged_pct": 43.9
+      "engaged_pct": 44.1
     },
     {
       "video_id": "3_4gRBRfJvs",
       "title": "5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst",
-      "views": 170,
+      "views": 173,
       "retention": 138.8,
-      "engaged_pct": 41.2
+      "engaged_pct": 40.5
     },
     {
       "video_id": "owcxy8S4qeM",
       "title": "Dein Gehirn hält ein leicht geneigtes Lächeln für ehrlicher",
-      "views": 152,
+      "views": 147,
       "retention": 28.3,
-      "engaged_pct": 27.6
+      "engaged_pct": 28.6
     },
     {
       "video_id": "Xzdyt1zohuI",
@@ -33,46 +40,53 @@
     {
       "video_id": "I8o6xf7LVPQ",
       "title": "3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut",
-      "views": 128,
+      "views": 126,
       "retention": 38.8,
-      "engaged_pct": 43.8
+      "engaged_pct": 44.4
     },
     {
       "video_id": "XJ-HBAyz600",
       "title": "3 Zentimeter mehr Kopfabstand entscheiden, ob ein Gespräch zu persönlich wirkt",
-      "views": 121,
+      "views": 120,
       "retention": 28.6,
-      "engaged_pct": 49.6
+      "engaged_pct": 50.0
     },
     {
       "video_id": "xxWt61E0wa0",
       "title": "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht",
-      "views": 112,
+      "views": 110,
       "retention": 31.1,
-      "engaged_pct": 26.8
-    },
-    {
-      "video_id": "wgdqPcTacWg",
-      "title": "Warum du beim Zögern automatisch die Lippen zusammenpresst",
-      "views": 103,
-      "retention": 34.0,
-      "engaged_pct": 35.9
+      "engaged_pct": 27.3
     }
   ],
   "flop": [
     {
       "video_id": "_pGHtDgsE7U",
       "title": "Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst",
-      "views": 16,
-      "retention": 29.2,
-      "engaged_pct": 62.5
+      "views": 18,
+      "retention": 30.8,
+      "engaged_pct": 61.1
     },
     {
-      "video_id": "b7ZldNqbnCE",
-      "title": "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit",
-      "views": 19,
+      "video_id": "3nAMVRwRCjY",
+      "title": "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken",
+      "views": 20,
+      "retention": 43.3,
+      "engaged_pct": 35.0
+    },
+    {
+      "video_id": "OXjOuO1I5eI",
+      "title": "Warum manche Menschen beim Trösten den Körper wegdrehen",
+      "views": 26,
+      "retention": 18.2,
+      "engaged_pct": 73.1
+    },
+    {
+      "video_id": "J0OrO6hj70c",
+      "title": "Warum du beim Zuhören öfter die Augen kurz schließt, wenn du zustimmst",
+      "views": 29,
       "retention": 21.9,
-      "engaged_pct": 36.8
+      "engaged_pct": 58.6
     },
     {
       "video_id": "Yy9LkmD7rcE",
@@ -80,21 +94,7 @@
       "views": 32,
       "retention": 25.1,
       "engaged_pct": 25.0
-    },
-    {
-      "video_id": "J0OrO6hj70c",
-      "title": "Warum du beim Zuhören öfter die Augen kurz schließt, wenn du zustimmst",
-      "views": 50,
-      "retention": 29.9,
-      "engaged_pct": 42.0
-    },
-    {
-      "video_id": "khRR1IxtfX0",
-      "title": "Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest",
-      "views": 64,
-      "retention": 238.6,
-      "engaged_pct": 39.1
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Warum du beim Zuhören öfter den Stift in der Hand drehst\" (187 Views, 36.0% Bindung, 43.9% nicht weitergewischt) | Hook: \"Ein Stift in der Hand verrät, wie sehr du dich langweilst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, konzentration\n- \"5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst\" (170 Views, 138.8% Bindung, 41.2% nicht weitergewischt) | Hook: \"5 Zentimeter Abstand entscheiden, wie glaubwürdig du wirkst.\" | Themen: körpersprache, psychologie, proxemik, abstand\n- \"Dein Gehirn hält ein leicht geneigtes Lächeln für ehrlicher\" (152 Views, 28.3% Bindung, 27.6% nicht weitergewischt) | Hook: \"Ein leicht schiefes Lächeln wirkt ehrlicher als ein symmetrisches.\" | Themen: psychologie, mimik, lächeln, körpersprache\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (145 Views, 27.9% Bindung, 29.0% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n- \"3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut\" (128 Views, 38.8% Bindung, 43.8% nicht weitergewischt) | Hook: \"Ein Lächeln über 3 Sekunden wirkt plötzlich unecht.\" | Themen: mimik, körpersprache, psychologie, lächeln\n- \"3 Zentimeter mehr Kopfabstand entscheiden, ob ein Gespräch zu persönlich wirkt\" (121 Views, 28.6% Bindung, 49.6% nicht weitergewischt) | Hook: \"3 Zentimeter Kopfabstand entscheiden über Nähe oder Unbehagen.\" | Themen: körpersprache, psychologie, nähe, distanz\n- \"Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht\" (112 Views, 31.1% Bindung, 26.8% nicht weitergewischt) | Hook: \"Eine hängende Schulter verrät Trauer schneller als das Gesicht.\" | Themen: psychologie, körpersprache, emotionen erkennen, mimik\n- \"Warum du beim Zögern automatisch die Lippen zusammenpresst\" (103 Views, 34.0% Bindung, 35.9% nicht weitergewischt) | Hook: \"Zusammengepresste Lippen verraten einen inneren Konflikt sofort.\" | Themen: körpersprache, mimik, psychologie, nonverbale kommunikation\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst\" (16 Views, 29.2% Bindung, 62.5% nicht weitergewischt) | Hook: \"Versteckte Hände unter dem Tisch wirken sofort unsicherer.\" | Themen: körpersprache, psychologie, vertrauen, bewerbungsgespräch\n- \"3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit\" (19 Views, 21.9% Bindung, 36.8% nicht weitergewischt) | Hook: \"3 Zentimeter Fußabstand verraten, wie sicher du dich fühlst.\" | Themen: körpersprache, psychologie, füße, unsicherheit\n- \"Warum deine Augenlider beim ersten Treffen kurz flattern\" (32 Views, 25.1% Bindung, 25.0% nicht weitergewischt) | Hook: \"Deine Augenlider flattern, bevor du Sympathie spürst.\" | Themen: körpersprache, psychologie, mimik, augen\n- \"Warum du beim Zuhören öfter die Augen kurz schließt, wenn du zustimmst\" (50 Views, 29.9% Bindung, 42.0% nicht weitergewischt) | Hook: \"Kurzes Augenschließen heißt oft: Ich stimme zu.\" | Themen: körpersprache, psychologie, mimik, augenkontakt\n- \"Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest\" (64 Views, 238.6% Bindung, 39.1% nicht weitergewischt) | Hook: \"Deine Stimme zittert öfter beim Bitten als beim Befehlen.\" | Themen: körpersprache, psychologie, stimme, stresssignale"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln\" (297 Views, 31.6% Bindung, 39.4% nicht weitergewischt) | Hook: \"Ein erzwungenes Lachen beginnt immer am Mund, nie an den Augen.\" | Themen: mimik, lachen, psychologie, körpersprache\n- \"Warum du beim Zuhören öfter den Stift in der Hand drehst\" (186 Views, 36.0% Bindung, 44.1% nicht weitergewischt) | Hook: \"Ein Stift in der Hand verrät, wie sehr du dich langweilst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, konzentration\n- \"5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst\" (173 Views, 138.8% Bindung, 40.5% nicht weitergewischt) | Hook: \"5 Zentimeter Abstand entscheiden, wie glaubwürdig du wirkst.\" | Themen: körpersprache, psychologie, proxemik, abstand\n- \"Dein Gehirn hält ein leicht geneigtes Lächeln für ehrlicher\" (147 Views, 28.3% Bindung, 28.6% nicht weitergewischt) | Hook: \"Ein leicht schiefes Lächeln wirkt ehrlicher als ein symmetrisches.\" | Themen: psychologie, mimik, lächeln, körpersprache\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (145 Views, 27.9% Bindung, 29.0% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n- \"3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut\" (126 Views, 38.8% Bindung, 44.4% nicht weitergewischt) | Hook: \"Ein Lächeln über 3 Sekunden wirkt plötzlich unecht.\" | Themen: mimik, körpersprache, psychologie, lächeln\n- \"3 Zentimeter mehr Kopfabstand entscheiden, ob ein Gespräch zu persönlich wirkt\" (120 Views, 28.6% Bindung, 50.0% nicht weitergewischt) | Hook: \"3 Zentimeter Kopfabstand entscheiden über Nähe oder Unbehagen.\" | Themen: körpersprache, psychologie, nähe, distanz\n- \"Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht\" (110 Views, 31.1% Bindung, 27.3% nicht weitergewischt) | Hook: \"Eine hängende Schulter verrät Trauer schneller als das Gesicht.\" | Themen: psychologie, körpersprache, emotionen erkennen, mimik\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst\" (18 Views, 30.8% Bindung, 61.1% nicht weitergewischt) | Hook: \"Versteckte Hände unter dem Tisch wirken sofort unsicherer.\" | Themen: körpersprache, psychologie, vertrauen, bewerbungsgespräch\n- \"Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken\" (20 Views, 43.3% Bindung, 35.0% nicht weitergewischt) | Hook: \"Ein offenes Handgelenk verrät mehr als jeder Blick.\" | Themen: körpersprache, psychologie, flirten, nonverbale kommunikation\n- \"Warum manche Menschen beim Trösten den Körper wegdrehen\" (26 Views, 18.2% Bindung, 73.1% nicht weitergewischt)\n- \"Warum du beim Zuhören öfter die Augen kurz schließt, wenn du zustimmst\" (29 Views, 21.9% Bindung, 58.6% nicht weitergewischt) | Hook: \"Kurzes Augenschließen heißt oft: Ich stimme zu.\" | Themen: körpersprache, psychologie, mimik, augenkontakt\n- \"Warum deine Augenlider beim ersten Treffen kurz flattern\" (32 Views, 25.1% Bindung, 25.0% nicht weitergewischt) | Hook: \"Deine Augenlider flattern, bevor du Sympathie spürst.\" | Themen: körpersprache, psychologie, mimik, augen"
 }
