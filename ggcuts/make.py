@@ -488,6 +488,26 @@ def run_campaign(camp, count, test, st):
     return done
 
 
+def kampagne_laeuft(cr_id):
+    """Content-Rewards-Kampagne noch aktiv? (öffentliche Kampagnenseite: status + Budget). None = nicht prüfbar."""
+    try:
+        s = requests.get(f"https://contentrewards.com/c/campaigns/{cr_id}", headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
+        s = s.replace('\\"', '"')
+        i = s.find(f'"id":"{cr_id}"')
+        if i < 0:
+            return None
+        seg = s[i:i + 20000]
+        status = (re.search(r'"status":"([a-z_]+)"', seg) or [None, "unbekannt"])[1]
+        spent = int((re.search(r'"budgetSpentCents":(\d+)', seg) or [None, 0])[1])
+        budget = int((re.search(r'"budgetCents":(\d+)', seg) or [None, 0])[1])
+        aktiv = status == "active" and (budget == 0 or spent < budget * 0.97)
+        print(f"  Kampagne {cr_id[:8]}: {status}, {spent / 100:.0f}/{budget / 100:.0f} $ -> {'aktiv' if aktiv else 'BEENDET'}", flush=True)
+        return aktiv
+    except Exception as e:  # noqa: BLE001
+        print("  Kampagnenprüfung fehlgeschlagen:", e)
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=0, help="Gesamtzahl (0 = per_day je Kampagne)")
@@ -497,6 +517,20 @@ def main():
     WORK.mkdir(exist_ok=True)
     st = load_state()
     camps = [c for c in CAMPAIGNS if c.get("active", True) and (not a.only or c["key"] == a.only)]
+    # Seit 20.11.2026 (Robin): nur noch Clips für laufende Content-Rewards-Kampagnen – ohne Kampagne kein Geld, also kein Clip.
+    laufend = []
+    for c in camps:
+        if not c.get("content_rewards"):
+            print(f"[{c['key']}] keine Content-Rewards-Kampagne hinterlegt – übersprungen", flush=True)
+            continue
+        if kampagne_laeuft(c["content_rewards"]) is False:
+            print(f"[{c['key']}] Kampagne beendet – übersprungen", flush=True)
+            continue
+        laufend.append(c)
+    camps = laufend
+    if not camps:
+        print("keine laufende Kampagne – nichts zu tun")
+        return
     total = 0
     for i, camp in enumerate(camps):
         n = camp.get("per_day", 1)
