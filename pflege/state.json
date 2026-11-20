@@ -37,7 +37,10 @@
   "behandlungspflege": 1,
   "pneumonie": 1,
   "hausnotruf": 1,
-  "sturz": 1
+  "sturz": 1,
+  "pflegestuetzpunkt": 1,
+  "bilanz": 1,
+  "fem": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -77,6 +80,9 @@
   "behandlungspflege|Grundpflege oder Behandlungspflege? So unterscheidest du richtig",
   "pneumonie|Pneumonieprophylaxe in der Pflege – Teil 1: Warum das so wichtig ist",
   "hausnotruf|Hausnotruf-Zuschuss: Zahlt die Pflegekasse wirklich alles?",
-  "sturz|Sturzprophylaxe: Was du wirklich wissen musst"
+  "sturz|Sturzprophylaxe: Was du wirklich wissen musst",
+  "pflegestuetzpunkt|Pflegestützpunkt im Saarland: Kostenlose Beratung, die kaum jemand kennt",
+  "bilanz|Flüssigkeitsbilanz führen: So machst du es richtig",
+  "fem|Freiheitsentziehende Maßnahmen in der Pflege – Teil 1: Was wirklich dahintersteckt"
  ]
 }
