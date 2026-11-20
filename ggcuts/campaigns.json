@@ -15,7 +15,9 @@
   ],
   "cam_border": "teal",
   "formats": "clutch plays, extraction tension, funny moments & fails, first impressions / hot takes, genuine reactions (jump scares, disbelief, hype), community moments (chat banter, giveaways)",
-  "content_rewards": "9a53cf91-e0ac-4157-bed0-81eb7095827d"
+  "content_rewards": "9a53cf91-e0ac-4157-bed0-81eb7095827d",
+  "active": false,
+  "pausiert": "20.11.2026: Publikum von gg.cuts ist zu ~90 % DACH, US-Kampagnen zahlen nur bei 40 %+ Tier-1-Publikum"
  },
  {
   "key": "kaicenat",
@@ -27,6 +29,8 @@
   "layout": "full",
   "caption_suffix": "twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
   "formats": "genuine funny reactions, hype moments, chaotic IRL moments with friends, chat interactions, wild one-liners",
-  "permission": "geduldet (Anfrage 16.11. gesendet, Antwort offen) - bei Beschwerde sofort deaktivieren"
+  "permission": "geduldet (Anfrage 16.11. gesendet, Antwort offen) - bei Beschwerde sofort deaktivieren",
+  "active": false,
+  "pausiert": "20.11.2026: Publikum von gg.cuts ist zu ~90 % DACH, US-Kampagnen zahlen nur bei 40 %+ Tier-1-Publikum"
  }
 ]
