@@ -63,6 +63,30 @@
      "caption": "He can't stop laughing at himself 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
      "layout": "cam",
      "date": "2026-11-19"
+    },
+    {
+     "start": 9727.6,
+     "end": 9748.1,
+     "hook": "They made love to you bro",
+     "caption": "Chat roasts him mid-game 😂 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-20"
+    },
+    {
+     "start": 8940.6,
+     "end": 8968.5,
+     "hook": "This is how real gold plays",
+     "caption": "Pure confidence on display 🔥 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-20"
+    },
+    {
+     "start": 12612.3,
+     "end": 12637.0,
+     "hook": "Revenge on Public Paul time",
+     "caption": "Chat wants payback ASAP 😈 twitch.tv/skiimasktimmy #skiimasktimmy #twitchclips #fps #gaming",
+     "layout": "cam",
+     "date": "2026-11-20"
     }
    ],
    "rejected": [
@@ -181,6 +205,62 @@
     [
      15078.0,
      15133.0
+    ],
+    [
+     1052.0,
+     1107.0
+    ],
+    [
+     2684.0,
+     2739.0
+    ],
+    [
+     4130.0,
+     4185.0
+    ],
+    [
+     4314.0,
+     4369.0
+    ],
+    [
+     5474.0,
+     5529.0
+    ],
+    [
+     5596.0,
+     5651.0
+    ],
+    [
+     5840.0,
+     5895.0
+    ],
+    [
+     7658.0,
+     7713.0
+    ],
+    [
+     8912.0,
+     8967.0
+    ],
+    [
+     9116.0,
+     9171.0
+    ],
+    [
+     9722.0,
+     9777.0
+    ],
+    [
+     9832.0,
+     9887.0
+    ],
+    [
+     12582.0,
+     12637.0
+    ],
+    [
+     14918.0,
+     14973.0
     ]
    ],
    "campaign": "skiimasktimmy"
@@ -728,10 +808,18 @@
      "caption": "Kai roasting his friend's driving 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
      "layout": "full",
      "date": "2026-11-19"
+    },
+    {
+     "start": 24962.0,
+     "end": 25000.0,
+     "hook": "RITUAL! random chaos erupts mid-scene",
+     "caption": "GTA 6 dialogue gets unhinged real quick 😂 twitch.tv/kaicenat #kaicenat #twitchclips #streamer #funny",
+     "layout": "full",
+     "date": "2026-11-20"
     }
    ],
    "campaign": "kaicenat",
-   "scan_pos": 14700.0,
+   "scan_pos": 29100.0,
    "rejected": [
     [
      1066.0,
@@ -788,6 +876,162 @@
     [
      14522.0,
      14577.0
+    ],
+    [
+     25936.8,
+     25978.0
+    ],
+    [
+     24146.0,
+     24188.0
+    ],
+    [
+     15808.0,
+     15833.0
+    ],
+    [
+     15778.0,
+     15833.0
+    ],
+    [
+     17602.0,
+     17657.0
+    ],
+    [
+     18710.0,
+     18765.0
+    ],
+    [
+     23064.0,
+     23119.0
+    ],
+    [
+     23726.0,
+     23781.0
+    ],
+    [
+     23978.0,
+     24033.0
+    ],
+    [
+     24146.0,
+     24201.0
+    ],
+    [
+     24962.0,
+     25017.0
+    ],
+    [
+     25176.0,
+     25231.0
+    ],
+    [
+     25266.0,
+     25321.0
+    ],
+    [
+     25458.0,
+     25513.0
+    ],
+    [
+     25710.0,
+     25765.0
+    ],
+    [
+     25934.0,
+     25989.0
+    ],
+    [
+     27228.0,
+     27283.0
+    ]
+   ]
+  },
+  "2933946215": {
+   "title": "SKII MASK IN LEONIDA 🌴 | 🎁 2x GTA VI GIVEAWAYS !GTA | DROPS ON | !razer !hostinger !iem",
+   "clips": [],
+   "campaign": "skiimasktimmy",
+   "scan_pos": 14700.0,
+   "rejected": [
+    [
+     4428.0,
+     4462.5
+    ],
+    [
+     11247.0,
+     11270.0
+    ],
+    [
+     12815.0,
+     12843.5
+    ],
+    [
+     11566.5,
+     11593.7
+    ],
+    [
+     14034.0,
+     14060.0
+    ],
+    [
+     11404.0,
+     11424.0
+    ],
+    [
+     4424.0,
+     4479.0
+    ],
+    [
+     5064.0,
+     5119.0
+    ],
+    [
+     7082.0,
+     7137.0
+    ],
+    [
+     9696.0,
+     9751.0
+    ],
+    [
+     11228.0,
+     11283.0
+    ],
+    [
+     11382.0,
+     11437.0
+    ],
+    [
+     11562.0,
+     11617.0
+    ],
+    [
+     11808.0,
+     11863.0
+    ],
+    [
+     12164.0,
+     12219.0
+    ],
+    [
+     12632.0,
+     12687.0
+    ],
+    [
+     12788.0,
+     12843.0
+    ],
+    [
+     13786.0,
+     13841.0
+    ],
+    [
+     14010.0,
+     14065.0
+    ],
+    [
+     14486.0,
+     14541.0
     ]
    ]
   }
