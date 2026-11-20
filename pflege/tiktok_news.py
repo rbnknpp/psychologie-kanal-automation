@@ -40,7 +40,8 @@ VOICE = os.getenv("PFLEGE_TT_VOICE", "de-DE-ConradNeural")
 RATE = os.getenv("PFLEGE_TT_RATE", "+6%")
 BILDER = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/site-bilder"
 GAMING_UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
-STYLE = ("isometric 3D illustration, clean low-poly diorama, soft studio lighting, muted colors, "
+STYLE = ("realistic 3D render, detailed miniature diorama with lifelike materials and textures, "
+         "cinematic soft lighting, gentle depth of field, natural colors, high detail, "
          "isolated on plain flat dark charcoal background, no text, no letters, no logos, centered composition")
 
 BG_TOP, BG_BOT = (36, 39, 42), (22, 24, 26)
@@ -49,7 +50,7 @@ GREEN, GREEN_T = (46, 107, 85), (215, 240, 228)
 ORANGE, RED, TEAL = (232, 128, 74), (214, 64, 64), (92, 214, 214)
 CARD = (238, 239, 236)
 
-IMG_W, IMG_H = 900, 760          # Fläche für die Illustration
+IMG_W, IMG_H = 860, 680          # Fläche für die Illustration (unter der Textzone)
 PILL_Y = 1330                    # Untertitel-Pille (oberhalb der TikTok-Bedienelemente)
 FONT = HERE / "fonts" / "Inter.ttf"
 EMOJI_FONTS = ["/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf", r"C:\Windows\Fonts\seguiemj.ttf"]
@@ -204,28 +205,81 @@ def fetch_image(prompt, cache_dir):
     return None
 
 
-# ---------------------------------------------------------------- Elemente (RGBA-Ebenen, unanimiert)
+# ---------------------------------------------------------------- Elemente (animierte Bausteine)
+# Seit 20.11.2026 (Robin: „Schrift über der Grafik, zu wenig Motion Graphics, 0815“):
+# feste Zonen (Text/Karten oben y 140–620, Illustration darunter), jedes Element besteht aus Teilen
+# mit eigener Einflug-Animation (gestaffelt), Zahlen zählen hoch, Balken füllen sich, Listen/Tabellen bauen sich auf.
+TOP_Y = 150                      # obere Kante der Text-/Kartenzone
+IMG_CY = 975                     # Mitte der Illustration (unter der Textzone, über der Pille)
+
+
+class Part:
+    """Ausgeschnittene RGBA-Ebene mit Position, Startverzögerung und Animationsart."""
+    __slots__ = ("img", "x", "y", "delay", "anim")
+
+    def __init__(self, img, x, y, delay=0.0, anim="pop"):
+        self.img, self.x, self.y, self.delay, self.anim = img, int(x), int(y), delay, anim
+
+
+def part(layer, delay=0.0, anim="pop", shadow=False):
+    if shadow:
+        layer = shadowed(layer)
+    bb = layer.getbbox()
+    if not bb:
+        return None
+    return Part(layer.crop(bb), bb[0], bb[1], delay, anim)
+
+
+def blank():
+    return Image.new("RGBA", (W, H), (0, 0, 0, 0))
+
+
+def num_parse(s):
+    """'0,9 %' -> (0.9, 1, '', ' %'); Jahreszahlen/Uhrzeiten zählen nicht hoch."""
+    m = re.search(r"(\d+(?:[.,]\d+)?)", s or "")
+    if not m or re.search(r"\d:\d", s) or re.fullmatch(r"\s*(19|20)\d\d\s*", s):
+        return None
+    raw = m.group(1)
+    dec = len(raw.split(",")[1]) if "," in raw else 0
+    try:
+        val = float(raw.replace(".", "").replace(",", ".")) if dec or "." in raw else float(raw)
+    except ValueError:
+        return None
+    return val, dec, s[:m.start()], s[m.end():]
+
+
+def num_fmt(v, dec):
+    t = f"{v:,.{dec}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return t
+
+
 def el_hook(text):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    f = font(78)
-    lines = wrap(d, text, f, 880)
-    lh = 96
-    y0 = 760 - len(lines) * lh / 2
+    parts = []
+    f = font(80, "ExtraBold")
+    d = ImageDraw.Draw(blank())
+    lines = wrap(d, text, f, 880)[:4]
+    lh = 100
     for i, ln in enumerate(lines):
+        lay = blank()
+        d = ImageDraw.Draw(lay)
         w = tw(d, ln, f)
-        x = (W - w) / 2
-        rr(d, (x - 22, y0 + i * lh - 8, x + w + 22, y0 + i * lh + lh - 4), 10, WHITE)
-        d.text((x, y0 + i * lh), ln, font=f, fill=DARK)
-    return lay, (W / 2, 760)
+        x, y = (W - w) / 2, TOP_Y + 110 + i * lh
+        rr(d, (x - 24, y - 8, x + w + 24, y + lh - 6), 12, WHITE)
+        d.text((x, y), ln, font=f, fill=DARK)
+        parts.append(part(lay, 0.08 + i * 0.12, "left"))
+    # kleiner grüner Akzentbalken darüber
+    lay = blank()
+    ImageDraw.Draw(lay).rounded_rectangle((W / 2 - 70, TOP_Y + 60, W / 2 + 70, TOP_Y + 74), radius=7, fill=GREEN_T)
+    parts.insert(0, part(lay, 0.0, "wipe"))
+    return {"parts": parts}
 
 
 def el_chip(icon, label, wert):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    lay = blank()
     d = ImageDraw.Draw(lay)
     fl, fv = font(34, "SemiBold"), font(86)
     w = max(tw(d, wert, fv), tw(d, label, fl) + 60) + 50
-    x0, y0 = (W - w) / 2, 150
+    x0, y0 = (W - w) / 2, TOP_Y
     rr(d, (x0, y0, x0 + w, y0 + 200), 22, CARD)
     d.rounded_rectangle((x0, y0, x0 + w, y0 + 64), radius=22, fill=GREEN, corners=(True, True, False, False))
     e = emoji(icon, 34) if icon else None
@@ -234,46 +288,67 @@ def el_chip(icon, label, wert):
         lay.alpha_composite(e, (int(lx), int(y0 + 15)))
         lx += 46
     d.text((lx, y0 + 12), label, font=fl, fill=WHITE)
-    d.text((x0 + 25, y0 + 78), wert, font=fv, fill=DARK)
-    return shadowed(lay), (W / 2, y0 + 100)
+    n = num_parse(wert)
+    if not n:
+        d.text((x0 + 25, y0 + 78), wert, font=fv, fill=DARK)
+    p = part(lay, 0.0, "pop", shadow=True)
+
+    def dyn(base, ts):
+        if not n:
+            return
+        k = min(1.0, max(0.0, (ts - 0.15) / 0.7))
+        v = n[0] * (1 - (1 - k) ** 3)
+        ImageDraw.Draw(base).text((x0 + 25, y0 + 78), f"{n[2]}{num_fmt(v, n[1])}{n[3]}", font=fv, fill=DARK)
+    return {"parts": [p], "dyn": dyn if n else None}
 
 
 def el_label(text):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    f = font(64)
-    for i, ln in enumerate(wrap(d, text, f, 900)):
-        d.text((W / 2, 440 + i * 78), ln, font=f, fill=WHITE, anchor="mt")
-    return lay, (W / 2, 470)
+    parts = []
+    f = font(66, "ExtraBold")
+    d = ImageDraw.Draw(blank())
+    for i, ln in enumerate(wrap(d, text, f, 900)[:3]):
+        lay = blank()
+        ImageDraw.Draw(lay).text((W / 2, TOP_Y + 250 + i * 80), ln, font=f, fill=WHITE, anchor="mt")
+        parts.append(part(lay, i * 0.1, "up"))
+    return {"parts": parts}
 
 
 def el_glow(icon, titel, unter):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    f = font(110, "ExtraBold") if True else None
+    f = font(110, "ExtraBold")
+    d = ImageDraw.Draw(blank())
     e = emoji(icon, 96) if icon else None
     tw_ = tw(d, titel, f) + (116 if e else 0)
     x = (W - tw_) / 2
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    gd = ImageDraw.Draw(glow)
-    gd.text((x + (116 if e else 0), 300), titel, font=f, fill=TEAL + (255,))
-    glow = glow.filter(ImageFilter.GaussianBlur(18))
-    lay.alpha_composite(glow)
-    lay.alpha_composite(glow)
+    y = TOP_Y + 160
+    glow = blank()
+    ImageDraw.Draw(glow).text((x + (116 if e else 0), y), titel, font=f, fill=TEAL + (255,))
+    glow = glow.filter(ImageFilter.GaussianBlur(20))
+    gp = part(glow, 0.0, "fade")
+    lay = blank()
     if e:
-        lay.alpha_composite(e, (int(x), 310))
-    d.text((x + (116 if e else 0), 300), titel, font=f, fill=(150, 235, 240))
+        lay.alpha_composite(e, (int(x), y + 10))
+    ImageDraw.Draw(lay).text((x + (116 if e else 0), y), titel, font=f, fill=(170, 240, 244))
+    parts = [gp, part(lay, 0.0, "pop")]
     if unter:
-        d.text((W / 2, 450), unter, font=font(40, "SemiBold"), fill=WHITE, anchor="mt")
-    return lay, (W / 2, 380)
+        lu = blank()
+        ImageDraw.Draw(lu).text((W / 2, y + 150), unter, font=font(40, "SemiBold"), fill=WHITE, anchor="mt")
+        parts.append(part(lu, 0.25, "up"))
+
+    def dyn(base, ts):  # pulsierendes Leuchten
+        if ts > 0.3 and gp:
+            a = 0.35 + 0.35 * (0.5 + 0.5 * math.sin(ts * 4.2))
+            g = gp.img.copy()
+            g.putalpha(g.split()[3].point(lambda v: int(v * a)))
+            base.alpha_composite(g, (gp.x, gp.y))
+    return {"parts": parts, "dyn": dyn}
 
 
 def el_tabelle(icon, titel, zeilen):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
     fh, fr = font(40), font(40, "SemiBold")
-    x0, y0, w = 90, 150, 900
+    x0, y0, w = 90, TOP_Y, 900
     h = 90 + 76 * len(zeilen) + 20
+    lay = blank()
+    d = ImageDraw.Draw(lay)
     rr(d, (x0, y0, x0 + w, y0 + h), 22, CARD)
     e = emoji(icon, 40) if icon else None
     tx = x0 + 30
@@ -281,83 +356,110 @@ def el_tabelle(icon, titel, zeilen):
         lay.alpha_composite(e, (tx, y0 + 26))
         tx += 54
     d.text((tx, y0 + 24), titel, font=fh, fill=DARK)
+    parts = [part(lay, 0.0, "pop", shadow=True)]
     for i, z in enumerate(zeilen):
+        rl = blank()
+        rd = ImageDraw.Draw(rl)
         y = y0 + 96 + i * 76
-        d.line((x0 + 24, y - 8, x0 + w - 24, y - 8), fill=(214, 216, 212), width=2)
-        a = str(z[0]) if len(z) > 0 else ""
-        b = str(z[1]) if len(z) > 1 else ""
-        etext(lay, (x0 + 40, y + 6), a, fr, RED, 38)
-        etext(lay, (x0 + 330, y + 6), b, fr, DARK, 38)
-        d.text((x0 + w - 70, y + 4), "✓", font=font(44), fill=GREEN)
-    return shadowed(lay), (W / 2, y0 + h / 2)
+        rd.line((x0 + 24, y - 8, x0 + w - 24, y - 8), fill=(214, 216, 212), width=2)
+        etext(rl, (x0 + 40, y + 6), str(z[0]) if len(z) > 0 else "", fr, RED, 38)
+        etext(rl, (x0 + 330, y + 6), str(z[1]) if len(z) > 1 else "", fr, DARK, 38)
+        rd.text((x0 + w - 70, y + 4), "✓", font=font(44), fill=GREEN)
+        parts.append(part(rl, 0.25 + i * 0.16, "left"))
+    return {"parts": parts}
 
 
-def el_liste(tag, titel, punkte, upto):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    y = 160
+def el_liste(tag, titel, punkte, alt=0):
+    """alt = Anzahl Punkte, die schon in der vorigen Szene standen (erscheinen ohne Animation)."""
+    parts = []
+    y = TOP_Y
+    st = -1.0 if alt else 0.0
     if tag:
+        lay = blank()
+        d = ImageDraw.Draw(lay)
         ft = font(32, "SemiBold")
-        t = "📰 " + tag
         w = tw(d, tag, ft) + 90
         rr(d, ((W - w) / 2, y, (W + w) / 2, y + 58), 29, GREEN)
         e = emoji("📰", 30)
         if e:
             lay.alpha_composite(e, (int((W - w) / 2 + 24), y + 14))
         d.text(((W - w) / 2 + 66, y + 10), tag, font=ft, fill=GREEN_T)
+        parts.append(part(lay, st, "pop"))
         y += 100
     if titel:
-        d.text((W / 2, y), titel, font=font(54), fill=WHITE, anchor="mt")
+        lay = blank()
+        ImageDraw.Draw(lay).text((W / 2, y), titel, font=font(54), fill=WHITE, anchor="mt")
+        parts.append(part(lay, st if alt else 0.1, "up"))
         y += 100
-    boxes = []
-    for i, p in enumerate(punkte[:upto]):
-        bx = (70, y, W - 70, y + 104)
-        rr(d, bx, 18, CARD)
+    for i, p in enumerate(punkte):
+        lay = blank()
+        d = ImageDraw.Draw(lay)
+        rr(d, (70, y, W - 70, y + 104), 18, CARD)
         e = emoji(p.get("icon") or "•", 52) if p.get("icon") else None
         if e:
             lay.alpha_composite(e, (100, int(y + 26)))
         d.text((180, y + 26), EMOJI_RE.sub("", str(p.get("text", "")))[:38], font=font(44, "SemiBold"), fill=DARK)
-        boxes.append(bx)
+        new = i >= alt
+        parts.append(part(lay, (0.2 + (i - alt) * 0.14) if new else -1.0, "left", shadow=True))
         y += 128
-    last = boxes[-1] if boxes else (0, 600, W, 700)
-    return shadowed(lay), (W / 2, (last[1] + last[3]) / 2)
+    return {"parts": parts}
 
 
 def el_zahl(oben, wert, balken):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
+    parts = []
     if oben:
-        d.text((W / 2, 520), oben, font=font(44), fill=WHITE, anchor="mt")
-    d.text((W / 2, 640), wert, font=font(150, "ExtraBold"), fill=ORANGE, anchor="mt")
-    if balken is not None:
-        b = max(0.03, min(1.0, float(balken)))
-        rr(d, (130, 860, W - 130, 920), 12, (80, 86, 90))
-        rr(d, (130, 860, 130 + (W - 260) * b, 920), 12, (170, 176, 180))
-    return lay, (W / 2, 720)
+        lay = blank()
+        ImageDraw.Draw(lay).text((W / 2, TOP_Y + 330), oben, font=font(46), fill=WHITE, anchor="mt")
+        parts.append(part(lay, 0.0, "up"))
+    fv = font(160, "ExtraBold")
+    n = num_parse(wert)
+    yv = TOP_Y + 440
+    if not n:
+        lay = blank()
+        ImageDraw.Draw(lay).text((W / 2, yv), wert, font=fv, fill=ORANGE, anchor="mt")
+        parts.append(part(lay, 0.12, "pop"))
+    b = None if balken is None else max(0.03, min(1.0, float(balken)))
+    by = TOP_Y + 690
+
+    def dyn(base, ts):
+        d = ImageDraw.Draw(base)
+        if n:
+            k = min(1.0, max(0.0, (ts - 0.1) / 0.8))
+            v = n[0] * (1 - (1 - k) ** 3)
+            if k > 0:
+                d.text((W / 2, yv), f"{n[2]}{num_fmt(v, n[1])}{n[3]}", font=fv, fill=ORANGE, anchor="mt")
+        if b is not None:
+            k = min(1.0, max(0.0, (ts - 0.25) / 0.9))
+            if k > 0:
+                rr(d, (130, by, W - 130, by + 60), 14, (80, 86, 90))
+                fill = 130 + (W - 260) * b * (1 - (1 - k) ** 3)
+                if fill > 140:
+                    rr(d, (130, by, fill, by + 60), 14, ORANGE if k < 1 else (232, 150, 110))
+    return {"parts": parts, "dyn": dyn}
 
 
 def el_frage(text):
-    """Überschrift mit [[Hervorhebung]] (petrol)."""
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    f = font(74)
+    """Überschrift mit [[Hervorhebung]] (petrol), Wörter erscheinen nacheinander."""
+    f = font(76, "ExtraBold")
     plain = text.replace("[[", "").replace("]]", "")
-    hl = set(" ".join(re.findall(r"\[\[(.+?)\]\]", text)).split())
-    lines = wrap(d, plain, f, 900)
-    y = 230
+    hl = {h.strip(".,!?") for h in " ".join(re.findall(r"\[\[(.+?)\]\]", text)).split()}
+    d = ImageDraw.Draw(blank())
+    lines = wrap(d, plain, f, 900)[:4]
+    y = TOP_Y + 120
+    parts, k = [], 0
     for ln in lines:
-        words = ln.split()
-        total = tw(d, ln, f)
-        x = (W - total) / 2
-        for wd in words:
-            col = (72, 160, 170) if wd.strip(".,!?") in {h.strip(".,!?") for h in hl} else WHITE
-            d.text((x, y), wd, font=f, fill=col)
+        x = (W - tw(d, ln, f)) / 2
+        for wd in ln.split():
+            lay = blank()
+            ImageDraw.Draw(lay).text((x, y), wd, font=f, fill=(92, 200, 205) if wd.strip(".,!?") in hl else WHITE)
+            parts.append(part(lay, k * 0.07, "pop"))
             x += tw(d, wd + " ", f)
-        y += 90
-    return lay, (W / 2, 300)
+            k += 1
+        y += 92
+    return {"parts": parts}
 
 
-def build_element(el, state):
+def build_element(el, prev=None):
     t = (el or {}).get("typ", "keins")
     if t == "hook":
         return el_hook(el.get("text", ""))
@@ -371,7 +473,10 @@ def build_element(el, state):
         return el_tabelle(el.get("icon"), el.get("titel", ""), el.get("zeilen", [])[:5])
     if t == "liste":
         pk = el.get("punkte", [])[:5]
-        return el_liste(el.get("tag"), el.get("titel"), pk, len(pk))
+        alt = 0
+        if (prev or {}).get("typ") == "liste" and prev.get("titel") == el.get("titel"):
+            alt = min(len(prev.get("punkte", [])), len(pk))
+        return el_liste(el.get("tag"), el.get("titel"), pk, alt)
     if t == "zahl":
         return el_zahl(el.get("oben", ""), el.get("wert", ""), el.get("balken"))
     if t == "frage":
@@ -379,17 +484,81 @@ def build_element(el, state):
     return None
 
 
-# ---------------------------------------------------------------- Untertitel-Pille
-def pill(text):
-    lay = Image.new("RGBA", (W, 140), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    f = font(38)
-    w = tw(d, text, f) + 90
-    x0 = (W - w) / 2
-    rr(d, (x0, 30, x0 + w, 106), 16, (236, 237, 233))
-    d.ellipse((x0 + 26, 60, x0 + 42, 76), fill=RED)
-    d.text((x0 + 58, 44), text, font=f, fill=DARK)
-    return lay
+def ease_out(x):
+    x = min(1.0, max(0.0, x))
+    return 1 - (1 - x) ** 3
+
+
+def ease_back(x):
+    c1, c3 = 1.70158, 2.70158
+    x = min(1.0, max(0.0, x))
+    return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2
+
+
+def draw_part(base, p, ts, static=False):
+    if p is None:
+        return
+    k = 1.0 if (static or p.delay < 0) else (ts - p.delay) / 0.38
+    if k <= 0:
+        return
+    if k >= 1:
+        base.alpha_composite(p.img, (p.x, p.y))
+        return
+    img, x, y = p.img, p.x, p.y
+    a = min(1.0, k * 2.0)
+    if p.anim == "pop":
+        s = 0.8 + 0.2 * ease_back(k)
+        nw, nh = max(1, int(img.width * s)), max(1, int(img.height * s))
+        img = img.resize((nw, nh), Image.BILINEAR)
+        x, y = x + (p.img.width - nw) // 2, y + (p.img.height - nh) // 2
+    elif p.anim == "up":
+        y += int(60 * (1 - ease_out(k)))
+    elif p.anim == "left":
+        x -= int(90 * (1 - ease_out(k)))
+    elif p.anim == "wipe":
+        cw = max(1, int(img.width * ease_out(k)))
+        img = img.crop((0, 0, cw, img.height))
+        a = 1.0
+    if a < 1:
+        img = img.copy()
+        img.putalpha(img.split()[3].point(lambda v: int(v * a)))
+    base.alpha_composite(img, (max(0, x), max(0, y)))
+
+
+# ---------------------------------------------------------------- Untertitel-Pille (Karaoke: aktuelles Wort grün)
+def pill_frames(words):
+    """Für einen Untertitel-Block je aktivem Wort ein fertiges Bild (W x 140)."""
+    f = font(40)
+    d = ImageDraw.Draw(blank())
+    txt = [w[2] for w in words]
+    gap = tw(d, " ", f)
+    widths = [tw(d, t, f) for t in txt]
+    total = sum(widths) + gap * (len(txt) - 1) + 90
+    x0 = (W - total) / 2
+    out = []
+    for act in range(len(txt)):
+        lay = Image.new("RGBA", (W, 140), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(lay)
+        rr(dd, (x0, 30, x0 + total, 108), 18, (236, 237, 233))
+        dd.ellipse((x0 + 26, 61, x0 + 42, 77), fill=RED)
+        x = x0 + 58
+        for i, t in enumerate(txt):
+            dd.text((x, 45), t, font=f, fill=DARK)
+            x += widths[i] + gap
+        out.append(lay)
+    return out
+
+
+def halo():
+    """Weicher grünlicher Lichtkreis hinter der Illustration."""
+    s = 760
+    yy, xx = np.mgrid[0:s, 0:s]
+    r = np.sqrt((xx - s / 2) ** 2 + (yy - s / 2) ** 2) / (s / 2)
+    a = np.clip(1 - r, 0, 1) ** 2 * 70
+    img = np.zeros((s, s, 4), np.uint8)
+    img[..., 0], img[..., 1], img[..., 2] = 70, 150, 120
+    img[..., 3] = a.astype(np.uint8)
+    return Image.fromarray(img, "RGBA")
 
 
 # ---------------------------------------------------------------- Stimme
@@ -468,29 +637,6 @@ def chunks(words, maxw=4, maxc=26):
 
 
 # ---------------------------------------------------------------- Rendern
-def ease_back(x):
-    c1, c3 = 1.70158, 2.70158
-    x = min(1.0, max(0.0, x))
-    return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2
-
-
-def place(base, layer, anchor, k):
-    """Element mit Pop-in (Skalierung um anchor, Deckkraft)."""
-    if k >= 1:
-        base.alpha_composite(layer)
-        return
-    s = 0.86 + 0.14 * ease_back(k)
-    a = min(1.0, k * 2.2)
-    sw, sh = int(W * s), int(H * s)
-    sm = layer.resize((sw, sh), Image.BILINEAR)
-    if a < 1:
-        al = sm.split()[3].point(lambda v: int(v * a))
-        sm.putalpha(al)
-    ax, ay = anchor
-    ox, oy = int(ax - ax * s), int(ay - ay * s)
-    base.alpha_composite(sm, (max(0, ox), max(0, oy)) if ox >= 0 and oy >= 0 else (0, 0))
-
-
 COVER_FRAMES = 3  # die ersten 0,1 s zeigen das Titelbild -> TikTok nimmt das erste Bild als Vorschaubild
 
 
@@ -539,7 +685,8 @@ def render(data, wd):
     align(scenes, words)
     total = scenes[-1]["t1"] + 0.6
     bg = background()
-    imgs, prev_img = {}, None
+    glow = halo()
+    imgs, prev_img, prev_el = {}, None, None
     for i, sc in enumerate(scenes):
         b = (sc.get("bild") or "").strip()
         if b.lower() in ("", "keins", "none"):
@@ -551,8 +698,15 @@ def render(data, wd):
                 imgs[b] = fetch_image(b, wd / "img")
             sc["_img"] = imgs[b]
         prev_img = sc["_img"]
-        sc["_el"] = build_element(sc.get("element"), None)
-        sc["_pills"] = [(a, z, pill(t)) for a, z, t in chunks(sc["words"])]
+        el = sc.get("element")
+        sc["_el"] = build_element(el, prev_el)
+        sc["_static"] = bool(i > 0 and el and el == scenes[i - 1].get("element"))
+        prev_el = el
+        sc["_pills"] = []
+        for a, z, _t in chunks(sc["words"]):
+            ws = [w for w in sc["words"] if a <= w[0] <= z]
+            if ws:
+                sc["_pills"].append((a, z, ws, pill_frames(ws)))
     # Musik leise darunter
     music = wd / "music.wav"
     try:
@@ -570,6 +724,39 @@ def render(data, wd):
     cov = cover_image(data, bg, first_img)
     cov.convert("RGB").save(wd / "cover.jpg", quality=92)
     cov_bytes = cov.convert("RGB").tobytes()
+    # Lichtstreifen für Übergänge (schräg, weich)
+    band = Image.new("RGBA", (520, H + 400), (0, 0, 0, 0))
+    bx = np.abs(np.linspace(-1, 1, 520))
+    ba = (np.clip(1 - bx, 0, 1) ** 2 * 46).astype(np.uint8)
+    barr = np.zeros((H + 400, 520, 4), np.uint8)
+    barr[..., 0], barr[..., 1], barr[..., 2] = 215, 240, 228
+    barr[..., 3] = ba[None, :]
+    band = Image.fromarray(barr, "RGBA").rotate(14, expand=True, resample=Image.BILINEAR)
+    BIG = ("zahl", "tabelle", "liste")
+
+    def shown(i):
+        if i < 0:
+            return None
+        return None if (scenes[i].get("element") or {}).get("typ") in BIG else scenes[i]["_img"]
+
+    def img_layer(im, z):
+        fit = min(IMG_W / im.width, IMG_H / im.height)
+        return im.resize((int(im.width * fit * z), int(im.height * fit * z)), Image.BILINEAR)
+
+    def comp(base, img, x, y):
+        x, y = int(x), int(y)
+        l, t_ = max(0, -x), max(0, -y)
+        r, b = min(img.width, W - x), min(img.height, H - y)
+        if r > l and b > t_:
+            base.alpha_composite(img.crop((l, t_, r, b)), (x + l, y + t_))
+
+    def fade(img, a):
+        img = img.copy()
+        img.putalpha(img.split()[3].point(lambda v: int(v * a)))
+        return img
+
+    rnd = np.random.default_rng(7)
+    dots = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(6, 22), rnd.uniform(2, 4.5), rnd.uniform(0, 6.3)) for _ in range(26)]
     si = 0
     for fi in range(n):
         if fi < COVER_FRAMES:
@@ -581,34 +768,81 @@ def render(data, wd):
         sc = scenes[si]
         ts = t - sc["t0"]
         fr = bg.copy()
-        im = sc["_img"]
-        if (sc.get("element") or {}).get("typ") in ("zahl", "tabelle", "liste"):
-            im = None  # große Karten stehen allein (wie im Vorbild), sonst überlappen Bild und Karte
+        d = ImageDraw.Draw(fr)
+        # treibende Lichtpunkte im Hintergrund
+        for x0, y0, sp, r, ph in dots:
+            x = (x0 + math.sin(t * 0.5 + ph) * 30) % W
+            y = (y0 - t * sp) % H
+            c = 52 + int(14 * (0.5 + 0.5 * math.sin(t * 1.3 + ph)))
+            d.ellipse((x - r, y - r, x + r, y + r), fill=(c, c + 6, c + 4))
+        # Fortschrittsbalken oben
+        d.rectangle((0, 0, int(W * min(1.0, t / total)), 7), fill=GREEN_T)
+        typ = (sc.get("element") or {}).get("typ")
+        im = shown(si)                    # große Karten stehen allein (kein Bild)
+        prev_im = shown(si - 1)
+        img_wechsel = prev_im is not None and prev_im is not im
+        # Übergang 1: altes Bild gleitet nach links raus
+        if img_wechsel and ts < 0.38:
+            ko = ease_out(ts / 0.38)
+            oi = fade(img_layer(prev_im, 1.0 - 0.08 * ko), 1 - ko)
+            comp(fr, oi, (W - oi.width) / 2 - 280 * ko, min(IMG_CY, PILL_Y - 30 - oi.height / 2) - oi.height / 2)
         if im is not None:
-            same = si > 0 and scenes[si - 1]["_img"] is im
-            # gleichmäßiger langsamer Zoom über alle Szenen mit demselben Bild
             j = si
-            while j > 0 and scenes[j - 1]["_img"] is im:
+            while j > 0 and shown(j - 1) is im:
                 j -= 1
-            tz = t - scenes[j]["t0"]
-            z = 1.0 + 0.010 * tz
-            sw, sh = int(IMG_W * z), int(IMG_H * z)
+            tz = t - scenes[j]["t0"]          # Zeit seit dieses Bild erschien
+            if j > 0 and shown(j - 1) is not None:
+                tz -= 0.18                    # erst raus, dann rein
+            if tz < 0:
+                tz = 0.0
+                k = 0.0
+            else:
+                k = ease_out(tz / 0.55)
+            z = min(1.06, 1.0 + 0.012 * tz) * (0.9 + 0.1 * k)
+            fit = min(IMG_W / im.width, IMG_H / im.height)
+            sw, sh = int(im.width * fit * z), int(im.height * fit * z)
             ii = im.resize((sw, sh), Image.BILINEAR)
-            typ = (sc.get("element") or {}).get("typ")
-            # Bildmitte: unter Karten/Überschriften etwas tiefer, unten immer über der Pille enden
-            cy = 930 if typ in ("chip", "ueberschrift", "glow", "frage", "tabelle", "liste") else 880
-            cy = min(cy, PILL_Y - 20 - sh / 2)
-            k = 1.0 if same else min(1.0, ts / 0.25)
+            cy = IMG_CY + 70 * (1 - k) + 10 * math.sin(tz * 1.25)
+            cy = min(cy, PILL_Y - 30 - sh / 2)
+            gs = 1.0 + 0.04 * math.sin(tz * 1.6)
+            gg = glow.resize((int(glow.width * gs * z), int(glow.height * gs * z)), Image.BILINEAR)
             if k < 1:
                 ii.putalpha(ii.split()[3].point(lambda v: int(v * k)))
-            fr.alpha_composite(ii, (int((W - sw) / 2), int(cy - sh / 2)))
+                gg.putalpha(gg.split()[3].point(lambda v: int(v * k)))
+            dx = int(240 * (1 - k)) if (j > 0 and shown(j - 1) is not None) else 0   # neues Bild kommt von rechts
+            comp(fr, gg, (W - gg.width) / 2 + dx, cy - gg.height / 2)
+            comp(fr, ii, (W - sw) / 2 + dx, cy - sh / 2)
+        # Übergang 2: altes Element verabschiedet sich nach oben, neues kommt kurz danach
+        prev_el = scenes[si - 1]["_el"] if si > 0 else None
+        pe, ce = (scenes[si - 1].get("element") or {}) if si > 0 else {}, (sc.get("element") or {})
+        wachsende_liste = pe.get("typ") == "liste" and ce.get("typ") == "liste" and pe.get("titel") == ce.get("titel")
+        el_wechsel = si > 0 and not sc["_static"] and prev_el is not None and not wachsende_liste
+        if el_wechsel and ts < 0.28:
+            ko = ease_out(ts / 0.28)
+            for p in prev_el["parts"]:
+                if p is not None:
+                    comp(fr, fade(p.img, 1 - ko), p.x, p.y - 60 * ko)
+        te = ts - (0.16 if el_wechsel else 0.0)
         if sc["_el"] is not None:
-            lay, anchor = sc["_el"]
-            prev_same = si > 0 and scenes[si - 1].get("element") == sc.get("element")
-            place(fr, lay, anchor, 1.0 if prev_same else ts / 0.32)
-        for a, z, p in sc["_pills"]:
+            for p in sc["_el"]["parts"]:
+                draw_part(fr, p, te, sc["_static"])
+            if sc["_el"].get("dyn") and (sc["_static"] or te > 0):
+                sc["_el"]["dyn"](fr, 9.0 if sc["_static"] else te)
+        # Übergang 3: Lichtstreifen wischt über das Bild, wenn Grafik oder Karte wechselt
+        if si > 0 and (img_wechsel or (im is not None and prev_im is None) or el_wechsel and typ in BIG) and ts < 0.5:
+            bxp = int(-band.width + (ts / 0.5) * (W + band.width))
+            comp(fr, band, bxp, -(band.height - H) // 2)
+        for a, z, ws, frames in sc["_pills"]:
             if a - 0.05 <= t < z + 0.25:
-                fr.alpha_composite(p, (0, PILL_Y))
+                act = max(0, sum(1 for w in ws if w[0] <= t) - 1)
+                p = frames[min(act, len(frames) - 1)]
+                kk = ease_back((t - a + 0.05) / 0.18)
+                if kk < 1:
+                    s = 0.9 + 0.1 * kk
+                    pw, ph = int(W * s), int(140 * s)
+                    fr.alpha_composite(p.resize((pw, ph), Image.BILINEAR), ((W - pw) // 2, PILL_Y + (140 - ph) // 2))
+                else:
+                    fr.alpha_composite(p, (0, PILL_Y))
                 break
         ff.stdin.write(fr.convert("RGB").tobytes())
     ff.stdin.close()
