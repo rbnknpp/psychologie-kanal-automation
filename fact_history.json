@@ -1,188 +1,4 @@
 {
- "Dein Gehirn vergisst Verluste schneller als Gewinne": {
-  "title": "Dein Gehirn vergisst Verluste schneller als Gewinne",
-  "hook": "Einen Gewinn erinnerst du dir oft länger als einen Verlust.",
-  "tags": [
-   "reue",
-   "psychologie",
-   "geld",
-   "entscheidungen",
-   "investieren",
-   "verhalten",
-   "gehirn",
-   "finanzen"
-  ]
- },
- "Die Zahl, die zeigt wann Sparen sich wie Verlust anfühlt": {
-  "title": "Die Zahl, die zeigt wann Sparen sich wie Verlust anfühlt",
-  "hook": "Geld zur Seite legen fühlt sich im Kopf an wie Geld verlieren.",
-  "tags": [
-   "sparen",
-   "verlustaversion",
-   "psychologie",
-   "finanzen",
-   "geld",
-   "sparplan",
-   "verhalten",
-   "budget"
-  ]
- },
- "Warum du beim Einkaufen im Kreis läufst, ohne es zu merken": {
-  "title": "Warum du beim Einkaufen im Kreis läufst, ohne es zu merken",
-  "hook": "Supermärkte zwingen dich auf eine Route, die du nie gewählt hättest.",
-  "tags": [
-   "psychologie",
-   "supermarkt",
-   "konsumpsychologie",
-   "gehirn fakten",
-   "alltagspsychologie",
-   "marketing tricks",
-   "kaufverhalten",
-   "ladengestaltung"
-  ]
- },
- "Dein Gehirn hält Dinge für wertvoller, wenn sie schwer sind": {
-  "title": "Dein Gehirn hält Dinge für wertvoller, wenn sie schwer sind",
-  "hook": "Ein schwereres Buch wirkt auf dich automatisch wichtiger.",
-  "tags": [
-   "psychologie",
-   "wahrnehmung",
-   "gehirn fakten",
-   "marketing psychologie",
-   "konsumverhalten",
-   "kognitive verzerrung",
-   "alltagspsychologie",
-   "produktdesign"
-  ]
- },
- "Warum du nach dem Sport optimistischer bist": {
-  "title": "Warum du nach dem Sport optimistischer bist",
-  "hook": "Nach zwanzig Minuten Bewegung siehst du die Welt anders.",
-  "tags": [
-   "psychologie",
-   "sport",
-   "gehirn fakten",
-   "stimmung",
-   "dopamin",
-   "wissenschaft",
-   "alltagspsychologie",
-   "motivation"
-  ]
- },
- "Die Sekunde, die entscheidet ob ein Witz lustig wirkt": {
-  "title": "Die Sekunde, die entscheidet ob ein Witz lustig wirkt",
-  "hook": "Der gleiche Witz kann lustig oder peinlich sein, nur wegen Timing.",
-  "tags": [
-   "psychologie",
-   "humor",
-   "komik",
-   "gehirn fakten",
-   "kommunikation",
-   "timing",
-   "alltagspsychologie",
-   "soziales verhalten"
-  ]
- },
- "Warum Musik dir Gänsehaut genau an bestimmten Stellen gibt": {
-  "title": "Warum Musik dir Gänsehaut genau an bestimmten Stellen gibt",
-  "hook": "Nicht jedes Lied gibt dir Gänsehaut, nur ganz bestimmte Momente darin.",
-  "tags": [
-   "psychologie",
-   "musik",
-   "gehirn fakten",
-   "dopamin",
-   "gänsehaut",
-   "emotionen",
-   "wissenschaft",
-   "alltagspsychologie"
-  ]
- },
- "Warum du dich an Gerüche aus der Kindheit sofort erinnerst": {
-  "title": "Warum du dich an Gerüche aus der Kindheit sofort erinnerst",
-  "hook": "Ein einziger Geruch kann dich zwanzig Jahre zurückbeamen.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "erinnerung",
-   "gerüche",
-   "proust effekt",
-   "wissenschaft",
-   "nostalgie",
-   "alltagspsychologie"
-  ]
- },
- "Der Grund, warum Fremdscham körperlich wehtun kann": {
-  "title": "Der Grund, warum Fremdscham körperlich wehtun kann",
-  "hook": "Du kannst dich für jemand anderen schämen, ohne selbst schuld zu sein.",
-  "tags": [
-   "psychologie",
-   "fremdscham",
-   "spiegelneuronen",
-   "gehirn fakten",
-   "emotionen",
-   "soziales verhalten",
-   "wissenschaft",
-   "alltagspsychologie"
-  ]
- },
- "Warum du im Dunkeln lauter sprichst als im Hellen": {
-  "title": "Warum du im Dunkeln lauter sprichst als im Hellen",
-  "hook": "In dunklen Räumen sprechen Menschen nachweislich lauter.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "gehirn fakten",
-   "soziales verhalten",
-   "wissenschaft",
-   "alltagspsychologie",
-   "stimme",
-   "dunkelheit"
-  ]
- },
- "3 Zahlen, die zeigen wie schnell dein erster Eindruck entsteht": {
-  "title": "3 Zahlen, die zeigen wie schnell dein erster Eindruck entsteht",
-  "hook": "Dein Gehirn urteilt über Fremde in weniger als einer Sekunde.",
-  "tags": [
-   "psychologie",
-   "erster eindruck",
-   "gehirn fakten",
-   "wissenschaft",
-   "soziales verhalten",
-   "wahrnehmung",
-   "alltagspsychologie",
-   "vertrauen"
-  ]
- },
- "Warum geteilte Kopfhörer euch näher zusammenbringen": {
-  "title": "Warum geteilte Kopfhörer euch näher zusammenbringen",
-  "hook": "Sich einen Kopfhörer zu teilen fühlt sich intimer an, als es sollte.",
-  "tags": [
-   "psychologie",
-   "beziehungen",
-   "gehirn fakten",
-   "oxytocin",
-   "nähe",
-   "wissenschaft",
-   "soziales verhalten",
-   "alltagspsychologie"
-  ]
- },
- "Warum du beim Warten auf eine Antwort ständig dein Handy checkst": {
-  "title": "Warum du beim Warten auf eine Antwort ständig dein Handy checkst",
-  "hook": "Du hast gerade geschrieben. Jetzt starrst du aufs Handy.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "dopamin",
-   "handy",
-   "smartphone sucht",
-   "verhalten",
-   "alltagsfakten",
-   "variable verstärkung",
-   "social media",
-   "aufmerksamkeit"
-  ]
- },
  "Dein Gehirn hält Menschen für vertrauenswürdiger, die langsamer sprechen": {
   "title": "Dein Gehirn hält Menschen für vertrauenswürdiger, die langsamer sprechen",
   "hook": "Zwei Menschen sagen dasselbe. Einer wirkt glaubwürdiger. Warum?",
@@ -6019,6 +5835,207 @@
    "verhaltensmuster",
    "mimik",
    "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst": {
+  "title": "Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst",
+  "hook": "Deine Füße verraten ein Gespräch, lange bevor du gehst.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "smalltalk",
+   "fußstellung",
+   "bodylanguage",
+   "mimik",
+   "soziale signale",
+   "menschliches verhalten",
+   "gesprächspsychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "3 Sekunden Verzögerung beim Händeschütteln verraten echtes Interesse": {
+  "title": "3 Sekunden Verzögerung beim Händeschütteln verraten echtes Interesse",
+  "hook": "3 Sekunden Verzögerung beim Loslassen zeigen echtes Interesse.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "händedruck",
+   "berührung",
+   "vertrauen",
+   "nonverbale kommunikation",
+   "bodylanguage",
+   "erster eindruck",
+   "soziale signale",
+   "beziehungen"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn hält eine aufrechte Haltung für kompetenter als ein Lächeln": {
+  "title": "Dein Gehirn hält eine aufrechte Haltung für kompetenter als ein Lächeln",
+  "hook": "Eine aufrechte Haltung wirkt kompetenter als jedes Lächeln.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "haltung",
+   "kompetenz",
+   "bodylanguage",
+   "erster eindruck",
+   "bewerbungsgespräch",
+   "nonverbale kommunikation",
+   "selbstbewusstsein",
+   "wirkung"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum ein Lächeln vor dem Spruch zeigt, dass ein Necken liebevoll gemeint ist": {
+  "title": "Warum ein Lächeln vor dem Spruch zeigt, dass ein Necken liebevoll gemeint ist",
+  "hook": "Bevor geneckt wird, lächelt dein Gesicht schon.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "mimik",
+   "lächeln",
+   "soziale signale",
+   "humor",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Blick entscheidet, ob ein Spaß als Angriff oder als Spiel verstanden wird": {
+  "title": "Dein Blick entscheidet, ob ein Spaß als Angriff oder als Spiel verstanden wird",
+  "hook": "Derselbe Satz wirkt anders, je nachdem wohin du schaust.",
+  "tags": [
+   "blickkontakt",
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "soziale signale",
+   "humor",
+   "augenkontakt",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Sekunden Pause nach einem Spruch verraten, ob er zu weit ging": {
+  "title": "3 Sekunden Pause nach einem Spruch verraten, ob er zu weit ging",
+  "hook": "3 Sekunden nach einem Spruch verraten alles.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "timing",
+   "soziale signale",
+   "humor",
+   "pause",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum dein Körper sich beim Necken automatisch näher zum anderen dreht": {
+  "title": "Warum dein Körper sich beim Necken automatisch näher zum anderen dreht",
+  "hook": "Beim liebevollen Necken dreht sich dein Körper zum anderen hin.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "körperhaltung",
+   "soziale signale",
+   "humor",
+   "nonverbale kommunikation",
+   "gruppendynamik"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn erkennt ein zu lautes Lachen als Tarnung für Unbehagen": {
+  "title": "Dein Gehirn erkennt ein zu lautes Lachen als Tarnung für Unbehagen",
+  "hook": "Ein zu lautes Lachen verrät oft das Gegenteil von Spaß.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lachen",
+   "necken",
+   "soziale signale",
+   "humor",
+   "stimme",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein Scherz unter engen Freunden weniger Abstand braucht als unter Fremden": {
+  "title": "Warum ein Scherz unter engen Freunden weniger Abstand braucht als unter Fremden",
+  "hook": "Je enger die Freundschaft, desto näher darf der Scherz kommen.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "nähe",
+   "proxemik",
+   "soziale signale",
+   "freundschaft",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn braucht eine Berührung, um Zweifel am Scherz aufzulösen": {
+  "title": "Dein Gehirn braucht eine Berührung, um Zweifel am Scherz aufzulösen",
+  "hook": "Eine kurze Berührung klärt mehr als jede Erklärung.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "berührung",
+   "soziale signale",
+   "humor",
+   "vertrauen",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein Spruch über dich selbst Scherze an andere entschärft": {
+  "title": "Warum ein Spruch über dich selbst Scherze an andere entschärft",
+  "hook": "Ein Scherz über dich selbst macht den nächsten Spruch sicherer.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "necken",
+   "humor",
+   "selbstironie",
+   "soziale signale",
+   "gruppendynamik",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn merkt an der Mundspannung, wenn ein Lächeln einen Spruch nur überspielt": {
+  "title": "Dein Gehirn merkt an der Mundspannung, wenn ein Lächeln einen Spruch nur überspielt",
+  "hook": "Ein angespannter Mundwinkel verrät mehr als ein Lächeln.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "mimik",
+   "lächeln",
+   "necken",
+   "soziale signale",
+   "humor",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Am Ende entscheidet nicht der Spruch, sondern das Zusammenspiel von Timing, Blick und Nähe beim Necken": {
+  "title": "Am Ende entscheidet nicht der Spruch, sondern das Zusammenspiel von Timing, Blick und Nähe beim Necken",
+  "hook": "Am Ende zählt nie der Spruch allein, sondern alles zusammen.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "necken",
+   "mimik",
+   "blickkontakt",
+   "soziale signale",
+   "humor",
+   "nonverbale kommunikation"
   ],
   "abo_aufruf": false
  }

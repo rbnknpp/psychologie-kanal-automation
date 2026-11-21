@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Warum du beim Lügen seltener blinzelst als sonst",
-    "Dein Gehirn braucht eine fremde Berührung an der Hand länger zum Einordnen",
-    "Warum dir ein Gesicht ohne Augenbrauen fremd vorkommt, ohne dass du weißt warum",
-    "3 Sekunden Stille nach einer Frage verändern, wie ehrlich die Antwort wirkt",
-    "Warum du in einer fremden Stadt automatisch schneller läufst als zu Hause",
-    "Warum du beim Zuhören öfter die Augenbrauen kurz hochziehst",
-    "Warum du beim Lügen öfter die Nase berührst",
-    "Warum dir ein Lächeln ohne Blinzeln unheimlich vorkommt",
-    "Dein Gehirn vertraut Fremden mehr, die deinen Namen richtig aussprechen",
-    "Warum du in einer Warteschlange automatisch den Abstand zum Vordermann regelst",
-    "Warum du bei einem Kompliment zuerst wegschaust",
-    "Warum du beim Zuhören öfter auf den Mund statt die Augen schaust",
-    "3 Sekunden entscheiden, ob ein Nicken als Zustimmung gilt",
     "Warum du bei einer Entschuldigung auf die Stimme hörst, nicht auf die Worte",
     "Dein Gehirn behandelt eine Videotelefon-Pause anders als eine echte",
     "Warum du beim Zuhören öfter die Handgelenke zeigst, wenn du jemanden magst",
@@ -199,7 +186,20 @@
     "Warum dein Lächeln beim Lügen zu früh verschwindet",
     "Dein Gehirn merkt, wenn Worte und Kopfbewegung nicht zusammenpassen",
     "Warum dein Atem beim Beschönigen kurz stockt",
-    "Am Ende verrät nicht ein Signal eine Lüge, sondern der Bruch im Muster"
+    "Am Ende verrät nicht ein Signal eine Lüge, sondern der Bruch im Muster",
+    "Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst",
+    "3 Sekunden Verzögerung beim Händeschütteln verraten echtes Interesse",
+    "Dein Gehirn hält eine aufrechte Haltung für kompetenter als ein Lächeln",
+    "Warum ein Lächeln vor dem Spruch zeigt, dass ein Necken liebevoll gemeint ist",
+    "Dein Blick entscheidet, ob ein Spaß als Angriff oder als Spiel verstanden wird",
+    "3 Sekunden Pause nach einem Spruch verraten, ob er zu weit ging",
+    "Warum dein Körper sich beim Necken automatisch näher zum anderen dreht",
+    "Dein Gehirn erkennt ein zu lautes Lachen als Tarnung für Unbehagen",
+    "Warum ein Scherz unter engen Freunden weniger Abstand braucht als unter Fremden",
+    "Dein Gehirn braucht eine Berührung, um Zweifel am Scherz aufzulösen",
+    "Warum ein Spruch über dich selbst Scherze an andere entschärft",
+    "Dein Gehirn merkt an der Mundspannung, wenn ein Lächeln einen Spruch nur überspielt",
+    "Am Ende entscheidet nicht der Spruch, sondern das Zusammenspiel von Timing, Blick und Nähe beim Necken"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -216,6 +216,7 @@
     "Wie unbewusste Körpersignale beim Zuhören und Reagieren (Nicken, Kopfneigung, Augenbrauen) zeigen, ob jemand wirklich interessiert ist oder nur höflich wirkt",
     "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird",
     "Wie unbewusste Körpersignale beim Entschuldigen (Blickkontakt, Handhaltung, Tonfall) zeigen, ob eine Entschuldigung wirklich ernst gemeint ist oder nur der Form halber kommt",
-    "Wie unbewusste Körpersignale beim Lügen und Beschönigen (Blickrichtung, Tonhöhe, Pausen) zeigen, ob jemand gerade die Wahrheit dehnt oder wirklich ehrlich ist"
+    "Wie unbewusste Körpersignale beim Lügen und Beschönigen (Blickrichtung, Tonhöhe, Pausen) zeigen, ob jemand gerade die Wahrheit dehnt oder wirklich ehrlich ist",
+    "Wie unbewusste Körpersignale beim Scherzen und Necken (Mimik-Timing, Blickkontakt, Körperabstand) zeigen, ob ein Spaß als liebevoll oder verletzend ankommt"
   ]
 }
