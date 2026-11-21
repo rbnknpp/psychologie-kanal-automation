@@ -40,7 +40,9 @@
   "sturz": 1,
   "pflegestuetzpunkt": 1,
   "bilanz": 1,
-  "fem": 1
+  "fem": 1,
+  "hoeherstufung": 1,
+  "hygiene": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -83,6 +85,8 @@
   "sturz|Sturzprophylaxe: Was du wirklich wissen musst",
   "pflegestuetzpunkt|Pflegestützpunkt im Saarland: Kostenlose Beratung, die kaum jemand kennt",
   "bilanz|Flüssigkeitsbilanz führen: So machst du es richtig",
-  "fem|Freiheitsentziehende Maßnahmen in der Pflege – Teil 1: Was wirklich dahintersteckt"
+  "fem|Freiheitsentziehende Maßnahmen in der Pflege – Teil 1: Was wirklich dahintersteckt",
+  "hoeherstufung|Pflegegrad erhöhen: Wann sich eine Höherstufung wirklich lohnt",
+  "hygiene|Schutzkleidung richtig anziehen: Diese Reihenfolge solltest du können"
  ]
 }
