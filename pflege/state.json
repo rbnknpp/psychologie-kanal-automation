@@ -42,7 +42,9 @@
   "bilanz": 1,
   "fem": 1,
   "hoeherstufung": 1,
-  "hygiene": 1
+  "hygiene": 1,
+  "vorsorge": 1,
+  "biografiearbeit": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -87,6 +89,8 @@
   "bilanz|Flüssigkeitsbilanz führen: So machst du es richtig",
   "fem|Freiheitsentziehende Maßnahmen in der Pflege – Teil 1: Was wirklich dahintersteckt",
   "hoeherstufung|Pflegegrad erhöhen: Wann sich eine Höherstufung wirklich lohnt",
-  "hygiene|Schutzkleidung richtig anziehen: Diese Reihenfolge solltest du können"
+  "hygiene|Schutzkleidung richtig anziehen: Diese Reihenfolge solltest du können",
+  "vorsorge|Vorsorgevollmacht & Patientenverfügung: Was wirklich zählt",
+  "biografiearbeit|Biografiearbeit in der Pflege: Warum sie mehr ist als nur Smalltalk"
  ]
 }
