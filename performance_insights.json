@@ -1,20 +1,27 @@
 {
-  "generated_at": "2026-11-21T05:18:25.426725",
+  "generated_at": "2026-11-22T05:18:14.270703",
   "lookback_days": 10,
   "top": [
     {
+      "video_id": "GdjG6aiylrI",
+      "title": "3 Grad Kopfneigung entscheiden, ob du als arrogant wirkst",
+      "views": 398,
+      "retention": 34.5,
+      "engaged_pct": 48.2
+    },
+    {
       "video_id": "XpUhsK9G-7w",
       "title": "Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln",
-      "views": 351,
-      "retention": 31.2,
+      "views": 359,
+      "retention": 32.1,
       "engaged_pct": 39.6
     },
     {
       "video_id": "3_4gRBRfJvs",
       "title": "5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst",
-      "views": 173,
-      "retention": 138.8,
-      "engaged_pct": 40.5
+      "views": 174,
+      "retention": 136.9,
+      "engaged_pct": 40.8
     },
     {
       "video_id": "owcxy8S4qeM",
@@ -26,16 +33,9 @@
     {
       "video_id": "Xzdyt1zohuI",
       "title": "Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust",
-      "views": 145,
+      "views": 144,
       "retention": 27.9,
-      "engaged_pct": 29.0
-    },
-    {
-      "video_id": "I8o6xf7LVPQ",
-      "title": "3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut",
-      "views": 126,
-      "retention": 38.8,
-      "engaged_pct": 44.4
+      "engaged_pct": 29.2
     },
     {
       "video_id": "XJ-HBAyz600",
@@ -52,11 +52,11 @@
       "engaged_pct": 23.2
     },
     {
-      "video_id": "-lRocEFWdX4",
-      "title": "Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst",
-      "views": 83,
-      "retention": 40.9,
-      "engaged_pct": 30.1
+      "video_id": "QjO2du51nw0",
+      "title": "Warum ein kurzer Griff ans Handgelenk mehr Vertrauen schafft als ein Händedruck",
+      "views": 81,
+      "retention": 34.1,
+      "engaged_pct": 35.8
     }
   ],
   "flop": [
@@ -68,33 +68,33 @@
       "engaged_pct": 61.1
     },
     {
-      "video_id": "B98kYthP9D8",
-      "title": "Warum du beim Zuhören öfter die Handflächen verbirgst, wenn du zweifelst",
-      "views": 18,
-      "retention": 36.1,
-      "engaged_pct": 44.4
+      "video_id": "-lRocEFWdX4",
+      "title": "Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst",
+      "views": 19,
+      "retention": 48.6,
+      "engaged_pct": 42.1
     },
     {
       "video_id": "3nAMVRwRCjY",
       "title": "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken",
-      "views": 20,
-      "retention": 43.3,
-      "engaged_pct": 35.0
+      "views": 21,
+      "retention": 40.1,
+      "engaged_pct": 38.1
     },
     {
-      "video_id": "B1t92AaNJvs",
-      "title": "3 Grad Kopfdrehung verraten, ob du jemandem wirklich zuhörst",
+      "video_id": "khRR1IxtfX0",
+      "title": "Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest",
       "views": 25,
-      "retention": 47.0,
-      "engaged_pct": 24.0
+      "retention": 27.3,
+      "engaged_pct": 48.0
     },
     {
-      "video_id": "xxWt61E0wa0",
-      "title": "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht",
-      "views": 27,
-      "retention": 17.2,
-      "engaged_pct": 22.2
+      "video_id": "OXjOuO1I5eI",
+      "title": "Warum manche Menschen beim Trösten den Körper wegdrehen",
+      "views": 28,
+      "retention": 18,
+      "engaged_pct": 75.0
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln\" (351 Views, 31.2% Bindung, 39.6% nicht weitergewischt) | Hook: \"Ein erzwungenes Lachen beginnt immer am Mund, nie an den Augen.\" | Themen: mimik, lachen, psychologie, körpersprache\n- \"5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst\" (173 Views, 138.8% Bindung, 40.5% nicht weitergewischt) | Hook: \"5 Zentimeter Abstand entscheiden, wie glaubwürdig du wirkst.\" | Themen: körpersprache, psychologie, proxemik, abstand\n- \"Dein Gehirn hält ein leicht geneigtes Lächeln für ehrlicher\" (147 Views, 28.3% Bindung, 28.6% nicht weitergewischt) | Hook: \"Ein leicht schiefes Lächeln wirkt ehrlicher als ein symmetrisches.\" | Themen: psychologie, mimik, lächeln, körpersprache\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (145 Views, 27.9% Bindung, 29.0% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n- \"3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut\" (126 Views, 38.8% Bindung, 44.4% nicht weitergewischt) | Hook: \"Ein Lächeln über 3 Sekunden wirkt plötzlich unecht.\" | Themen: mimik, körpersprache, psychologie, lächeln\n- \"3 Zentimeter mehr Kopfabstand entscheiden, ob ein Gespräch zu persönlich wirkt\" (120 Views, 28.6% Bindung, 50.0% nicht weitergewischt) | Hook: \"3 Zentimeter Kopfabstand entscheiden über Nähe oder Unbehagen.\" | Themen: körpersprache, psychologie, nähe, distanz\n- \"3 Sekunden Augenkontakt entscheiden, ob ein Witz ankommt\" (95 Views, 25.8% Bindung, 23.2% nicht weitergewischt) | Hook: \"3 Sekunden Blickkontakt entscheiden, ob dein Witz funktioniert.\" | Themen: psychologie, körpersprache, blickkontakt, humor\n- \"Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst\" (83 Views, 40.9% Bindung, 30.1% nicht weitergewischt) | Hook: \"Ein sechstel Sekunde lang zucken deine Augenbrauen hoch.\" | Themen: körpersprache, psychologie, mimik, eyebrow flash\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst\" (18 Views, 30.8% Bindung, 61.1% nicht weitergewischt) | Hook: \"Versteckte Hände unter dem Tisch wirken sofort unsicherer.\" | Themen: körpersprache, psychologie, vertrauen, bewerbungsgespräch\n- \"Warum du beim Zuhören öfter die Handflächen verbirgst, wenn du zweifelst\" (18 Views, 36.1% Bindung, 44.4% nicht weitergewischt) | Hook: \"Zweifelst du, verschwinden deine Handflächen fast automatisch.\" | Themen: körpersprache, psychologie, handzeichen, nonverbale kommunikation\n- \"Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken\" (20 Views, 43.3% Bindung, 35.0% nicht weitergewischt) | Hook: \"Ein offenes Handgelenk verrät mehr als jeder Blick.\" | Themen: körpersprache, psychologie, flirten, nonverbale kommunikation\n- \"3 Grad Kopfdrehung verraten, ob du jemandem wirklich zuhörst\" (25 Views, 47.0% Bindung, 24.0% nicht weitergewischt) | Hook: \"3 Grad Kopfdrehung entscheiden, ob du wirklich zuhörst.\" | Themen: körpersprache, zuhören, psychologie, kopfbewegung\n- \"Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht\" (27 Views, 17.2% Bindung, 22.2% nicht weitergewischt) | Hook: \"Eine hängende Schulter verrät Trauer schneller als das Gesicht.\" | Themen: psychologie, körpersprache, emotionen erkennen, mimik"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"3 Grad Kopfneigung entscheiden, ob du als arrogant wirkst\" (398 Views, 34.5% Bindung, 48.2% nicht weitergewischt) | Hook: \"3 Grad mehr Kopfneigung lassen dich arrogant wirken.\" | Themen: körpersprache, psychologie, erster eindruck, kopfhaltung\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln\" (359 Views, 32.1% Bindung, 39.6% nicht weitergewischt) | Hook: \"Ein erzwungenes Lachen beginnt immer am Mund, nie an den Augen.\" | Themen: mimik, lachen, psychologie, körpersprache\n- \"5 Zentimeter mehr Abstand verändern, wie ehrlich du wirkst\" (174 Views, 136.9% Bindung, 40.8% nicht weitergewischt) | Hook: \"5 Zentimeter Abstand entscheiden, wie glaubwürdig du wirkst.\" | Themen: körpersprache, psychologie, proxemik, abstand\n- \"Dein Gehirn hält ein leicht geneigtes Lächeln für ehrlicher\" (147 Views, 28.3% Bindung, 28.6% nicht weitergewischt) | Hook: \"Ein leicht schiefes Lächeln wirkt ehrlicher als ein symmetrisches.\" | Themen: psychologie, mimik, lächeln, körpersprache\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (144 Views, 27.9% Bindung, 29.2% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n- \"3 Zentimeter mehr Kopfabstand entscheiden, ob ein Gespräch zu persönlich wirkt\" (120 Views, 28.6% Bindung, 50.0% nicht weitergewischt) | Hook: \"3 Zentimeter Kopfabstand entscheiden über Nähe oder Unbehagen.\" | Themen: körpersprache, psychologie, nähe, distanz\n- \"3 Sekunden Augenkontakt entscheiden, ob ein Witz ankommt\" (95 Views, 25.8% Bindung, 23.2% nicht weitergewischt) | Hook: \"3 Sekunden Blickkontakt entscheiden, ob dein Witz funktioniert.\" | Themen: psychologie, körpersprache, blickkontakt, humor\n- \"Warum ein kurzer Griff ans Handgelenk mehr Vertrauen schafft als ein Händedruck\" (81 Views, 34.1% Bindung, 35.8% nicht weitergewischt) | Hook: \"Ein Griff ans Handgelenk wirkt vertrauter als ein Händedruck.\" | Themen: körpersprache, psychologie, berührung, vertrauen\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst\" (18 Views, 30.8% Bindung, 61.1% nicht weitergewischt) | Hook: \"Versteckte Hände unter dem Tisch wirken sofort unsicherer.\" | Themen: körpersprache, psychologie, vertrauen, bewerbungsgespräch\n- \"Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst\" (19 Views, 48.6% Bindung, 42.1% nicht weitergewischt) | Hook: \"Ein sechstel Sekunde lang zucken deine Augenbrauen hoch.\" | Themen: körpersprache, psychologie, mimik, eyebrow flash\n- \"Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken\" (21 Views, 40.1% Bindung, 38.1% nicht weitergewischt) | Hook: \"Ein offenes Handgelenk verrät mehr als jeder Blick.\" | Themen: körpersprache, psychologie, flirten, nonverbale kommunikation\n- \"Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest\" (25 Views, 27.3% Bindung, 48.0% nicht weitergewischt) | Hook: \"Deine Stimme zittert öfter beim Bitten als beim Befehlen.\" | Themen: körpersprache, psychologie, stimme, stresssignale\n- \"Warum manche Menschen beim Trösten den Körper wegdrehen\" (28 Views, 18% Bindung, 75.0% nicht weitergewischt)"
 }

@@ -1,50 +1,4 @@
 {
- "Dein Gehirn hält Menschen für vertrauenswürdiger, die langsamer sprechen": {
-  "title": "Dein Gehirn hält Menschen für vertrauenswürdiger, die langsamer sprechen",
-  "hook": "Zwei Menschen sagen dasselbe. Einer wirkt glaubwürdiger. Warum?",
-  "tags": [
-   "psychologie",
-   "stimme",
-   "sprechtempo",
-   "kommunikation",
-   "vertrauen",
-   "körpersprache",
-   "soziale psychologie",
-   "erster eindruck",
-   "rhetorik",
-   "gehirn"
-  ]
- },
- "Warum du dich bei Regen gemütlicher fühlst als bei Sonnenschein": {
-  "title": "Warum du dich bei Regen gemütlicher fühlst als bei Sonnenschein",
-  "hook": "Regen prasselt ans Fenster. Und plötzlich fühlst du dich ruhiger.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "regen",
-   "entspannung",
-   "wetter psychologie",
-   "rosa rauschen",
-   "nervensystem",
-   "alltagsfakten",
-   "wissenschaft",
-   "ruhe"
-  ]
- },
- "Warum du beim Gähnen eines Fremden selbst gähnen musst": {
-  "title": "Warum du beim Gähnen eines Fremden selbst gähnen musst",
-  "hook": "Jemand gähnt und du gähnst sofort mit, warum eigentlich?",
-  "tags": [
-   "psychologie",
-   "gähnen",
-   "gehirn fakten",
-   "körpersprache",
-   "empathie",
-   "soziales verhalten",
-   "spiegelneuronen",
-   "alltagspsychologie"
-  ]
- },
  "Dein Gehirn merkt sich Niederlagen länger als Siege": {
   "title": "Dein Gehirn merkt sich Niederlagen länger als Siege",
   "hook": "Eine Niederlage vergisst du seltener als einen Sieg, hast du das gemerkt?",
@@ -6036,6 +5990,57 @@
    "soziale signale",
    "humor",
    "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Stimme beim Small Talk eine andere Melodie bekommt als sonst": {
+  "title": "Warum deine Stimme beim Small Talk eine andere Melodie bekommt als sonst",
+  "hook": "Deine Stimme wechselt bei Fremden automatisch die Melodie.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "stimme",
+   "smalltalk",
+   "nonverbale kommunikation",
+   "soziale psychologie",
+   "alltagsfakten",
+   "gesprächspsychologie",
+   "tonlage",
+   "erster eindruck"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde": {
+  "title": "Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde",
+  "hook": "Ein Händedruck verrät Unsicherheit, bevor ein Wort fällt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "händedruck",
+   "erster eindruck",
+   "nonverbale kommunikation",
+   "begrüßung",
+   "soziale signale",
+   "vertrauen",
+   "businessknigge",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war": {
+  "title": "3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war",
+  "hook": "3 Sekunden Verzögerung verraten ein gespieltes Lachen.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lachen",
+   "mimik",
+   "soziale signale",
+   "nonverbale kommunikation",
+   "humor",
+   "alltagsfakten",
+   "emotionen",
+   "interaktion"
   ],
   "abo_aufruf": false
  }
