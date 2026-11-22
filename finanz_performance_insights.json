@@ -1,66 +1,73 @@
 {
-  "generated_at": "2026-11-15T22:40:16.937144",
+  "generated_at": "2026-11-22T23:28:10.071963",
   "lookback_days": 14,
   "top": [
     {
+      "video_id": "EJtS4-AvJlE",
+      "title": "Die 6 Module der Pflegegrad-Begutachtung einfach erklärt #Shorts",
+      "views": 124,
+      "retention": 44.2,
+      "engaged_pct": 27.4
+    },
+    {
+      "video_id": "xEzTACCHXlA",
+      "title": "Hausnotruf-Zuschuss: Zahlt die Pflegekasse wirklich alles? #Shorts",
+      "views": 84,
+      "retention": 46.1,
+      "engaged_pct": 28.6
+    },
+    {
+      "video_id": "yIe3x2WmoBo",
+      "title": "Validation nach Naomi Feil: Warum Widersprechen nicht hilft #Shorts",
+      "views": 71,
+      "retention": 25.2,
+      "engaged_pct": 12.7
+    },
+    {
+      "video_id": "gFDHeVbxGeg",
+      "title": "Verhinderungspflege und Kurzzeitpflege #Shorts",
+      "views": 66,
+      "retention": 31.5,
+      "engaged_pct": 18.2
+    },
+    {
       "video_id": "aQEMvq3q93Q",
       "title": "Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht #Shorts",
-      "views": 61,
-      "retention": 44.8,
-      "engaged_pct": 32.8
+      "views": 62,
+      "retention": 47.4,
+      "engaged_pct": 33.9
+    },
+    {
+      "video_id": "3Z3g48MtcYo",
+      "title": "Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts",
+      "views": 51,
+      "retention": 84.5,
+      "engaged_pct": 33.3
+    },
+    {
+      "video_id": "rFd7DR7Ek5Y",
+      "title": "Pflegegeld, Pflegedienst oder beides? So finden Sie die richtige Lösung #Shorts",
+      "views": 48,
+      "retention": 31.0,
+      "engaged_pct": 8.3
     },
     {
       "video_id": "7OrKyBA6JTg",
       "title": "Ambulanten Pflegedienst finden: So vergleichen Sie richtig #Shorts",
-      "views": 33,
+      "views": 37,
       "retention": 9.7,
-      "engaged_pct": 3.0
-    },
-    {
-      "video_id": "3Z3g48MtcYo",
-      "title": "Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts",
-      "views": 30,
-      "retention": 94.8,
-      "engaged_pct": 40.0
-    },
-    {
-      "video_id": "YwIqaWmbu5o",
-      "title": "Demenz zu Hause – erste Schritte #Shorts",
-      "views": 26,
-      "retention": 12.3,
-      "engaged_pct": 26.9
-    },
-    {
-      "video_id": "ElvGQgb-wmg",
-      "title": "Tagespflege: Was sie bringt – und was sie kostet #Shorts",
-      "views": 23,
-      "retention": 41.6,
-      "engaged_pct": 26.1
-    },
-    {
-      "video_id": "7T4HKSfTSaw",
-      "title": "Pflegegrad beantragen in 4 Schritten – so gehen Sie vor #Shorts",
-      "views": 15,
-      "retention": 72.5,
-      "engaged_pct": 26.7
-    },
-    {
-      "video_id": "-cZwJLuA3mk",
-      "title": "Delegation in der Pflege: Was darf die Pflege wirklich? #Shorts",
-      "views": 14,
-      "retention": 53.7,
-      "engaged_pct": 14.3
-    },
-    {
-      "video_id": "cwHhCjXH_rU",
-      "title": "Zwischenprüfung Pflegeausbildung – so bereitest du dich vor #Shorts",
-      "views": 10,
-      "retention": 62.8,
-      "engaged_pct": 30.0
+      "engaged_pct": 2.7
     }
   ],
   "flop": [
     {
+      "video_id": "cwHhCjXH_rU",
+      "title": "Zwischenprüfung Pflegeausbildung – so bereitest du dich vor #Shorts",
+      "views": 15,
+      "retention": 60.7,
+      "engaged_pct": 33.3
+    },
+    {
       "video_id": "7T4HKSfTSaw",
       "title": "Pflegegrad beantragen in 4 Schritten – so gehen Sie vor #Shorts",
       "views": 15,
@@ -70,9 +77,16 @@
     {
       "video_id": "ElvGQgb-wmg",
       "title": "Tagespflege: Was sie bringt – und was sie kostet #Shorts",
-      "views": 23,
+      "views": 22,
       "retention": 41.6,
-      "engaged_pct": 26.1
+      "engaged_pct": 27.3
+    },
+    {
+      "video_id": "G9Fi16OTkGw",
+      "title": "Lagerung & Mobilisation: Die Grundprinzipien, die du wirklich können musst #Shorts",
+      "views": 25,
+      "retention": 21.7,
+      "engaged_pct": 20.0
     },
     {
       "video_id": "YwIqaWmbu5o",
@@ -80,21 +94,7 @@
       "views": 26,
       "retention": 12.3,
       "engaged_pct": 26.9
-    },
-    {
-      "video_id": "3Z3g48MtcYo",
-      "title": "Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts",
-      "views": 30,
-      "retention": 94.8,
-      "engaged_pct": 40.0
-    },
-    {
-      "video_id": "aQEMvq3q93Q",
-      "title": "Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht #Shorts",
-      "views": 61,
-      "retention": 44.8,
-      "engaged_pct": 32.8
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht #Shorts\" (61 Views, 44.8% Bindung, 32.8% nicht weitergewischt)\n- \"Ambulanten Pflegedienst finden: So vergleichen Sie richtig #Shorts\" (33 Views, 9.7% Bindung, 3.0% nicht weitergewischt)\n- \"Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts\" (30 Views, 94.8% Bindung, 40.0% nicht weitergewischt)\n- \"Demenz zu Hause – erste Schritte #Shorts\" (26 Views, 12.3% Bindung, 26.9% nicht weitergewischt)\n- \"Tagespflege: Was sie bringt – und was sie kostet #Shorts\" (23 Views, 41.6% Bindung, 26.1% nicht weitergewischt)\n- \"Pflegegrad beantragen in 4 Schritten – so gehen Sie vor #Shorts\" (15 Views, 72.5% Bindung, 26.7% nicht weitergewischt)\n- \"Delegation in der Pflege: Was darf die Pflege wirklich? #Shorts\" (14 Views, 53.7% Bindung, 14.3% nicht weitergewischt)\n- \"Zwischenprüfung Pflegeausbildung – so bereitest du dich vor #Shorts\" (10 Views, 62.8% Bindung, 30.0% nicht weitergewischt)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Pflegegrad beantragen in 4 Schritten – so gehen Sie vor #Shorts\" (15 Views, 72.5% Bindung, 26.7% nicht weitergewischt)\n- \"Tagespflege: Was sie bringt – und was sie kostet #Shorts\" (23 Views, 41.6% Bindung, 26.1% nicht weitergewischt)\n- \"Demenz zu Hause – erste Schritte #Shorts\" (26 Views, 12.3% Bindung, 26.9% nicht weitergewischt)\n- \"Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts\" (30 Views, 94.8% Bindung, 40.0% nicht weitergewischt)\n- \"Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht #Shorts\" (61 Views, 44.8% Bindung, 32.8% nicht weitergewischt)"
+  "digest_text": "Diese Videos kamen in den letzten 14 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"Die 6 Module der Pflegegrad-Begutachtung einfach erklärt #Shorts\" (124 Views, 44.2% Bindung, 27.4% nicht weitergewischt)\n- \"Hausnotruf-Zuschuss: Zahlt die Pflegekasse wirklich alles? #Shorts\" (84 Views, 46.1% Bindung, 28.6% nicht weitergewischt)\n- \"Validation nach Naomi Feil: Warum Widersprechen nicht hilft #Shorts\" (71 Views, 25.2% Bindung, 12.7% nicht weitergewischt)\n- \"Verhinderungspflege und Kurzzeitpflege #Shorts\" (66 Views, 31.5% Bindung, 18.2% nicht weitergewischt)\n- \"Schweigepflicht in der Pflege: Der Fehler, den fast jeder macht #Shorts\" (62 Views, 47.4% Bindung, 33.9% nicht weitergewischt)\n- \"Pflegeplanung schreiben: 5 Fehler, die dich die Note kosten #Shorts\" (51 Views, 84.5% Bindung, 33.3% nicht weitergewischt)\n- \"Pflegegeld, Pflegedienst oder beides? So finden Sie die richtige Lösung #Shorts\" (48 Views, 31.0% Bindung, 8.3% nicht weitergewischt)\n- \"Ambulanten Pflegedienst finden: So vergleichen Sie richtig #Shorts\" (37 Views, 9.7% Bindung, 2.7% nicht weitergewischt)\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Zwischenprüfung Pflegeausbildung – so bereitest du dich vor #Shorts\" (15 Views, 60.7% Bindung, 33.3% nicht weitergewischt)\n- \"Pflegegrad beantragen in 4 Schritten – so gehen Sie vor #Shorts\" (15 Views, 72.5% Bindung, 26.7% nicht weitergewischt)\n- \"Tagespflege: Was sie bringt – und was sie kostet #Shorts\" (22 Views, 41.6% Bindung, 27.3% nicht weitergewischt)\n- \"Lagerung & Mobilisation: Die Grundprinzipien, die du wirklich können musst #Shorts\" (25 Views, 21.7% Bindung, 20.0% nicht weitergewischt)\n- \"Demenz zu Hause – erste Schritte #Shorts\" (26 Views, 12.3% Bindung, 26.9% nicht weitergewischt)"
 }
