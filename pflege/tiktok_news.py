@@ -979,7 +979,12 @@ def youtube_short(path, data, slot):
     desc = "\n".join([
         data.get("caption", data.get("thema", "")).strip(), "",
         f"Quelle: {data.get('quelle', '')} {data.get('quelle_url', '')}".strip(),
-        f"👉 Mehr Hilfe für pflegende Angehörige: {SITE}", "",
+        f"👉 Mehr Hilfe für pflegende Angehörige: {SITE}",
+        *([f"🎁 Geschenkideen für Senioren & pflegende Angehörige: {SITE}/geschenkideen-senioren-pflege"]
+          if dt.date.today() <= dt.date(dt.date.today().year, 12, 24) and dt.date.today().month >= 11 else []),
+        f"📖 Mein Pflegetagebuch zum Ausfüllen: https://www.amazon.de/dp/B0HR97VS62?tag={config.AMAZON_TAG_PFLEGE_YT}",
+        f"🆘 Meine Pflege-Notfallmappe: https://www.amazon.de/dp/B0HRKB47NW?tag={config.AMAZON_TAG_PFLEGE_YT}",
+        "(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)", "",
         "Keine Rechts- oder medizinische Beratung.", "",
         " ".join((data.get("hashtags") or ["#pflege"])[:5]) + " #PflegeMitPlan #Shorts",
     ])

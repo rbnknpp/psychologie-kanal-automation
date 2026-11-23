@@ -65,8 +65,11 @@ THUMBNAIL_EMOJI = "🧠"
 AMAZON_TAG = "psychoalltagyt-21"            # YouTube Psychologie & Alltagsfakten
 AMAZON_TAG_PFLEGE_YT = "pflegemitplanyt-21"  # YouTube Pflege mit Plan
 AMAZON_TAG_GGCLIPS = "ggclipsyt-21"          # YouTube GG-Clips (eigene Gaming-Videos)
+import datetime as _dt
+_XMAS = _dt.date.today().month == 11 and _dt.date.today().day >= 15 or _dt.date.today().month == 12 and _dt.date.today().day <= 24
 BOOK_LINE = (
-    "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: "
+    ("🎁 Geschenkidee zu Weihnachten – " if _XMAS else "")
+    + "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: "
     f"https://www.amazon.de/dp/B0HNFH6PC4?tag={AMAZON_TAG}\n"
     "(Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.)"
 )
