@@ -16,7 +16,7 @@
   "pflege-und-beruf": 1,
   "tagespflege": 1,
   "zwischenpruefung": 1,
-  "krankenhaus-entlassung": 1,
+  "krankenhaus-entlassung": 2,
   "pflegedienst-finden": 1,
   "delegation": 1,
   "pflegebox": 1,
@@ -44,7 +44,9 @@
   "hoeherstufung": 1,
   "hygiene": 1,
   "vorsorge": 1,
-  "biografiearbeit": 1
+  "biografiearbeit": 1,
+  "entlastungsbetrag": 1,
+  "kontraktur": 1
  },
  "titles": [
   "pflegegrad-beantragen|Pflegegrad beantragen in 4 Schritten – so gehen Sie vor",
@@ -91,6 +93,9 @@
   "hoeherstufung|Pflegegrad erhöhen: Wann sich eine Höherstufung wirklich lohnt",
   "hygiene|Schutzkleidung richtig anziehen: Diese Reihenfolge solltest du können",
   "vorsorge|Vorsorgevollmacht & Patientenverfügung: Was wirklich zählt",
-  "biografiearbeit|Biografiearbeit in der Pflege: Warum sie mehr ist als nur Smalltalk"
+  "biografiearbeit|Biografiearbeit in der Pflege: Warum sie mehr ist als nur Smalltalk",
+  "entlastungsbetrag|Entlastungsbetrag: 131 € im Monat, die viele verschenken",
+  "kontraktur|Kontrakturenprophylaxe: So verhinderst du steife Gelenke bei Pflegebedürftigen",
+  "krankenhaus-entlassung|Krankenhausentlassung: Warum „Es wird schon klappen“ gefährlich ist"
  ]
 }
