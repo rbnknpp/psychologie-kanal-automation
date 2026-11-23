@@ -964,6 +964,34 @@ def queue(path, data, secs):
     return reg
 
 
+YT_SLOTS = ["12:30", "18:30"]   # wie bisher die Pflege-Shorts auf YouTube
+SITE = "https://pflege-mit-plan.com"
+
+
+def youtube_short(path, data, slot):
+    """Dasselbe Video wie auf TikTok als YouTube-Short auf „Pflege mit Plan“ (Robin 23.11.2026)."""
+    if not Path(ROOT / "token.json").exists() and not Path("token.json").exists():
+        print("  kein YouTube-Token (token.json) – kein YouTube-Upload")
+        return None
+    from upload.upload_video import upload as yt_upload
+    title = re.sub(r"\s+", " ", data.get("thema", "Pflege-News")).strip()[:85] + " #Shorts"
+    tags = [t.lstrip("#") for t in (data.get("hashtags") or [])][:10] + ["Pflege", "Pflege mit Plan", "Pflegenews"]
+    desc = "\n".join([
+        data.get("caption", data.get("thema", "")).strip(), "",
+        f"Quelle: {data.get('quelle', '')} {data.get('quelle_url', '')}".strip(),
+        f"👉 Mehr Hilfe für pflegende Angehörige: {SITE}", "",
+        "Keine Rechts- oder medizinische Beratung.", "",
+        " ".join((data.get("hashtags") or ["#pflege"])[:5]) + " #PflegeMitPlan #Shorts",
+    ])
+    review = os.getenv("PFLEGE_REVIEW", "1") == "1"
+    h, m = map(int, slot.split(":"))
+    local = dt.datetime.combine(dt.datetime.now(TZ).date(), dt.time(h, m), TZ)
+    when = None if local < dt.datetime.now(TZ) + dt.timedelta(minutes=20) else local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if review:
+        return yt_upload(str(path), title, desc, list(dict.fromkeys(tags)), privacy_status="private")
+    return yt_upload(str(path), title, desc, list(dict.fromkeys(tags)), publish_at=when, privacy_status=None if when else "public")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=1)
@@ -984,6 +1012,11 @@ def main():
             print(f"  gerendert: {path} ({secs:.0f} s)")
             if not a.test and not a.script:
                 queue(path, data, secs)
+                try:
+                    vid = youtube_short(path, data, YT_SLOTS[ok % len(YT_SLOTS)])
+                    print("  YouTube-Short:", vid)
+                except Exception as e:  # noqa: BLE001
+                    print("  YouTube FEHLER:", str(e)[:300])
                 st["themen"].append({"thema": data["thema"], "url": data.get("quelle_url"), "datum": day})
                 st["themen"] = st["themen"][-200:]
                 STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")

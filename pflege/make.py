@@ -498,7 +498,11 @@ def main():
     today = dt.datetime.now(TZ).date()
     rng = random.Random(today.isoformat())
     st = load_state()
-    jobs = [("short", "angehoerige", SHORT_TIMES[0]), ("short", "azubi", SHORT_TIMES[1])]
+    # Robin 23.11.2026: auf YouTube dieselben Shorts wie auf TikTok -> die kommen aus pflege/tiktok_news.py.
+    # Eigene YouTube-Shorts baut make.py nur noch, wenn die News-TikToks ausgeschaltet sind.
+    jobs = [] if TIKTOK_NEWS else [("short", "angehoerige", SHORT_TIMES[0]), ("short", "azubi", SHORT_TIMES[1])]
+    if a.only == "short" or a.test:
+        jobs = [("short", "angehoerige", SHORT_TIMES[0]), ("short", "azubi", SHORT_TIMES[1])]
     if today.weekday() in LONG_DAYS:
         reihe = "angehoerige" if (today.isocalendar().week + today.weekday()) % 2 == 0 else "azubi"
         jobs.append(("long", reihe, LONG_TIME))
@@ -513,6 +517,9 @@ def main():
     elif not a.only and not a.test and not TIKTOK_NEWS:
         # Robin 11.11.2026: 3 Pflege-TikToks pro Tag -> dritter Short nur für TikTok (hhmm=None = kein YouTube-Upload)
         jobs.append(("short", "angehoerige" if today.toordinal() % 2 == 0 else "azubi", None))
+    if not jobs:
+        print("Heute nichts zu tun (Shorts kommen aus pflege/tiktok_news.py, Erklärvideo nur Mo/Mi/Fr).")
+        return
     failures = 0
     for i, (kind, reihe, hhmm) in enumerate(jobs):
         topic = pick(reihe, st, rng)

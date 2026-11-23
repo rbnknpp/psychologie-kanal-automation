@@ -97,7 +97,7 @@ jobs:
         run: |
           printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
           printf '%s' "$YT_TOKEN" > token.json
-      - name: Pflege-News-TikToks (3 pro Tag, News-Stil)
+      - name: Pflege-News (2 pro Tag, TikTok + YouTube-Shorts)
         if: ${{ inputs.news != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '') }}
         continue-on-error: true
         env:
