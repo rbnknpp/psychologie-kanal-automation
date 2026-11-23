@@ -24,7 +24,7 @@ SNIPPET_KEYS = ("title", "description", "tags", "categoryId", "defaultLanguage",
 
 
 def new_description(desc: str) -> str | None:
-    if f"tag={config.AMAZON_TAG}" in desc:
+    if "amazon.de/dp/B0HNFH6PC4?tag=" in desc:   # hat schon einen Partnerlink (egal welche Tracking-ID)
         return None
     if OLD_LINE.search(desc):
         return OLD_LINE.sub(lambda _m: config.BOOK_LINE, desc, count=1)

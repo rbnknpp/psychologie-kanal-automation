@@ -61,7 +61,10 @@ THUMBNAIL_EMOJI = "🧠"
 
 # Buch zum Kanal (Robin 20.10.2026), steht in jeder Beschreibung. Seit 21.10.2026 als Amazon-Partnerlink
 # (PartnerNet-ID robinknapp-21) mit dem vorgeschriebenen Partner-Hinweis.
-AMAZON_TAG = "robinknapp-21"
+# Seit 23.11.2026 eigene Tracking-IDs je Kanal, damit im PartnerNet sichtbar ist, welcher Kanal verkauft.
+AMAZON_TAG = "psychoalltagyt-21"            # YouTube Psychologie & Alltagsfakten
+AMAZON_TAG_PFLEGE_YT = "pflegemitplanyt-21"  # YouTube Pflege mit Plan
+AMAZON_TAG_GGCLIPS = "ggclipsyt-21"          # YouTube GG-Clips (eigene Gaming-Videos)
 BOOK_LINE = (
     "Das Buch zum Kanal: Alltagspsychologie – 30 Aha-Momente zum Mitmachen: "
     f"https://www.amazon.de/dp/B0HNFH6PC4?tag={AMAZON_TAG}\n"
