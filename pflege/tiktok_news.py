@@ -37,6 +37,8 @@ OUT = ROOT / "output" / "pflege_tiktok"
 TZ = ZoneInfo("Europe/Berlin")
 W, H, FPS = 1080, 1920, 30
 VOICE = os.getenv("PFLEGE_TT_VOICE", "de-DE-ConradNeural")
+# Seit 23.11.2026: günstiges Modell für Recherche + Skript (Kosten), höchstens 3 Websuchen
+NEWS_MODEL = os.getenv("PFLEGE_NEWS_MODEL", "claude-haiku-5-5")
 RATE = os.getenv("PFLEGE_TT_RATE", "+6%")
 BILDER = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/site-bilder"
 GAMING_UPLOAD = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/gaming-upload"
@@ -907,8 +909,8 @@ def script(avoid):
     msgs = [{"role": "user", "content": research}]
     parts = []
     for _ in range(5):
-        resp = client.messages.create(model=config.ANTHROPIC_MODEL, max_tokens=8000, system=SYSTEM.rsplit("\n", 1)[0],
-                                      tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
+        resp = client.messages.create(model=NEWS_MODEL, max_tokens=8000, system=SYSTEM.rsplit("\n", 1)[0],
+                                      tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
                                       messages=msgs)
         if resp.stop_reason == "refusal":
             raise RuntimeError("Recherche abgelehnt")
@@ -923,7 +925,7 @@ def script(avoid):
     # Schritt 2: Skript aus dem Faktenblatt (ohne Werkzeuge, nur JSON)
     last = ""
     for attempt in range(2):
-        resp = client.messages.create(model=config.ANTHROPIC_MODEL, max_tokens=12000, system=SYSTEM, messages=[{
+        resp = client.messages.create(model=NEWS_MODEL, max_tokens=12000, system=SYSTEM, messages=[{
             "role": "user", "content": f"Faktenblatt (nur diese Fakten verwenden):\n{facts}\n\n{FORMAT}\n\nAntworte nur mit dem JSON-Objekt."}])
         if resp.stop_reason == "refusal":
             raise RuntimeError("Skript abgelehnt")

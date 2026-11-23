@@ -23,6 +23,13 @@ from pathlib import Path
 import numpy as np
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+try:  # Kosten-Protokoll (Supabase api_usage)
+    import usage_log
+    usage_log.install()
+except Exception:  # noqa: BLE001
+    pass
+
 HERE = Path(__file__).parent
 WORK = HERE / "work"
 STATE = HERE / "state.json"

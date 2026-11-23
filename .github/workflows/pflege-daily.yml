@@ -101,7 +101,7 @@ jobs:
         if: ${{ inputs.news != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '') }}
         continue-on-error: true
         env:
-          NEWS_N: ${{ inputs.news || '3' }}
+          NEWS_N: ${{ inputs.news || '2' }}
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_news --test
           else python -m pflege.tiktok_news --count "$NEWS_N"; fi

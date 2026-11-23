@@ -151,3 +151,11 @@ SUBSCRIBE_LINES = [
     "Abonnier für mehr solcher Signale, die dir sonst entgehen.",
     "Mehr davon jeden Tag, wenn du den Kanal abonnierst.",
 ]
+
+
+# Kosten-Protokoll: jeder Claude-Aufruf landet in Supabase api_usage (siehe usage_log.py)
+try:
+    import usage_log as _usage_log
+    _usage_log.install()
+except Exception:  # noqa: BLE001
+    pass
