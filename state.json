@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "In 0,4 Sekunden erkennt dein Gehirn, ob ein Blick freundlich gemeint ist",
-    "Warum du beim Zuhören öfter die Füße deines Gegenübers übersiehst",
-    "Warum du bei schlechten Neuigkeiten automatisch tiefer atmest",
-    "Dein Gehirn braucht nur 2 Sekunden, um eine Grimasse als Warnung zu lesen",
-    "Warum du beim Zuhören öfter mit den Fingern trommelst, als dir bewusst ist",
-    "Dein Gehirn stuft einen schnellen Gang automatisch als kompetent ein",
-    "Warum du beim Warten auf eine Antwort automatisch den Atem anhältst",
-    "Warum du beim Zweifeln automatisch an deinem Ohr ziehst",
-    "Dein Gehirn braucht nur 7 Sekunden für einen stabilen ersten Eindruck",
-    "Warum du beim Zuhören öfter die Handflächen nach unten drehst",
-    "Warum du beim Lächeln über einen Witz zuerst die Schultern hebst",
-    "3 Grad Kippung im Stand verraten, ob du dich sicher fühlst",
-    "Warum du beim Zuhören öfter den Oberkörper nach vorne beugst",
     "Warum du beim Zuhören öfter die Augenbrauen senkst, wenn du konzentriert bist",
     "2 Sekunden Verzögerung beim Winken verraten, wie sehr du dich freust",
     "Dein Gehirn hält einen geraden Rücken für selbstbewusster als breite Schultern",
@@ -199,7 +186,20 @@
     "Am Ende entscheidet nicht der Spruch, sondern das Zusammenspiel von Timing, Blick und Nähe beim Necken",
     "Warum deine Stimme beim Small Talk eine andere Melodie bekommt als sonst",
     "Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde",
-    "3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war"
+    "3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war",
+    "Warum deine Füße beim Zuhören verraten, wie sehr du gelangweilt bist",
+    "3 Sekunden Lächeln-Verzögerung verraten, ob Freude echt ist",
+    "Dein Gehirn hält eine tiefere Stimme bei schlechten Nachrichten für ehrlicher",
+    "Warum du beim Warten auf eine wichtige Nachricht öfter räusperst",
+    "Dein Daumen verrät, wie nervös du wirklich auf eine Antwort wartest",
+    "Warum deine Füße beim Warten unruhiger werden als deine Hände",
+    "Dein Gehirn checkt das Handy, obwohl du weißt, dass nichts da ist",
+    "Warum deine Atmung flacher wird, während du auf eine Antwort wartest",
+    "Dein Blick wandert öfter zur Tür, wenn du auf jemanden wartest",
+    "Warum du beim Warten öfter mit Gegenständen spielst",
+    "Dein Gehirn verzerrt die Zeit, wenn dir eine Antwort wichtig ist",
+    "Dein Lächeln wird dünner, je länger du auf eine Antwort wartest",
+    "Am Ende verrät nicht ein Zeichen, sondern die Summe aller Signale, wie sehr dich ein Ergebnis kümmert"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -217,6 +217,7 @@
     "Wie unbewusste Körpersignale beim Komplimente machen und annehmen (Blick abwenden, Lächeln unterdrücken, Haare berühren) zeigen, ob jemand sich wirklich wohlfühlt oder innerlich verlegen wird",
     "Wie unbewusste Körpersignale beim Entschuldigen (Blickkontakt, Handhaltung, Tonfall) zeigen, ob eine Entschuldigung wirklich ernst gemeint ist oder nur der Form halber kommt",
     "Wie unbewusste Körpersignale beim Lügen und Beschönigen (Blickrichtung, Tonhöhe, Pausen) zeigen, ob jemand gerade die Wahrheit dehnt oder wirklich ehrlich ist",
-    "Wie unbewusste Körpersignale beim Scherzen und Necken (Mimik-Timing, Blickkontakt, Körperabstand) zeigen, ob ein Spaß als liebevoll oder verletzend ankommt"
+    "Wie unbewusste Körpersignale beim Scherzen und Necken (Mimik-Timing, Blickkontakt, Körperabstand) zeigen, ob ein Spaß als liebevoll oder verletzend ankommt",
+    "Wie unbewusste Körpersignale beim Warten auf eine wichtige Nachricht oder Rückmeldung (Handy-Checks, Unruhe in den Füßen, Räuspern) zeigen, wie sehr uns das Ergebnis wirklich kümmert"
   ]
 }

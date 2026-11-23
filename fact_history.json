@@ -1,186 +1,4 @@
 {
- "Dein Gehirn merkt sich Niederlagen länger als Siege": {
-  "title": "Dein Gehirn merkt sich Niederlagen länger als Siege",
-  "hook": "Eine Niederlage vergisst du seltener als einen Sieg, hast du das gemerkt?",
-  "tags": [
-   "psychologie",
-   "negativitätsbias",
-   "gehirn",
-   "erinnerung",
-   "emotionen",
-   "fakten",
-   "mentalhealth",
-   "alltagspsychologie"
-  ]
- },
- "3 Minuten reichen, damit du einen Fremden sympathisch findest": {
-  "title": "3 Minuten reichen, damit du einen Fremden sympathisch findest",
-  "hook": "Drei Minuten Gespräch reichen, damit dein Gehirn jemanden mag.",
-  "tags": [
-   "psychologie",
-   "sympathie",
-   "erster eindruck",
-   "sozialpsychologie",
-   "gehirn",
-   "fakten",
-   "kommunikation",
-   "alltagspsychologie"
-  ]
- },
- "Warum du beim Treppensteigen automatisch den Takt deiner Schritte anpasst": {
-  "title": "Warum du beim Treppensteigen automatisch den Takt deiner Schritte anpasst",
-  "hook": "Dein Gehirn zählt Treppenstufen, ohne dass du es merkst.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "motorik",
-   "bewegung",
-   "alltagsfakten",
-   "stolpern",
-   "wahrnehmung",
-   "nervensystem"
-  ]
- },
- "Dein Gehirn hört deinen Namen auch im lautesten Raum heraus": {
-  "title": "Dein Gehirn hört deinen Namen auch im lautesten Raum heraus",
-  "hook": "In einem lauten Raum hörst du trotzdem sofort deinen Namen, warum?",
-  "tags": [
-   "psychologie",
-   "cocktailparty effekt",
-   "gehirn",
-   "aufmerksamkeit",
-   "wahrnehmung",
-   "hören",
-   "fakten",
-   "sozialpsychologie"
-  ]
- },
- "Die Zahl, die zeigt wie oft du am Tag an andere Menschen denkst": {
-  "title": "Die Zahl, die zeigt wie oft du am Tag an andere Menschen denkst",
-  "hook": "Dein Gehirn denkt täglich tausende Male an andere Menschen.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "soziale kognition",
-   "gedanken",
-   "default mode network",
-   "fakten",
-   "beziehungen",
-   "alltagspsychologie"
-  ]
- },
- "Warum du bei einem Streit zuerst an frühere Streits denkst": {
-  "title": "Warum du bei einem Streit zuerst an frühere Streits denkst",
-  "hook": "Mitten im Streit fallen dir plötzlich alte Streits wieder ein, warum?",
-  "tags": [
-   "psychologie",
-   "beziehungen",
-   "streit",
-   "gedächtnis",
-   "emotionen",
-   "gehirn",
-   "fakten",
-   "konflikte"
-  ]
- },
- "Dein Gehirn braucht nur 0,1 Sekunden für den ersten Eindruck von einem Gesicht": {
-  "title": "Dein Gehirn braucht nur 0,1 Sekunden für den ersten Eindruck von einem Gesicht",
-  "hook": "In einer Zehntelsekunde hat dein Gehirn schon über dich geurteilt.",
-  "tags": [
-   "psychologie",
-   "erster eindruck",
-   "gehirn",
-   "gesicht",
-   "amygdala",
-   "wahrnehmung",
-   "fakten",
-   "sozialpsychologie"
-  ]
- },
- "Warum geteiltes Lachen eine Gruppe enger zusammenschweißt": {
-  "title": "Warum geteiltes Lachen eine Gruppe enger zusammenschweißt",
-  "hook": "Gemeinsames Lachen verändert messbar, wie nah sich Menschen fühlen.",
-  "tags": [
-   "psychologie",
-   "lachen",
-   "humor",
-   "sozialpsychologie",
-   "gehirn",
-   "endorphine",
-   "fakten",
-   "beziehungen"
-  ]
- },
- "Dein Gehirn hält Wartezeit für länger, wenn du auf die Uhr schaust": {
-  "title": "Dein Gehirn hält Wartezeit für länger, wenn du auf die Uhr schaust",
-  "hook": "Wer öfter auf die Uhr schaut, dem kommt Warten noch länger vor.",
-  "tags": [
-   "psychologie",
-   "zeitwahrnehmung",
-   "gehirn",
-   "warten",
-   "fakten",
-   "alltagspsychologie",
-   "zeitgefühl",
-   "wahrnehmung"
-  ]
- },
- "Warum du beim Lügen nach oben wegschaust, aber nicht immer": {
-  "title": "Warum du beim Lügen nach oben wegschaust, aber nicht immer",
-  "hook": "Du denkst, Augen nach oben heißt Lüge? Falsch.",
-  "tags": [
-   "psychologie",
-   "lügen erkennen",
-   "körpersprache",
-   "mimik",
-   "gehirn fakten",
-   "mythos",
-   "verhalten",
-   "nonverbale kommunikation"
-  ]
- },
- "Dein Gehirn braucht ein Gesicht, um eine Stimme zu glauben": {
-  "title": "Dein Gehirn braucht ein Gesicht, um eine Stimme zu glauben",
-  "hook": "Am Telefon klingt jemand ehrlich. Mit Video plötzlich nicht mehr.",
-  "tags": [
-   "psychologie",
-   "vertrauen",
-   "körpersprache",
-   "stimme",
-   "mimik",
-   "gehirn",
-   "deepfake",
-   "wahrnehmung"
-  ]
- },
- "Warum dein Gehirn bei Gruppenfotos zuerst dein eigenes Gesicht sucht": {
-  "title": "Warum dein Gehirn bei Gruppenfotos zuerst dein eigenes Gesicht sucht",
-  "hook": "Schau dir ein Gruppenfoto an. Wen findest du zuerst?",
-  "tags": [
-   "psychologie",
-   "wahrnehmung",
-   "gehirn fakten",
-   "selbstwahrnehmung",
-   "soziale psychologie",
-   "fotos",
-   "aufmerksamkeit",
-   "verhalten"
-  ]
- },
- "3 Sekunden reichen, damit du eine Melodie wiedererkennst": {
-  "title": "3 Sekunden reichen, damit du eine Melodie wiedererkennst",
-  "hook": "Drei Sekunden eines Songs reichen deinem Gehirn vollkommen.",
-  "tags": [
-   "psychologie",
-   "musik",
-   "gehirn fakten",
-   "gedächtnis",
-   "wahrnehmung",
-   "ohrwurm",
-   "melodie",
-   "wissenschaft"
-  ]
- },
  "Dein Gehirn spart Energie, indem es dich faul denken lässt": {
   "title": "Dein Gehirn spart Energie, indem es dich faul denken lässt",
   "hook": "Dein Gehirn ist nicht faul aus Zufall. Es spart Strom.",
@@ -6041,6 +5859,227 @@
    "alltagsfakten",
    "emotionen",
    "interaktion"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Füße beim Zuhören verraten, wie sehr du gelangweilt bist": {
+  "title": "Warum deine Füße beim Zuhören verraten, wie sehr du gelangweilt bist",
+  "hook": "Deine Füße verraten Langeweile, bevor dein Gesicht es tut.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "fußstellung",
+   "langeweile",
+   "soziale signale",
+   "menschenkenntnis",
+   "alltagspsychologie",
+   "gesprächsverhalten",
+   "body language"
+  ],
+  "abo_aufruf": true
+ },
+ "3 Sekunden Lächeln-Verzögerung verraten, ob Freude echt ist": {
+  "title": "3 Sekunden Lächeln-Verzögerung verraten, ob Freude echt ist",
+  "hook": "3 Sekunden Verzögerung entscheiden, ob ein Lächeln echt ist.",
+  "tags": [
+   "mimik",
+   "psychologie",
+   "lächeln",
+   "körpersprache",
+   "emotionen",
+   "echte freude",
+   "gesichtsausdruck",
+   "menschenkenntnis",
+   "nonverbale kommunikation",
+   "soziale signale"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn hält eine tiefere Stimme bei schlechten Nachrichten für ehrlicher": {
+  "title": "Dein Gehirn hält eine tiefere Stimme bei schlechten Nachrichten für ehrlicher",
+  "hook": "Eine tiefere Stimme lässt schlechte Nachrichten glaubwürdiger klingen.",
+  "tags": [
+   "stimme",
+   "psychologie",
+   "tonlage",
+   "kommunikation",
+   "glaubwürdigkeit",
+   "körpersprache",
+   "vertrauen",
+   "menschenkenntnis",
+   "nonverbale kommunikation",
+   "stimmlage"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum du beim Warten auf eine wichtige Nachricht öfter räusperst": {
+  "title": "Warum du beim Warten auf eine wichtige Nachricht öfter räusperst",
+  "hook": "Räuspern ohne Grund zeigt, wie sehr dich etwas beschäftigt.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "warten",
+   "stress",
+   "räuspern",
+   "nonverbal",
+   "alltag",
+   "anspannung",
+   "gehirn",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Daumen verrät, wie nervös du wirklich auf eine Antwort wartest": {
+  "title": "Dein Daumen verrät, wie nervös du wirklich auf eine Antwort wartest",
+  "hook": "Dein Daumen reibt sich, bevor du merkst, dass du nervös bist.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "nervosität",
+   "warten",
+   "daumen",
+   "selbstberuhigung",
+   "handy",
+   "stress",
+   "gehirn",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Füße beim Warten unruhiger werden als deine Hände": {
+  "title": "Warum deine Füße beim Warten unruhiger werden als deine Hände",
+  "hook": "Deine Füße wippen zuerst, lange bevor dein Gesicht etwas zeigt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "füße",
+   "nervosität",
+   "warten",
+   "nonverbal",
+   "stress",
+   "verhalten",
+   "gehirn",
+   "alltag"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn checkt das Handy, obwohl du weißt, dass nichts da ist": {
+  "title": "Dein Gehirn checkt das Handy, obwohl du weißt, dass nichts da ist",
+  "hook": "Du checkst dein Handy, obwohl du genau weißt, es ist leer.",
+  "tags": [
+   "psychologie",
+   "handy",
+   "warten",
+   "stress",
+   "gehirn",
+   "verhalten",
+   "alltag",
+   "smartphone",
+   "unruhe",
+   "kontrolle"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Atmung flacher wird, während du auf eine Antwort wartest": {
+  "title": "Warum deine Atmung flacher wird, während du auf eine Antwort wartest",
+  "hook": "Dein Atem wird flacher, ohne dass du es bewusst merkst.",
+  "tags": [
+   "psychologie",
+   "atmung",
+   "stress",
+   "warten",
+   "körpersprache",
+   "gehirn",
+   "nervensystem",
+   "alltag",
+   "verhalten",
+   "anspannung"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Blick wandert öfter zur Tür, wenn du auf jemanden wartest": {
+  "title": "Dein Blick wandert öfter zur Tür, wenn du auf jemanden wartest",
+  "hook": "Dein Blick springt zur Tür, bevor du es selbst merkst.",
+  "tags": [
+   "psychologie",
+   "blick",
+   "warten",
+   "körpersprache",
+   "gehirn",
+   "aufmerksamkeit",
+   "erwartung",
+   "alltag",
+   "verhalten",
+   "nonverbal"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Warten öfter mit Gegenständen spielst": {
+  "title": "Warum du beim Warten öfter mit Gegenständen spielst",
+  "hook": "Ein Stift in der Hand verrät mehr Anspannung als dein Gesicht.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "übersprungshandlung",
+   "warten",
+   "stress",
+   "gewohnheit",
+   "verhalten",
+   "gehirn",
+   "nervosität",
+   "alltag"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn verzerrt die Zeit, wenn dir eine Antwort wichtig ist": {
+  "title": "Dein Gehirn verzerrt die Zeit, wenn dir eine Antwort wichtig ist",
+  "hook": "5 Minuten fühlen sich wie 20 an, wenn dir etwas wichtig ist.",
+  "tags": [
+   "psychologie",
+   "zeitwahrnehmung",
+   "warten",
+   "gehirn",
+   "stress",
+   "alltag",
+   "aufmerksamkeit",
+   "verhalten",
+   "zeit",
+   "gefühl"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Lächeln wird dünner, je länger du auf eine Antwort wartest": {
+  "title": "Dein Lächeln wird dünner, je länger du auf eine Antwort wartest",
+  "hook": "Dein Lächeln wird dünner, je länger die Antwort ausbleibt.",
+  "tags": [
+   "psychologie",
+   "mimik",
+   "lächeln",
+   "warten",
+   "körpersprache",
+   "gehirn",
+   "stress",
+   "verhalten",
+   "alltag",
+   "aufmerksamkeit"
+  ],
+  "abo_aufruf": false
+ },
+ "Am Ende verrät nicht ein Zeichen, sondern die Summe aller Signale, wie sehr dich ein Ergebnis kümmert": {
+  "title": "Am Ende verrät nicht ein Zeichen, sondern die Summe aller Signale, wie sehr dich ein Ergebnis kümmert",
+  "hook": "Nicht ein Zeichen zeigt Sorge, sondern alle zusammen.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "warten",
+   "stress",
+   "gehirn",
+   "muster",
+   "verhalten",
+   "nonverbal",
+   "alltag",
+   "anspannung"
   ],
   "abo_aufruf": false
  }
