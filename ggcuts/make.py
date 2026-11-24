@@ -123,7 +123,7 @@ def choose(cands, n, title, camp):
     sprache = "German (natural, casual TikTok German, correct umlauts)" if LANG == "de" else "English"
     prompt = f"""You pick TikTok clips from a Twitch VOD of streamer {camp['name']} (stream title: {title!r}).
 Campaign formats that perform: {camp.get('formats', 'clutch plays, funny moments & fails, genuine reactions, hot takes, chat banter')}.
-Avoid: sponsor reads, ads, gambling, bathroom breaks, menus/loading, quiet talk, anything that needs long context
+Avoid: sponsor reads, ads, gambling, gore/violent hooks (no "beheading", "killing" etc. in hook or caption), bathroom breaks, menus/loading, quiet talk, anything that needs long context
 or shows the streamer in a negative light.
 
 Below are transcribed windows around loudness peaks (timestamps in seconds of the VOD).
@@ -354,9 +354,12 @@ def render(camp, vod, start, end, name, hook):
         cam_h = min(760, int(1080 * h / w) // 2 * 2)
         game_h = 1920 - cam_h
         gw = int(1080 * 1080 / game_h) // 2 * 2
+        # Spielbild-Ausschnitt: Mitte des Bereichs game_area [x0, x1] (z. B. ohne Chat/Facecam rechts), sonst Bildmitte
+        ga0, ga1 = camp.get("game_area", [0, 1920])
+        gx = max(0, min(1920 - gw, int((ga0 + ga1) / 2 - gw / 2)))
         base = (f"[0:v]scale=1920:1080,split=2[a][b];"
                 f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h},format=yuv420p[cam];"
-                f"[b]crop={gw}:1080:(1920-{gw})/2:0,scale=1080:{game_h},format=yuv420p[game];"
+                f"[b]crop={gw}:1080:{gx}:0,scale=1080:{game_h},format=yuv420p[game];"
                 f"[cam][game]vstack=inputs=2[st]")
         ov_y = cam_h - 80
     elif lay == "track":

@@ -51,6 +51,10 @@
   "cam_border": "face",
   "formats": "lustige Momente & Fails, echte Reaktionen, Chat-Interaktionen, Hype-Momente in GTA VI, starke Sprüche",
   "erlaubnis": "Robin 24.11.2026: Rewinside hat am 23.11. das OK zum Clippen gegeben",
-  "active": true
+  "active": true,
+  "game_area": [
+   0,
+   1400
+  ]
  }
 ]
