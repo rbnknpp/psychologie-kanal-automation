@@ -32,5 +32,25 @@
   "permission": "geduldet (Anfrage 16.11. gesendet, Antwort offen) - bei Beschwerde sofort deaktivieren",
   "active": false,
   "pausiert": "20.11.2026: Publikum von gg.cuts ist zu ~90 % DACH, US-Kampagnen zahlen nur bei 40 %+ Tier-1-Publikum"
+ },
+ {
+  "key": "rewinside",
+  "name": "Rewinside",
+  "platform": "twitch",
+  "channel": "rewinside",
+  "per_day": 4,
+  "lang": "de",
+  "overlay": null,
+  "caption_suffix": "twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+  "cam_box": [
+   1430,
+   710,
+   412,
+   308
+  ],
+  "cam_border": "face",
+  "formats": "lustige Momente & Fails, echte Reaktionen, Chat-Interaktionen, Hype-Momente in GTA VI, starke Sprüche",
+  "erlaubnis": "Robin 24.11.2026: Rewinside hat am 23.11. das OK zum Clippen gegeben",
+  "active": true
  }
 ]

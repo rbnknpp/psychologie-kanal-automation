@@ -94,6 +94,9 @@ def peaks(audio, top=14, win=2.0, skip=(), guard=90):
 _model = None
 
 
+LANG = "en"   # Sprache der aktuellen Kampagne (campaigns.json "lang"), wird in run_campaign gesetzt
+
+
 def whisper():
     global _model
     if _model is None:
@@ -107,7 +110,7 @@ def transcribe_window(audio, t, pre=30, post=25):
     s = max(0, t - pre)
     sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(s), "-t", str(pre + post), "-i", str(audio),
         "-ac", "1", "-ar", "16000", str(wav)])
-    segs, _ = whisper().transcribe(str(wav), language="en", vad_filter=True)
+    segs, _ = whisper().transcribe(str(wav), language=LANG, vad_filter=True)
     return [(round(x.start + s, 1), round(x.end + s, 1), x.text.strip()) for x in segs]
 
 
@@ -117,6 +120,7 @@ def choose(cands, n, title, camp):
     for i, (t, segs) in enumerate(cands):
         lines.append(f"### Kandidat {i} (Lautstaerke-Spitze bei {t:.0f}s)")
         lines += [f"[{a:.1f}-{b:.1f}] {txt}" for a, b, txt in segs] or ["(kaum Sprache)"]
+    sprache = "German (natural, casual TikTok German, correct umlauts)" if LANG == "de" else "English"
     prompt = f"""You pick TikTok clips from a Twitch VOD of streamer {camp['name']} (stream title: {title!r}).
 Campaign formats that perform: {camp.get('formats', 'clutch plays, funny moments & fails, genuine reactions, hot takes, chat banter')}.
 Avoid: sponsor reads, ads, gambling, bathroom breaks, menus/loading, quiet talk, anything that needs long context
@@ -126,8 +130,8 @@ Below are transcribed windows around loudness peaks (timestamps in seconds of th
 Choose the {n} best, non-overlapping clips (ranked best first; some may be dropped later if his facecam is not visible). Each clip: 15-45 seconds, must start right before the payoff/hook
 (no slow intro) and end shortly after the reaction. Use the timestamps.
 
-Return ONLY JSON: {{"clips":[{{"start":float,"end":float,"hook":"max 6 words, punchy, English, no emoji",
-"caption":"short English caption with 1 emoji, max 90 chars, no hashtags","score":1-10}}]}}
+Return ONLY JSON: {{"clips":[{{"start":float,"end":float,"hook":"max 6 words, punchy, {sprache}, no emoji",
+"caption":"short {sprache} caption with 1 emoji, max 90 chars, no hashtags","score":1-10}}]}}
 Skip weak windows - if fewer than {n} are good, return fewer.
 
 {chr(10).join(lines)}"""
@@ -185,7 +189,7 @@ def ass_time(t):
 
 
 def subtitles(src, ass, hook, sub_y, hook_y):
-    segs, _ = whisper().transcribe(str(src), language="en", word_timestamps=True, vad_filter=True)
+    segs, _ = whisper().transcribe(str(src), language=LANG, word_timestamps=True, vad_filter=True)
     words = [w for s in segs for w in s.words if w.word.strip()]
     head = f"""[Script Info]
 PlayResX: 1080
@@ -236,6 +240,8 @@ def faces(img, min_size=60, neighbors=5):
 def border_match(im, box, color):
     """Rahmen der Facecam-Box vorhanden? color = "teal" (animiert leuchtend) oder [r, g, b] mit Toleranz."""
     x, y, w, h = box
+    if color == "face":  # Facecam ohne farbigen Rahmen (z. B. Rewinside): Gesicht innerhalb der Box?
+        return len(faces(im[y:y + h, x:x + w], min_size=50, neighbors=4)) > 0
     band = im[max(0, y - 14):y + 8].astype(int)
     def ok(px):
         if color == "teal":
@@ -437,6 +443,8 @@ def queue(path, title, caption, seconds, camp=None):
 
 
 def run_campaign(camp, count, test, st):
+    global LANG
+    LANG = camp.get("lang", "en")
     done = 0
     vl = vods(camp)
     print(f"[{camp['key']}] {len(vl)} VODs:", [(v, int(d)) for v, _, d in vl[:4]], flush=True)
@@ -527,6 +535,10 @@ def main():
     # Seit 20.11.2026 (Robin): nur noch Clips für laufende Content-Rewards-Kampagnen – ohne Kampagne kein Geld, also kein Clip.
     laufend = []
     for c in camps:
+        if not c.get("content_rewards") and c.get("erlaubnis"):
+            print(f"[{c['key']}] ohne Kampagne, mit Erlaubnis: {c['erlaubnis']}", flush=True)
+            laufend.append(c)
+            continue
         if not c.get("content_rewards"):
             print(f"[{c['key']}] keine Content-Rewards-Kampagne hinterlegt – übersprungen", flush=True)
             continue
