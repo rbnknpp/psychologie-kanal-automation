@@ -1,200 +1,4 @@
 {
- "Dein Gehirn spart Energie, indem es dich faul denken lässt": {
-  "title": "Dein Gehirn spart Energie, indem es dich faul denken lässt",
-  "hook": "Dein Gehirn ist nicht faul aus Zufall. Es spart Strom.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "kognitive verzerrung",
-   "denken",
-   "energie",
-   "neurowissenschaft",
-   "entscheidungen",
-   "heuristik"
-  ]
- },
- "Warum du beim Autofahren leiser wirst, wenn du dich konzentrierst": {
-  "title": "Warum du beim Autofahren leiser wirst, wenn du dich konzentrierst",
-  "hook": "Du suchst eine Adresse und drehst automatisch das Radio leiser.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "autofahren",
-   "konzentration",
-   "alltag",
-   "aufmerksamkeit",
-   "multitasking",
-   "verhalten"
-  ]
- },
- "Die Zahl der Entscheidungen, die du täglich triffst, ohne es zu merken": {
-  "title": "Die Zahl der Entscheidungen, die du täglich triffst, ohne es zu merken",
-  "hook": "Du triffst heute etwa 35.000 Entscheidungen. Die meisten unbewusst.",
-  "tags": [
-   "psychologie",
-   "entscheidungen",
-   "gehirn fakten",
-   "alltag",
-   "mentale energie",
-   "autopilot",
-   "verhalten",
-   "wissenschaft"
-  ]
- },
- "Dein Gehirn behandelt Ablehnung wie körperlichen Schmerz": {
-  "title": "Dein Gehirn behandelt Ablehnung wie körperlichen Schmerz",
-  "hook": "Zurückgewiesen zu werden aktiviert dieselben Areale wie ein Schlag.",
-  "tags": [
-   "psychologie",
-   "ablehnung",
-   "gehirn fakten",
-   "soziale psychologie",
-   "schmerz",
-   "emotionen",
-   "beziehungen",
-   "neurowissenschaft"
-  ]
- },
- "Warum dir eine Umarmung von hinten unangenehmer ist als von vorne": {
-  "title": "Warum dir eine Umarmung von hinten unangenehmer ist als von vorne",
-  "hook": "Jemand umarmt dich von hinten und dein Puls steigt sofort.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "berührung",
-   "gehirn fakten",
-   "beziehungen",
-   "verhalten",
-   "schutzreflex",
-   "nervensystem"
-  ]
- },
- "Dein Gehirn erfindet Gründe für Entscheidungen, die es längst getroffen hat": {
-  "title": "Dein Gehirn erfindet Gründe für Entscheidungen, die es längst getroffen hat",
-  "hook": "Du triffst eine Entscheidung und erfindest die Begründung erst danach.",
-  "tags": [
-   "psychologie",
-   "entscheidungen",
-   "gehirn fakten",
-   "unbewusstes",
-   "neurowissenschaft",
-   "freier wille",
-   "verhalten",
-   "denken"
-  ]
- },
- "Warum du beim Flüstern mehr Geheimnis vermutest, als wirklich drin steckt": {
-  "title": "Warum du beim Flüstern mehr Geheimnis vermutest, als wirklich drin steckt",
-  "hook": "Ein Flüstern reicht, und dein Gehirn schaltet auf Alarm.",
-  "tags": [
-   "psychologie",
-   "gehirn fakten",
-   "flüstern",
-   "verhalten",
-   "wahrnehmung",
-   "kommunikation",
-   "alltagspsychologie",
-   "neurowissenschaft",
-   "geheimnisse",
-   "soziales verhalten"
-  ]
- },
- "Die Zahl, die zeigt wie schnell du eine Melodie in deinem Kopf nicht mehr loswirst": {
-  "title": "Die Zahl, die zeigt wie schnell du eine Melodie in deinem Kopf nicht mehr loswirst",
-  "hook": "Ein Ohrwurm braucht oft nur einen einzigen Takt.",
-  "tags": [
-   "ohrwurm",
-   "musikpsychologie",
-   "gehirn fakten",
-   "popmusik",
-   "neurowissenschaft",
-   "alltagspsychologie",
-   "melodie",
-   "musik und gehirn",
-   "psychologie fakten",
-   "wissenschaft"
-  ]
- },
- "Warum dein Gehirn Stille in Gesprächen als unangenehm empfindet": {
-  "title": "Warum dein Gehirn Stille in Gesprächen als unangenehm empfindet",
-  "hook": "Schon kurze Gesprächspausen fühlen sich für dich quälend an.",
-  "tags": [
-   "psychologie",
-   "kommunikation",
-   "gesprächspause",
-   "stille",
-   "sozialverhalten",
-   "gehirn fakten",
-   "alltagspsychologie",
-   "smalltalk",
-   "wissenschaft",
-   "verhalten"
-  ]
- },
- "Dein Gehirn reagiert auf Kritik stärker, wenn sie schriftlich kommt": {
-  "title": "Dein Gehirn reagiert auf Kritik stärker, wenn sie schriftlich kommt",
-  "hook": "Ein geschriebener Satz kann mehr verletzen als derselbe gesprochen.",
-  "tags": [
-   "psychologie",
-   "textnachrichten",
-   "kommunikation",
-   "gehirn fakten",
-   "sozialverhalten",
-   "alltagspsychologie",
-   "konflikte",
-   "wissenschaft",
-   "messenger",
-   "fehlinterpretation"
-  ]
- },
- "3 Sekunden Blickkontakt reichen, um Vertrauen aufzubauen": {
-  "title": "3 Sekunden Blickkontakt reichen, um Vertrauen aufzubauen",
-  "hook": "Drei Sekunden Blickkontakt verändern, wie jemand dich wahrnimmt.",
-  "tags": [
-   "blickkontakt",
-   "psychologie",
-   "sozialverhalten",
-   "vertrauen",
-   "gehirn fakten",
-   "körpersprache",
-   "kommunikation",
-   "alltagspsychologie",
-   "wissenschaft",
-   "verhalten"
-  ]
- },
- "Warum dir dein eigener Name auf einem Preisschild sofort auffällt": {
-  "title": "Warum dir dein eigener Name auf einem Preisschild sofort auffällt",
-  "hook": "Deinen eigenen Namen erkennst du schneller als jedes andere Wort.",
-  "tags": [
-   "psychologie",
-   "eigener name",
-   "aufmerksamkeit",
-   "cocktail party effekt",
-   "gehirn fakten",
-   "marketingpsychologie",
-   "wissenschaft",
-   "alltagspsychologie",
-   "wahrnehmung",
-   "verhalten"
-  ]
- },
- "Dein Gehirn empfindet Wartezeit in der Schlange länger als beim Gehen": {
-  "title": "Dein Gehirn empfindet Wartezeit in der Schlange länger als beim Gehen",
-  "hook": "Dieselbe Minute fühlt sich im Stehen viel länger an als im Gehen.",
-  "tags": [
-   "psychologie",
-   "zeitgefühl",
-   "warten",
-   "gehirn fakten",
-   "alltagspsychologie",
-   "wahrnehmung",
-   "wissenschaft",
-   "verhalten",
-   "supermarkt",
-   "schlange stehen"
-  ]
- },
  "Warum dir eine Stimme am Telefon vertrauter vorkommt als erwartet": {
   "title": "Warum dir eine Stimme am Telefon vertrauter vorkommt als erwartet",
   "hook": "Am Telefon baust du schneller Vertrauen auf als gedacht.",
@@ -6080,6 +5884,207 @@
    "nonverbal",
    "alltag",
    "anspannung"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum dein Fuß beim Flirten in eine bestimmte Richtung zeigt": {
+  "title": "Warum dein Fuß beim Flirten in eine bestimmte Richtung zeigt",
+  "hook": "Dein Fuß zeigt immer dahin, wo dein Interesse wirklich liegt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "flirten",
+   "nonverbale kommunikation",
+   "fußstellung",
+   "body language",
+   "erster eindruck",
+   "alltagspsychologie",
+   "verhalten",
+   "social skills"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Augen beim Gehen durch eine Menge automatisch Gesichter suchen": {
+  "title": "Warum deine Augen beim Gehen durch eine Menge automatisch Gesichter suchen",
+  "hook": "Dein Blick findet Gesichter in der Menge in Millisekunden.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "gesichtserkennung",
+   "gehirn",
+   "wahrnehmung",
+   "erster eindruck",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "soziale wahrnehmung",
+   "mimik"
+  ],
+  "abo_aufruf": true
+ },
+ "Warum deine Stimme beim Lügen über WhatsApp-Sprachnachrichten langsamer klingt": {
+  "title": "Warum deine Stimme beim Lügen über WhatsApp-Sprachnachrichten langsamer klingt",
+  "hook": "Lügner sprechen in Sprachnachrichten messbar langsamer.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "lügen erkennen",
+   "stimme",
+   "whatsapp",
+   "sprachnachricht",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "erster eindruck",
+   "gehirn"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du im Aufzug sofort die Ecke suchst": {
+  "title": "Warum du im Aufzug sofort die Ecke suchst",
+  "hook": "Du betrittst einen Aufzug und steuerst sofort eine Ecke an.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "aufzug",
+   "persönliche distanz",
+   "proxemik",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "menschliches verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn berechnet deine Distanzzone in Zentimetern": {
+  "title": "Dein Gehirn berechnet deine Distanzzone in Zentimetern",
+  "hook": "Um dich herum liegt eine unsichtbare Zone von etwa 45 Zentimetern.",
+  "tags": [
+   "proxemik",
+   "körpersprache",
+   "psychologie",
+   "persönliche distanz",
+   "nonverbale kommunikation",
+   "soziale distanz",
+   "menschliches verhalten",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du in der Schlange nie direkt hinter jemandem stehst": {
+  "title": "Warum du in der Schlange nie direkt hinter jemandem stehst",
+  "hook": "In der Schlange stellst du dich fast nie exakt hinter die Person vor dir.",
+  "tags": [
+   "körpersprache",
+   "warteschlange",
+   "psychologie",
+   "proxemik",
+   "persönliche distanz",
+   "alltagspsychologie",
+   "nonverbale kommunikation",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn tauscht Blickkontakt gegen Nähe": {
+  "title": "Dein Gehirn tauscht Blickkontakt gegen Nähe",
+  "hook": "Je enger der Raum, desto seltener suchst du den Blick von Fremden.",
+  "tags": [
+   "blickkontakt",
+   "körpersprache",
+   "psychologie",
+   "aufzug",
+   "proxemik",
+   "soziale distanz",
+   "nonverbale kommunikation",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Arme im Aufzug näher am Körper bleiben": {
+  "title": "Warum deine Arme im Aufzug näher am Körper bleiben",
+  "hook": "In engen Räumen ziehst du deine Arme automatisch näher an den Körper.",
+  "tags": [
+   "körpersprache",
+   "aufzug",
+   "psychologie",
+   "proxemik",
+   "körperhaltung",
+   "soziale distanz",
+   "nonverbale kommunikation",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Freiwillige Nähe fühlt sich anders an als erzwungene": {
+  "title": "Freiwillige Nähe fühlt sich anders an als erzwungene",
+  "hook": "Der gleiche Abstand fühlt sich völlig unterschiedlich an, je nach Kontext.",
+  "tags": [
+   "psychologie",
+   "proxemik",
+   "persönliche distanz",
+   "körpersprache",
+   "stress",
+   "soziale distanz",
+   "nonverbale kommunikation",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum Männer und Frauen Enge unterschiedlich ausgleichen": {
+  "title": "Warum Männer und Frauen Enge unterschiedlich ausgleichen",
+  "hook": "Männer und Frauen gleichen fremde Nähe auf unterschiedliche Weise aus.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "proxemik",
+   "geschlechterunterschiede",
+   "soziale distanz",
+   "nonverbale kommunikation",
+   "verhalten",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein voller Aufzug deinen Puls leicht erhöht": {
+  "title": "Warum ein voller Aufzug deinen Puls leicht erhöht",
+  "hook": "Dein Puls steigt messbar, sobald ein Aufzug zu voll wird.",
+  "tags": [
+   "psychologie",
+   "stress",
+   "proxemik",
+   "körpersprache",
+   "nervensystem",
+   "soziale distanz",
+   "aufzug",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum du beim Aussteigen schon vorher den Weg planst": {
+  "title": "Warum du beim Aussteigen schon vorher den Weg planst",
+  "hook": "Schon vor dem Aussteigen berechnet dein Gehirn den kürzesten Weg nach draußen.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "aufzug",
+   "proxemik",
+   "verhalten",
+   "nonverbale kommunikation",
+   "raumwahrnehmung",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Am Ende verteidigt dein Körper den Raum, den dein Verstand längst aufgegeben hat": {
+  "title": "Am Ende verteidigt dein Körper den Raum, den dein Verstand längst aufgegeben hat",
+  "hook": "All diese Signale zusammen ergeben ein einziges, klares Muster.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "proxemik",
+   "persönliche distanz",
+   "nonverbale kommunikation",
+   "soziale distanz",
+   "zusammenfassung",
+   "alltagspsychologie"
   ],
   "abo_aufruf": false
  }
