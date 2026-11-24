@@ -32,12 +32,12 @@ FORMAT = """Gib NUR ein JSON-Objekt zurück:
  "tags": ["was wäre wenn", "... 6-10 weitere"],
  "figur": "%s",
  "szenen": [ {"say": "1-2 gesprochene Sätze", "bild": "englische Szene ODER gleich", "titel": "optional kurze Texteinblendung"} ],
- "shorts": [ {"von": 0, "bis": 0, "titel": "Hook für den Short, max. 60 Zeichen"} ]
+ "shorts": [ {"von": 0, "bis": 0, "titel": "eigenständige Schlagzeile für den Short, max. 60 Zeichen (steht ohne „Was wäre, wenn“ davor)"} ]
 }
 Regeln:
 - 85-110 Szenen, zusammen 1250-1450 gesprochene Wörter (ergibt 8,5-10 Minuten). Das ist Pflicht.
 - Aufbau: Hook-Alltagsszene mit Leo -> Teaser „In diesem Video …" -> 6-8 Kapitel mit eigener Einblendung (titel) -> überraschende Wendung/Realitäts-Check -> Abschluss mit Frage an die Zuschauer + Abo-Hinweis.
-- "bild": eine konkrete englische Szene im Pixar-Stil (Leo kommt in jedem 3. Bild vor, immer mit dem Wort "Leo"), "gleich" = vorheriges Bild bleibt (max. 3x hintereinander). 50-65 verschiedene Bilder. Keine Schrift in Bildern. Planeten/Erde ohne Ringe.
+- "bild": eine konkrete englische Szene im Pixar-Stil (Leo kommt in jedem 3. Bild vor, immer mit dem Wort "Leo"), "gleich" = vorheriges Bild bleibt (max. 3x hintereinander). 50-65 verschiedene Bilder. Keine Schrift in Bildern. Planeten/Erde ohne Ringe. Das Bild muss sachlich zum Gesagten passen (richtige Tierart, z. B. Grönlandhai statt Weißer Hai; keine Planeten unter Wasser oder Weltraum-Deko in Erdszenen).
 - "titel": nur bei Kapitelstarts und starken Zahlen (z. B. "1.670 km/h"), max. 22 Zeichen, sonst weglassen.
 - Zahlen im "say" ausschreiben, wie man sie spricht.
 - "shorts": 6-8 Abschnitte (von/bis = Szenen-Indizes, 0-basiert), je 25-55 Sekunden (ca. 70-140 Wörter), jeder für sich verständlich, starker erster Satz.""" % FIGUR

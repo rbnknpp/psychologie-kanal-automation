@@ -41,13 +41,20 @@ def cover(im, w, h):
     return r.crop((x, y, x + w, y + h))
 
 
-def header(titel):
+def header(titel, frage=""):
+    """Oben klein die Frage der Folge (z. B. „Was wäre, wenn du 1.000 Jahre alt werden könntest?“), darunter groß der Hook.
+    Robin 24.11.2026: früher stand fest „WAS WÄRE, WENN …“ vor dem Hook -> ergab Unsinn („… Dieser Hai ist 392 Jahre alt?!“)."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
-    d.text((W / 2, 250), "WAS WÄRE, WENN …", font=font(46, "ExtraBold"), fill=WHITE, anchor="mm", stroke_width=5, stroke_fill=BLACK)
+    y = 230
+    if frage and frage.strip().lower() != titel.strip().lower():
+        fs = font(44, "ExtraBold")
+        for ln in wrap(d, frage.upper(), fs, 960)[:2]:
+            d.text((W / 2, y), ln, font=fs, fill=WHITE, anchor="mt", stroke_width=5, stroke_fill=BLACK)
+            y += 54
+        y += 26
     f = font(82, "ExtraBold")
     lines = wrap(d, titel.upper(), f, 960)[:3]
-    y = 330
     for ln in lines:
         d.text((W / 2, y), ln, font=f, fill=YELLOW, anchor="mt", stroke_width=9, stroke_fill=BLACK)
         y += 96
@@ -68,7 +75,7 @@ def endcard():
     return lay
 
 
-def render_short(wd, tl, seg, titel, out):
+def render_short(wd, tl, seg, titel, out, frage=""):
     sc = tl["scenes"][seg["von"]:seg["bis"] + 1]
     t0, t1 = sc[0]["t0"], sc[-1]["t1"]
     dur = t1 - t0 + 0.4
@@ -78,7 +85,7 @@ def render_short(wd, tl, seg, titel, out):
             im = Image.open(wd / s["bild"]).convert("RGB")
             bg = cover(im, W, H).filter(ImageFilter.GaussianBlur(28)).point(lambda v: int(v * 0.55))
             imgs[s["bild"]] = (bg.convert("RGBA"), im.resize((int(W * 1.1), int(W * 1.1 * 9 / 16)), Image.LANCZOS))
-    head = header(titel)
+    head = header(titel, frage)
     caps = [(a - t0, z - t0, caption(t)) for s in sc for a, z, t in chunks([tuple(w) for w in s["words"]], maxw=3, maxc=22)]
     end = endcard()
     vid = out.with_suffix(".silent.mp4")
@@ -142,16 +149,17 @@ def make_shorts(ep, wd, start, days, upload=False, main_video=None):
     sd.mkdir(exist_ok=True)
     done = []
     for k, (seg, (day, hh)) in enumerate(zip(segs, plan)):
-        titel = seg.get("titel") or ep.get("short_titel") or ep["titel"].replace("Was wäre, wenn ", "").rstrip("?") + "?"
-        path, dur = render_short(wd, tl, seg, titel, sd / f"short_{k + 1}.mp4")
+        frage = ep["titel"].strip()
+        titel = seg.get("titel") or ep.get("short_titel") or frage
+        path, dur = render_short(wd, tl, seg, titel, sd / f"short_{k + 1}.mp4", frage)
         print(f"  Short {k + 1}: {titel} ({dur:.0f} s) -> {day} {hh}")
         if upload:
             from upload.upload_video import upload as yt_upload
             from waswaerewenn.make import publish_at
             link = f"\n\n▶ Ganze Folge: https://youtu.be/{main_video}" if main_video else "\n\n▶ Die ganze Folge findest du auf dem Kanal."
-            desc = (f"Was wäre, wenn … {titel}{link}\n\nNeue Folgen jeden Mo, Mi und Fr um 17 Uhr.\n\n"
+            desc = (f"{titel}\n\n{frage}{link}\n\nNeue Folgen jeden Mo, Mi und Fr um 17 Uhr.\n\n"
                     "#shorts #waswärewenn #wissen #gedankenexperiment")
-            title = f"Was wäre, wenn … {titel}"[:90] + " #shorts"
+            title = titel[:90] + " #shorts"
             vid = yt_upload(str(path), title, desc, ep.get("tags", []) + ["shorts"], publish_at=publish_at(day, hh))
             print("    hochgeladen:", vid)
         done.append(str(path))
