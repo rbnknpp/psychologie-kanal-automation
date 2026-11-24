@@ -1,0 +1,405 @@
+{
+ "titel": "Was wäre, wenn es kein Internet mehr gäbe?",
+ "thumb_text": "INTERNET WEG?!",
+ "thumb_bild": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans, staring shocked at a giant glowing globe-shaped network of light slowly going dark, dramatic Pixar style lighting, worried expression, city skyline behind him with blank dark screens everywhere",
+ "beschreibung": "Stell dir vor, von einer Sekunde auf die andere ist das gesamte Internet weg – keine Nachrichten, kein Streaming, keine Bankautomaten. Leo nimmt dich mit auf eine Reise durch eine Welt ohne Netz und zeigt dir, was wirklich passieren würde. Welches Szenario sollen wir als Nächstes durchspielen? Schreib es in die Kommentare!\n#waswärewenn #internet #gedankenexperiment #zukunft #wissenschaft",
+ "tags": [
+  "was wäre wenn",
+  "internet ausfall",
+  "ohne internet",
+  "digitale welt",
+  "stromausfall",
+  "technik erklärt",
+  "wissen für kinder",
+  "leo cartoon",
+  "zukunftsszenario",
+  "netzwerk"
+ ],
+ "figur": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans",
+ "szenen": [
+  {
+   "say": "Leo sitzt am Frühstückstisch und tippt auf seinem Tablet, um ein Video zu schauen – aber es lädt einfach nicht.",
+   "bild": "Leo sitting at a breakfast table, tapping confused on a tablet showing a loading spinner, morning light through kitchen window",
+   "titel": "Kein Internet mehr?"
+  },
+  {
+   "say": "Er probiert es mit dem Handy seiner Mutter, dann mit dem Computer im Wohnzimmer – überall das gleiche Bild: nichts geht mehr.",
+   "bild": "Leo running between a phone and a laptop in a cozy living room, both showing error symbols, slight panic on his face"
+  },
+  {
+   "say": "Was, wenn das kein kleiner Wackelkontakt wäre, sondern das Internet weltweit komplett verschwinden würde – für immer?",
+   "bild": "Leo looking out of a window at a city where all screens and billboards are suddenly dark and blank"
+  },
+  {
+   "say": "In diesem Video schauen wir uns an, was wirklich passieren würde, wenn es plötzlich kein Internet mehr gäbe.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Wir reisen durch Krankenhäuser, Banken, Schulen und sogar ins Weltall, um zu verstehen, wie tief das Netz in unserem Leben steckt.",
+   "bild": "Leo floating in a small cartoon spaceship window, looking down at glowing lines of light connecting cities on Earth below"
+  },
+  {
+   "say": "Und am Ende erfährst du eine überraschende Wahrheit darüber, wie die Menschheit so ein Chaos schon einmal überstanden hat.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Fangen wir ganz am Anfang an: Was genau ist das Internet eigentlich?",
+   "bild": "Leo pointing at a glowing holographic globe wrapped in countless light lines, standing in his room",
+   "titel": "Was ist das Internet?"
+  },
+  {
+   "say": "Es ist kein einzelnes Ding, sondern ein riesiges Netz aus Millionen Computern, die über Kabel, Funk und Satelliten miteinander sprechen.",
+   "bild": "Close up of glowing cables and light signals traveling under oceans and through cities, cartoon style"
+  },
+  {
+   "say": "Ein großer Teil dieser Verbindungen läuft durch Unterseekabel, die am Meeresboden liegen und ganze Kontinente verbinden.",
+   "bild": "Leo in a diving suit looking at a glowing cable lying on the ocean floor, curious fish swimming around"
+  },
+  {
+   "say": "Wenn man sich vorstellt, das würde alles gleichzeitig abgeschaltet, wäre das, als würde man der Welt plötzlich die Stimme nehmen.",
+   "bild": "Leo standing in front of a giant silent control room with dark screens everywhere"
+  },
+  {
+   "say": "Schauen wir uns zuerst an, was mit deinem ganz normalen Alltag passieren würde.",
+   "bild": "gleich",
+   "titel": "Dein Alltag ohne Netz"
+  },
+  {
+   "say": "Kein Streaming mehr, keine Sprachnachrichten, keine Routenplaner – du müsstest wieder Landkarten aus Papier benutzen.",
+   "bild": "Leo unfolding a huge paper map that covers his whole body, looking lost but curious"
+  },
+  {
+   "say": "Auch Online-Spiele mit Freunden wären nicht mehr möglich, weil die Server, die alles verbinden, keinen Kontakt mehr hätten.",
+   "bild": "Leo looking sadly at a game console with a frozen loading screen, controller in hand"
+  },
+  {
+   "say": "Viele Menschen würden anfangen, sich wieder persönlich zu verabreden, so wie es vor dem Internet ganz normal war.",
+   "bild": "Leo riding his bike to a friend's house, knocking on a wooden door, sunny street"
+  },
+  {
+   "say": "Das klingt erstmal gemütlich – aber es gibt auch Bereiche, in denen es richtig gefährlich werden könnte.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Zum Beispiel bei Geld und Banken.",
+   "bild": "Leo standing in front of a bank building with a closed shutter, confused people outside",
+   "titel": "Geld und Banken"
+  },
+  {
+   "say": "Die meisten Zahlungen heute laufen digital ab, über Karten oder Apps, die mit Banken im Internet verbunden sind.",
+   "bild": "Leo watching a cashier trying to swipe a card that doesn't work, empty cash register"
+  },
+  {
+   "say": "Ohne Internet könnten Geldautomaten kein Geld mehr auszahlen und Überweisungen würden einfach stehen bleiben.",
+   "bild": "Leo standing in front of a dark ATM screen with a sad face icon"
+  },
+  {
+   "say": "Viele Menschen hätten plötzlich nur noch das Bargeld in ihrer Tasche – und das wäre für manche sehr wenig.",
+   "bild": "Leo counting a few coins in his open hand, worried expression"
+  },
+  {
+   "say": "Firmen könnten ihre Mitarbeiter nicht mehr automatisch bezahlen, weil auch das meist über Online-Systeme läuft.",
+   "bild": "Leo looking at a printed paper list of names in an office, people queuing confused"
+  },
+  {
+   "say": "Jetzt schauen wir uns an, was in Krankenhäusern passieren würde – denn dort hängt oft mehr am Netz, als man denkt.",
+   "bild": "gleich",
+   "titel": "Krankenhäuser in Gefahr"
+  },
+  {
+   "say": "Moderne Krankenhäuser speichern Patientendaten digital, damit Ärzte sofort wissen, welche Medikamente jemand braucht.",
+   "bild": "Leo peeking into a hospital room where a doctor looks puzzled at a blank computer screen"
+  },
+  {
+   "say": "Ohne Internet müssten viele Kliniken wieder auf Papierakten umsteigen, so wie es noch vor wenigen Jahrzehnten üblich war.",
+   "bild": "Leo watching nurses carrying large stacks of paper folders through a hospital hallway"
+  },
+  {
+   "say": "Das würde zwar funktionieren, aber deutlich langsamer sein, und in dringenden Notfällen zählt manchmal jede Minute.",
+   "bild": "Leo looking worried at a clock on a hospital wall, hands moving fast"
+  },
+  {
+   "say": "Auch Rettungswagen nutzen oft digitale Systeme, um den schnellsten Weg zum Unfallort zu finden.",
+   "bild": "Leo watching an ambulance driver studying a paper map instead of a GPS screen"
+  },
+  {
+   "say": "Zum Glück wissen Ärzte und Sanitäter auch ohne Internet, wie man Leben rettet – das haben sie schließlich schon lange vor dem Netz gelernt.",
+   "bild": "Leo giving a thumbs up to a smiling paramedic next to an ambulance"
+  },
+  {
+   "say": "Kommen wir zu etwas, das viele unterschätzen: die Stromversorgung selbst.",
+   "bild": "gleich",
+   "titel": "Strom ohne Netz?"
+  },
+  {
+   "say": "Viele Kraftwerke und Stromnetze werden heute über digitale Systeme gesteuert und überwacht, die ebenfalls mit dem Internet verbunden sind.",
+   "bild": "Leo standing in front of a huge power plant with blinking control panels, curious look"
+  },
+  {
+   "say": "Ein plötzlicher Totalausfall des Internets könnte also theoretisch auch kleinere Probleme bei der Steuerung von Stromnetzen auslösen.",
+   "bild": "Leo watching flickering lights in a street lamp from below"
+  },
+  {
+   "say": "Die meisten Stromnetze haben aber auch alte, nicht-digitale Rückfallsysteme, die extra für solche Notfälle gebaut wurden.",
+   "bild": "Leo looking relieved at a technician flipping a large analog switch in a control room"
+  },
+  {
+   "say": "Trotzdem wäre es ein riesiger Aufwand, alles ohne digitale Hilfe am Laufen zu halten.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Schauen wir uns jetzt an, wie es in der Schule und bei der Arbeit aussehen würde.",
+   "bild": "gleich",
+   "titel": "Schule und Arbeit"
+  },
+  {
+   "say": "Viele Schulen nutzen heute digitale Tafeln, Lernplattformen und E-Mails, um mit Schülern und Eltern zu kommunizieren.",
+   "bild": "Leo sitting in a classroom looking at a dark smartboard, teacher holding a piece of chalk instead"
+  },
+  {
+   "say": "Ohne Internet müsste der Unterricht wieder komplett mit Büchern, Heften und der guten alten Tafel funktionieren.",
+   "bild": "Leo writing with chalk on a traditional blackboard, smiling slightly"
+  },
+  {
+   "say": "Auch viele Berufe, bei denen Menschen von zu Hause aus arbeiten, wären plötzlich nicht mehr möglich.",
+   "bild": "Leo looking at his neighbor packing a briefcase, looking confused about where to go to work"
+  },
+  {
+   "say": "Millionen Menschen müssten wieder ins Büro fahren, nur um dort festzustellen, dass auch dort kaum etwas funktioniert.",
+   "bild": "Leo watching a crowded street full of people walking instead of driving, no phones in hand"
+  },
+  {
+   "say": "Interessant ist, dass manche Berufe davon kaum betroffen wären – zum Beispiel Bäcker, Gärtner oder Handwerker.",
+   "bild": "Leo watching a baker pulling fresh bread out of an oven, smiling and unaffected"
+  },
+  {
+   "say": "Jetzt wird es richtig spannend: Was würde mit der Kommunikation zwischen Ländern passieren?",
+   "bild": "gleich",
+   "titel": "Weltweite Kommunikation"
+  },
+  {
+   "say": "Heute laufen die meisten internationalen Nachrichten, E-Mails und sogar Telefonate über das Internet.",
+   "bild": "Leo looking at a glowing world map with connecting lines between countries, cartoon style"
+  },
+  {
+   "say": "Ohne Internet müssten Regierungen und Firmen wieder auf alte Technik wie Fax, Telefonleitungen oder sogar Funk zurückgreifen.",
+   "bild": "Leo curiously touching an old-fashioned fax machine in a museum-like room"
+  },
+  {
+   "say": "Das würde die Kommunikation zwischen Ländern erheblich verlangsamen, besonders bei wichtigen politischen Entscheidungen.",
+   "bild": "Leo watching two diplomats talking through an old telephone with a long cord"
+  },
+  {
+   "say": "Nachrichtenagenturen könnten keine Eilmeldungen mehr in Sekunden verschicken, sondern müssten wieder auf Radios und Zeitungen setzen.",
+   "bild": "Leo listening to an old radio, newspaper in hand, sitting on a park bench"
+  },
+  {
+   "say": "Das klingt nach einer Zeitreise – und genau das wäre es in gewisser Weise auch.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Kommen wir zu einem Bereich, den viele komplett vergessen: das Weltall.",
+   "bild": "gleich",
+   "titel": "Satelliten im All"
+  },
+  {
+   "say": "Viele Satelliten im Weltraum senden ihre Daten über internetähnliche Verbindungen zur Erde zurück.",
+   "bild": "Leo in his small cartoon spaceship looking at a satellite floating nearby, Earth glowing below"
+  },
+  {
+   "say": "Wettervorhersagen, GPS-Systeme und sogar manche Warnsysteme vor Naturkatastrophen hängen stark davon ab.",
+   "bild": "Leo looking worried at a weather map glitching out on a screen inside the spaceship"
+  },
+  {
+   "say": "Ohne funktionierendes Internet könnten Warnungen vor Stürmen oder Erdbeben langsamer bei den Menschen ankommen.",
+   "bild": "Leo watching a storm forming over a cartoon ocean from his spaceship window"
+  },
+  {
+   "say": "Das zeigt, wie sehr wir uns daran gewöhnt haben, in Sekunden gewarnt zu werden, wenn Gefahr droht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Lass uns jetzt einen Blick auf etwas Positives werfen – denn nicht alles wäre schlecht.",
+   "bild": "gleich",
+   "titel": "Die guten Seiten"
+  },
+  {
+   "say": "Menschen hätten plötzlich viel mehr Zeit, weil endloses Scrollen durch Videos und Nachrichten einfach wegfallen würde.",
+   "bild": "Leo sitting outside on grass, reading a book under a tree, phone lying unused next to him"
+  },
+  {
+   "say": "Familien würden wahrscheinlich wieder mehr miteinander reden, spielen und Zeit draußen verbringen.",
+   "bild": "Leo playing board games with his family at a table, laughing together"
+  },
+  {
+   "say": "Auch alte Hobbys wie Briefeschreiben, Angeln oder Sterne beobachten könnten wieder beliebter werden.",
+   "bild": "Leo looking through an old telescope at a starry night sky, amazed expression"
+  },
+  {
+   "say": "Manche Wissenschaftler sagen sogar, dass weniger Bildschirmzeit guttun kann, weil unser Gehirn auch mal Pausen braucht.",
+   "bild": "Leo stretching happily outside, sun shining, no screens in sight"
+  },
+  {
+   "say": "Aber natürlich gäbe es auch riesige wirtschaftliche Probleme, die wir nicht übersehen dürfen.",
+   "bild": "gleich",
+   "titel": "Wirtschaft in Gefahr"
+  },
+  {
+   "say": "Viele Firmen verkaufen ihre Produkte heute hauptsächlich online, von kleinen Shops bis zu riesigen Lieferdiensten.",
+   "bild": "Leo looking at an empty delivery truck parked in front of a closed online shop warehouse"
+  },
+  {
+   "say": "Ohne Internet könnten Millionen Menschen ihren Job verlieren, weil ganze Branchen darauf aufgebaut sind.",
+   "bild": "Leo watching worried workers standing outside a closed tech company building"
+  },
+  {
+   "say": "Auch Fabriken, die ihre Maschinen über das Internet steuern, müssten plötzlich wieder von Hand bedient werden.",
+   "bild": "Leo watching workers manually operating old-style machines in a factory"
+  },
+  {
+   "say": "Das würde die Produktion stark verlangsamen und vieles teurer machen, weil mehr Menschen gebraucht würden.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Jetzt kommt die spannende Frage: Könnte sich die Menschheit überhaupt wieder erholen?",
+   "bild": "gleich",
+   "titel": "Könnten wir uns erholen?"
+  },
+  {
+   "say": "Die Antwort ist: Ja, höchstwahrscheinlich schon – denn die Menschheit hat schon vor dem Internet funktioniert, über tausende Jahre lang.",
+   "bild": "Leo looking at an old photograph of a busy street from decades ago, no screens anywhere"
+  },
+  {
+   "say": "Das erste richtige Internet, wie wir es heute kennen, gibt es erst seit wenigen Jahrzehnten.",
+   "bild": "Leo looking amazed at a timeline floating in the air, showing old computers to modern smartphones"
+  },
+  {
+   "say": "Davor haben Menschen mit Briefen, Telefonleitungen und persönlichen Treffen genauso wichtige Dinge erledigt.",
+   "bild": "Leo watching people writing letters at wooden desks in an old-fashioned room"
+  },
+  {
+   "say": "Es würde dauern, aber Stück für Stück könnten Techniker alte Systeme reaktivieren und neue, unabhängige Netze aufbauen.",
+   "bild": "Leo watching engineers rebuilding small local networks with glowing cables"
+  },
+  {
+   "say": "Manche Städte könnten sogar eigene kleine Netzwerke bilden, die nur innerhalb der Stadt funktionieren, ganz ohne globales Internet.",
+   "bild": "Leo looking at a glowing small network bubble around his hometown on a model city"
+  },
+  {
+   "say": "Das zeigt: Komplett hilflos wären wir nicht, aber es würde eine harte und chaotische Übergangszeit geben.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und jetzt kommt die überraschende Wendung, die du vielleicht nicht erwartet hast.",
+   "bild": "gleich",
+   "titel": "Die Überraschung"
+  },
+  {
+   "say": "Es gab tatsächlich schon kleinere Vorfälle, bei denen große Teile des Internets für Stunden ausgefallen sind.",
+   "bild": "Leo looking at a newspaper headline about an internet outage, surprised face"
+  },
+  {
+   "say": "Dabei zeigte sich: Innerhalb weniger Stunden merkten viele Menschen schon deutlich, wie abhängig unser Alltag vom Netz geworden ist.",
+   "bild": "Leo watching people standing confused outside a shop with a broken card payment sign"
+  },
+  {
+   "say": "Aber die Welt ist danach nicht zusammengebrochen – die Menschen fanden immer wieder einen Weg, sich anzupassen.",
+   "bild": "Leo smiling, watching life slowly going back to normal in a city street"
+  },
+  {
+   "say": "Das zeigt uns etwas Wichtiges: Wir sind erstaunlich anpassungsfähig, auch wenn Technik mal ausfällt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Vielleicht ist die wahre Lehre aus diesem Gedankenexperiment nicht Angst vor dem Internet, sondern Respekt davor, wie viel Macht es hat.",
+   "bild": "Leo looking thoughtfully at the glowing globe network from the beginning of the video"
+  },
+  {
+   "say": "Es verbindet uns, aber es macht uns auch verletzlich, wenn wir uns zu sehr allein darauf verlassen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Vielleicht wäre es klug, hin und wieder bewusst offline zu gehen, einfach um zu üben, wie es sich anfühlt.",
+   "bild": "Leo putting his tablet aside and smiling, looking out of the window at kids playing outside"
+  },
+  {
+   "say": "So wärst du vorbereitet, falls das Netz wirklich einmal für längere Zeit ausfallen sollte.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Am Ende hat Leo an diesem besonderen Tag ohne funktionierendes Internet etwas gelernt, das er vorher nie bemerkt hatte.",
+   "bild": "Leo sitting outside with friends, playing a board game, phones nowhere to be seen",
+   "titel": "Was Leo gelernt hat"
+  },
+  {
+   "say": "Nämlich, dass echte Verbindungen zwischen Menschen nicht nur aus Kabeln und Satelliten bestehen, sondern vor allem aus echten Gesprächen.",
+   "bild": "Leo laughing with his friends in a park, golden afternoon light"
+  },
+  {
+   "say": "Das Internet ist ein unglaubliches Werkzeug, aber es ersetzt nicht alles, was uns als Menschen wirklich wichtig ist.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und genau das macht dieses Gedankenexperiment so spannend: Es zeigt uns, wie viel wir manchmal für selbstverständlich halten.",
+   "bild": "Leo looking directly at the camera with a warm smile, standing in his room with his tablet turned off"
+  },
+  {
+   "say": "Was denkst du: Könntest du eine Woche komplett ohne Internet überleben?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Schreib es mir in die Kommentare, ich bin wirklich gespannt auf deine Antwort.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Wenn dir dieses Gedankenexperiment gefallen hat, dann abonniere den Kanal, damit du keine neue Folge von Was wäre wenn verpasst.",
+   "bild": "Leo waving happily at the camera, subscribe icon glowing softly nearby"
+  },
+  {
+   "say": "Bis zum nächsten Mal, wenn wir wieder eine verrückte Frage gemeinsam durchspielen.",
+   "bild": "Leo walking away into a sunny street, waving back one last time"
+  }
+ ],
+ "shorts": [
+  {
+   "von": 15,
+   "bis": 20,
+   "titel": "Ohne Internet kein Geld vom Automaten?!"
+  },
+  {
+   "von": 20,
+   "bis": 26,
+   "titel": "Krankenhäuser ohne Internet – so gefährlich wäre es"
+  },
+  {
+   "von": 33,
+   "bis": 38,
+   "titel": "Dein Job wäre sofort weg – ohne Internet"
+  },
+  {
+   "von": 39,
+   "bis": 44,
+   "titel": "Weltweite Kommunikation würde einfach stoppen"
+  },
+  {
+   "von": 45,
+   "bis": 49,
+   "titel": "Sogar Satelliten im All wären betroffen"
+  },
+  {
+   "von": 50,
+   "bis": 55,
+   "titel": "Die überraschend guten Seiten ohne Internet"
+  },
+  {
+   "von": 65,
+   "bis": 70,
+   "titel": "So würde sich die Menschheit wieder erholen"
+  },
+  {
+   "von": 71,
+   "bis": 76,
+   "titel": "Das ist wirklich schon mal passiert!"
+  }
+ ]
+}
