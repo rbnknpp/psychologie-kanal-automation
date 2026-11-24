@@ -1034,6 +1034,102 @@
      14541.0
     ]
    ]
+  },
+  "2938422892": {
+   "title": "[DROPS] GTA VI & später DICKE GAMESHOW",
+   "clips": [
+    {
+     "start": 1508.9,
+     "end": 1535.4,
+     "hook": "Wieso hab ich einfach einen Stern?",
+     "caption": "Rewinside bekommt random einen Stern 😂 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-24"
+    },
+    {
+     "start": 7339.7,
+     "end": 7375.8,
+     "hook": "Das ist doch eine Psycho-Alte!",
+     "caption": "Rewinside flippt wegen durchgeknallter NPC aus 😅 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-24"
+    },
+    {
+     "start": 3803.5,
+     "end": 3829.0,
+     "hook": "Klau ich das, merkt's keiner?",
+     "caption": "Rewinside klaut heimlich im Game 😏 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-24"
+    },
+    {
+     "start": 3579.2,
+     "end": 3610.4,
+     "hook": "Gibt's Windschatten in GTA 6?",
+     "caption": "Rewinside testet den Windschatten-Trick 🏎️ twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-24"
+    }
+   ],
+   "campaign": "rewinside",
+   "rejected": [
+    [
+     1486.0,
+     1541.0
+    ],
+    [
+     1868.0,
+     1923.0
+    ],
+    [
+     3578.0,
+     3633.0
+    ],
+    [
+     3774.0,
+     3829.0
+    ],
+    [
+     3940.0,
+     3995.0
+    ],
+    [
+     5392.0,
+     5447.0
+    ],
+    [
+     5908.0,
+     5963.0
+    ],
+    [
+     6608.0,
+     6663.0
+    ],
+    [
+     6814.0,
+     6869.0
+    ],
+    [
+     7020.0,
+     7075.0
+    ],
+    [
+     7338.0,
+     7393.0
+    ],
+    [
+     7732.0,
+     7787.0
+    ],
+    [
+     8016.0,
+     8071.0
+    ],
+    [
+     8186.0,
+     8241.0
+    ]
+   ]
   }
  }
 }
