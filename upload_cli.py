@@ -173,6 +173,10 @@ def main():
     parser.add_argument("--only", choices=["all", "shorts", "longform"], default="all")
     parser.add_argument("--no-spread", action="store_true", help="Zeitversetzte Veroeffentlichung deaktivieren")
     args = parser.parse_args()
+    import projekt
+    if not projekt.aktiv("yt-psychologie"):
+        print("Kanal-Schalter: yt-psychologie ruht – kein Upload.")
+        return
 
     run_dir = Path(args.dir) if args.dir else _latest_run_dir()
     manifest = _load_manifest(run_dir)

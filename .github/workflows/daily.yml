@@ -50,6 +50,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Kanal-Schalter im Agent-HQ (Seite „Kanäle & Projekte“): ruhen alle Kanäle dieses Workflows, nichts tun.
+          K=sb_publishable_TvKHtP7D400zXCBFj4icPA_c7T6Hosp
+          st=$(curl -s -m 15 -X POST https://kfiiaqjzzwwacthzrcut.supabase.co/rest/v1/rpc/project_status_all -H "apikey: $K" -H "Authorization: Bearer $K" -H "Content-Type: application/json" -d '{}' || true)
+          on=$(echo "$st" | jq -r '[.["yt-psychologie"]] | map(. // "aktiv") | any(. == "aktiv")' 2>/dev/null || echo true)
+          echo "Kanal aktiv: $on"
+          if [ "$on" = "false" ] && [ "${{ inputs.test }}" != "true" ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "skip=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           today=$(date -u +%F)
           n=$(gh api "repos/${{ github.repository }}/actions/workflows/daily.yml/runs?created=%3E%3D${today}&per_page=50"             --jq "[.workflow_runs[] | select(.id != ${{ github.run_id }}) | select(.display_title != \"TEST\") | select(.status != \"completed\" or .conclusion == \"success\")] | length")

@@ -43,6 +43,12 @@ jobs:
             n=$(gh run list -R "$GITHUB_REPOSITORY" -w "${{ github.workflow }}" --created ">=$(date -u +%F)" --json event -q '[.[]|select(.event=="workflow_dispatch")]|length')
             [ "${n:-0}" -gt 0 ] && skip=1
           fi
+          # Kanal-Schalter im Agent-HQ (Seite „Kanäle & Projekte“): ruhen alle Kanäle dieses Workflows, nichts tun.
+          K=sb_publishable_TvKHtP7D400zXCBFj4icPA_c7T6Hosp
+          st=$(curl -s -m 15 -X POST https://kfiiaqjzzwwacthzrcut.supabase.co/rest/v1/rpc/project_status_all -H "apikey: $K" -H "Authorization: Bearer $K" -H "Content-Type: application/json" -d '{}' || true)
+          on=$(echo "$st" | jq -r '[.["tt-ggcuts"]] | map(. // "aktiv") | any(. == "aktiv")' 2>/dev/null || echo true)
+          echo "Kanal aktiv: $on"
+          if [ "$on" = "false" ] && [ "${{ inputs.test }}" != "true" ]; then skip=1; fi
           echo "skip=$skip" >> "$GITHUB_OUTPUT"
           echo "skip=$skip"
   run:

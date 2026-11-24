@@ -381,6 +381,10 @@ def _audio_seconds(path) -> float:
 
 if __name__ == "__main__":
     import sys
+    import projekt
+    if "--test" not in sys.argv and not projekt.aktiv("yt-psychologie"):
+        print("Kanal-Schalter: yt-psychologie ruht – nichts zu tun.")
+        sys.exit(0)
 
     if "--test" in sys.argv:  # Cloud-Testlauf: 1 Short, kein langes Video
         run(shorts_n=1, skip_longform=True)

@@ -443,6 +443,10 @@ def publish_at(day, hhmm):
 
 
 def upload(path, thumb, data, topic, kind, when):
+    import projekt
+    if not projekt.aktiv("yt-pflege"):
+        print("  Kanal-Schalter: yt-pflege ruht – kein YouTube-Upload.")
+        return None
     from upload.upload_video import upload as yt_upload
     title = data["titel"].strip()[:95]
     if kind == "short" and "#shorts" not in title.lower():
@@ -468,6 +472,10 @@ TIKTOK_TAGS = {
 
 def tiktok_queue(path, data, topic, reihe):
     """Short zusätzlich als TikTok-Entwurf einreihen (gaming-upload pumpt alle 30 Min ins Postfach)."""
+    import projekt
+    if not projekt.aktiv("tt-pflege"):
+        print("  Kanal-Schalter: tt-pflege ruht – nicht eingereiht.")
+        return None
     tok = os.environ.get("PFLEGE_UPLOAD_TOKEN", "").strip()
     if not tok:
         print("  TikTok: kein PFLEGE_UPLOAD_TOKEN, übersprungen")
@@ -495,6 +503,10 @@ def main():
     ap.add_argument("--only", choices=["short", "long"], help="nur diese Art erzeugen (Nachholen)")
     ap.add_argument("--tiktok-only", type=int, default=0, help="N Shorts nur für TikTok bauen (ohne YouTube)")
     a = ap.parse_args()
+    import projekt
+    if not a.test and not projekt.aktiv("yt-pflege") and not projekt.aktiv("tt-pflege"):
+        print("Kanal-Schalter: Pflege mit Plan (YouTube + TikTok) ruht – nichts zu tun.")
+        return
     today = dt.datetime.now(TZ).date()
     rng = random.Random(today.isoformat())
     st = load_state()

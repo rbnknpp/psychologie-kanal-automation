@@ -532,6 +532,10 @@ def main():
     ap.add_argument("--only", default="", help="nur diese Kampagne (key)")
     ap.add_argument("--test", action="store_true", help="rendern, nicht einreihen")
     a = ap.parse_args()
+    import projekt
+    if not a.test and not projekt.aktiv("tt-ggcuts"):
+        print("Kanal-Schalter: tt-ggcuts ruht – keine Clips.")
+        return
     WORK.mkdir(exist_ok=True)
     st = load_state()
     camps = [c for c in CAMPAIGNS if c.get("active", True) and (not a.only or c["key"] == a.only)]

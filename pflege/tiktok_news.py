@@ -1003,6 +1003,11 @@ def main():
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--script", default="")
     a = ap.parse_args()
+    import projekt
+    tt_on, yt_on = projekt.aktiv("tt-pflege"), projekt.aktiv("yt-pflege")
+    if not a.test and not a.script and not tt_on and not yt_on:
+        print("Kanal-Schalter: Pflege mit Plan (TikTok + YouTube) ruht – nichts zu tun.")
+        return
     st = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {"themen": []}
     day = dt.datetime.now(TZ).date().isoformat()
     ok = 0
@@ -1016,9 +1021,12 @@ def main():
             path, secs = render(data, wd)
             print(f"  gerendert: {path} ({secs:.0f} s)")
             if not a.test and not a.script:
-                queue(path, data, secs)
+                if tt_on:
+                    queue(path, data, secs)
+                else:
+                    print("  Kanal-Schalter: tt-pflege ruht – nicht eingereiht.")
                 try:
-                    vid = youtube_short(path, data, YT_SLOTS[ok % len(YT_SLOTS)])
+                    vid = youtube_short(path, data, YT_SLOTS[ok % len(YT_SLOTS)]) if yt_on else "übersprungen (yt-pflege ruht)"
                     print("  YouTube-Short:", vid)
                 except Exception as e:  # noqa: BLE001
                     print("  YouTube FEHLER:", str(e)[:300])

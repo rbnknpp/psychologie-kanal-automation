@@ -246,6 +246,10 @@ def main():
     ap.add_argument("--time", default="17:00", help="Uhrzeit der Veröffentlichung (Berlin)")
     ap.add_argument("--render-only-upload", action="store_true", help="vorhandenes Video hochladen, nicht neu rendern")
     a = ap.parse_args()
+    import projekt
+    if (a.auto or a.publish or a.shorts_from) and not projekt.aktiv("yt-waswaerewenn"):
+        print("Kanal-Schalter: yt-waswaerewenn ruht – nichts zu tun.")
+        return
     if a.auto and not a.folge:
         from waswaerewenn.autor import next_episode
         a.folge = str(next_episode())
