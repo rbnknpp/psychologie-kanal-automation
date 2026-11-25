@@ -1,18 +1,5 @@
 {
   "used_titles": [
-    "Dein Gehirn lässt dich beim Rechnung-Teilen öfter auf die Hände der anderen schauen",
-    "Warum du nach einem teuren Kauf seltener in den Spiegel schaust",
-    "Dein Gehirn öffnet deine Hand automatisch weiter, wenn du Geld geben willst",
-    "Warum du beim Zuhören öfter den Kopf schräg hältst als sonst",
-    "3 Zentimeter Abstand zwischen den Füßen verraten deine Sicherheit",
-    "Warum deine Stimme höher wird, wenn du jemanden beeindrucken willst",
-    "Warum du beim Zuhören öfter dein Kinn anhebst, wenn du zustimmst",
-    "In 2 Sekunden entscheidet dein Gehirn, ob ein Raum dir gehört",
-    "Warum du beim Trösten automatisch die gleiche Haltung einnimmst",
-    "Warum du beim Zögern automatisch die Lippen zusammenpresst",
-    "Warum du beim Zuhören öfter die Augen kurz schließt, wenn du zustimmst",
-    "Warum du beim Zuhören öfter die Handflächen verbirgst, wenn du zweifelst",
-    "Warum du beim Sitzen automatisch die Knöchel übereinander kreuzt, wenn du dich unwohl fühlst",
     "Dein Oberkörper dreht sich weg, lange bevor du 'Nein' sagst",
     "Warum offene Beine im Sitzen Status signalisieren, nicht nur Entspannung",
     "Dein Nacken verspannt sich im Gespräch, bevor du es merkst",
@@ -199,7 +186,20 @@
     "Warum Männer und Frauen Enge unterschiedlich ausgleichen",
     "Warum ein voller Aufzug deinen Puls leicht erhöht",
     "Warum du beim Aussteigen schon vorher den Weg planst",
-    "Am Ende verteidigt dein Körper den Raum, den dein Verstand längst aufgegeben hat"
+    "Am Ende verteidigt dein Körper den Raum, den dein Verstand längst aufgegeben hat",
+    "Warum du beim Zweifeln öfter mit den Fingern über die Lippen fährst",
+    "2 Zentimeter mehr Abstand verraten, ob du jemandem wirklich vertraust",
+    "Dein Gehirn erkennt echtes Interesse an der Richtung deiner Schuhspitzen",
+    "Warum dein Standpunkt vor einer Gruppe über Autorität entscheidet, bevor du sprichst",
+    "Dein Gehirn verrät Unsicherheit durch verschobenes Körpergewicht",
+    "Warum offene Handflächen beim Präsentieren mehr Vertrauen schaffen",
+    "3 Sekunden Blickwechsel entscheiden, ob dein Publikum dir folgt",
+    "Warum deine Stimme beim Präsentieren höher wird, wenn du unsicher bist",
+    "Warum zu schnelles Sprechen vor Gruppen wie Flucht wirkt",
+    "Dein Gehirn deutet verschränkte Arme beim Reden als Schutzhaltung",
+    "Warum ein fester Stand mehr Autorität zeigt als große Gesten",
+    "Dein Gehirn erkennt erzwungene Gesten an fehlender Synchronität",
+    "Am Ende entscheidet nicht eine Geste, sondern das Zusammenspiel von Stand, Stimme und Blick über Autorität"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -219,6 +219,7 @@
     "Wie unbewusste Körpersignale beim Lügen und Beschönigen (Blickrichtung, Tonhöhe, Pausen) zeigen, ob jemand gerade die Wahrheit dehnt oder wirklich ehrlich ist",
     "Wie unbewusste Körpersignale beim Scherzen und Necken (Mimik-Timing, Blickkontakt, Körperabstand) zeigen, ob ein Spaß als liebevoll oder verletzend ankommt",
     "Wie unbewusste Körpersignale beim Warten auf eine wichtige Nachricht oder Rückmeldung (Handy-Checks, Unruhe in den Füßen, Räuspern) zeigen, wie sehr uns das Ergebnis wirklich kümmert",
-    "Wie unbewusste Körpersignale beim Stehen in Aufzügen, Warteschlangen und engen Räumen zeigen, wie Menschen instinktiv ihre persönliche Distanzzone verteidigen"
+    "Wie unbewusste Körpersignale beim Stehen in Aufzügen, Warteschlangen und engen Räumen zeigen, wie Menschen instinktiv ihre persönliche Distanzzone verteidigen",
+    "Wie unbewusste Körpersignale beim Präsentieren und Reden vor Gruppen (Standposition, Handgesten, Stimme) zeigen, ob jemand wirklich Autorität ausstrahlt oder innerlich unsicher ist"
   ]
 }
