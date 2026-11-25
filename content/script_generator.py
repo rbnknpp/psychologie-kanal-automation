@@ -51,7 +51,9 @@ Pro Fakt:
 - "hook": der allererste gesprochene Satz (max 9 Woerter), muss in der ersten Sekunde fesseln: direkt mit der ueberraschenden Aussage oder einer Du-Situation starten, keine Einleitung wie "Wusstest du" oder "Heute".
   Wenn es der Fakt hergibt, steckt im Hook eine konkrete Zahl (Sekunden, Zentimeter, Prozent, Anzahl),
   z.B. "3 Zentimeter entscheiden, ob du dich wohlfuehlst" (Robin 02.11.2026: Zahlen-Hooks laufen am besten)
-- "script": der komplette gesprochene Text (inkl. hook am Anfang), 170-205 Woerter (Ziel: 60-75 Sekunden - kuerzere Shorts laufen auf dem Kanal deutlich schlechter),
+- "script": der komplette gesprochene Text (inkl. hook am Anfang), 130-160 Woerter (Ziel: 45-58 Sekunden, nie ueber 60).
+  Robin 25.11.2026 aus den Kanal-Zahlen: die Top-Shorts (900-1.000 Aufrufe) waren 53-64 s lang, die Flops 66-76 s -
+  also knapp und dicht, jeder Satz bringt etwas Neues, kein Fuelltext,
   natuerliche gesprochene Sprache, kurze Saetze, endet mit einem einpraegsamen Schlusssatz,
   der inhaltlich wieder zum Hook passt, sodass das Video beim Wiederholen nahtlos weiterlaeuft
   (kein "abonniere" o.ae. - ein Abo-Aufruf wird bei einem Teil der Shorts automatisch angehaengt). Ein einziger Absatz, keine
@@ -64,6 +66,13 @@ Pro Fakt:
 - "search_keywords": 5 kurze ENGLISCHE Stichworte fuer die Suche nach passendem
   Stock-Hintergrundvideo, jedes eine ANDERE konkrete Szene passend zum Skript
   (z.B. "human brain", "person thinking", "city night walk", "hands typing phone")
+- "image_prompts": 6 ENGLISCHE Bildbeschreibungen fuer animierte Szenenbilder (Robin 25.11.2026: Shorts
+  bekommen KI-Bilder mit Kamerafahrt statt Stockvideos). Sie laufen in dieser Reihenfolge gleichmaessig
+  verteilt ueber das Video, also Bild 1 = Hook, Bild 6 = Schlusssatz; jedes Bild zeigt genau das, was in
+  diesem Sechstel gesagt wird. Konkrete, bildstarke Alltagsszene mit Personen, deren Koerpersprache den
+  Fakt sichtbar macht (z.B. "close-up of a nervous man hiding his hands behind his back while talking to his
+  boss in a bright office", "two friends on a park bench, one leaning away with crossed arms"). Hochformat,
+  eine klare Hauptfigur, keine Schrift, keine Marken, keine echten Prominenten. Je 15-35 Woerter.
 
 Abwechslung ist Pflicht - die Videos duerfen NICHT wie aus einer Schablone wirken:
 - Themen (Robin 03.11.2026, aus den Kanal-Zahlen): AUSSCHLIESSLICH Koerpersprache und Nonverbales:
@@ -106,6 +115,7 @@ _TOOL = {
                         "comment_prompt": {"type": "string"},
                         "tags": {"type": "array", "items": {"type": "string"}},
                         "search_keywords": {"type": "array", "items": {"type": "string"}},
+                        "image_prompts": {"type": "array", "items": {"type": "string"}},
                     },
                     "required": [
                         "title", "thumbnail_text", "hook", "script", "description",

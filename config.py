@@ -122,6 +122,11 @@ HYPNOSIS_PUBLISH_TIME = "20:30"    # abends, wenn die Leute schlafen gehen
 # Robin 06.11.2026: wieder taeglich ein ~10-Min-Themenvideo ("themen"), ausser an den Hypnose-Tagen
 # (dort kommt das Stunden-Video). Bestes Langvideo bisher: Themenvideo "erster Eindruck" (~90 Aufrufe).
 LONGFORM_MODE = "themen"
+# Robin 25.11.2026: Themen-Langvideos nur noch Mi + Sa (taeglich brachten sie im Schnitt 10 Aufrufe, 32 Stueck in 30 Tagen).
+# Sonntags bleibt das Hypnose-Video. None = jeden Tag.
+LONGFORM_WEEKDAYS = [2, 5]
+# Shorts-Hintergrund: animierte KI-Szenenbilder (video/ai_scenes.py) statt Pexels-Stockvideos. False = wieder Pexels.
+SHORTS_AI_SCENES = True
 LONGFORM_SKIP_ON_HYPNOSIS_DAYS = True
 RAIN_TOTAL_SECONDS = 3 * 60 * 60
 # Einmal pro Woche eine 8-Std-Version (Robin 23.10.2026): laeuft die ganze Nacht durch und bringt

@@ -17,6 +17,7 @@ from content.script_generator import generate_facts, generate_longform_theme
 from tts.edge_tts_engine import synthesize
 from video.captions import build_ass
 from video.stock_footage import fetch_clips
+from video.ai_scenes import build_scene_video
 from video.render import render_segment, concat_segments
 from video.thumbnail import build_thumbnail, build_cover
 from video.intro import get_or_build_intro
@@ -55,10 +56,19 @@ def _render_short(fact, item_dir):
     ass_path = item_dir / "captions_short.ass"
     build_ass(alignment, str(ass_path), config.SHORT_RESOLUTION, config.CAPTION_FONT_SIZE_SHORT)
 
-    bg = fetch_clips(
-        fact["search_keywords"], orientation="portrait",
-        count=max(1, round(duration / SHORT_CLIP_SECONDS)), min_duration=5,
-    )
+    # Robin 25.11.2026: animierte KI-Szenenbilder (wie „Was wäre wenn“) statt Pexels; Pexels nur als Ersatz
+    bg = None
+    if getattr(config, "SHORTS_AI_SCENES", True) and fact.get("image_prompts"):
+        try:
+            scene = build_scene_video(fact["image_prompts"][:7], duration, item_dir / "scenes.mp4")
+            bg = [scene] if scene else None
+        except Exception as e:  # noqa: BLE001
+            print(f"  Animierte Szenen fehlgeschlagen ({str(e)[:160]}) - nehme Stockvideos")
+    if not bg:
+        bg = fetch_clips(
+            fact["search_keywords"], orientation="portrait",
+            count=max(1, round(duration / SHORT_CLIP_SECONDS)), min_duration=5,
+        )
     cover_path = item_dir / "cover.png"
     build_cover(fact["thumbnail_text"], str(cover_path))
 
@@ -231,7 +241,13 @@ def run(shorts_n: int = None, skip_longform: bool = False):
 
     # --- Langes Video: seit 23.10.2026 Regen-Video (3 Std), sonst Themen-Deep-Dive
     mode = getattr(config, "LONGFORM_MODE", "themen")
-    if getattr(config, "LONGFORM_SKIP_ON_HYPNOSIS_DAYS", False) and datetime.date.today().weekday() in config.HYPNOSIS_WEEKDAYS:
+    lw = getattr(config, "LONGFORM_WEEKDAYS", None)
+    if lw is not None and mode != "aus" and datetime.date.today().weekday() not in lw:
+        print("[3/3] Heute kein langes Video (config.LONGFORM_WEEKDAYS).")
+        mode = "aus_heute"
+    if mode == "aus_heute":
+        pass
+    elif getattr(config, "LONGFORM_SKIP_ON_HYPNOSIS_DAYS", False) and datetime.date.today().weekday() in config.HYPNOSIS_WEEKDAYS:
         print("[3/3] Heute kein Themen-Langvideo - an Hypnose-Tagen kommt nur das Stunden-Video.")
     elif mode == "aus":
         print("[3/3] Langes Video ist abgeschaltet (config.LONGFORM_MODE = 'aus').")

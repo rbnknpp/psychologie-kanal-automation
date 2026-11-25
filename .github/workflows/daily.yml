@@ -41,6 +41,8 @@ jobs:
       PYTHONUNBUFFERED: "1"
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      # Szenenbilder über site-bilder (Cloudflare Workers AI), gleicher Schlüssel wie „Was wäre wenn“
+      PFLEGE_UPLOAD_TOKEN: ${{ secrets.PFLEGE_UPLOAD_TOKEN }}
       EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
       EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
@@ -91,6 +93,13 @@ jobs:
       - name: Piper-Stimme herunterladen
         if: steps.guard.outputs.skip != 'true' && steps.voice-cache.outputs.cache-hit != 'true'
         run: python -m piper.download_voices --download-dir assets/voices "$PIPER_MODEL"
+
+      - name: Tiefenmodell für animierte Szenen (Cache)
+        if: steps.guard.outputs.skip != 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/waswaerewenn
+          key: depth-anything-v2-small-onnx
 
       - name: YouTube-Zugangsdaten bereitstellen
         if: steps.guard.outputs.skip != 'true'
