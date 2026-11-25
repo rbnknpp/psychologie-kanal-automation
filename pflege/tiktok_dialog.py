@@ -5,7 +5,8 @@ jede mit eigener Stimme (edge-tts). Bild = feste 3D-Szenen aus assets/pflege_dia
 langsame Kamerafahrt, Schnitt bei jedem Sprecherwechsel. Oben Zahlen-Karten (Kassenbon, Bausteine, Vergleich),
 unten Untertitel mit Namensschild. Fakten nur von der passenden Seite auf pflege-mit-plan.com.
 
-Aufruf:  python -m pflege.tiktok_dialog --count 1        (bauen + als TikTok-Entwurf einreihen + YouTube-Short)
+Aufruf:  python -m pflege.tiktok_dialog                  (Tagesplan: 1 News, 1 Angehörige, 1 Azubi -> TikTok-Entwurf + YouTube-Short)
+         python -m pflege.tiktok_dialog --plan azubi      (nur diese Reihe(n))
          python -m pflege.tiktok_dialog --test            (1 Video, nur rendern)
          python -m pflege.tiktok_dialog --script x.json   (vorhandenes Skript rendern)
 """
@@ -29,7 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from pflege.tiktok_news import font, wrap, tw, rr, queue, youtube_short, ease_out, ease_back  # noqa: E402
-from pflege.topics import ANGEHOERIGE, SITE  # noqa: E402
+from pflege.topics import ANGEHOERIGE, AZUBI, SITE  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ASSETS = ROOT / "assets" / "pflege_dialog"
@@ -49,6 +50,7 @@ CAST = {
     "anja": {"name": "ANJA · TOCHTER", "voice": "de-DE-KatjaNeural", "rate": "+4%", "pitch": "+0Hz", "col": (226, 170, 60), "shot": "anja_nah"},
     "jana": {"name": "JANA · PFLEGEDIENST", "voice": "de-DE-SeraphinaMultilingualNeural", "rate": "+4%", "pitch": "+0Hz", "col": (70, 170, 150), "shot": "jana_nah"},
     "becker": {"name": "HERR BECKER · PFLEGEBERATUNG", "voice": "de-DE-FlorianMultilingualNeural", "rate": "+2%", "pitch": "+0Hz", "col": (110, 140, 200), "shot": "becker_nah"},
+    "leon": {"name": "LEON · AZUBI", "voice": "de-DE-ChristophNeural", "rate": "+6%", "pitch": "+0Hz", "col": (150, 190, 235), "shot": "leon_nah"},
 }
 SHOTS = {
     "wohnzimmer_alle": "Wohnzimmer, alle drei (Hilde im Sessel, Anja dahinter, Jana auf dem Sofa)",
@@ -59,6 +61,9 @@ SHOTS = {
     "jana_tuer": "Jana klingelt an der Haustür",
     "becker_nah": "Herr Becker nah", "becker_buero": "Herr Becker im Büro mit Anja",
     "kueche_alle": "Hilde und Anja am Küchentisch mit Kaffee", "bad": "Barrierefreies Bad (leer)",
+    "leon_nah": "Leon nah, fragt nach", "leon_lernt": "Leon lernt abends am Schreibtisch", "schule_klasse": "Leon im Klassenraum der Pflegeschule",
+    "jana_tafel": "Jana erklärt am Whiteboard", "skills_lab": "Jana zeigt Leon etwas im Übungsraum an der Puppe im Pflegebett",
+    "station_flur": "Jana und Leon gehen über den Stationsflur",
 }
 
 MONO = next((p for p in ["/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf", r"C:\Windows\Fonts\consolab.ttf"] if Path(p).exists()), None)
@@ -361,18 +366,23 @@ def card_balken(k):
 
 
 def card_liste(k):
-    punkte = k.get("punkte") or []
-    lay = Image.new("RGBA", (W, 140 + 74 * len(punkte)), (0, 0, 0, 0))
+    punkte = [str(p) for p in (k.get("punkte") or [])][:6]
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fp = font(34, "Bold")
+    rows = [wrap(tmp, p, fp, CARD_W - 130)[:2] for p in punkte]
+    h = 100 + sum(14 + 44 * len(r) for r in rows) + 10
+    lay = Image.new("RGBA", (W, h + 60), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
-    h = 100 + 74 * len(punkte)
     shadow_box(lay, (CX, 10, CX + CARD_W, 10 + h), 18)
     rr(d, (CX, 10, CX + CARD_W, 10 + h), 18, WHITE)
     d.text((CX + 30, 34), k.get("titel", ""), font=font(42, "ExtraBold"), fill=INK)
-    for i, p in enumerate(punkte):
-        y = 100 + i * 74
-        d.ellipse((CX + 30, y + 6, CX + 70, y + 46), fill=GREEN)
-        d.text((CX + 50, y + 26), "✓", font=font(28, "ExtraBold"), fill=WHITE, anchor="mm")
-        d.text((CX + 90, y + 6), p, font=font(36, "Bold"), fill=INK)
+    y = 100
+    for r in rows:
+        d.ellipse((CX + 30, y + 4, CX + 68, y + 42), fill=GREEN)
+        d.text((CX + 49, y + 23), "✓", font=font(26, "ExtraBold"), fill=WHITE, anchor="mm")
+        for j, ln in enumerate(r):
+            d.text((CX + 90, y + 2 + j * 44), ln, font=fp, fill=INK)
+        y += 14 + 44 * len(r)
     return lay.crop((0, 0, W, 10 + h + 30))
 
 
@@ -611,55 +621,74 @@ def render(data, wd):
 
 
 # ---------------------------------------------------------------- Skript (Claude)
-SYSTEM = """Du schreibst kurze Dialog-Szenen für TikTok/YouTube-Shorts des Kanals „Pflege mit Plan“ (Hilfe für pflegende Angehörige in Deutschland).
-Feste Figuren (immer gleich, wie eine kleine Serie):
-- hilde: Hilde, 84, die Mutter, hat Pflegegrad 3, trocken-humorvoll, eigensinnig, herzlich.
+FIGUREN = """Feste Figuren (immer gleich, wie eine kleine Serie):
+- hilde: Hilde, 84, Mutter, hat Pflegegrad 3, trocken-humorvoll, eigensinnig, herzlich.
 - anja: Anja, 52, ihre Tochter, pflegt Hilde neben dem Job, stellt die Fragen der Zuschauer, manchmal überfordert.
-- jana: Jana, 30, Pflegefachkraft vom ambulanten Pflegedienst, erklärt klar und freundlich.
-- becker: Herr Becker, Pflegeberater (Pflegestützpunkt/Pflegekasse), erklärt Anträge und Geld – nur einsetzen, wenn das Thema Beratung/Anträge ist.
-Stil: echter Alltagsdialog, kurze gesprochene Sätze, Umgangssprache, ein kleiner Konflikt oder ein Missverständnis am Anfang, dann Aufklärung mit konkreten Zahlen, eine humorvolle Zeile von Hilde, am Ende ein klarer Tipp.
-WICHTIG: Fakten und Beträge NUR aus dem mitgegebenen Seitentext von pflege-mit-plan.com. Nichts erfinden. Wenn ein Betrag nicht im Text steht, keinen Betrag nennen.
-Keine echten Personen, keine Marken von Pflegediensten, keine Patientendaten, keine Rechtsberatung („das prüft die Pflegekasse“ ist ok).
-Antworte ausschließlich mit einem JSON-Objekt (ohne Markdown)."""
+- jana: Jana, 30, Pflegefachkraft beim ambulanten Pflegedienst und Praxisanleiterin, erklärt klar und freundlich.
+- becker: Herr Becker, Pflegeberater (Pflegestützpunkt), erklärt Anträge, Geld und neue Regeln.
+- leon: Leon, 19, Pflege-Azubi im 1. Jahr, neugierig, macht typische Anfängerfehler, fragt nach."""
+
+# Robin 25.11.2026: höchstens 1 News pro Tag, sonst Info-Videos für Angehörige und Lernvideos für Azubis – alles in diesem Design
+REIHEN = {
+    "angehoerige": {
+        "ziel": "Info-Video für pflegende Angehörige (Anrede „Sie“, wenn jemand die Zuschauer anspricht).",
+        "figuren": "hilde, anja, jana, becker (Becker nur bei Anträgen/Beratung)",
+        "fakten": "Fakten und Beträge NUR aus dem mitgegebenen Seitentext von pflege-mit-plan.com. Steht etwas nicht darin, lass es weg.",
+        "schluss": "Letzte Zeile: Jana oder Herr Becker mit dem wichtigsten Tipp + Frage an die Zuschauer.",
+    },
+    "azubi": {
+        "ziel": "Lernvideo für Pflege-Azubis (Pflegefachfrau/-mann und Pflegeassistenz), prüfungsnah, Anrede „du“.",
+        "figuren": "jana (Praxisanleiterin) und leon (Azubi); höchstens eine kurze Zeile von hilde als Pflegebeispiel",
+        "fakten": ("Nur gesichertes Lehrbuch-Grundwissen. KEINE Medikamente, Wirkstoffe, Dosierungen oder ärztlichen Entscheidungen. "
+                   "Normalwerte nur als allgemein anerkannte Erwachsenen-Richtwerte mit dem Hinweis, dass Einrichtungsstandard und Praxisanleitung gelten. "
+                   "Wo sich Aufgaben unterscheiden, kurz sagen, was die Assistenz übernimmt und was der Fachkraft vorbehalten ist. "
+                   "Keine erfundenen Studien oder Zahlen."),
+        "schluss": "Letzte Zeile: Jana mit Merksatz für die Prüfung + Frage an die Zuschauer.",
+    },
+    "news": {
+        "ziel": "Aktuelle Pflege-Nachricht als Alltagsszene: Anja (oder Leon) hat davon gehört oder gelesen, Herr Becker oder Jana ordnet ein.",
+        "figuren": "anja, becker, jana, hilde (Hilde für eine humorvolle Zeile); bei Nachrichten für Pflegekräfte: jana und leon",
+        "fakten": ("Fakten NUR aus dem mitgegebenen Faktenblatt (belegt, mit Quelle). Nichts erfinden. "
+                   "Eine Karte {\"typ\":\"hinweis\",\"text\":\"Quelle: <Name>\"} zeigt die Quelle."),
+        "schluss": "Letzte Zeile: Was das konkret bedeutet + Frage an die Zuschauer.",
+    },
+}
+
+SYSTEM = ("Du schreibst kurze Dialog-Szenen für TikTok/YouTube-Shorts des Kanals „Pflege mit Plan“ (Hilfe rund um Pflege in Deutschland).\n"
+          + FIGUREN + "\n"
+          "Stil: echter Alltagsdialog, kurze gesprochene Sätze, Umgangssprache, am Anfang ein kleiner Konflikt, eine Frage oder ein Missverständnis, "
+          "dann Aufklärung mit konkreten Fakten, eine humorvolle Zeile, am Ende ein klarer Tipp.\n"
+          "Keine echten Personen, keine Marken von Pflegediensten, keine Patientendaten, keine Rechtsberatung („das prüft die Pflegekasse“ ist ok), "
+          "keine Heilversprechen.\nAntworte ausschließlich mit einem JSON-Objekt (ohne Markdown).")
 
 FORMAT = """JSON-Format:
 {
  "thema": "kurzer Titel fürs Video (max. 70 Zeichen)",
- "titel": "Hook oben im Bild, max. 4 Wörter mit Fragezeichen, z. B. „Tochter pflegt?“",
+ "titel": "Hook oben im Bild, max. 4 Wörter, z. B. „Tochter pflegt?“",
  "unter": "Unterzeile zum Hook, max. 6 Wörter, z. B. „Dann zahlt die Kasse weniger.“",
  "caption": "TikTok-Text: 1-2 Sätze mit Hauptsuchwort, 1 Emoji, eine Frage. Ohne Hashtags.",
- "hashtags": ["#pflege", "#pflegendeangehoerige", "... 3 weitere"],
+ "hashtags": ["#pflege", "... 4 weitere passende"],
  "zeilen": [ {"wer": "anja", "say": "Gesprochener Satz.", "text": "Untertitel", "shot": "anja_nah", "karte": null} ]
 }
-Regeln für "zeilen" (24-36 Zeilen, zusammen 170-240 Wörter, ca. 70-100 Sekunden):
+Regeln für "zeilen" (18-26 Zeilen, zusammen 120-160 Wörter – nicht mehr! –, ca. 60-90 Sekunden):
+- "wer": eine der erlaubten Figuren.
 - "say": 3-14 Wörter, so wie man es spricht; Zahlen ausgeschrieben, wie gesprochen („fünfhundertneunundneunzig Euro“).
 - "text": derselbe Satz als Untertitel, mit Ziffern und Satzzeichen („599 Euro.“).
 - "shot": passende Einstellung aus dieser Liste (zur sprechenden Person oder zur Handlung): SHOTS
-  Möglichst oft die Einstellung der sprechenden Person; Totale (wohnzimmer_alle, kueche_alle) zum Einstieg und für Pointen.
-- "karte" (oben im Bild, bleibt stehen, bis eine neue kommt; null = nichts ändern). Jeder genannte Betrag wird als Karte gezeigt. Typen:
+  Möglichst oft die Einstellung der sprechenden Person; Totale zum Einstieg und für Pointen.
+- "karte" (oben im Bild, bleibt stehen, bis eine neue kommt; null = nichts ändern). Jede genannte Zahl wird als Karte gezeigt. Typen:
   {"typ":"zahlen","tag":"PFLEGEGRAD 3","a":{"wert":"599 €","text":"Pflegegeld"},"b":{"wert":"bis 1.497 €","text":"Pflegedienst"}}
-  {"typ":"bon","titel":"1 Hausbesuch","posten":[["Große Grundpflege","31,79 €"],["Hausbesuchspauschale","5,79 €"]],"summe":"37,58 €","fuss":"Beispielrechnung, Preise je Dienst verschieden"}
+  {"typ":"bon","titel":"1 Hausbesuch","posten":[["Große Grundpflege","31,79 €"],["Hausbesuchspauschale","5,79 €"]],"summe":"37,58 €","fuss":"Beispielrechnung"}
   {"typ":"baustein","kopf":"Davon zahlt der Dienst","etikett":"Lohn","titel":"Tarifgehalt der Pflegekraft","fuss":"kurzer Beleg"}  (mehrere hintereinander mit gleichem "kopf" sammeln die Etiketten oben)
-  {"typ":"hinweis","text":"1.497 € reichen für 39 Besuche"}
-  {"typ":"liste","titel":"So geht's:","punkte":["Antrag stellen","Gutachten vorbereiten"]}  (wächst: in Folgezeilen dieselbe Liste mit einem Punkt mehr)
+  {"typ":"hinweis","text":"kurzer Merksatz"}
+  {"typ":"liste","titel":"So geht's:","punkte":["Schritt eins","Schritt zwei"]}  (wächst: in Folgezeilen dieselbe Liste mit einem Punkt mehr)
   {"typ":"balken","zeilen":[{"label":"Pflegesachleistung","wert":1497},{"label":"Pflegegeld","wert":599}]}
   {"typ":"weg"} (Karten ausblenden)
-  Insgesamt 5-10 Karten-Wechsel, mindestens 2 verschiedene Typen. Ein Bon nur bei echten Beispielrechnungen aus dem Text.
-- Die ersten 2 Zeilen: der Konflikt (z. B. Anja wundert sich über einen Brief/eine Rechnung). Keine Begrüßung.
-- Letzte Zeile: Jana oder Herr Becker mit dem wichtigsten Tipp + Frage an die Zuschauer („Wie macht ihr das?“)."""
+  Insgesamt 5-10 Karten-Wechsel, mindestens 2 verschiedene Typen. Ein Bon nur bei echten Beispielrechnungen.
+- Die ersten 2 Zeilen: der Konflikt bzw. die Frage. Keine Begrüßung."""
 
 
-def script(topic, avoid):
-    import anthropic
-    from pflege.make import page_text
-    url = SITE + topic[2]
-    text = page_text(url)
-    if len(text) < 400:
-        raise RuntimeError(f"Seite zu kurz: {url}")
-    client = anthropic.Anthropic()
-    shots = ", ".join(f"{k} ({v})" for k, v in SHOTS.items())
-    user = (f"Thema: {topic[1]}\nSeite: {url}\nSchon gemacht (anderer Blickwinkel wählen): {avoid or 'nichts'}\n\n"
-            f"Seitentext (einzige Faktenquelle):\n{text}\n\n{FORMAT.replace('SHOTS', shots)}\n\nAntworte nur mit dem JSON-Objekt.")
+def _ask(client, user):
     last = ""
     for _ in range(2):
         resp = client.messages.create(model=MODEL, max_tokens=8000, system=SYSTEM, messages=[{"role": "user", "content": user}])
@@ -667,25 +696,85 @@ def script(topic, avoid):
         i, j = last.find("{"), last.rfind("}")
         try:
             data = json.loads(last[i:j + 1])
-            if len(data.get("zeilen") or []) >= 12:
-                data["quelle"] = "pflege-mit-plan.com"
-                data["quelle_url"] = url
+            n = sum(len(str(z.get("say", "")).split()) for z in data.get("zeilen") or [])
+            if len(data.get("zeilen") or []) >= 12 and (n <= 185 or _ == 1):
                 return data
+            if n > 185:
+                print(f"  Skript zu lang ({n} Wörter), kürzer")
+                user += f" WICHTIG: Dein letzter Entwurf hatte {n} Wörter. Höchstens 160 Wörter!"
         except Exception as e:  # noqa: BLE001
             print("  JSON-Fehler, neuer Versuch:", e)
     raise RuntimeError(f"kein gültiges Skript: {last[-300:]}")
 
 
-def pick_topic(st):
-    used = st.get("used", {})
-    least = min(used.get(t[0], 0) for t in ANGEHOERIGE)
-    pool = [t for t in ANGEHOERIGE if used.get(t[0], 0) == least]
-    return random.choice(pool)
+def news_facts(client, avoid):
+    """Recherche mit Websuche (wie bisher bei den Pflege-News) -> Faktenblatt mit Quelle."""
+    from pflege.tiktok_news import NEWS_MODEL, SYSTEM as NEWS_SYSTEM
+    today = dt.datetime.now(TZ).strftime("%d.%m.%Y")
+    research = (f"Heute ist der {today}. Suche EINE aktuelle, belegte Pflege-Nachricht aus Deutschland (letzte 30 Tage), die pflegende Angehörige "
+                "oder Pflegekräfte direkt betrifft: neue Regeln, Pflegegeld/Leistungen, Gerichtsurteile, Abrechnungsbetrug, Personalmangel, Studien. "
+                f"Diese Themen gab es schon (nicht wiederholen): {avoid or 'keine'}.\n"
+                "Gib ein kurzes Faktenblatt aus. Erste Zeile genau so: QUELLE: <Name> | <URL>. Dann Thema, Zielgruppe (Angehörige oder Pflegekräfte) "
+                "und 6-12 belegte Fakten mit Zahlen. Noch kein Skript.")
+    msgs, parts = [{"role": "user", "content": research}], []
+    for _ in range(5):
+        resp = client.messages.create(model=NEWS_MODEL, max_tokens=8000, system=NEWS_SYSTEM.rsplit("\n", 1)[0],
+                                      tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}], messages=msgs)
+        if resp.stop_reason == "refusal":
+            raise RuntimeError("Recherche abgelehnt")
+        parts += [b.text for b in resp.content if b.type == "text"]
+        if resp.stop_reason == "pause_turn":
+            msgs = msgs + [{"role": "assistant", "content": resp.content}]
+            continue
+        break
+    facts = "".join(parts).strip()
+    if len(facts) < 200:
+        raise RuntimeError(f"Recherche zu dünn: {facts[:200]}")
+    m = re.search(r"QUELLE:\s*(.+?)\s*\|\s*(https?://\S+)", facts)
+    return facts, (m.group(1).strip() if m else ""), (m.group(2).strip().rstrip(").,") if m else "")
+
+
+def script(reihe, topic, avoid):
+    import anthropic
+    client = anthropic.Anthropic()
+    r = REIHEN[reihe]
+    shots = ", ".join(f"{k} ({v})" for k, v in SHOTS.items())
+    head = f"Reihe: {r['ziel']}\nErlaubte Figuren: {r['figuren']}\nFAKTEN-REGEL: {r['fakten']}\n{r['schluss']}\n"
+    quelle, url = "pflege-mit-plan.com", SITE
+    if reihe == "angehoerige":
+        from pflege.make import page_text
+        url = SITE + topic[2]
+        text = page_text(url)
+        if len(text) < 400:
+            raise RuntimeError(f"Seite zu kurz: {url}")
+        body = f"Thema: {topic[1]}\nSeite: {url}\nSeitentext (einzige Faktenquelle):\n{text}\n"
+    elif reihe == "azubi":
+        body = f"Thema: {topic[1]}\n"
+    else:
+        facts, quelle, url = news_facts(client, avoid)
+        body = f"Faktenblatt (einzige Faktenquelle):\n{facts}\n"
+        avoid = None
+    user = (f"{head}\n{body}\n" + (f"Schon gemacht (anderen Blickwinkel wählen): {avoid}\n" if avoid else "")
+            + "\n" + FORMAT.replace("SHOTS", shots) + "\n\nAntworte nur mit dem JSON-Objekt.")
+    data = _ask(client, user)
+    data["quelle"], data["quelle_url"] = quelle or "pflege-mit-plan.com", url or SITE
+    return data
+
+
+def pick_topic(reihe, st):
+    pool = ANGEHOERIGE if reihe == "angehoerige" else AZUBI
+    used = st.setdefault("used", {})
+    least = min(used.get(t[0], 0) for t in pool)
+    return random.choice([t for t in pool if used.get(t[0], 0) == least])
+
+
+PLAN = ["news", "angehoerige", "azubi"]
+YT_SLOTS = ["09:30", "12:30", "18:30"]
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--count", type=int, default=1)
+    ap.add_argument("--plan", default=",".join(PLAN), help="Reihen in dieser Reihenfolge, z. B. news,angehoerige,azubi")
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--script", default="")
     ap.add_argument("--topic", default="")
@@ -695,18 +784,29 @@ def main():
     if not a.test and not a.script and not tt_on and not yt_on:
         print("Kanal-Schalter: Pflege mit Plan (TikTok + YouTube) ruht – nichts zu tun.")
         return
-    st = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {"used": {}, "themen": []}
+    st = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
+    st.setdefault("used", {})
+    st.setdefault("themen", [])
     day = dt.datetime.now(TZ).date().isoformat()
+    plan = [p for p in a.plan.split(",") if p in REIHEN]
+    if a.script:
+        plan = plan[:1] or ["angehoerige"]
     ok = 0
-    for i in range(1 if (a.test or a.script) else a.count):
+    for i, reihe in enumerate(plan):
         try:
+            topic = None
             if a.script:
-                data, topic = json.loads(Path(a.script).read_text(encoding="utf-8")), None
+                data = json.loads(Path(a.script).read_text(encoding="utf-8"))
             else:
-                topic = next((t for t in ANGEHOERIGE if t[0] == a.topic), None) or pick_topic(st)
-                data = script(topic, [x["thema"] for x in st["themen"][-20:] if x.get("slug") == topic[0]])
-            print(f"[{i}] {data['thema']}")
-            wd = OUT / day / f"{i}"
+                if reihe != "news":
+                    pool = ANGEHOERIGE if reihe == "angehoerige" else AZUBI
+                    topic = next((t for t in pool if t[0] == a.topic), None) or pick_topic(reihe, st)
+                    avoid = [x["thema"] for x in st["themen"][-60:] if x.get("slug") == topic[0]]
+                else:
+                    avoid = [x["thema"] for x in st["themen"][-60:] if x.get("reihe") == "news"]
+                data = script(reihe, topic, avoid)
+            print(f"[{i}] {reihe}: {data['thema']} ({data.get('quelle')})")
+            wd = OUT / day / f"{i}-{reihe}"
             wd.mkdir(parents=True, exist_ok=True)
             (wd / "script.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
             path, secs = render(data, wd)
@@ -716,12 +816,14 @@ def main():
                     queue(path, data, secs)
                 if yt_on:
                     try:
-                        print("  YouTube-Short:", youtube_short(path, data, ["12:30", "18:30"][ok % 2]))
+                        print("  YouTube-Short:", youtube_short(path, data, YT_SLOTS[ok % len(YT_SLOTS)]))
                     except Exception as e:  # noqa: BLE001
                         print("  YouTube FEHLER:", str(e)[:300])
-                st["used"][topic[0]] = st["used"].get(topic[0], 0) + 1
-                st["themen"].append({"thema": data["thema"], "slug": topic[0], "datum": day})
-                st["themen"] = st["themen"][-200:]
+                if topic:
+                    st["used"][topic[0]] = st["used"].get(topic[0], 0) + 1
+                st["themen"].append({"thema": data["thema"], "reihe": reihe, "slug": topic[0] if topic else None,
+                                     "url": data.get("quelle_url"), "datum": day})
+                st["themen"] = st["themen"][-300:]
                 STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
             ok += 1
         except Exception as e:  # noqa: BLE001

@@ -22,7 +22,7 @@ on:
         type: string
         default: ""
       dialog:
-        description: "Nur Dialog-Videos (Hilde, Anja, Jana): Anzahl (z. B. 1); test=true -> nur rendern"
+        description: "Nur Dialog-Videos: Reihen, z. B. azubi oder news,angehoerige,azubi; test=true -> nur rendern"
         type: string
         default: ""
 
@@ -107,21 +107,23 @@ jobs:
         run: |
           printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
           printf '%s' "$YT_TOKEN" > token.json
-      - name: Pflege-News (2 pro Tag, TikTok + YouTube-Shorts)
-        if: ${{ inputs.dialog == '' && (inputs.news != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '')) }}
+      - name: Pflege-News alter Stil (nur noch manuell)
+        if: ${{ inputs.news != '' }}
         continue-on-error: true
         env:
           NEWS_N: ${{ inputs.news || '2' }}
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_news --test
           else python -m pflege.tiktok_news --count "$NEWS_N"; fi
-      - name: Pflege-Dialog (Hilde, Anja, Jana – Stil seit 25.11.2026)
-        if: ${{ inputs.dialog != '' }}
+      # Robin 25.11.2026: ersetzt die News-TikToks. Täglich 1 News + 1 Info (Angehörige) + 1 Lernvideo (Azubis), TikTok + YouTube-Shorts
+      - name: Pflege-Dialog (Hilde, Anja, Jana, Leon, Herr Becker)
+        if: ${{ inputs.dialog != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '' && inputs.news == '') }}
+        continue-on-error: true
         env:
-          DIALOG_N: ${{ inputs.dialog }}
+          DIALOG_PLAN: ${{ inputs.dialog || 'news,angehoerige,azubi' }}
         run: |
-          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_dialog --test
-          else python -m pflege.tiktok_dialog --count "$DIALOG_N"; fi
+          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_dialog --test --plan "$DIALOG_PLAN"
+          else python -m pflege.tiktok_dialog --plan "$DIALOG_PLAN"; fi
       - name: Videos erzeugen und hochladen
         if: ${{ inputs.news == '' && inputs.dialog == '' }}
         run: |
