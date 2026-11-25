@@ -392,8 +392,10 @@ def render(camp, vod, start, end, name, hook):
 
 # TikTok/Instagram-taugliche Ausgabe: H.264 High@4.1, 30 fps konstant, Keyframe jede Sekunde (geschlossene GOP),
 # BT.709, AAC 48 kHz Stereo, moov vorne. Lange GOPs (vorher 8 s) fuehrten in der TikTok-Vorschau zu Schwarzbild.
-EXPORT = ["-r", "30", "-fps_mode", "cfr", "-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-level:v", "4.1",
-          "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-g", "30", "-keyint_min", "30", "-sc_threshold", "0",
+# 25.11.2026: Bitrate von bis zu 9 auf max. 4,5 Mbit/s (Dateien ~12 statt ~25 MB). Die grossen Entwuerfe blieben in der
+# TikTok-App auf dem Handy nach ein paar Sekunden als Standbild haengen; die veroeffentlichte Fassung war in Ordnung.
+EXPORT = ["-r", "30", "-fps_mode", "cfr", "-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-level:v", "4.0",
+          "-crf", "22", "-maxrate", "4500k", "-bufsize", "9000k", "-g", "30", "-keyint_min", "30", "-sc_threshold", "0",
           "-flags", "+cgop", "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
           "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", "-movflags", "+faststart"]
 
