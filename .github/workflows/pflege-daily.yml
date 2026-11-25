@@ -21,6 +21,10 @@ on:
         description: "Nur Pflege-News-TikToks: Anzahl (z. B. 1); test=true -> nur rendern"
         type: string
         default: ""
+      dialog:
+        description: "Nur Dialog-Videos (Hilde, Anja, Jana): Anzahl (z. B. 1); test=true -> nur rendern"
+        type: string
+        default: ""
 
 concurrency:
   group: pflege-daily
@@ -104,15 +108,22 @@ jobs:
           printf '%s' "$YT_CLIENT_SECRET" > client_secret.json
           printf '%s' "$YT_TOKEN" > token.json
       - name: Pflege-News (2 pro Tag, TikTok + YouTube-Shorts)
-        if: ${{ inputs.news != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '') }}
+        if: ${{ inputs.dialog == '' && (inputs.news != '' || (inputs.test != true && inputs.only == '' && inputs.tiktok_only == '')) }}
         continue-on-error: true
         env:
           NEWS_N: ${{ inputs.news || '2' }}
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_news --test
           else python -m pflege.tiktok_news --count "$NEWS_N"; fi
+      - name: Pflege-Dialog (Hilde, Anja, Jana – Stil seit 25.11.2026)
+        if: ${{ inputs.dialog != '' }}
+        env:
+          DIALOG_N: ${{ inputs.dialog }}
+        run: |
+          if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_dialog --test
+          else python -m pflege.tiktok_dialog --count "$DIALOG_N"; fi
       - name: Videos erzeugen und hochladen
-        if: ${{ inputs.news == '' }}
+        if: ${{ inputs.news == '' && inputs.dialog == '' }}
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.make --test
           elif [ -n "${{ inputs.tiktok_only }}" ]; then python -m pflege.make --tiktok-only "${{ inputs.tiktok_only }}"
@@ -127,13 +138,15 @@ jobs:
             output/pflege/**/video.mp4
             output/pflege_tiktok/**/video.mp4
             output/pflege_tiktok/**/script.json
+            output/pflege_dialog/**/video.mp4
+            output/pflege_dialog/**/script.json
           retention-days: 3
       - name: Zustand sichern
         if: ${{ always() && inputs.test != true }}
         run: |
           git config user.name "pflege-bot"
           git config user.email "pflege-bot@users.noreply.github.com"
-          git add pflege/state.json pflege/tiktok_state.json 2>/dev/null || true
+          git add pflege/state.json pflege/tiktok_state.json pflege/dialog_state.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Pflege-Kanal: Zustand aktualisiert [skip ci]"
             git pull --rebase -q && git push -q
