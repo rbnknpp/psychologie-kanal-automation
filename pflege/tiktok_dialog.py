@@ -648,7 +648,8 @@ REIHEN = {
     "news": {
         "ziel": "Aktuelle Pflege-Nachricht als Alltagsszene: Anja (oder Leon) hat davon gehört oder gelesen, Herr Becker oder Jana ordnet ein.",
         "figuren": "anja, becker, jana, hilde (Hilde für eine humorvolle Zeile); bei Nachrichten für Pflegekräfte: jana und leon",
-        "fakten": ("Fakten NUR aus dem mitgegebenen Faktenblatt (belegt, mit Quelle). Nichts erfinden. "
+        "fakten": ("Fakten NUR aus dem mitgegebenen Faktenblatt (belegt, mit Quelle). Nichts erfinden. Namen und Ämter genau wie im Faktenblatt, "
+                   "keine wörtlichen Zitate, die dort nicht wörtlich stehen. Entwürfe klar als Entwurf bezeichnen. "
                    "Eine Karte {\"typ\":\"hinweis\",\"text\":\"Quelle: <Name>\"} zeigt die Quelle."),
         "schluss": "Letzte Zeile: Was das konkret bedeutet + Frage an die Zuschauer.",
     },
