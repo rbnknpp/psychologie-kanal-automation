@@ -769,8 +769,45 @@ def pick_topic(reihe, st):
     return random.choice([t for t in pool if used.get(t[0], 0) == least])
 
 
+WEB_API = "https://kfiiaqjzzwwacthzrcut.supabase.co/functions/v1/pflege-videos"
+
+
+def web_publish(path, data, reihe, topic, wd, secs):
+    """Kleine Web-Fassung (540 px) + Vorschaubild in den Video-Speicher, Eintrag für pflege-mit-plan.com (/videos, Ratgeber-Seiten)."""
+    import requests
+    tok = os.environ.get("PFLEGE_UPLOAD_TOKEN", "").strip()
+    if not tok:
+        print("  kein PFLEGE_UPLOAD_TOKEN – nicht auf die Website")
+        return None
+    web, poster = wd / "web.mp4", wd / "poster.jpg"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(path), "-vf", "scale=540:960", "-c:v", "libx264", "-preset", "slow",
+                    "-crf", "27", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", str(web)], check=True)
+    Image.open(wd / "cover.jpg").convert("RGB").resize((540, 960), Image.LANCZOS).save(poster, quality=82)
+    h = {"x-pflege-token": tok, "Content-Type": "application/json"}
+    stem = f"{dt.datetime.now(TZ):%Y/%m/%d-%H%M%S}-{reihe}-{(topic[0] if topic else 'news')}"
+    paths = {}
+    for f, ctype in ((web, "video/mp4"), (poster, "image/jpeg")):
+        r = requests.post(WEB_API, json={"action": "upload_url", "name": f"{stem}{f.suffix}"}, headers=h, timeout=60).json()
+        if "signed_url" not in r:
+            raise RuntimeError(f"upload_url: {r}")
+        with open(f, "rb") as fh:
+            up = requests.put(r["signed_url"], data=fh, headers={"Content-Type": ctype, "x-upsert": "true"}, timeout=300)
+        if up.status_code >= 300:
+            raise RuntimeError(f"Upload {up.status_code}: {up.text[:200]}")
+        paths[ctype] = r["path"]
+    seite = (topic[2] if reihe == "angehoerige" and topic else "/pflege-lernen" if reihe == "azubi" else None)
+    row = {"action": "add", "reihe": reihe, "slug": topic[0] if topic else None, "seite": seite, "thema": data["thema"],
+           "titel": f"{data.get('titel', '')} {data.get('unter', '')}".strip(), "caption": data.get("caption"),
+           "quelle": data.get("quelle"), "quelle_url": data.get("quelle_url"), "video_path": paths["video/mp4"],
+           "poster_path": paths["image/jpeg"], "seconds": round(secs, 1)}
+    r = requests.post(WEB_API, json=row, headers=h, timeout=60).json()
+    print("  Website:", r)
+    return r
+
+
 PLAN = ["news", "angehoerige", "azubi"]
 YT_SLOTS = ["09:30", "12:30", "18:30"]
+WEB_ONLY = os.getenv("PFLEGE_DIALOG_WEB_ONLY", "0") == "1"   # nur für die Website (z. B. zum Befüllen), kein TikTok/YouTube
 
 
 def main():
@@ -813,9 +850,13 @@ def main():
             path, secs = render(data, wd)
             print(f"  gerendert: {path} ({secs:.0f} s)")
             if not a.test and not a.script:
-                if tt_on:
+                try:
+                    web_publish(path, data, reihe, topic, wd, secs)
+                except Exception as e:  # noqa: BLE001
+                    print("  Website FEHLER:", str(e)[:300])
+                if tt_on and not WEB_ONLY:
                     queue(path, data, secs)
-                if yt_on:
+                if yt_on and not WEB_ONLY:
                     try:
                         print("  YouTube-Short:", youtube_short(path, data, YT_SLOTS[ok % len(YT_SLOTS)]))
                     except Exception as e:  # noqa: BLE001

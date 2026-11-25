@@ -25,6 +25,10 @@ on:
         description: "Nur Dialog-Videos: Reihen, z. B. azubi oder news,angehoerige,azubi; test=true -> nur rendern"
         type: string
         default: ""
+      web_only:
+        description: "Dialog-Videos nur auf pflege-mit-plan.com (kein TikTok/YouTube)"
+        type: boolean
+        default: false
 
 concurrency:
   group: pflege-daily
@@ -121,6 +125,7 @@ jobs:
         continue-on-error: true
         env:
           DIALOG_PLAN: ${{ inputs.dialog || 'news,angehoerige,azubi' }}
+          PFLEGE_DIALOG_WEB_ONLY: ${{ inputs.web_only && '1' || '0' }}
         run: |
           if [ "${{ inputs.test }}" = "true" ]; then python -m pflege.tiktok_dialog --test --plan "$DIALOG_PLAN"
           else python -m pflege.tiktok_dialog --plan "$DIALOG_PLAN"; fi
