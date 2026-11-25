@@ -1,0 +1,29 @@
+{
+ "used": {
+  "pflegedienst-finden": 1,
+  "palliativ": 1
+ },
+ "themen": [
+  {
+   "thema": "Ambulanten Pflegedienst finden – die Checkliste",
+   "reihe": "angehoerige",
+   "slug": "pflegedienst-finden",
+   "url": "https://pflege-mit-plan.com/ratgeber/pflegedienst-finden",
+   "datum": "2026-11-25"
+  },
+  {
+   "thema": "Palliativpflege: Die Grundhaltung für die Prüfung",
+   "reihe": "azubi",
+   "slug": "palliativ",
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-25"
+  },
+  {
+   "thema": "Pflegereform 2027: Was ist wirklich schon beschlossen?",
+   "reihe": "news",
+   "slug": null,
+   "url": "https://www.tk.de/techniker/pflegeversicherung/ueberblick-pflegeleistungen-pflegegrade/pflegereform-2027-ueberblick-2221228",
+   "datum": "2026-11-25"
+  }
+ ]
+}
