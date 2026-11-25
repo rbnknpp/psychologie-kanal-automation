@@ -1,7 +1,9 @@
 {
  "used": {
   "pflegedienst-finden": 1,
-  "palliativ": 1
+  "palliativ": 1,
+  "tagespflege": 1,
+  "fem": 1
  },
  "themen": [
   {
@@ -23,6 +25,27 @@
    "reihe": "news",
    "slug": null,
    "url": "https://www.tk.de/techniker/pflegeversicherung/ueberblick-pflegeleistungen-pflegegrade/pflegereform-2027-ueberblick-2221228",
+   "datum": "2026-11-25"
+  },
+  {
+   "thema": "Pflege-News im Netz: Stimmt das wirklich?",
+   "reihe": "news",
+   "slug": null,
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-25"
+  },
+  {
+   "thema": "Tagespflege – was sie bringt",
+   "reihe": "angehoerige",
+   "slug": "tagespflege",
+   "url": "https://pflege-mit-plan.com/lexikon/tagespflege",
+   "datum": "2026-11-25"
+  },
+  {
+   "thema": "Freiheitsentziehende Maßnahmen: Was gilt wirklich?",
+   "reihe": "azubi",
+   "slug": "fem",
+   "url": "https://pflege-mit-plan.com",
    "datum": "2026-11-25"
   }
  ]
