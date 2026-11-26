@@ -3,7 +3,9 @@
   "pflegedienst-finden": 1,
   "palliativ": 1,
   "tagespflege": 1,
-  "fem": 1
+  "fem": 1,
+  "pflegestuetzpunkt": 1,
+  "sis": 1
  },
  "themen": [
   {
@@ -47,6 +49,27 @@
    "slug": "fem",
    "url": "https://pflege-mit-plan.com",
    "datum": "2026-11-25"
+  },
+  {
+   "thema": "Pflege-News im Netz: Stimmt das überhaupt?",
+   "reihe": "news",
+   "slug": null,
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-26"
+  },
+  {
+   "thema": "Pflegestützpunkt: Kostenlose Beratung im Saarland",
+   "reihe": "angehoerige",
+   "slug": "pflegestuetzpunkt",
+   "url": "https://pflege-mit-plan.com/pflegestuetzpunkte-saarland",
+   "datum": "2026-11-26"
+  },
+  {
+   "thema": "SIS und Strukturmodell einfach erklärt",
+   "reihe": "azubi",
+   "slug": "sis",
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-26"
   }
  ]
 }
