@@ -1,52 +1,4 @@
 {
- "Warum du bei Gruppenentscheidungen leiser wirst": {
-  "title": "Warum du bei Gruppenentscheidungen leiser wirst",
-  "hook": "Je größer die Gruppe, desto leiser wirst du, auch ohne es zu merken.",
-  "tags": [
-   "Psychologie",
-   "Gruppendynamik",
-   "Verhalten",
-   "Gehirn",
-   "Soziale Hemmung",
-   "Meeting",
-   "Fakten",
-   "Wissen",
-   "Kommunikation",
-   "Team"
-  ]
- },
- "Dein Gehirn braucht Berührung, um Nähe wirklich zu glauben": {
-  "title": "Dein Gehirn braucht Berührung, um Nähe wirklich zu glauben",
-  "hook": "Worte allein reichen deinem Gehirn oft nicht, um Nähe zu glauben.",
-  "tags": [
-   "Psychologie",
-   "Berührung",
-   "Oxytocin",
-   "Vertrauen",
-   "Gehirn",
-   "Beziehungen",
-   "Fakten",
-   "Wissen",
-   "Emotionen",
-   "Nähe"
-  ]
- },
- "Warum du dich nach einem Kompliment manchmal unwohl fühlst": {
-  "title": "Warum du dich nach einem Kompliment manchmal unwohl fühlst",
-  "hook": "Ein Kompliment kann sich manchmal komisch anfühlen, statt einfach gut.",
-  "tags": [
-   "Psychologie",
-   "Selbstwert",
-   "Kompliment",
-   "Kognitive Dissonanz",
-   "Gehirn",
-   "Emotionen",
-   "Fakten",
-   "Wissen",
-   "Verhalten",
-   "Selbstbild"
-  ]
- },
  "Warum du beim Lügen öfter lächelst, aber falsch": {
   "title": "Warum du beim Lügen öfter lächelst, aber falsch",
   "hook": "Ein Lächeln beim Lügen sieht fast immer anders aus.",
@@ -6097,6 +6049,57 @@
    "öffentliches reden",
    "body language",
    "souveränität"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Stimme sinkt, wenn du wirklich ehrlich meinst, was du sagst": {
+  "title": "Warum deine Stimme sinkt, wenn du wirklich ehrlich meinst, was du sagst",
+  "hook": "Eine tiefere Stimme klingt für dein Gehirn automatisch ehrlicher.",
+  "tags": [
+   "psychologie",
+   "körpersprache",
+   "stimme",
+   "nonverbale kommunikation",
+   "stimmlage",
+   "vertrauen",
+   "alltagspsychologie",
+   "kommunikation",
+   "gehirn",
+   "ehrlichkeit"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Zentimeter mehr Abstand deiner Hände verraten dein wahres Interesse": {
+  "title": "3 Zentimeter mehr Abstand deiner Hände verraten dein wahres Interesse",
+  "hook": "3 Zentimeter Abstand deiner Hände verraten echtes Interesse.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "hände",
+   "nonverbale kommunikation",
+   "mikrogesten",
+   "interesse",
+   "alltagspsychologie",
+   "gestik",
+   "kommunikation",
+   "erster eindruck"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn braucht nur einen Wimpernschlag, um Sympathie zu erkennen": {
+  "title": "Dein Gehirn braucht nur einen Wimpernschlag, um Sympathie zu erkennen",
+  "hook": "Dein Gehirn entscheidet in 0,2 Sekunden, ob es dich mag.",
+  "tags": [
+   "psychologie",
+   "erster eindruck",
+   "körpersprache",
+   "gehirn",
+   "sympathie",
+   "amygdala",
+   "nonverbale kommunikation",
+   "alltagspsychologie",
+   "wahrnehmung",
+   "begegnung"
   ],
   "abo_aufruf": false
  }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T05:18:00.494043",
+  "generated_at": "2026-11-26T05:17:48.991773",
   "lookback_days": 10,
   "top": [
     {
@@ -19,7 +19,7 @@
     {
       "video_id": "L0M_RkaLihs",
       "title": "3 Sekunden Blick nach unten entscheiden, ob du als schüchtern giltst",
-      "views": 302,
+      "views": 304,
       "retention": 46.0,
       "engaged_pct": 41.4
     },
@@ -33,9 +33,23 @@
     {
       "video_id": "8tI5RZ6EXag",
       "title": "Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst",
-      "views": 211,
-      "retention": 29.5,
+      "views": 219,
+      "retention": 29.6,
       "engaged_pct": 38.4
+    },
+    {
+      "video_id": "nEZoqSQ_H7Y",
+      "title": "Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde",
+      "views": 188,
+      "retention": 43.5,
+      "engaged_pct": 36.7
+    },
+    {
+      "video_id": "Sn2plJ9l0W4",
+      "title": "3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war",
+      "views": 153,
+      "retention": 29.3,
+      "engaged_pct": 37.3
     },
     {
       "video_id": "Xzdyt1zohuI",
@@ -43,37 +57,9 @@
       "views": 144,
       "retention": 27.9,
       "engaged_pct": 29.2
-    },
-    {
-      "video_id": "oGEUBz-IgG0",
-      "title": "Dein Gehirn merkt an der Handflächenposition, ob du etwas verbirgst",
-      "views": 130,
-      "retention": 35.8,
-      "engaged_pct": 33.8
-    },
-    {
-      "video_id": "nEZoqSQ_H7Y",
-      "title": "Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde",
-      "views": 101,
-      "retention": 40.1,
-      "engaged_pct": 32.7
     }
   ],
   "flop": [
-    {
-      "video_id": "_pGHtDgsE7U",
-      "title": "Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst",
-      "views": 18,
-      "retention": 30.8,
-      "engaged_pct": 61.1
-    },
-    {
-      "video_id": "tRLIRfFtjQU",
-      "title": "Warum derselbe Spruch mal lustig und mal verletzend wirkt",
-      "views": 20,
-      "retention": 12.7,
-      "engaged_pct": 45.0
-    },
     {
       "video_id": "3nAMVRwRCjY",
       "title": "Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken",
@@ -84,17 +70,31 @@
     {
       "video_id": "Pnoiiayg_ak",
       "title": "Warum echte Entschuldigungen an den Händen zu erkennen sind",
-      "views": 23,
-      "retention": 11.8,
-      "engaged_pct": 60.9
+      "views": 24,
+      "retention": 11.5,
+      "engaged_pct": 62.5
+    },
+    {
+      "video_id": "tRLIRfFtjQU",
+      "title": "Warum derselbe Spruch mal lustig und mal verletzend wirkt",
+      "views": 29,
+      "retention": 11.0,
+      "engaged_pct": 44.8
     },
     {
       "video_id": "OXjOuO1I5eI",
       "title": "Warum manche Menschen beim Trösten den Körper wegdrehen",
-      "views": 28,
-      "retention": 18.0,
-      "engaged_pct": 75.0
+      "views": 29,
+      "retention": 18.1,
+      "engaged_pct": 75.9
+    },
+    {
+      "video_id": "B1t92AaNJvs",
+      "title": "3 Grad Kopfdrehung verraten, ob du jemandem wirklich zuhörst",
+      "views": 42,
+      "retention": 47.2,
+      "engaged_pct": 26.2
     }
   ],
-  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"3 Grad Kopfneigung entscheiden, ob du als arrogant wirkst\" (612 Views, 35.5% Bindung, 50.7% nicht weitergewischt) | Hook: \"3 Grad mehr Kopfneigung lassen dich arrogant wirken.\" | Themen: körpersprache, psychologie, erster eindruck, kopfhaltung\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln\" (356 Views, 32.3% Bindung, 39.6% nicht weitergewischt) | Hook: \"Ein erzwungenes Lachen beginnt immer am Mund, nie an den Augen.\" | Themen: mimik, lachen, psychologie, körpersprache\n- \"3 Sekunden Blick nach unten entscheiden, ob du als schüchtern giltst\" (302 Views, 46.0% Bindung, 41.4% nicht weitergewischt) | Hook: \"3 Sekunden Blick nach unten reichen für ein Urteil.\" | Themen: körpersprache, psychologie, blickkontakt, erster eindruck\n- \"Dein Gehirn hält feste Händedrücke für kompetenter, egal was gesagt wird\" (289 Views, 64.5% Bindung, 40.8% nicht weitergewischt) | Hook: \"Ein fester Händedruck verändert, was dein Gegenüber über dich denkt.\" | Themen: psychologie, körpersprache, händedruck, erster eindruck\n- \"Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst\" (211 Views, 29.5% Bindung, 38.4% nicht weitergewischt) | Hook: \"Deine Füße verraten ein Gespräch, lange bevor du gehst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, smalltalk\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (144 Views, 27.9% Bindung, 29.2% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n- \"Dein Gehirn merkt an der Handflächenposition, ob du etwas verbirgst\" (130 Views, 35.8% Bindung, 33.8% nicht weitergewischt) | Hook: \"Nach unten gedrehte Handflächen wecken sofort Misstrauen.\" | Themen: körpersprache, psychologie, handgesten, vertrauen\n- \"Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde\" (101 Views, 40.1% Bindung, 32.7% nicht weitergewischt) | Hook: \"Ein Händedruck verrät Unsicherheit, bevor ein Wort fällt.\" | Themen: körpersprache, psychologie, händedruck, erster eindruck\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Vorstellungsgespräch die Hände auf den Tisch legst\" (18 Views, 30.8% Bindung, 61.1% nicht weitergewischt) | Hook: \"Versteckte Hände unter dem Tisch wirken sofort unsicherer.\" | Themen: körpersprache, psychologie, vertrauen, bewerbungsgespräch\n- \"Warum derselbe Spruch mal lustig und mal verletzend wirkt\" (20 Views, 12.7% Bindung, 45.0% nicht weitergewischt)\n- \"Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken\" (21 Views, 40.1% Bindung, 38.1% nicht weitergewischt) | Hook: \"Ein offenes Handgelenk verrät mehr als jeder Blick.\" | Themen: körpersprache, psychologie, flirten, nonverbale kommunikation\n- \"Warum echte Entschuldigungen an den Händen zu erkennen sind\" (23 Views, 11.8% Bindung, 60.9% nicht weitergewischt)\n- \"Warum manche Menschen beim Trösten den Körper wegdrehen\" (28 Views, 18.0% Bindung, 75.0% nicht weitergewischt)"
+  "digest_text": "Diese Videos kamen in den letzten 10 Tagen gut an (hohe Aufrufe/Zuschauerbindung) - greife aehnliche Themen, Hook-Formulierungen oder Erzaehlaufbauten wieder auf, aber nicht wortgleich:\n- \"3 Grad Kopfneigung entscheiden, ob du als arrogant wirkst\" (612 Views, 35.5% Bindung, 50.7% nicht weitergewischt) | Hook: \"3 Grad mehr Kopfneigung lassen dich arrogant wirken.\" | Themen: körpersprache, psychologie, erster eindruck, kopfhaltung\n- \"Dein Gehirn erkennt ein erzwungenes Lachen an der Reihenfolge der Muskeln\" (356 Views, 32.3% Bindung, 39.6% nicht weitergewischt) | Hook: \"Ein erzwungenes Lachen beginnt immer am Mund, nie an den Augen.\" | Themen: mimik, lachen, psychologie, körpersprache\n- \"3 Sekunden Blick nach unten entscheiden, ob du als schüchtern giltst\" (304 Views, 46.0% Bindung, 41.4% nicht weitergewischt) | Hook: \"3 Sekunden Blick nach unten reichen für ein Urteil.\" | Themen: körpersprache, psychologie, blickkontakt, erster eindruck\n- \"Dein Gehirn hält feste Händedrücke für kompetenter, egal was gesagt wird\" (289 Views, 64.5% Bindung, 40.8% nicht weitergewischt) | Hook: \"Ein fester Händedruck verändert, was dein Gegenüber über dich denkt.\" | Themen: psychologie, körpersprache, händedruck, erster eindruck\n- \"Warum deine Füße beim Smalltalk zur Tür zeigen, obwohl du höflich lächelst\" (219 Views, 29.6% Bindung, 38.4% nicht weitergewischt) | Hook: \"Deine Füße verraten ein Gespräch, lange bevor du gehst.\" | Themen: körpersprache, psychologie, nonverbale kommunikation, smalltalk\n- \"Dein Gehirn erkennt einen unsicheren Händedruck in unter einer Sekunde\" (188 Views, 43.5% Bindung, 36.7% nicht weitergewischt) | Hook: \"Ein Händedruck verrät Unsicherheit, bevor ein Wort fällt.\" | Themen: körpersprache, psychologie, händedruck, erster eindruck\n- \"3 Sekunden Lachverzögerung verraten, ob ein Witz wirklich lustig war\" (153 Views, 29.3% Bindung, 37.3% nicht weitergewischt) | Hook: \"3 Sekunden Verzögerung verraten ein gespieltes Lachen.\" | Themen: psychologie, körpersprache, lachen, mimik\n- \"Warum du beim Zuhören öfter die Stirn glättest, wenn du jemandem vertraust\" (144 Views, 27.9% Bindung, 29.2% nicht weitergewischt) | Hook: \"Eine glatte Stirn verrät, dass du dich gerade sicher fühlst.\" | Themen: körpersprache, psychologie, mimik, vertrauen\n\nDiese Videos kamen vergleichsweise schlecht an - vermeide aehnliche Themen/Formulierungen:\n- \"Warum du beim Flirten öfter dein Handgelenk zeigst, ohne es zu merken\" (21 Views, 40.1% Bindung, 38.1% nicht weitergewischt) | Hook: \"Ein offenes Handgelenk verrät mehr als jeder Blick.\" | Themen: körpersprache, psychologie, flirten, nonverbale kommunikation\n- \"Warum echte Entschuldigungen an den Händen zu erkennen sind\" (24 Views, 11.5% Bindung, 62.5% nicht weitergewischt)\n- \"Warum derselbe Spruch mal lustig und mal verletzend wirkt\" (29 Views, 11.0% Bindung, 44.8% nicht weitergewischt)\n- \"Warum manche Menschen beim Trösten den Körper wegdrehen\" (29 Views, 18.1% Bindung, 75.9% nicht weitergewischt)\n- \"3 Grad Kopfdrehung verraten, ob du jemandem wirklich zuhörst\" (42 Views, 47.2% Bindung, 26.2% nicht weitergewischt) | Hook: \"3 Grad Kopfdrehung entscheiden, ob du wirklich zuhörst.\" | Themen: körpersprache, zuhören, psychologie, kopfbewegung"
 }
