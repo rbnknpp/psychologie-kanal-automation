@@ -731,8 +731,13 @@ def news_facts(client, avoid):
     facts = "".join(parts).strip()
     if len(facts) < 200:
         raise RuntimeError(f"Recherche zu dünn: {facts[:200]}")
-    m = re.search(r"QUELLE:\s*(.+?)\s*\|\s*(https?://\S+)", facts)
-    return facts, (m.group(1).strip() if m else ""), (m.group(2).strip().rstrip(").,") if m else "")
+    clean = facts.replace("*", "")
+    m = re.search(r"QUELLE:\s*(.+?)\s*\|\s*(https?://\S+)", clean)
+    url = m.group(2).strip().rstrip(").,]") if m else ""
+    if not url or "pflege-mit-plan.com" in url:
+        # 26.11.2026: ohne echte Nachricht mit Quelle KEIN News-Video (sonst entsteht ein allgemeines „Quelle prüfen“-Video)
+        raise RuntimeError("keine belegte Nachricht mit Quelle gefunden")
+    return facts, m.group(1).strip(), url
 
 
 def script(reihe, topic, avoid):
@@ -872,6 +877,9 @@ def main():
             import traceback
             traceback.print_exc()
             print("  FEHLER:", str(e)[:400])
+            if reihe == "news" and not a.script and "angehoerige" in REIHEN:
+                print("  -> statt News ein weiteres Info-Video für Angehörige")
+                plan.insert(i + 1, "angehoerige")
     if ok == 0:
         sys.exit(1)
 
