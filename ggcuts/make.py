@@ -357,10 +357,21 @@ def render(camp, vod, start, end, name, hook):
         # Spielbild-Ausschnitt: Mitte des Bereichs game_area [x0, x1] (z. B. ohne Chat/Facecam rechts), sonst Bildmitte
         ga0, ga1 = camp.get("game_area", [0, 1920])
         gx = max(0, min(1920 - gw, int((ga0 + ga1) / 2 - gw / 2)))
-        base = (f"[0:v]scale=1920:1080,split=2[a][b];"
-                f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h},format=yuv420p[cam];"
-                f"[b]crop={gw}:1080:{gx}:0,scale=1080:{game_h},format=yuv420p[game];"
-                f"[cam][game]vstack=inputs=2[st]")
+        if camp.get("game_fit"):
+            # Robin 26.11.2026: komplettes Spielbild statt Ausschnitt in Facecam-Breite. Ganzer Bereich game_area
+            # in voller Breite unter der Kamera, Rest des Hochformats = unscharfer, abgedunkelter Hintergrund.
+            gaw = (ga1 - ga0) // 2 * 2
+            fit_h = int(1080 * 1080 / gaw) // 2 * 2
+            base = (f"[0:v]scale=1920:1080,split=3[a][b][c];"
+                    f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h}[cam];"
+                    f"[b]crop={gaw}:1080:{ga0}:0,scale=1080:{fit_h}[game];"
+                    f"[c]crop={gaw}:1080:{ga0}:0,scale=-2:1920,crop=1080:1920,boxblur=30:2,eq=brightness=-0.12[bg];"
+                    f"[bg][cam]overlay=0:0[t1];[t1][game]overlay=0:{cam_h},format=yuv420p[st]")
+        else:
+            base = (f"[0:v]scale=1920:1080,split=2[a][b];"
+                    f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h},format=yuv420p[cam];"
+                    f"[b]crop={gw}:1080:{gx}:0,scale=1080:{game_h},format=yuv420p[game];"
+                    f"[cam][game]vstack=inputs=2[st]")
         ov_y = cam_h - 80
     elif lay == "track":
         cmd = WORK / f"{name}.cmd"

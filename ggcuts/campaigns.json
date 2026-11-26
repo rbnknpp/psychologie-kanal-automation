@@ -55,6 +55,7 @@
   "game_area": [
    0,
    1400
-  ]
+  ],
+  "game_fit": true
  }
 ]
