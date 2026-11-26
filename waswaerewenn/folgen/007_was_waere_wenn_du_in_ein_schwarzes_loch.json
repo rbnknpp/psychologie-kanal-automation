@@ -1,0 +1,454 @@
+{
+ "titel": "Was wäre, wenn du in ein Schwarzes Loch fällst?",
+ "thumb_text": "SPAGHETTI-TOD?!",
+ "thumb_bild": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans, floating in space with a shocked expression, being gently stretched by a massive glowing black hole with swirling orange accretion disk behind him, dramatic cosmic lighting, Pixar style",
+ "beschreibung": "Leo fällt heute in ein Schwarzes Loch – und was dabei wirklich passiert, ist viel verrückter als Spaghetti-Vergleiche. Wir schauen uns an, was Einstein, Hawking und echte Weltraumteleskope darüber herausgefunden haben. Welches Szenario sollen wir als Nächstes durchspielen? Schreib es in die Kommentare! #waswärewenn #schwarzeslooch #weltraum #wissenschaft #astrophysik",
+ "tags": [
+  "was wäre wenn",
+  "schwarzes loch",
+  "weltraum",
+  "einstein",
+  "hawking strahlung",
+  "event horizon telescope",
+  "astrophysik für kinder",
+  "sagittarius a",
+  "spaghettifizierung",
+  "nasa"
+ ],
+ "figur": "Leo, a 10 year old cartoon boy with messy brown hair, big curious eyes, orange hoodie and blue jeans",
+ "szenen": [
+  {
+   "say": "Leo liegt nachts auf dem Trampolin im Garten und starrt in den Sternenhimmel.",
+   "bild": "Leo lying on a trampoline in his backyard at night, looking up at a starry sky, Pixar style"
+  },
+  {
+   "say": "Er fragt sich: Was ist eigentlich in diesem schwarzen Fleck zwischen den Sternen?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und dann stellt er sich vor, er würde selbst in ein Schwarzes Loch fallen.",
+   "bild": "Leo's imagination bubble showing a swirling black hole in deep space, Pixar style"
+  },
+  {
+   "say": "In diesem Video spielen wir genau das durch: Was passiert wirklich, wenn du in ein Schwarzes Loch stürzt?",
+   "titel": "Das Experiment",
+   "bild": "gleich"
+  },
+  {
+   "say": "Spoiler: Es hängt total davon ab, wie groß das Schwarze Loch ist.",
+   "bild": "Leo floating in space holding a tiny model black hole and a huge one, comparing sizes, Pixar style"
+  },
+  {
+   "say": "Fangen wir ganz vorne an. Was ist überhaupt ein Schwarzes Loch?",
+   "titel": "Kapitel 1: Der Horizont",
+   "bild": "Leo in a spacesuit approaching a glowing black hole with a bright orange disk of gas around it, Pixar style"
+  },
+  {
+   "say": "Ein Schwarzes Loch hat eine Grenze, die man Ereignishorizont nennt.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Ab dieser Grenze ist die Schwerkraft so stark, dass nicht einmal Licht entkommen kann.",
+   "bild": "Close-up of light rays bending and disappearing into a black sphere, Pixar style"
+  },
+  {
+   "say": "Licht legt normalerweise fast dreihunderttausend Kilometer pro Sekunde zurück, aber hier reicht das nicht.",
+   "titel": "299.792 km/s",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo nickt beeindruckt und fragt: Wie groß ist so ein Horizont eigentlich?",
+   "bild": "Leo scratching his head, floating near the black hole in his spacesuit, Pixar style"
+  },
+  {
+   "say": "Das kommt total auf die Masse an. Würde man die Erde zu einem Schwarzen Loch zusammenpressen, wäre ihr Horizont nur neun Millimeter groß.",
+   "bild": "Tiny glowing marble-sized black hole floating where Earth used to be, Pixar style"
+  },
+  {
+   "say": "Kleiner als eine Murmel! Die ganze Erde, zusammengequetscht auf Murmelgröße.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Bei der Sonne wären es etwa drei Kilometer Radius.",
+   "bild": "The Sun shrinking into a small black dot with a glowing ring, Pixar style"
+  },
+  {
+   "say": "Leo findet: Das ist verrückt, so viel Masse auf so wenig Platz.",
+   "bild": "Leo making a surprised face, arms wide open in space, Pixar style"
+  },
+  {
+   "say": "Im Zentrum unserer Milchstraße gibt es sogar ein Monster-Schwarzes-Loch namens Sagittarius A Stern.",
+   "titel": "Kapitel 2: Das Monster",
+   "bild": "Wide shot of the Milky Way galaxy with a glowing bright center, Pixar style"
+  },
+  {
+   "say": "Es wiegt etwa viereinhalb Millionen Sonnenmassen und ist sechsundzwanzigtausend Lichtjahre von uns entfernt.",
+   "titel": "4,3 Mio. Sonnenmassen",
+   "bild": "gleich"
+  },
+  {
+   "say": "Zweitausendzwanzig bekamen zwei Forscher dafür den Nobelpreis, weil sie durch die Bewegung von Sternen bewiesen, dass es da ist.",
+   "bild": "Leo looking through a giant telescope at night, stars moving around an invisible point, Pixar style"
+  },
+  {
+   "say": "Zweitausendneunzehn gelang sogar das erste Foto eines Schwarzen Lochs überhaupt, von einem Riesen namens M87 Stern.",
+   "bild": "Famous orange ring-shaped black hole image style, Pixar rendering, glowing donut shape in space"
+  },
+  {
+   "say": "Das Ding wiegt sechseinhalb Milliarden Sonnenmassen. Leo kann sich das kaum vorstellen.",
+   "bild": "Leo with jaw dropped, tiny compared to a massive glowing black hole silhouette, Pixar style"
+  },
+  {
+   "say": "Erst zweitausendzweiundzwanzig gelang auch ein Bild von unserem eigenen Schwarzen Loch, Sagittarius A Stern.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das war technisch viel schwerer, weil sich das Material darum rasend schnell bewegt.",
+   "bild": "Swirling bright gas disk spinning fast around a dark center, Pixar style"
+  },
+  {
+   "say": "Okay, Leo. Jetzt wird es ernst. Stell dir vor, du fliegst wirklich auf eins zu.",
+   "titel": "Kapitel 3: Der Fall beginnt",
+   "bild": "Leo in his spacesuit drifting slowly toward a massive black hole, small compared to its size, Pixar style"
+  },
+  {
+   "say": "Die erste große Frage: Fällst du in ein kleines oder ein großes Schwarzes Loch?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das macht nämlich einen riesigen Unterschied für das, was mit deinem Körper passiert.",
+   "bild": "Split screen style image: Leo approaching a small black hole on one side, a giant one on the other, Pixar style"
+  },
+  {
+   "say": "Fällst du in ein kleines, sternengroßes Schwarzes Loch, wird es schnell unangenehm.",
+   "titel": "Kapitel 4: Spaghetti-Effekt",
+   "bild": "Leo's feet getting pulled slightly longer than his head as he falls, Pixar style, cartoonish not scary"
+  },
+  {
+   "say": "Diese kleinen Schwarzen Löcher entstehen, wenn massereiche Sterne kollabieren, und wiegen oft nur drei bis zehn Sonnenmassen.",
+   "bild": "A giant star collapsing into a bright point of light, Pixar style"
+  },
+  {
+   "say": "Weil sie so kompakt sind, ziehen sie an deinen Füßen viel stärker als an deinem Kopf.",
+   "bild": "Leo stretched cartoonishly long like taffy, floating toward the black hole, Pixar style, funny not scary"
+  },
+  {
+   "say": "Stephen Hawking nannte diesen Effekt Spaghettifizierung.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Dein Körper würde lang gezogen wie eine Nudel, noch bevor du den Horizont überhaupt erreichst.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Klingt nach einem schlechten Tag. Aber Leo fragt: Geht das auch anders?",
+   "bild": "Leo making a worried but curious face in his spacesuit, Pixar style"
+  },
+  {
+   "say": "Ja! Bei einem riesigen Schwarzen Loch wie Sagittarius A Stern ist das komplett anders.",
+   "titel": "Kapitel 5: Der sanfte Fall",
+   "bild": "Leo calmly floating toward a huge, gentle-looking black hole with a soft glowing disk, Pixar style"
+  },
+  {
+   "say": "Je größer das Schwarze Loch, desto schwächer sind die Gezeitenkräfte an seinem Horizont.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Bei einem richtig großen Loch könntest du den Ereignishorizont theoretisch überqueren, ohne etwas Besonderes zu spüren.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Verrückt, oder? Der Horizont ist nämlich keine echte Wand, sondern nur eine unsichtbare mathematische Grenze.",
+   "bild": "Leo passing through an invisible shimmering boundary in space, calm expression, Pixar style"
+  },
+  {
+   "say": "Du würdest also einfach weiterfliegen, ohne einen Knall oder ein Kribbeln zu spüren.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Klingt fast enttäuschend unspektakulär für so einen dramatischen Moment.",
+   "bild": "Leo shrugging with a half-smile, floating calmly in space, Pixar style"
+  },
+  {
+   "say": "Aber für jemanden, der von außen zuschaut, sieht die ganze Sache komplett anders aus.",
+   "titel": "Kapitel 6: Der Blick von außen",
+   "bild": "A spaceship watching Leo from a distance near the black hole, Pixar style"
+  },
+  {
+   "say": "Das liegt an der Zeitdilatation, einem Effekt aus Einsteins Relativitätstheorie.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Je näher du der Masse kommst, desto langsamer vergeht deine Zeit, verglichen mit jemandem weit weg.",
+   "bild": "Split image: clock ticking fast far from black hole, clock ticking slow near it, Pixar style"
+  },
+  {
+   "say": "Das ist kein Scifi-Trick, das wurde mit Atomuhren auf der Erde wirklich gemessen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Für deine Freunde zu Hause würdest du immer langsamer wirken, immer röter leuchten, bis dein Bild einfach verblasst.",
+   "bild": "Leo's figure glowing faint red and fading slowly from the viewpoint of a distant spaceship, Pixar style"
+  },
+  {
+   "say": "Sie würden dich also nie wirklich verschwinden sehen, nur für immer langsamer werden.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Für dich selbst dagegen würde die Zeit ganz normal weiterlaufen. Verrückter Unterschied, oder?",
+   "bild": "Leo looking at his wristwatch, puzzled expression, floating in space, Pixar style"
+  },
+  {
+   "say": "Jetzt kommt der Teil, den sich sogar Physiker schwer vorstellen können.",
+   "titel": "Kapitel 7: Drinnen",
+   "bild": "Leo crossing into complete darkness inside the black hole, abstract swirling space, Pixar style"
+  },
+  {
+   "say": "Sobald du den Horizont überquert hast, tauschen Raum und Zeit quasi ihre Rollen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Die Bewegung zum Zentrum hin wird so unausweichlich wie für uns das Vergehen der Zeit.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Du könntest also nicht mehr umkehren, genauso wenig, wie du gestern noch einmal erleben kannst.",
+   "bild": "Leo looking back with a determined but calm face, drifting deeper into darkness, Pixar style"
+  },
+  {
+   "say": "Leo findet das gleichzeitig gruselig und total faszinierend.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Kurz vor dem Horizont gibt es übrigens noch spannende Zonen.",
+   "titel": "Kapitel 8: Lichtkreisel",
+   "bild": "Leo observing glowing rings of light orbiting the black hole, Pixar style"
+  },
+  {
+   "say": "In der sogenannten Photonensphäre könnten Lichtteilchen theoretisch im Kreis um das Loch herumfliegen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das liegt beim anderthalbfachen Schwarzschild-Radius, also ziemlich nah dran.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Noch etwas weiter draußen, beim dreifachen Radius, liegt die innerste stabile Umlaufbahn.",
+   "bild": "A small spaceship orbiting steadily around the black hole at a safe distance, Pixar style"
+  },
+  {
+   "say": "Näher dran kann nichts mehr stabil kreisen, alles wird irgendwann hineingezogen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo fragt sich: Saugt ein Schwarzes Loch eigentlich alles in der Nähe auf wie ein Staubsauger?",
+   "titel": "Realitäts-Check",
+   "bild": "Leo looking suspiciously at the black hole, arms crossed, Pixar style"
+  },
+  {
+   "say": "Und hier kommt die große Überraschung: Nein, überhaupt nicht!",
+   "bild": "gleich"
+  },
+  {
+   "say": "Würde die Sonne plötzlich durch ein gleich schweres Schwarzes Loch ersetzt, würde sich an der Erdumlaufbahn gar nichts ändern.",
+   "bild": "Earth calmly orbiting a black hole instead of the Sun, same distance, Pixar style, Earth without rings"
+  },
+  {
+   "say": "Die Anziehungskraft aus der Entfernung bleibt exakt gleich wie vorher.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Nur würde es auf der Erde ziemlich kalt und dunkel werden, weil kein Licht mehr kommt.",
+   "bild": "Earth in darkness with faint black hole glow in the sky, Pixar style"
+  },
+  {
+   "say": "Schwarze Löcher sind also keine gierigen Monster, sie verhalten sich aus der Ferne wie ganz normale Masse.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Spannend ist auch, dass manche Schwarze Löcher sich wahnsinnig schnell drehen.",
+   "titel": "Kapitel 9: Rasende Riesen",
+   "bild": "Leo watching a black hole spin rapidly with swirling light around it, Pixar style"
+  },
+  {
+   "say": "Manche drehen sich fast so schnell, wie es überhaupt theoretisch möglich ist.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Dabei beschreibt man ein Schwarzes Loch eigentlich nur mit drei Eigenschaften.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Masse, Drehimpuls und elektrische Ladung, das war's. Alles andere spielt für das Loch selbst keine Rolle.",
+   "titel": "3 Eigenschaften",
+   "bild": "Leo holding up three fingers, floating in space, Pixar style"
+  },
+  {
+   "say": "Das nennt man in der Physik auch scherzhaft das No-Hair-Theorem, weil ein Schwarzes Loch sozusagen keine Details mehr hat.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Jetzt wird es noch verrückter: Schwarze Löcher könnten theoretisch sogar irgendwann verdampfen.",
+   "titel": "Kapitel 10: Verdampfung",
+   "bild": "Leo watching a tiny glowing particle escape from the edge of a black hole, Pixar style"
+  },
+  {
+   "say": "Stephen Hawking sagte neunzehnhundertvierundsiebzig voraus, dass Schwarze Löcher durch Quanteneffekte langsam Energie abstrahlen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das nennt man Hawking-Strahlung, und bisher wurde sie noch nie direkt beobachtet, es ist also eine Theorie.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Ein sonnenmassegroßes Schwarzes Loch wäre dabei wahnsinnig kalt, nur sechzig Nanokelvin.",
+   "titel": "60 Nanokelvin",
+   "bild": "Leo shivering comically, floating near the black hole, Pixar style"
+  },
+  {
+   "say": "Das ist kälter als das gesamte Universum im Hintergrund, das etwa zweikommasieben Kelvin misst.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Deshalb nimmt so ein Schwarzes Loch aktuell eher mehr Energie auf, als es abgibt, es wächst also eher als zu schrumpfen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Und würde es doch irgendwann komplett verdampfen, würde das unglaubliche zehn hoch siebenundsechzig Jahre dauern.",
+   "titel": "10^67 Jahre",
+   "bild": "Leo looking at a giant clock with spinning numbers, cosmic background, Pixar style"
+  },
+  {
+   "say": "Unser Universum ist bisher nur dreizehn Komma acht Milliarden Jahre alt. Diese Zahl ist also wirklich unfassbar groß.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Leo kratzt sich am Kopf: Wie wissen Forscher das überhaupt alles so genau?",
+   "bild": "Leo scratching his head, confused but curious expression, Pixar style"
+  },
+  {
+   "say": "Teilweise durch Gravitationswellen! Zweitausendfünfzehn wies ein Observatorium namens LIGO zum ersten Mal zwei verschmelzende Schwarze Löcher nach.",
+   "titel": "Kapitel 11: Der Beweis",
+   "bild": "Two black holes spiraling toward each other, sending out ripples in space, Pixar style"
+  },
+  {
+   "say": "Die beiden wogen etwa neunundzwanzig und sechsunddreißig Sonnenmassen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Bei der Verschmelzung wurde Energie von etwa drei Sonnenmassen als Gravitationswellen ins All geschleudert.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das ist, als würde plötzlich die Masse von drei Sonnen einfach in Wellen durchs Universum rauschen.",
+   "bild": "Ripples spreading outward through space like water waves, Pixar style"
+  },
+  {
+   "say": "Schon neunzehnhundertvierundsechzig vermutete man zum ersten Mal ein Schwarzes Loch, bei einem Objekt namens Cygnus X-1.",
+   "bild": "Leo looking at an old-style telescope pointed at a distant glowing star system, Pixar style"
+  },
+  {
+   "say": "Stephen Hawking wettete damals sogar mit einem Kollegen darüber, ob es wirklich eins ist.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Heute wissen wir: Es war tatsächlich eins. Die Wissenschaft hatte also recht.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Eine riesige Frage bleibt aber bis heute völlig ungeklärt.",
+   "titel": "Kapitel 12: Das Rätsel",
+   "bild": "Leo looking puzzled at a glowing question mark floating near the black hole, Pixar style"
+  },
+  {
+   "say": "Geht alle Information, die in ein Schwarzes Loch fällt, für immer verloren?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Oder bleibt sie irgendwie erhalten, nur unglaublich gut versteckt?",
+   "bild": "gleich"
+  },
+  {
+   "say": "Das nennt man das Informationsparadoxon, und selbst die klügsten Physiker der Welt streiten noch darüber.",
+   "bild": "Leo looking at a chalkboard full of scribbled equations, scratching his head, Pixar style"
+  },
+  {
+   "say": "Leo findet das irgendwie beruhigend: Es gibt also noch echte Geheimnisse im Universum.",
+   "bild": "Leo smiling thoughtfully, floating peacefully in space, Pixar style"
+  },
+  {
+   "say": "Zurück auf seinem Trampolin denkt Leo über alles nach, was er gerade erlebt hat.",
+   "bild": "Leo lying back on the trampoline in his backyard at night, looking up at stars, Pixar style"
+  },
+  {
+   "say": "Ein Fall in ein kleines Schwarzes Loch wäre ein schnelles, dramatisches Ende.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Ein Fall in ein riesiges Schwarzes Loch dagegen wäre fast unspektakulär, zumindest am Anfang.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Aber am Ende, so vermuten Forscher, führt beides ins Unbekannte, in eine Zone, die unsere Physik noch nicht vollständig erklären kann.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Schwarze Löcher sind also keine Monster, sondern die extremsten Orte, die wir kennen, voller Fragen statt Antworten.",
+   "bild": "Wide shot of the Milky Way with a glowing black hole in the distance, Leo's tiny trampoline visible below, Pixar style"
+  },
+  {
+   "say": "Und manchmal ist genau das das Spannendste an der Wissenschaft: zu wissen, was wir noch nicht wissen.",
+   "bild": "gleich"
+  },
+  {
+   "say": "Was denkst du: Würdest du dich trauen, in ein Schwarzes Loch zu fallen, wenn du könntest?",
+   "bild": "Leo smiling at the camera, giving a thumbs up, starry sky behind him, Pixar style"
+  },
+  {
+   "say": "Schreib's in die Kommentare, und wenn dir dieses Gedankenexperiment gefallen hat, abonniere Was wäre wenn für die nächste verrückte Reise.",
+   "bild": "gleich"
+  }
+ ],
+ "shorts": [
+  {
+   "von": 0,
+   "bis": 8,
+   "titel": "Was ist wirklich hinter dem Ereignishorizont?"
+  },
+  {
+   "von": 15,
+   "bis": 20,
+   "titel": "Das erste Foto eines Schwarzen Lochs"
+  },
+  {
+   "von": 24,
+   "bis": 30,
+   "titel": "Spaghettifizierung: Dein Körper wird zur Nudel"
+  },
+  {
+   "von": 31,
+   "bis": 37,
+   "titel": "So fühlt sich ein RIESIGES Schwarzes Loch an"
+  },
+  {
+   "von": 38,
+   "bis": 44,
+   "titel": "Warum du von außen niemals verschwindest"
+  },
+  {
+   "von": 54,
+   "bis": 59,
+   "titel": "Saugen Schwarze Löcher wirklich alles auf?"
+  },
+  {
+   "von": 68,
+   "bis": 73,
+   "titel": "Schwarze Löcher können verdampfen?!"
+  },
+  {
+   "von": 84,
+   "bis": 89,
+   "titel": "Das größte ungelöste Rätsel der Physik"
+  }
+ ]
+}
