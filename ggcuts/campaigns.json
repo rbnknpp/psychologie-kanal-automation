@@ -54,8 +54,16 @@
   "active": true,
   "game_area": [
    0,
-   1400
+   1920
   ],
-  "game_fit": true
+  "game_fit": true,
+  "blur_boxes": [
+   [
+    1424,
+    566,
+    496,
+    470
+   ]
+  ]
  }
 ]

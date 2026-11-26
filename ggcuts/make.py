@@ -360,11 +360,19 @@ def render(camp, vod, start, end, name, hook):
         if camp.get("game_fit"):
             # Robin 26.11.2026: komplettes Spielbild statt Ausschnitt in Facecam-Breite. Ganzer Bereich game_area
             # in voller Breite unter der Kamera, Rest des Hochformats = unscharfer, abgedunkelter Hintergrund.
+            # blur_boxes [[x, y, w, h], ..]: Bereiche im Spielbild unscharf machen (Facecam/Chat, damit Rewi nicht doppelt drin ist)
             gaw = (ga1 - ga0) // 2 * 2
             fit_h = int(1080 * 1080 / gaw) // 2 * 2
-            base = (f"[0:v]scale=1920:1080,split=3[a][b][c];"
-                    f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h}[cam];"
-                    f"[b]crop={gaw}:1080:{ga0}:0,scale=1080:{fit_h}[game];"
+            boxes = camp.get("blur_boxes", [])
+            n = 3 + len(boxes)
+            blur = "".join(f"[k{i}]crop={bw}:{bh}:{bx}:{by},boxblur=40:3[bl{i}];" for i, (bx, by, bw, bh) in enumerate(boxes))
+            chain, cur = "", "b"
+            for i, (bx, by, bw, bh) in enumerate(boxes):
+                chain += f"[{cur}][bl{i}]overlay={bx}:{by}[b{i}];"
+                cur = f"b{i}"
+            base = (f"[0:v]scale=1920:1080,split={n}[a][b][c]{''.join(f'[k{i}]' for i in range(len(boxes)))};"
+                    f"[a]crop={w}:{h}:{x}:{y},scale=1080:{cam_h}[cam];" + blur + chain +
+                    f"[{cur}]crop={gaw}:1080:{ga0}:0,scale=1080:{fit_h}[game];"
                     f"[c]crop={gaw}:1080:{ga0}:0,scale=-2:1920,crop=1080:1920,boxblur=30:2,eq=brightness=-0.12[bg];"
                     f"[bg][cam]overlay=0:0[t1];[t1][game]overlay=0:{cam_h},format=yuv420p[st]")
         else:
