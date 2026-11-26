@@ -1227,6 +1227,115 @@
      14107.0
     ]
    ]
+  },
+  "2940399650": {
+   "title": "ADHD MAXXING IN GTA VI (heute besonders schlimm)",
+   "clips": [
+    {
+     "start": 13199.6,
+     "end": 13235.3,
+     "hook": "Billy ist so heiß, Chat",
+     "caption": "Rewinside findet den NPC heißer als sich selbst 😂 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-26"
+    },
+    {
+     "start": 11739.6,
+     "end": 11763.9,
+     "hook": "Wo ist das scheiß Radio",
+     "caption": "Rewinside rastet wegen der Musik total aus 😤 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-26"
+    },
+    {
+     "start": 13345.3,
+     "end": 13373.1,
+     "hook": "Fresh Meat für Billy",
+     "caption": "Billy hat ne neue Mission für Rewinside parat 🎮 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-26"
+    },
+    {
+     "start": 6709.5,
+     "end": 6743.1,
+     "hook": "War das eine gute Landung",
+     "caption": "Rewinside landet und ist selbst überrascht davon 😅 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-26"
+    },
+    {
+     "start": 4856.0,
+     "end": 4894.0,
+     "hook": "Wo bleibt hier die Polizei",
+     "caption": "Rewinside wartet vergeblich auf Hilfe im Stau 🚓 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-26"
+    }
+   ],
+   "campaign": "rewinside",
+   "scan_pos": 14700.0,
+   "rejected": [
+    [
+     763.8,
+     787.5
+    ],
+    [
+     742.0,
+     797.0
+    ],
+    [
+     3424.0,
+     3479.0
+    ],
+    [
+     4692.0,
+     4747.0
+    ],
+    [
+     4856.0,
+     4911.0
+    ],
+    [
+     6350.0,
+     6405.0
+    ],
+    [
+     6476.0,
+     6531.0
+    ],
+    [
+     6688.0,
+     6743.0
+    ],
+    [
+     10284.0,
+     10339.0
+    ],
+    [
+     10386.0,
+     10441.0
+    ],
+    [
+     11732.0,
+     11787.0
+    ],
+    [
+     12170.0,
+     12225.0
+    ],
+    [
+     13180.0,
+     13235.0
+    ],
+    [
+     13338.0,
+     13393.0
+    ],
+    [
+     13566.0,
+     13621.0
+    ]
+   ]
   }
  }
 }
