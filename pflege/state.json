@@ -8,7 +8,7 @@
   "pflegeplanung": 1,
   "beratungsbesuch": 1,
   "dokumentation": 1,
-  "pflegekurs": 1,
+  "pflegekurs": 2,
   "fachbegriffe": 1,
   "badumbau": 1,
   "demenz": 1,
@@ -97,6 +97,7 @@
   "entlastungsbetrag|Entlastungsbetrag: 131 € im Monat, die viele verschenken",
   "kontraktur|Kontrakturenprophylaxe: So verhinderst du steife Gelenke bei Pflegebedürftigen",
   "krankenhaus-entlassung|Krankenhausentlassung: Warum „Es wird schon klappen“ gefährlich ist",
-  "pflegegeld-sachleistung|Pflegegeld oder Pflegedienst: Die Entscheidung, die viele falsch angehen"
+  "pflegegeld-sachleistung|Pflegegeld oder Pflegedienst: Die Entscheidung, die viele falsch angehen",
+  "pflegekurs|Pflegekurs für Angehörige: Was steckt wirklich dahinter? (Teil 1/3)"
  ]
 }

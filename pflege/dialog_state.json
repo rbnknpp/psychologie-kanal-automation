@@ -5,7 +5,10 @@
   "tagespflege": 1,
   "fem": 1,
   "pflegestuetzpunkt": 1,
-  "sis": 1
+  "sis": 1,
+  "beratungsbesuch": 1,
+  "geld-pro-pflegegrad": 1,
+  "aufgaben-assistenz": 1
  },
  "themen": [
   {
@@ -70,6 +73,27 @@
    "slug": "sis",
    "url": "https://pflege-mit-plan.com",
    "datum": "2026-11-26"
+  },
+  {
+   "thema": "Beratungsbesuch nach § 37 Absatz 3: Das müssen Sie wissen",
+   "reihe": "angehoerige",
+   "slug": "beratungsbesuch",
+   "url": "https://pflege-mit-plan.com/ratgeber/beratungsbesuch-37-3",
+   "datum": "2026-11-27"
+  },
+  {
+   "thema": "Wie viel Geld gibt es bei Pflegegrad 1 bis 5?",
+   "reihe": "angehoerige",
+   "slug": "geld-pro-pflegegrad",
+   "url": "https://pflege-mit-plan.com/ratgeber/wie-viel-geld-pro-pflegegrad",
+   "datum": "2026-11-27"
+  },
+  {
+   "thema": "Pflegeassistenz: Was darfst du und was nicht?",
+   "reihe": "azubi",
+   "slug": "aufgaben-assistenz",
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-27"
   }
  ]
 }
