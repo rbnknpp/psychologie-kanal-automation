@@ -1270,10 +1270,26 @@
      "caption": "Rewinside wartet vergeblich auf Hilfe im Stau 🚓 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
      "layout": "cam",
      "date": "2026-11-26"
+    },
+    {
+     "start": 16073.5,
+     "end": 16093.5,
+     "hook": "Süßer Hund rettet die Szene",
+     "caption": "Der Chat liebt diesen Hund 🐶 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-27"
+    },
+    {
+     "start": 18624.7,
+     "end": 18653.9,
+     "hook": "Ich hab sein Leben gerettet",
+     "caption": "Rewinside als Lebensretter 😂 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-27"
     }
    ],
    "campaign": "rewinside",
-   "scan_pos": 14700.0,
+   "scan_pos": 21947.0,
    "rejected": [
     [
      763.8,
@@ -1334,6 +1350,158 @@
     [
      13566.0,
      13621.0
+    ],
+    [
+     15828.0,
+     15883.0
+    ],
+    [
+     15930.0,
+     15985.0
+    ],
+    [
+     16042.0,
+     16097.0
+    ],
+    [
+     16450.0,
+     16505.0
+    ],
+    [
+     16600.0,
+     16655.0
+    ],
+    [
+     16784.0,
+     16839.0
+    ],
+    [
+     17004.0,
+     17059.0
+    ],
+    [
+     17858.0,
+     17913.0
+    ],
+    [
+     18058.0,
+     18113.0
+    ],
+    [
+     18402.0,
+     18457.0
+    ],
+    [
+     18598.0,
+     18653.0
+    ],
+    [
+     18722.0,
+     18777.0
+    ],
+    [
+     19254.0,
+     19309.0
+    ],
+    [
+     21284.0,
+     21339.0
+    ]
+   ]
+  },
+  "2941406673": {
+   "title": "ADHD MAXXING IN GTA VI (BAUSTELLEN AUF LOGIK PRÜFEN); Dann QuizShow mit Marli, Ali, Schmobin UVM",
+   "clips": [
+    {
+     "start": 7710.0,
+     "end": 7749.0,
+     "hook": "Jasons Outfit sorgt für Chaos",
+     "caption": "Rewinside flippt wegen Jasons Look komplett aus 😂 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-27"
+    },
+    {
+     "start": 6871.0,
+     "end": 6897.0,
+     "hook": "Mitten im Chaos ein Auto geklaut",
+     "caption": "Rewinside klaut einfach mal ein Auto mitten im Spiel 😂 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-27"
+    },
+    {
+     "start": 8694.0,
+     "end": 8712.0,
+     "hook": "Opferdäger will ihn totfahren",
+     "caption": "Rewinside fast überfahren mitten im Stream 😳 twitch.tv/rewinside #rewinside #gta6 #twitchclips #gaming",
+     "layout": "cam",
+     "date": "2026-11-27"
+    }
+   ],
+   "campaign": "rewinside",
+   "rejected": [
+    [
+     8838.0,
+     8876.0
+    ],
+    [
+     7176.0,
+     7205.0
+    ],
+    [
+     4046.0,
+     4101.0
+    ],
+    [
+     6064.0,
+     6119.0
+    ],
+    [
+     6558.0,
+     6613.0
+    ],
+    [
+     6648.0,
+     6703.0
+    ],
+    [
+     6842.0,
+     6897.0
+    ],
+    [
+     7150.0,
+     7205.0
+    ],
+    [
+     7424.0,
+     7479.0
+    ],
+    [
+     7710.0,
+     7765.0
+    ],
+    [
+     7934.0,
+     7989.0
+    ],
+    [
+     8092.0,
+     8147.0
+    ],
+    [
+     8190.0,
+     8245.0
+    ],
+    [
+     8440.0,
+     8495.0
+    ],
+    [
+     8664.0,
+     8719.0
+    ],
+    [
+     8834.0,
+     8889.0
     ]
    ]
   }
