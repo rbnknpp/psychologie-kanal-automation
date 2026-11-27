@@ -1,46 +1,4 @@
 {
- "Warum du beim Lügen öfter lächelst, aber falsch": {
-  "title": "Warum du beim Lügen öfter lächelst, aber falsch",
-  "hook": "Ein Lächeln beim Lügen sieht fast immer anders aus.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "lächeln",
-   "lügen erkennen",
-   "mimik",
-   "gehirn fakten",
-   "duchenne lächeln",
-   "soziale signale"
-  ]
- },
- "Warum dir ein geliehener Kugelschreiber fremd vorkommt": {
-  "title": "Warum dir ein geliehener Kugelschreiber fremd vorkommt",
-  "hook": "Ein geliehener Stift fühlt sich fast immer unangenehm an.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "gewohnheit",
-   "motorisches gedächtnis",
-   "alltagspsychologie",
-   "fakten",
-   "wissenschaft",
-   "gewohnheiten"
-  ]
- },
- "3 Sekunden – so lange brauchst du, um eine Lüge zu planen": {
-  "title": "3 Sekunden – so lange brauchst du, um eine Lüge zu planen",
-  "hook": "Eine spontane Lüge entsteht oft in weniger als drei Sekunden.",
-  "tags": [
-   "psychologie",
-   "lügen erkennen",
-   "gehirn",
-   "körpersprache",
-   "kommunikation",
-   "fakten",
-   "wissenschaft",
-   "soziale psychologie"
-  ]
- },
  "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum": {
   "title": "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum",
   "hook": "Ein einziger Akkord reicht, um deine Stimmung zu beeinflussen.",
@@ -6102,5 +6060,56 @@
    "begegnung"
   ],
   "abo_aufruf": false
+ },
+ "Warum du beim Zuhören am Telefon trotzdem nickst": {
+  "title": "Warum du beim Zuhören am Telefon trotzdem nickst",
+  "hook": "Du nickst am Telefon, obwohl niemand dich sieht.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "nonverbale kommunikation",
+   "telefon",
+   "nicken",
+   "gehirn",
+   "alltagspsychologie",
+   "kommunikation",
+   "zuhören",
+   "gestik"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn braucht nur 100 Millisekunden für Vertrauen": {
+  "title": "Dein Gehirn braucht nur 100 Millisekunden für Vertrauen",
+  "hook": "100 Millisekunden reichen, um dir zu vertrauen.",
+  "tags": [
+   "erster eindruck",
+   "psychologie",
+   "vertrauen",
+   "gesichtserkennung",
+   "mimik",
+   "körpersprache",
+   "sozialpsychologie",
+   "gehirn",
+   "wahrnehmung",
+   "sympathie"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Schultern beim Lob leicht nach hinten gehen": {
+  "title": "Warum deine Schultern beim Lob leicht nach hinten gehen",
+  "hook": "Ein Lob zieht deine Schultern sofort nach hinten.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "stolz",
+   "kompliment",
+   "nonverbale kommunikation",
+   "mimik",
+   "schulterhaltung",
+   "gestik",
+   "emotionen",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": true
  }
 }
