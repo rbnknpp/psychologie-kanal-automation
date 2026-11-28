@@ -8,7 +8,10 @@
   "sis": 1,
   "beratungsbesuch": 1,
   "geld-pro-pflegegrad": 1,
-  "aufgaben-assistenz": 1
+  "aufgaben-assistenz": 1,
+  "pflege-und-beruf": 1,
+  "pflegegrad-beantragen": 1,
+  "grundpflege-bett": 1
  },
  "themen": [
   {
@@ -94,6 +97,27 @@
    "slug": "aufgaben-assistenz",
    "url": "https://pflege-mit-plan.com",
    "datum": "2026-11-27"
+  },
+  {
+   "thema": "Pflegezeit & Familienpflegezeit: Muss ich kündigen?",
+   "reihe": "angehoerige",
+   "slug": "pflege-und-beruf",
+   "url": "https://pflege-mit-plan.com/ratgeber/pflege-und-beruf",
+   "datum": "2026-11-28"
+  },
+  {
+   "thema": "Pflegegrad beantragen in 4 Schritten",
+   "reihe": "angehoerige",
+   "slug": "pflegegrad-beantragen",
+   "url": "https://pflege-mit-plan.com/ratgeber/pflegegrad-beantragen",
+   "datum": "2026-11-28"
+  },
+  {
+   "thema": "Ganzkörperwaschung im Bett: Schritt für Schritt erklärt",
+   "reihe": "azubi",
+   "slug": "grundpflege-bett",
+   "url": "https://pflege-mit-plan.com",
+   "datum": "2026-11-28"
   }
  ]
 }
