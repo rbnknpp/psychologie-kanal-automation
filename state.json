@@ -1,21 +1,5 @@
 {
   "used_titles": [
-    "Dein Becken zeigt dir, wer in einem Gespräch wirklich im Mittelpunkt steht",
-    "Warum du beim Stehen öfter von einem Bein aufs andere wechselst, wenn ein Gespräch dich erschöpft",
-    "Am Ende verrät die Gesamthaltung mehr als jede einzelne Geste",
-    "Warum du beim Zuhören öfter den Stift in der Hand drehst",
-    "3 Sekunden Blickwechsel entscheiden, wer in einem Gespräch führt",
-    "Dein Gehirn hält eine hängende Schulter für trauriger als ein trauriges Gesicht",
-    "Warum zwei Menschen beim Gehen automatisch im gleichen Takt laufen",
-    "Wer beim Gehen vorgeht, bestimmt oft mehr als nur das Tempo",
-    "Warum ihr beim Gehen automatisch denselben Abstand haltet",
-    "Warum ihr beim Sitzen am Tisch oft denselben Winkel wählt",
-    "Dein Gehirn merkt, wer am Tisch zuerst nach dem Essen greift",
-    "Warum ihr am Tisch öfter nach denselben Dingen greift",
-    "Warum ihr beim Abschied oft schon vor dem letzten Satz zögert",
-    "Dein Gehirn merkt am Blick, ob ein Abschied wirklich das Ende ist",
-    "Warum ihr euch nach einem guten Treffen in dieselbe Richtung dreht",
-    "Am Ende zeigt sich Verbundenheit nicht in einer Geste, sondern im Zusammenspiel",
     "Warum deine Augenbrauen kurz nach oben schnellen, wenn du jemanden erkennst",
     "Warum deine Stimme zittert, wenn du jemanden um Hilfe bittest",
     "3 Sekunden Lächeln entscheiden, ob dein Gegenüber dir traut",
@@ -199,7 +183,23 @@
     "Dein Gehirn braucht nur einen Wimpernschlag, um Sympathie zu erkennen",
     "Warum du beim Zuhören am Telefon trotzdem nickst",
     "Dein Gehirn braucht nur 100 Millisekunden für Vertrauen",
-    "Warum deine Schultern beim Lob leicht nach hinten gehen"
+    "Warum deine Schultern beim Lob leicht nach hinten gehen",
+    "Warum deine Hand beim Zweifeln öfter zum Nacken wandert",
+    "3 Sekunden Schweigen nach einer Umarmung zeigen, wie nah ihr euch wirklich seid",
+    "Dein Gehirn braucht einen Seitenblick, um Ironie zu erkennen",
+    "Warum die ersten 2 Sekunden einer Umarmung über Nähe entscheiden",
+    "Wie lange eine Umarmung dauert, sagt mehr als jedes Wort",
+    "Warum Klopfen auf den Rücken oft Distanz bedeutet",
+    "Der Abstand beim Lösen verrät, wie nah ihr euch wirklich seid",
+    "Warum Druck in der Umarmung mehr zählt als die Umarmung selbst",
+    "Warum dein Kopf sich beim Umarmen automatisch zur Seite dreht",
+    "Warum manche Hände beim Umarmen flach bleiben und andere sich schließen",
+    "Warum ein Lächeln vor dem Abschied oft ehrlicher ist als danach",
+    "Warum ein letzter Blick zurück mehr zeigt als der ganze Abschied",
+    "Warum das Zusammenspiel aller Signale zeigt, wie eng eine Beziehung wirklich ist",
+    "Warum deine Arme sich beim Umarmen unterschiedlich hoch platzieren",
+    "Dein Gehirn merkt am Timing des Loslassens, wer zuerst gehen will",
+    "Warum ein kurzer Blick vor der Umarmung mehr zeigt als die Umarmung selbst"
   ],
   "used_topics": [],
   "used_longform_themes": [
@@ -220,6 +220,7 @@
     "Wie unbewusste Körpersignale beim Scherzen und Necken (Mimik-Timing, Blickkontakt, Körperabstand) zeigen, ob ein Spaß als liebevoll oder verletzend ankommt",
     "Wie unbewusste Körpersignale beim Warten auf eine wichtige Nachricht oder Rückmeldung (Handy-Checks, Unruhe in den Füßen, Räuspern) zeigen, wie sehr uns das Ergebnis wirklich kümmert",
     "Wie unbewusste Körpersignale beim Stehen in Aufzügen, Warteschlangen und engen Räumen zeigen, wie Menschen instinktiv ihre persönliche Distanzzone verteidigen",
-    "Wie unbewusste Körpersignale beim Präsentieren und Reden vor Gruppen (Standposition, Handgesten, Stimme) zeigen, ob jemand wirklich Autorität ausstrahlt oder innerlich unsicher ist"
+    "Wie unbewusste Körpersignale beim Präsentieren und Reden vor Gruppen (Standposition, Handgesten, Stimme) zeigen, ob jemand wirklich Autorität ausstrahlt oder innerlich unsicher ist",
+    "Wie unbewusste Körpersignale beim Begrüßen und Verabschieden (Umarmungsdauer, Klopfen auf den Rücken, Abstand beim Lösen) zeigen, wie eng eine Beziehung wirklich ist"
   ]
 }

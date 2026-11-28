@@ -1,234 +1,4 @@
 {
- "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum": {
-  "title": "Warum dir eine Melodie in Dur fröhlicher vorkommt, obwohl du nicht weißt warum",
-  "hook": "Ein einziger Akkord reicht, um deine Stimmung zu beeinflussen.",
-  "tags": [
-   "psychologie",
-   "musik",
-   "dur moll",
-   "gehirn",
-   "emotionen",
-   "musikpsychologie",
-   "fakten",
-   "wissenschaft"
-  ]
- },
- "Die Zahl, die zeigt wie oft dein Blick pro Minute abschweift": {
-  "title": "Die Zahl, die zeigt wie oft dein Blick pro Minute abschweift",
-  "hook": "Dein Blick wandert öfter ab, als du jemals zugeben würdest.",
-  "tags": [
-   "psychologie",
-   "blickkontakt",
-   "körpersprache",
-   "kommunikation",
-   "gehirn",
-   "aufmerksamkeit",
-   "fakten",
-   "soziale psychologie"
-  ]
- },
- "Warum du bei einer Umfrage ehrlicher antwortest, wenn niemand zuschaut": {
-  "title": "Warum du bei einer Umfrage ehrlicher antwortest, wenn niemand zuschaut",
-  "hook": "Allein im Raum antwortest du erstaunlich anders als in Gesellschaft.",
-  "tags": [
-   "psychologie",
-   "sozialpsychologie",
-   "verhalten",
-   "ehrlichkeit",
-   "umfrage",
-   "gehirn",
-   "fakten",
-   "wissenschaft"
-  ]
- },
- "Dein Gehirn merkt sich Gerüche länger als Gesichter": {
-  "title": "Dein Gehirn merkt sich Gerüche länger als Gesichter",
-  "hook": "Ein einziger Geruch kann eine Erinnerung von vor Jahren zurückholen.",
-  "tags": [
-   "psychologie",
-   "gehirn",
-   "erinnerung",
-   "geruchssinn",
-   "limbisches system",
-   "fakten",
-   "wissenschaft",
-   "gedächtnis"
-  ]
- },
- "Warum du beim Zuhören am Telefon automatisch nickst, obwohl niemand es sieht": {
-  "title": "Warum du beim Zuhören am Telefon automatisch nickst, obwohl niemand es sieht",
-  "hook": "Am Telefon nickst du, obwohl dich niemand sehen kann.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "telefonieren",
-   "kommunikation",
-   "gehirn",
-   "alltagspsychologie",
-   "fakten",
-   "verhalten"
-  ]
- },
- "3 Töne pro Sekunde – mehr braucht dein Gehirn nicht, um Musik zu erkennen": {
-  "title": "3 Töne pro Sekunde – mehr braucht dein Gehirn nicht, um Musik zu erkennen",
-  "hook": "Dein Gehirn erkennt ein bekanntes Lied fast augenblicklich.",
-  "tags": [
-   "psychologie",
-   "musik",
-   "gehirn",
-   "mustererkennung",
-   "musikpsychologie",
-   "fakten",
-   "wissenschaft",
-   "hören"
-  ]
- },
- "Warum du beim Flirten unbewusst deine Füße verrätst": {
-  "title": "Warum du beim Flirten unbewusst deine Füße verrätst",
-  "hook": "Willst du wissen, ob dich jemand wirklich mag? Schau auf die Füße.",
-  "tags": [
-   "körpersprache",
-   "psychologie",
-   "flirten",
-   "nonverbale kommunikation",
-   "verhalten",
-   "gehirn fakten",
-   "body language",
-   "soziale signale",
-   "menschliches verhalten",
-   "fakten"
-  ]
- },
- "Dein Gehirn belohnt dich fürs Erzählen über dich selbst": {
-  "title": "Dein Gehirn belohnt dich fürs Erzählen über dich selbst",
-  "hook": "Über dich selbst zu reden fühlt sich gut an, fast wie Essen oder Geld.",
-  "tags": [
-   "gehirn",
-   "psychologie",
-   "belohnungssystem",
-   "kommunikation",
-   "gespräche",
-   "selbstoffenbarung",
-   "soziale medien",
-   "fakten",
-   "verhalten",
-   "beziehungen"
-  ]
- },
- "3 Minuten Schweigen reichen, um ein Gespräch unangenehm zu machen": {
-  "title": "3 Minuten Schweigen reichen, um ein Gespräch unangenehm zu machen",
-  "hook": "Kennst du das, wenn eine Gesprächspause plötzlich ewig lang wirkt?",
-  "tags": [
-   "psychologie",
-   "stille",
-   "gesprächspause",
-   "kommunikation",
-   "soziales verhalten",
-   "gehirn fakten",
-   "beziehungen",
-   "nähe",
-   "verhalten",
-   "fakten"
-  ]
- },
- "Warum du beim Lachen über einen Witz zuerst die Person ansiehst, die ihn erzählt hat": {
-  "title": "Warum du beim Lachen über einen Witz zuerst die Person ansiehst, die ihn erzählt hat",
-  "hook": "Du lachst über einen Witz – aber schaust du wirklich den Komiker an?",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "soziales verhalten",
-   "lachen",
-   "gruppenverhalten",
-   "gehirn fakten",
-   "unbewusstes verhalten",
-   "soziale referenzierung"
-  ]
- },
- "Dein Gehirn braucht ein zweites Mal Hinschauen, um Symmetrie als schön zu empfinden": {
-  "title": "Dein Gehirn braucht ein zweites Mal Hinschauen, um Symmetrie als schön zu empfinden",
-  "hook": "Warum findest du manche Gesichter sofort attraktiv und andere nicht?",
-  "tags": [
-   "psychologie",
-   "wahrnehmung",
-   "symmetrie",
-   "attraktivität",
-   "gehirn fakten",
-   "schönheit",
-   "kognition",
-   "verarbeitung"
-  ]
- },
- "Kennst du das? Du vergisst einen Namen sofort – aber nicht das Gesicht dazu": {
-  "title": "Kennst du das? Du vergisst einen Namen sofort – aber nicht das Gesicht dazu",
-  "hook": "Du vergisst Namen in drei Sekunden, aber Gesichter nie wirklich.",
-  "tags": [
-   "psychologie",
-   "gedächtnis",
-   "gehirn fakten",
-   "namen vergessen",
-   "gesichtserkennung",
-   "wissenschaft",
-   "alltag",
-   "kognition"
-  ]
- },
- "Die Zahl der Sekunden, die dein Gehirn braucht, um Humor zu erkennen": {
-  "title": "Die Zahl der Sekunden, die dein Gehirn braucht, um Humor zu erkennen",
-  "hook": "In 0,3 Sekunden weiß dein Gehirn schon, ob etwas lustig ist.",
-  "tags": [
-   "psychologie",
-   "humor",
-   "gehirn fakten",
-   "lachen",
-   "wissenschaft",
-   "kognition",
-   "gefühle",
-   "reaktionszeit"
-  ]
- },
- "Warum du bei einem Kompliment öfter widersprichst, als es anzunehmen": {
-  "title": "Warum du bei einem Kompliment öfter widersprichst, als es anzunehmen",
-  "hook": "Jemand lobt dich – und deine erste Reaktion ist, es zu entkräften.",
-  "tags": [
-   "psychologie",
-   "selbstwertgefühl",
-   "komplimente",
-   "kognitive dissonanz",
-   "gehirn fakten",
-   "selbstbild",
-   "wissenschaft",
-   "alltag"
-  ]
- },
- "3 Minuten Musik reichen, damit sich dein Puls anpasst": {
-  "title": "3 Minuten Musik reichen, damit sich dein Puls anpasst",
-  "hook": "Deine Herzfrequenz folgt heimlich dem Takt der Musik, die du hörst.",
-  "tags": [
-   "psychologie",
-   "musik",
-   "herzfrequenz",
-   "gehirn fakten",
-   "entrainment",
-   "wissenschaft",
-   "körper",
-   "rhythmus"
-  ]
- },
- "Warum dir ein Raum voller Fremder leichter fällt, wenn einer davon lächelt": {
-  "title": "Warum dir ein Raum voller Fremder leichter fällt, wenn einer davon lächelt",
-  "hook": "Ein einziges Lächeln im Raum verändert, wie sicher du dich fühlst.",
-  "tags": [
-   "psychologie",
-   "körpersprache",
-   "soziales verhalten",
-   "lächeln",
-   "gehirn fakten",
-   "evolution",
-   "wissenschaft",
-   "party"
-  ]
- },
  "Dein Gehirn verwechselt Aufregung mit Angst – und du merkst es kaum": {
   "title": "Dein Gehirn verwechselt Aufregung mit Angst – und du merkst es kaum",
   "hook": "Zitternde Hände vor einer Prüfung und vor einem Date fühlen sich fast gleich an.",
@@ -6111,5 +5881,255 @@
    "alltagspsychologie"
   ],
   "abo_aufruf": true
+ },
+ "Warum deine Hand beim Zweifeln öfter zum Nacken wandert": {
+  "title": "Warum deine Hand beim Zweifeln öfter zum Nacken wandert",
+  "hook": "Deine Hand greift zum Nacken, wenn Stress aufkommt.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "stress",
+   "nonverbale kommunikation",
+   "selbstberuhigung",
+   "gestik",
+   "alltagspsychologie",
+   "gehirn",
+   "erster eindruck",
+   "verhalten"
+  ],
+  "abo_aufruf": false
+ },
+ "3 Sekunden Schweigen nach einer Umarmung zeigen, wie nah ihr euch wirklich seid": {
+  "title": "3 Sekunden Schweigen nach einer Umarmung zeigen, wie nah ihr euch wirklich seid",
+  "hook": "3 Sekunden Schweigen nach einer Umarmung verraten echte Nähe.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "umarmung",
+   "nähe",
+   "beziehungen",
+   "oxytocin",
+   "nonverbale kommunikation",
+   "bindung",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": true
+ },
+ "Dein Gehirn braucht einen Seitenblick, um Ironie zu erkennen": {
+  "title": "Dein Gehirn braucht einen Seitenblick, um Ironie zu erkennen",
+  "hook": "Ohne einen kurzen Seitenblick verstehst du Ironie kaum.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "ironie",
+   "mimik",
+   "blickkontakt",
+   "kommunikation",
+   "missverständnisse",
+   "humor",
+   "nonverbale kommunikation"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum die ersten 2 Sekunden einer Umarmung über Nähe entscheiden": {
+  "title": "Warum die ersten 2 Sekunden einer Umarmung über Nähe entscheiden",
+  "hook": "In 2 Sekunden entscheidet dein Körper über Nähe.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "nonverbale kommunikation",
+   "begrüßung",
+   "beziehungen",
+   "erster eindruck",
+   "synchronisation"
+  ],
+  "abo_aufruf": false
+ },
+ "Wie lange eine Umarmung dauert, sagt mehr als jedes Wort": {
+  "title": "Wie lange eine Umarmung dauert, sagt mehr als jedes Wort",
+  "hook": "Die Dauer einer Umarmung verrät eure echte Nähe.",
+  "tags": [
+   "umarmung",
+   "körpersprache",
+   "oxytocin",
+   "vertrauen",
+   "psychologie",
+   "beziehungen",
+   "nonverbale kommunikation",
+   "bindung"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum Klopfen auf den Rücken oft Distanz bedeutet": {
+  "title": "Warum Klopfen auf den Rücken oft Distanz bedeutet",
+  "hook": "Klopfen auf den Rücken kann eine Umarmung beenden wollen.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "klopfen",
+   "nonverbale kommunikation",
+   "beziehungen",
+   "distanz",
+   "vertrauen"
+  ],
+  "abo_aufruf": false
+ },
+ "Der Abstand beim Lösen verrät, wie nah ihr euch wirklich seid": {
+  "title": "Der Abstand beim Lösen verrät, wie nah ihr euch wirklich seid",
+  "hook": "Der Abstand nach dem Lösen verrät eure echte Nähe.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "persönlicher raum",
+   "psychologie",
+   "nonverbale kommunikation",
+   "beziehungen",
+   "distanz",
+   "erster eindruck"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum Druck in der Umarmung mehr zählt als die Umarmung selbst": {
+  "title": "Warum Druck in der Umarmung mehr zählt als die Umarmung selbst",
+  "hook": "Der Druck einer Umarmung verrät, wie ernst sie gemeint ist.",
+  "tags": [
+   "umarmung",
+   "körpersprache",
+   "psychologie",
+   "druck",
+   "nonverbale kommunikation",
+   "beziehungen",
+   "vertrauen",
+   "berührung"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum dein Kopf sich beim Umarmen automatisch zur Seite dreht": {
+  "title": "Warum dein Kopf sich beim Umarmen automatisch zur Seite dreht",
+  "hook": "Dein Kopf wählt beim Umarmen fast immer dieselbe Seite.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "kopfhaltung",
+   "nonverbale kommunikation",
+   "beziehungen",
+   "gewohnheiten",
+   "erster eindruck"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum manche Hände beim Umarmen flach bleiben und andere sich schließen": {
+  "title": "Warum manche Hände beim Umarmen flach bleiben und andere sich schließen",
+  "hook": "Deine Hand verrät beim Umarmen, wie viel Nähe du zulässt.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "hände",
+   "nonverbale kommunikation",
+   "emotionen",
+   "beziehungen",
+   "berührung"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein Lächeln vor dem Abschied oft ehrlicher ist als danach": {
+  "title": "Warum ein Lächeln vor dem Abschied oft ehrlicher ist als danach",
+  "hook": "Das Lächeln vor einem Abschied verrät mehr als danach.",
+  "tags": [
+   "körpersprache",
+   "abschied",
+   "mimik",
+   "psychologie",
+   "lächeln",
+   "nonverbale kommunikation",
+   "emotionen",
+   "beziehungen"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein letzter Blick zurück mehr zeigt als der ganze Abschied": {
+  "title": "Warum ein letzter Blick zurück mehr zeigt als der ganze Abschied",
+  "hook": "Ein letzter Blick zurück verrät, wie schwer der Abschied fällt.",
+  "tags": [
+   "körpersprache",
+   "abschied",
+   "blickkontakt",
+   "psychologie",
+   "nonverbale kommunikation",
+   "beziehungen",
+   "emotionen",
+   "erster eindruck"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum das Zusammenspiel aller Signale zeigt, wie eng eine Beziehung wirklich ist": {
+  "title": "Warum das Zusammenspiel aller Signale zeigt, wie eng eine Beziehung wirklich ist",
+  "hook": "Am Ende zählt nicht ein Signal, sondern ihr Zusammenspiel.",
+  "tags": [
+   "körpersprache",
+   "psychologie",
+   "beziehungen",
+   "nonverbale kommunikation",
+   "umarmung",
+   "abschied",
+   "vertrauen",
+   "zusammenfassung"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum deine Arme sich beim Umarmen unterschiedlich hoch platzieren": {
+  "title": "Warum deine Arme sich beim Umarmen unterschiedlich hoch platzieren",
+  "hook": "Die Höhe deiner Arme beim Umarmen ist kein Zufall.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "nonverbale kommunikation",
+   "beziehung",
+   "nähe",
+   "begrüßung",
+   "vertrauen",
+   "gesten",
+   "alltagspsychologie"
+  ],
+  "abo_aufruf": false
+ },
+ "Dein Gehirn merkt am Timing des Loslassens, wer zuerst gehen will": {
+  "title": "Dein Gehirn merkt am Timing des Loslassens, wer zuerst gehen will",
+  "hook": "Wer zuerst loslässt, verrät mehr als beide ahnen.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "nonverbale kommunikation",
+   "beziehung",
+   "timing",
+   "abschied",
+   "begrüßung",
+   "vertrauen",
+   "gesten"
+  ],
+  "abo_aufruf": false
+ },
+ "Warum ein kurzer Blick vor der Umarmung mehr zeigt als die Umarmung selbst": {
+  "title": "Warum ein kurzer Blick vor der Umarmung mehr zeigt als die Umarmung selbst",
+  "hook": "Schon vor der Umarmung verrät ein Blick alles.",
+  "tags": [
+   "körpersprache",
+   "umarmung",
+   "psychologie",
+   "blickkontakt",
+   "nonverbale kommunikation",
+   "mimik",
+   "begrüßung",
+   "beziehung",
+   "erster eindruck",
+   "gesten"
+  ],
+  "abo_aufruf": false
  }
 }
